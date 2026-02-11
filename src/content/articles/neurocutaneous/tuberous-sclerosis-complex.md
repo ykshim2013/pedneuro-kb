@@ -2,18 +2,24 @@
 title: "Tuberous Sclerosis Complex (TSC)"
 category: "neurocutaneous"
 subcategory: "Phakomatoses"
-description: "Tuberous sclerosis complex: genetics, diagnostic criteria, multisystem manifestations, neurological features, and mTOR inhibitor therapy."
-tags: ["TSC", "tuberous sclerosis", "mTOR", "everolimus", "SEGA", "infantile spasms", "angiomyolipoma", "cortical tubers"]
+description: "Tuberous sclerosis complex: genetics, 2021 updated diagnostic criteria, multisystem manifestations, neurological features, TAND, and mTOR inhibitor therapy."
+tags: ["TSC", "tuberous sclerosis", "mTOR", "everolimus", "SEGA", "infantile spasms", "TAND", "cortical tubers"]
 difficulty: "intermediate"
 lastUpdated: "2026-02-11"
 author: "PedNeuro KB"
 references:
-  - title: "Tuberous sclerosis complex diagnostic criteria update: recommendations of the 2012 International Tuberous Sclerosis Complex Consensus Conference"
-    authors: "Northrup H, Krueger DA, International Tuberous Sclerosis Complex Consensus Group"
-    journal: "Pediatric Neurology"
-    year: 2013
-    doi: "10.1016/j.pediatrneurol.2013.08.001"
-    pmid: "24053983"
+  - title: "International consensus recommendations for the identification and treatment of tuberous sclerosis complex-associated neuropsychiatric disorders (TAND)"
+    authors: "de Vries PJ, Heunis TM, et al., TANDem Consortium"
+    journal: "Journal of Neurodevelopmental Disorders"
+    year: 2023
+    doi: "10.1186/s11689-023-09500-1"
+    pmid: "37710171"
+  - title: "Adjunctive everolimus therapy for tuberous sclerosis complex-associated refractory seizures: Results from the postextension phase of EXIST-3"
+    authors: "Franz DN, Belousova E, Sparagana S, et al."
+    journal: "Epilepsia"
+    year: 2021
+    doi: "10.1111/epi.17099"
+    pmid: "34693520"
   - title: "Updated International Tuberous Sclerosis Complex Diagnostic Criteria and Surveillance and Management Recommendations"
     authors: "Northrup H, Aronow ME, Bebin EM, et al."
     journal: "Pediatric Neurology"
@@ -58,12 +64,14 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 
 1. **Normal function**: TSC1/TSC2 complex → inhibits Rheb → suppresses mTORC1 → controlled cell growth
 2. **In TSC**: Loss of TSC1/TSC2 function → constitutive mTORC1 activation → uncontrolled cell growth, proliferation, and hamartoma formation
-3. **Therapeutic target**: mTOR inhibitors (everolimus, sirolimus) can reverse this pathway hyperactivation
+3. **Therapeutic target**: mTOR inhibitors (everolimus, sirolimus) directly target the underlying pathway hyperactivation
 
 ## Diagnostic Criteria (2021 Updated International TSC Consensus)
 
+The 2021 update by Northrup et al. (*Pediatric Neurology*, 2021; PMID 34399110) revised the diagnostic criteria and surveillance/management recommendations:
+
 ### Genetic Diagnostic Criteria
-- **Definite diagnosis**: Identification of a pathogenic variant in *TSC1* or *TSC2* (sufficient regardless of clinical findings)
+- **Definite diagnosis**: Identification of a pathogenic variant in *TSC1* or *TSC2* is sufficient regardless of clinical findings
 
 ### Clinical Diagnostic Criteria
 
@@ -73,7 +81,7 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 3. Ungual fibromas (≥2)
 4. Shagreen patch
 5. Multiple retinal hamartomas
-6. Cortical dysplasias (includes tubers and cerebral white matter radial migration lines)
+6. **Multiple cortical tubers and/or radial migration lines** *(revised 2021 — replaced the more general term "cortical dysplasias")*
 7. Subependymal nodules (SEN)
 8. Subependymal giant cell astrocytoma (SEGA)
 9. Cardiac rhabdomyoma
@@ -87,7 +95,7 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 4. Retinal achromic patch
 5. Multiple renal cysts
 6. Nonrenal hamartomas
-7. Sclerotic bone lesions
+7. **Sclerotic bone lesions** *(reinstated as minor criterion in 2021 update)*
 
 **Definite diagnosis**: 2 major features OR 1 major + ≥2 minor features
 **Possible diagnosis**: 1 major feature OR ≥2 minor features
@@ -110,7 +118,7 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 - Occurs in 5-20% of TSC patients
 - Typically near the foramen of Monro
 - Can cause obstructive hydrocephalus
-- **Management**: Surgical resection or mTOR inhibitor therapy (everolimus)
+- **Management**: Surgical resection or mTOR inhibitor therapy — everolimus demonstrated significant SEGA volume reduction in the EXIST-1 trial (Franz et al., *NEJM*, 2013)
 
 ### Epilepsy
 - Affects 80-90% of TSC patients
@@ -121,13 +129,27 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 - **Epilepsy surgery**: Consider for focal drug-resistant seizures with identifiable epileptogenic tuber
 
 ### TSC-Associated Neuropsychiatric Disorders (TAND)
+
+The 2023 TANDem Consortium published international consensus recommendations for TAND identification and treatment (de Vries et al., *J Neurodevelopmental Disorders*, 2023; PMID 37710171):
+
+**Prevalence:**
 - **Intellectual disability**: ~50% (range: mild to severe)
 - **Autism spectrum disorder**: 40-50%
 - **ADHD**: 30-50%
 - **Anxiety/mood disorders**: Common
 - **Sleep disorders**: 50-60%
 - **Behavioral difficulties**: Aggression, self-injury in severe cases
-- **Recommendation**: Annual TAND screening using structured assessment tools
+
+**2023 TAND Consensus Framework — Seven Natural Clusters:**
+1. Autism-like cluster
+2. Dysregulated behavior cluster
+3. Eat/sleep cluster
+4. Mood/anxiety cluster
+5. Neuropsychological cluster
+6. Overactive/impulsive cluster
+7. Scholastic cluster
+
+**Core Recommendation**: "Screen → Act → Repeat" — screen for TAND at least annually using structured assessment tools, act using appropriate next steps for evaluation and treatment, and repeat the process to ensure early identification and early intervention (de Vries et al., 2023).
 
 ## Dermatologic Manifestations
 
@@ -138,17 +160,13 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 
 ### Facial Angiofibromas
 - Appear in early childhood (typically 3-5 years)
-- Red-brown papules in butterfly distribution (nose and cheeks)
-- Progressive without treatment
+- Red-brown papules in butterfly distribution
 - **Treatment**: Topical sirolimus (0.1-0.2%), laser therapy
 
 ### Shagreen Patch
-- Connective tissue hamartoma
-- Irregular, slightly elevated, orange-peel textured plaque
-- Usually on lower back/lumbosacral area
+- Connective tissue hamartoma on lower back/lumbosacral area
 
 ### Ungual Fibromas (Koenen Tumors)
-- Flesh-colored growths at nail base
 - More common in adolescents/adults
 - May require surgical excision if symptomatic
 
@@ -163,7 +181,6 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 ### Cardiac
 - **Cardiac rhabdomyomas**: Often detected prenatally, may be first sign of TSC
 - Usually regress spontaneously during infancy/childhood
-- Can cause arrhythmias or outflow obstruction in neonates
 
 ### Pulmonary
 - **LAM**: Almost exclusively in adult females
@@ -171,39 +188,49 @@ The hamartin-tuberin complex acts as a critical negative regulator of the **mech
 
 ## Surveillance Recommendations (2021 Updated Consensus)
 
+Per the 2021 updated consensus (Northrup et al., 2021):
+
 | Organ System | Investigation | Frequency |
 |-------------|---------------|-----------|
 | Brain MRI | SEGA monitoring | Every 1-3 years until age 25 |
 | EEG | Seizure assessment | At diagnosis; as clinically indicated |
+| TAND screening | Structured assessment | **At least annually** (2021/2023 update) |
 | Renal MRI | AML monitoring | Every 1-3 years lifelong |
-| Echocardiogram | Rhabdomyoma | At diagnosis; every 1-3 years in childhood |
+| Echocardiogram | Rhabdomyoma | At diagnosis; every 1-3 years in childhood, then every 3-5 years |
 | Dermatology | Skin assessment | Annual |
 | Ophthalmology | Retinal exam | At diagnosis; every 1-3 years |
-| Neuropsychology | TAND assessment | At diagnosis; annual screening |
+| Dental | Enamel pits, fibromas | Every 6 months |
 | Pulmonary CT | LAM screening | Baseline at age 18 in females; every 5-10 years |
 
 ## Treatment
 
 ### mTOR Inhibitors
 - **Everolimus**: FDA-approved for SEGA (2010) and renal AML (2012) in TSC
-- **Sirolimus**: Off-label use, particularly for LAM
-- **Topical sirolimus**: For facial angiofibromas
+- **Sirolimus**: Used off-label, particularly for LAM and skin lesions
+- **Topical sirolimus**: For facial angiofibromas (0.1-0.2%)
 - **Mechanism**: Directly targets the underlying mTOR pathway hyperactivation
-- **Side effects**: Stomatitis, immunosuppression, hyperlipidemia, amenorrhea
 
 ### Epilepsy Management
 - **Vigabatrin**: First-line for infantile spasms in TSC (Level A evidence)
 - **Other AEDs**: Standard approach for focal seizures
 - **Epilepsy surgery**: For drug-resistant focal epilepsy with identifiable tuber
-- **mTOR inhibitors**: Everolimus as adjunctive therapy for refractory seizures (EXIST-3 trial)
+- **Everolimus for refractory seizures**: The EXIST-3 postextension phase showed sustained efficacy as adjunctive therapy — seizure response rate improved from 31% at week 18 to 57.7% at 2 years, with median seizure frequency reduction of 56.9% at 2 years (Franz et al., *Epilepsia*, 2021)
 - **Ketogenic diet**: May be beneficial in drug-resistant cases
+
+### Everolimus Long-Term Safety (EXIST-3 Postextension)
+Per Franz et al. (*Epilepsia*, 2021; PMID 34693520):
+- After ~2 years of treatment, 64.8% had stable or improved seizure status
+- 18.9% were seizure-free during the postextension phase
+- Grade 3/4 adverse events: 40.2%
+- Discontinuation due to adverse events: 13%
+- Benefit-risk ratio improves with ongoing treatment
 
 ## Key Points
 
 - TSC is caused by mutations in TSC1 or TSC2, leading to mTOR pathway hyperactivation
-- Genetic testing provides definitive diagnosis regardless of clinical features
-- Epilepsy is the most common neurological manifestation, often presenting with infantile spasms
-- Vigabatrin is first-line treatment for infantile spasms in TSC
-- mTOR inhibitors (everolimus) are disease-modifying therapy targeting the underlying molecular defect
-- Lifelong multidisciplinary surveillance is essential
-- TAND screening should be performed annually
+- The 2021 updated consensus refined diagnostic criteria, notably replacing "cortical dysplasias" with "multiple cortical tubers and/or radial migration lines" and reinstating sclerotic bone lesions as a minor criterion (Northrup et al., 2021)
+- Epilepsy is the most common neurological manifestation; vigabatrin is first-line for infantile spasms
+- The 2023 TAND Consortium established a "Screen → Act → Repeat" framework with seven natural TAND clusters for systematic neuropsychiatric management (de Vries et al., 2023)
+- Everolimus is disease-modifying therapy targeting the underlying molecular defect, with sustained efficacy for both SEGA and refractory seizures over 2+ years (Franz et al., 2021)
+- Lifelong multidisciplinary surveillance per the 2021 updated consensus is essential
+- TAND screening should be performed at least annually using structured assessment tools
