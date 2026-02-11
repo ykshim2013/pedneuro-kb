@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="gsBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="exonGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="promoterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="mrnaGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="proteinGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="gsArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+    </marker>
+    <marker id="gsArrowGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669"/>
+    </marker>
+    <filter id="gsShadow" x="-2%" y="-5%" width="104%" height="115%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#94a3b8" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gsBg)" rx="8"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Gene Structure: From DNA to Protein</text>
+
+  <!-- ======================== LEVEL 1: DNA GENE STRUCTURE ======================== -->
+  <text x="30" y="62" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">DNA Gene</text>
+
+  <!-- 5' and 3' labels -->
+  <text x="55" y="105" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#475569">5'</text>
+  <text x="755" y="105" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#475569">3'</text>
+
+  <!-- Main gene line -->
+  <line x1="65" y1="100" x2="745" y2="100" stroke="#cbd5e1" stroke-width="3"/>
+
+  <!-- Promoter (orange) -->
+  <rect x="70" y="82" width="70" height="36" rx="4" fill="url(#promoterGrad)" filter="url(#gsShadow)"/>
+  <text x="105" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#fff">Promoter</text>
+
+  <!-- Transcription start arrow -->
+  <line x1="142" y1="78" x2="142" y2="68" stroke="#ea580c" stroke-width="1.5"/>
+  <polygon points="138,68 142,60 146,68" fill="#ea580c"/>
+  <text x="142" y="56" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#ea580c" font-weight="600">TSS (+1)</text>
+
+  <!-- 5' UTR (light gray) -->
+  <rect x="145" y="87" width="55" height="26" rx="3" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="172" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#64748b">5' UTR</text>
+
+  <!-- Exon 1 (blue) -->
+  <rect x="205" y="77" width="80" height="46" rx="5" fill="url(#exonGrad)" filter="url(#gsShadow)"/>
+  <text x="245" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#fff">Exon 1</text>
+
+  <!-- Intron 1 (V-shaped line) -->
+  <path d="M290,100 L330,78 L370,100" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <text x="330" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#94a3b8" font-weight="600">Intron 1</text>
+
+  <!-- Splice site indicators -->
+  <text x="295" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#94a3b8">GT</text>
+  <text x="365" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#94a3b8">AG</text>
+
+  <!-- Exon 2 (blue) -->
+  <rect x="375" y="77" width="80" height="46" rx="5" fill="url(#exonGrad)" filter="url(#gsShadow)"/>
+  <text x="415" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#fff">Exon 2</text>
+
+  <!-- Intron 2 (V-shaped line) -->
+  <path d="M460,100 L500,78 L540,100" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <text x="500" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#94a3b8" font-weight="600">Intron 2</text>
+
+  <!-- Splice site indicators -->
+  <text x="465" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#94a3b8">GT</text>
+  <text x="535" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#94a3b8">AG</text>
+
+  <!-- Exon 3 (blue) -->
+  <rect x="545" y="77" width="80" height="46" rx="5" fill="url(#exonGrad)" filter="url(#gsShadow)"/>
+  <text x="585" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#fff">Exon 3</text>
+
+  <!-- 3' UTR (light gray) -->
+  <rect x="630" y="87" width="55" height="26" rx="3" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="657" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#64748b">3' UTR</text>
+
+  <!-- Poly-A signal -->
+  <rect x="690" y="87" width="50" height="26" rx="3" fill="#fecdd3" stroke="#fda4af" stroke-width="1"/>
+  <text x="715" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="600" fill="#be123c">Poly-A</text>
+  <text x="715" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#be123c">AATAAA</text>
+
+  <!-- ======================== ARROW: Transcription + Splicing ======================== -->
+  <line x1="400" y1="132" x2="400" y2="168" stroke="#475569" stroke-width="2" marker-end="url(#gsArrow)"/>
+  <rect x="290" y="138" width="220" height="20" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="400" y="153" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#475569">Transcription + Splicing</text>
+
+  <!-- ======================== LEVEL 2: MATURE mRNA ======================== -->
+  <text x="30" y="190" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#059669">Mature mRNA</text>
+
+  <!-- mRNA backbone line -->
+  <rect x="120" y="198" width="560" height="36" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+
+  <!-- 5' Cap -->
+  <circle cx="135" cy="216" r="14" fill="#fbbf24" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="135" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Cap</text>
+
+  <!-- 5' UTR segment -->
+  <rect x="155" y="203" width="40" height="26" rx="3" fill="#d1d5db"/>
+  <text x="175" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="600" fill="#6b7280">5'UTR</text>
+
+  <!-- Exon 1 in mRNA -->
+  <rect x="200" y="198" width="100" height="36" rx="5" fill="url(#exonGrad)"/>
+  <text x="250" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">Exon 1</text>
+
+  <!-- Exon 2 in mRNA -->
+  <rect x="305" y="198" width="100" height="36" rx="5" fill="url(#exonGrad)"/>
+  <text x="355" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">Exon 2</text>
+
+  <!-- Exon 3 in mRNA -->
+  <rect x="410" y="198" width="100" height="36" rx="5" fill="url(#exonGrad)"/>
+  <text x="460" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">Exon 3</text>
+
+  <!-- 3' UTR segment -->
+  <rect x="515" y="203" width="40" height="26" rx="3" fill="#d1d5db"/>
+  <text x="535" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="600" fill="#6b7280">3'UTR</text>
+
+  <!-- Poly-A tail -->
+  <text x="575" y="220" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#be123c">AAAAAAA</text>
+
+  <!-- Introns removed annotation -->
+  <text x="253" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#059669" font-style="italic">Introns removed; exons joined together</text>
+
+  <!-- Dashed lines showing splicing connections -->
+  <line x1="245" y1="123" x2="250" y2="198" stroke="#3b82f6" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="415" y1="123" x2="355" y2="198" stroke="#3b82f6" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="585" y1="123" x2="460" y2="198" stroke="#3b82f6" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- ======================== ARROW: Translation ======================== -->
+  <line x1="400" y1="256" x2="400" y2="288" stroke="#475569" stroke-width="2" marker-end="url(#gsArrow)"/>
+  <rect x="338" y="260" width="124" height="20" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="400" y="275" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#475569">Translation</text>
+
+  <!-- ======================== LEVEL 3: PROTEIN ======================== -->
+  <text x="30" y="310" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">Protein</text>
+
+  <!-- Protein chain -->
+  <rect x="120" y="298" width="450" height="34" rx="17" fill="url(#proteinGrad)" filter="url(#gsShadow)"/>
+
+  <!-- Amino acid beads -->
+  <circle cx="155" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="155" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Met</text>
+
+  <circle cx="185" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="185" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Ala</text>
+
+  <circle cx="215" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="215" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Gly</text>
+
+  <circle cx="245" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="245" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Leu</text>
+
+  <circle cx="275" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="275" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Ser</text>
+
+  <circle cx="305" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="305" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Pro</text>
+
+  <circle cx="335" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="335" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Arg</text>
+
+  <circle cx="365" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="365" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Val</text>
+
+  <circle cx="395" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="395" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Ile</text>
+
+  <circle cx="425" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="425" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Thr</text>
+
+  <circle cx="455" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="455" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Phe</text>
+
+  <circle cx="485" cy="315" r="12" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+  <text x="485" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="bold" fill="#fff">Glu</text>
+
+  <text x="525" y="319" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#7c3aed">...</text>
+
+  <!-- N-terminus and C-terminus labels -->
+  <text x="135" y="345" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#7c3aed">N-terminus</text>
+  <text x="540" y="345" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#7c3aed">C-terminus</text>
+
+  <!-- ======================== LEGEND ======================== -->
+  <rect x="600" y="260" width="185" height="128" rx="6" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="692" y="278" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Legend</text>
+  <line x1="612" y1="284" x2="774" y2="284" stroke="#e2e8f0" stroke-width="1"/>
+
+  <rect x="615" y="292" width="20" height="12" rx="2" fill="#f97316"/>
+  <text x="642" y="302" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#475569">Promoter</text>
+
+  <rect x="615" y="310" width="20" height="12" rx="2" fill="#3b82f6"/>
+  <text x="642" y="320" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#475569">Exon (coding)</text>
+
+  <line x1="615" y1="334" x2="635" y2="324" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="635" y1="324" x2="635" y2="324" stroke="#94a3b8" stroke-width="2"/>
+  <text x="642" y="334" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#475569">Intron (non-coding)</text>
+
+  <rect x="615" y="342" width="20" height="12" rx="2" fill="#d1d5db"/>
+  <text x="642" y="352" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#475569">UTR (untranslated)</text>
+
+  <rect x="615" y="360" width="20" height="12" rx="2" fill="#fecdd3"/>
+  <text x="642" y="370" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#475569">Poly-A signal</text>
+
+  <!-- Splice site note -->
+  <text x="400" y="392" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b" font-style="italic">Splice sites: Introns begin with GT (donor) and end with AG (acceptor) -- the GT-AG rule</text>
+</svg>

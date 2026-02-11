@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <filter id="shadowACMG" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="bgGrad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGrad3)" rx="8"/>
+  <rect x="0" y="0" width="800" height="4" fill="#d97706" rx="2"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">ACMG/AMP Variant Classification</text>
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Standards and Guidelines for Sequence Variant Interpretation (Richards et al., 2015)</text>
+
+  <!-- Five-tier spectrum bar -->
+  <!-- Each tier: width ~140px, total = 700, starting at x=50 -->
+
+  <!-- Tier 1: Pathogenic (dark red) -->
+  <rect x="50" y="70" width="140" height="50" rx="6" fill="#dc2626" filter="url(#shadowACMG)"/>
+  <text x="120" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="white">Pathogenic</text>
+  <text x="120" y="108" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#fecaca">Class 5</text>
+
+  <!-- Tier 2: Likely Pathogenic (orange) -->
+  <rect x="192" y="70" width="140" height="50" rx="6" fill="#ea580c" filter="url(#shadowACMG)"/>
+  <text x="262" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="white">Likely</text>
+  <text x="262" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="white">Pathogenic</text>
+  <text x="262" y="115" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#fed7aa">Class 4</text>
+
+  <!-- Tier 3: VUS (amber, highlighted) -->
+  <rect x="334" y="64" width="140" height="62" rx="6" fill="#d97706" filter="url(#shadowACMG)" stroke="#92400e" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="404" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="white">VUS</text>
+  <text x="404" y="106" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#fef3c7">Uncertain Significance</text>
+  <text x="404" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#fef3c7">Class 3</text>
+  <!-- Warning icon -->
+  <text x="354" y="86" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#fef3c7">!</text>
+
+  <!-- Tier 4: Likely Benign (light green) -->
+  <rect x="476" y="70" width="140" height="50" rx="6" fill="#65a30d" filter="url(#shadowACMG)"/>
+  <text x="546" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="white">Likely</text>
+  <text x="546" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="white">Benign</text>
+  <text x="546" y="115" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#d9f99d">Class 2</text>
+
+  <!-- Tier 5: Benign (green) -->
+  <rect x="618" y="70" width="140" height="50" rx="6" fill="#16a34a" filter="url(#shadowACMG)"/>
+  <text x="688" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="white">Benign</text>
+  <text x="688" y="108" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#bbf7d0">Class 1</text>
+
+  <!-- Action labels below each tier -->
+  <text x="120" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#dc2626">Act on finding</text>
+  <text x="120" y="152" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Clinical action</text>
+  <text x="120" y="163" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">warranted</text>
+
+  <text x="262" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#ea580c">>90% certainty</text>
+  <text x="262" y="152" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Treat as</text>
+  <text x="262" y="163" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">pathogenic</text>
+
+  <text x="404" y="147" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#92400e">DO NOT use for</text>
+  <text x="404" y="159" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#92400e">clinical decisions</text>
+
+  <text x="546" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#65a30d">>90% benign</text>
+  <text x="546" y="152" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Low clinical</text>
+  <text x="546" y="163" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">significance</text>
+
+  <text x="688" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#16a34a">No clinical action</text>
+  <text x="688" y="152" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Population</text>
+  <text x="688" y="163" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">polymorphism</text>
+
+  <!-- Gradient arrow below: "Increasing clinical significance" -->
+  <defs>
+    <linearGradient id="sigGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect x="50" y="174" width="708" height="4" rx="2" fill="url(#sigGrad)" opacity="0.5"/>
+  <text x="750" y="182" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#94a3b8" font-style="italic">Increasing pathogenicity</text>
+  <text x="58" y="182" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#94a3b8" font-style="italic">Benign</text>
+
+  <!-- VUS Warning callout box -->
+  <rect x="120" y="196" width="560" height="58" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2" filter="url(#shadowACMG)"/>
+  <rect x="120" y="196" width="6" height="58" rx="3" fill="#f59e0b"/>
+  <!-- Warning triangle -->
+  <text x="145" y="222" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#f59e0b">&#9888;</text>
+  <text x="170" y="218" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#92400e">VUS should NEVER drive clinical decisions</text>
+  <text x="170" y="234" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#78350f">Approximately 10-30% of VUS are reclassified over time with emerging evidence.</text>
+  <text x="170" y="247" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#78350f">Periodic re-evaluation (every 1-2 years) is recommended for clinically relevant VUS.</text>
+
+  <!-- Evidence types section -->
+  <text x="400" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Evidence Types Used in Classification</text>
+  <line x1="120" y1="288" x2="680" y2="288" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Evidence items in two rows -->
+  <!-- Row 1 -->
+  <rect x="55" y="298" width="130" height="36" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="78" cy="316" r="10" fill="#eff6ff"/>
+  <text x="78" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#3b82f6">P</text>
+  <text x="95" y="312" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1e293b">Population</text>
+  <text x="95" y="325" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Frequency data</text>
+
+  <rect x="193" y="298" width="130" height="36" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="216" cy="316" r="10" fill="#f0fdf4"/>
+  <text x="216" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#16a34a">C</text>
+  <text x="233" y="312" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1e293b">Computational</text>
+  <text x="233" y="325" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">In silico predictions</text>
+
+  <rect x="331" y="298" width="130" height="36" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="354" cy="316" r="10" fill="#fef3c7"/>
+  <text x="354" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#d97706">F</text>
+  <text x="371" y="312" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1e293b">Functional</text>
+  <text x="371" y="325" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Assay data</text>
+
+  <rect x="469" y="298" width="130" height="36" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="492" cy="316" r="10" fill="#fff1f2"/>
+  <text x="492" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#dc2626">S</text>
+  <text x="509" y="312" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1e293b">Segregation</text>
+  <text x="509" y="325" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Family co-segregation</text>
+
+  <rect x="607" y="298" width="140" height="36" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="630" cy="316" r="10" fill="#faf5ff"/>
+  <text x="630" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#7c3aed">D</text>
+  <text x="650" y="312" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1e293b">De novo status</text>
+  <text x="650" y="325" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#64748b">Parental testing</text>
+
+  <!-- Typical distribution note -->
+  <rect x="55" y="348" width="692" height="42" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="365" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#475569">Typical Variant Distribution in WES/WGS Results</text>
+  <text x="400" y="382" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">Pathogenic: 1-5%  |  Likely Pathogenic: 2-8%  |  VUS: 20-40%  |  Likely Benign: 10-20%  |  Benign: 40-60%</text>
+</svg>

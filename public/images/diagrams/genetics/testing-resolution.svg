@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" rx="8"/>
+  <rect x="0" y="0" width="800" height="4" fill="#6366f1" rx="2"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Genetic Testing: Resolution Comparison</text>
+
+  <!-- Axis area -->
+  <!-- Axis line -->
+  <line x1="170" y1="68" x2="710" y2="68" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- Tick marks and labels for resolution scale -->
+  <!-- Positions: 170=10Mb, 260=1Mb, 350=100kb, 440=10kb, 530=1kb, 620=100bp, 710=1bp -->
+  <line x1="170" y1="63" x2="170" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="170" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">10 Mb</text>
+
+  <line x1="260" y1="63" x2="260" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="260" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">1 Mb</text>
+
+  <line x1="350" y1="63" x2="350" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="350" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">100 kb</text>
+
+  <line x1="440" y1="63" x2="440" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="440" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">10 kb</text>
+
+  <line x1="530" y1="63" x2="530" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="530" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">1 kb</text>
+
+  <line x1="620" y1="63" x2="620" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="620" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">100 bp</text>
+
+  <line x1="710" y1="63" x2="710" y2="73" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="710" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">1 bp</text>
+
+  <!-- Grid lines (light) -->
+  <line x1="170" y1="73" x2="170" y2="340" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="260" y1="73" x2="260" y2="340" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="350" y1="73" x2="350" y2="340" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="440" y1="73" x2="440" y2="340" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="530" y1="73" x2="530" y2="340" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="620" y1="73" x2="620" y2="340" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="710" y1="73" x2="710" y2="340" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- Arrow: Large <-- --> Small -->
+  <text x="170" y="82" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#94a3b8" font-style="italic">Large variants</text>
+  <text x="710" y="82" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#94a3b8" font-style="italic">Small variants</text>
+  <line x1="245" y1="79" x2="660" y2="79" stroke="#cbd5e1" stroke-width="0.7"/>
+  <polygon points="245,79 250,76 250,82" fill="#cbd5e1"/>
+  <polygon points="660,79 655,76 655,82" fill="#cbd5e1"/>
+
+  <!-- Row spacing: start at y=105, each row 42px -->
+
+  <!-- 1. Karyotype - purple #7c3aed -->
+  <text x="158" y="107" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">Karyotype</text>
+  <rect x="170" y="95" width="125" height="20" rx="4" fill="#7c3aed" opacity="0.85"/>
+  <rect x="170" y="95" width="125" height="20" rx="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+  <!-- range: ~5-10 Mb (from 170 to ~295) = large structural variants only -->
+  <text x="300" y="109" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#7c3aed">Aneuploidies, large rearrangements (>5-10 Mb)</text>
+
+  <!-- 2. FISH - blue #3b82f6 -->
+  <text x="158" y="149" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#3b82f6">FISH</text>
+  <rect x="260" y="137" width="130" height="20" rx="4" fill="#3b82f6" opacity="0.85"/>
+  <rect x="260" y="137" width="130" height="20" rx="4" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <!-- range: ~100 kb to ~10 Mb -->
+  <text x="396" y="151" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#3b82f6">Targeted: known deletions/duplications (~100 kb-10 Mb)</text>
+
+  <!-- 3. CMA (Microarray) - green #059669 -->
+  <text x="158" y="191" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#059669">CMA</text>
+  <text x="158" y="202" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#059669">(Microarray)</text>
+  <rect x="170" y="179" width="220" height="20" rx="4" fill="#059669" opacity="0.85"/>
+  <rect x="170" y="179" width="220" height="20" rx="4" fill="none" stroke="#059669" stroke-width="1.5"/>
+  <!-- range: ~50 kb to genome-wide -->
+  <text x="396" y="193" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#059669">Genome-wide CNVs, LOH (>50-100 kb resolution)</text>
+
+  <!-- 4. Gene Panel - amber #d97706 -->
+  <text x="158" y="233" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#d97706">Gene Panel</text>
+  <rect x="530" y="221" width="180" height="20" rx="4" fill="#d97706" opacity="0.85"/>
+  <rect x="530" y="221" width="180" height="20" rx="4" fill="none" stroke="#d97706" stroke-width="1.5"/>
+  <!-- range: 1 bp to gene-level, targeted genes -->
+  <text x="524" y="235" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#d97706">SNVs/indels in 50-500 targeted genes</text>
+
+  <!-- 5. WES - orange #ea580c -->
+  <text x="158" y="275" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#ea580c">WES</text>
+  <rect x="440" y="263" width="270" height="20" rx="4" fill="#ea580c" opacity="0.85"/>
+  <rect x="440" y="263" width="270" height="20" rx="4" fill="none" stroke="#ea580c" stroke-width="1.5"/>
+  <!-- range: 1 bp, exons (~1-2% of genome) -->
+  <text x="434" y="277" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#ea580c">SNVs/indels across all exons (~20,000 genes)</text>
+
+  <!-- 6. WGS - red #dc2626 -->
+  <text x="158" y="317" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">WGS</text>
+  <rect x="170" y="305" width="540" height="20" rx="4" fill="#dc2626" opacity="0.85"/>
+  <rect x="170" y="305" width="540" height="20" rx="4" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <!-- range: 1 bp to genome-wide = full bar -->
+  <text x="440" y="319" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="white" font-weight="bold">All variant types: SNVs, indels, CNVs, SVs, repeats, non-coding</text>
+
+  <!-- Variant type brackets at bottom -->
+  <!-- CNVs/SVs bracket on the left -->
+  <line x1="170" y1="348" x2="170" y2="358" stroke="#64748b" stroke-width="1.2"/>
+  <line x1="170" y1="358" x2="350" y2="358" stroke="#64748b" stroke-width="1.2"/>
+  <line x1="350" y1="348" x2="350" y2="358" stroke="#64748b" stroke-width="1.2"/>
+  <text x="260" y="374" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#475569">CNVs / SVs</text>
+  <text x="260" y="387" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#94a3b8">Copy number variants, structural variants</text>
+
+  <!-- SNVs/Indels bracket on the right -->
+  <line x1="530" y1="348" x2="530" y2="358" stroke="#64748b" stroke-width="1.2"/>
+  <line x1="530" y1="358" x2="710" y2="358" stroke="#64748b" stroke-width="1.2"/>
+  <line x1="710" y1="348" x2="710" y2="358" stroke="#64748b" stroke-width="1.2"/>
+  <text x="620" y="374" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#475569">SNVs / Indels</text>
+  <text x="620" y="387" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#94a3b8">Single nucleotide variants, insertions/deletions</text>
+
+  <!-- Connecting area -->
+  <text x="440" y="370" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">+</text>
+
+  <!-- Legend note -->
+  <rect x="20" y="410" width="760" height="30" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="429" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">Bar length indicates the resolution range (variant size) detectable by each test. Wider bars detect larger genomic changes; narrower bars detect finer variants.</text>
+</svg>

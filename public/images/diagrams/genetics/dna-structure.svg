@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="strandBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="strandCyan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrid)" rx="8"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#e2e8f0" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">DNA Double Helix Structure</text>
+
+  <!-- DNA Ladder Diagram (untwisted for clarity) -->
+  <!-- Left strand (blue, 5' to 3' top-to-bottom) -->
+  <rect x="150" y="65" width="28" height="330" rx="14" fill="url(#strandBlue)" opacity="0.85"/>
+  <!-- Right strand (cyan, 3' to 5' top-to-bottom) -->
+  <rect x="422" y="65" width="28" height="330" rx="14" fill="url(#strandCyan)" opacity="0.85"/>
+
+  <!-- 5' and 3' labels for left strand (blue) -->
+  <text x="164" y="58" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">5'</text>
+  <text x="164" y="412" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">3'</text>
+
+  <!-- 3' and 5' labels for right strand (cyan) — antiparallel -->
+  <text x="436" y="58" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#0891b2">3'</text>
+  <text x="436" y="412" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#0891b2">5'</text>
+
+  <!-- Antiparallel arrows -->
+  <!-- Left strand arrow pointing down (5'->3') -->
+  <line x1="140" y1="75" x2="140" y2="385" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#0891b2"/>
+    </marker>
+  </defs>
+  <!-- Right strand arrow pointing up (5'->3') -->
+  <line x1="460" y1="385" x2="460" y2="75" stroke="#0891b2" stroke-width="2" marker-end="url(#arrowCyan)"/>
+
+  <!-- Base pair 1: A-T (y=105) -->
+  <rect x="178" y="92" width="40" height="26" rx="5" fill="#ef4444" opacity="0.9"/>
+  <text x="198" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">A</text>
+  <rect x="382" y="92" width="40" height="26" rx="5" fill="#22c55e" opacity="0.9"/>
+  <text x="402" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">T</text>
+  <!-- 2 H-bonds for A-T -->
+  <line x1="224" y1="101" x2="376" y2="101" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="111" x2="376" y2="111" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Base pair 2: G-C (y=155) -->
+  <rect x="178" y="142" width="40" height="26" rx="5" fill="#eab308" opacity="0.9"/>
+  <text x="198" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">G</text>
+  <rect x="382" y="142" width="40" height="26" rx="5" fill="#8b5cf6" opacity="0.9"/>
+  <text x="402" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">C</text>
+  <!-- 3 H-bonds for G-C -->
+  <line x1="224" y1="149" x2="376" y2="149" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="157" x2="376" y2="157" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="165" x2="376" y2="165" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Base pair 3: T-A (y=205) -->
+  <rect x="178" y="192" width="40" height="26" rx="5" fill="#22c55e" opacity="0.9"/>
+  <text x="198" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">T</text>
+  <rect x="382" y="192" width="40" height="26" rx="5" fill="#ef4444" opacity="0.9"/>
+  <text x="402" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">A</text>
+  <!-- 2 H-bonds for T-A -->
+  <line x1="224" y1="201" x2="376" y2="201" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="211" x2="376" y2="211" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Base pair 4: C-G (y=255) -->
+  <rect x="178" y="242" width="40" height="26" rx="5" fill="#8b5cf6" opacity="0.9"/>
+  <text x="198" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">C</text>
+  <rect x="382" y="242" width="40" height="26" rx="5" fill="#eab308" opacity="0.9"/>
+  <text x="402" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">G</text>
+  <!-- 3 H-bonds for C-G -->
+  <line x1="224" y1="249" x2="376" y2="249" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="257" x2="376" y2="257" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="265" x2="376" y2="265" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Base pair 5: A-T (y=305) -->
+  <rect x="178" y="292" width="40" height="26" rx="5" fill="#ef4444" opacity="0.9"/>
+  <text x="198" y="310" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">A</text>
+  <rect x="382" y="292" width="40" height="26" rx="5" fill="#22c55e" opacity="0.9"/>
+  <text x="402" y="310" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">T</text>
+  <!-- 2 H-bonds for A-T -->
+  <line x1="224" y1="301" x2="376" y2="301" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="311" x2="376" y2="311" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Base pair 6: G-C (y=355) -->
+  <rect x="178" y="342" width="40" height="26" rx="5" fill="#eab308" opacity="0.9"/>
+  <text x="198" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">G</text>
+  <rect x="382" y="342" width="40" height="26" rx="5" fill="#8b5cf6" opacity="0.9"/>
+  <text x="402" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#fff">C</text>
+  <!-- 3 H-bonds for G-C -->
+  <line x1="224" y1="349" x2="376" y2="349" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="357" x2="376" y2="357" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="224" y1="365" x2="376" y2="365" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Annotation: Sugar-phosphate backbone (left) -->
+  <line x1="105" y1="120" x2="148" y2="180" stroke="#475569" stroke-width="1.2"/>
+  <text x="68" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569" font-weight="600">Sugar-phosphate</text>
+  <text x="68" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569" font-weight="600">backbone</text>
+
+  <!-- Annotation: Sugar-phosphate backbone (right) -->
+  <line x1="495" y1="280" x2="452" y2="250" stroke="#475569" stroke-width="1.2"/>
+  <text x="535" y="275" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569" font-weight="600">Sugar-phosphate</text>
+  <text x="535" y="289" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569" font-weight="600">backbone</text>
+
+  <!-- Annotation: Base pairs -->
+  <line x1="300" y1="230" x2="300" y2="215" stroke="#475569" stroke-width="1.2"/>
+  <rect x="260" y="220" width="80" height="22" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="300" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569" font-weight="600">Base pairs</text>
+
+  <!-- Annotation: Hydrogen bonds -->
+  <line x1="320" y1="155" x2="340" y2="140" stroke="#475569" stroke-width="1"/>
+  <text x="340" y="132" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b" font-style="italic">Hydrogen bonds</text>
+
+  <!-- Legend box -->
+  <rect x="570" y="70" width="210" height="150" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="675" y="94" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Legend</text>
+  <line x1="585" y1="102" x2="765" y2="102" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- A-T legend -->
+  <rect x="590" y="112" width="24" height="18" rx="4" fill="#ef4444"/>
+  <text x="602" y="125" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">A</text>
+  <line x1="618" y1="118" x2="642" y2="118" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="618" y1="126" x2="642" y2="126" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <rect x="646" y="112" width="24" height="18" rx="4" fill="#22c55e"/>
+  <text x="658" y="125" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">T</text>
+  <text x="690" y="125" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">2 H-bonds</text>
+
+  <!-- G-C legend -->
+  <rect x="590" y="140" width="24" height="18" rx="4" fill="#eab308"/>
+  <text x="602" y="153" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">G</text>
+  <line x1="618" y1="145" x2="642" y2="145" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="618" y1="151" x2="642" y2="151" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="618" y1="157" x2="642" y2="157" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <rect x="646" y="140" width="24" height="18" rx="4" fill="#8b5cf6"/>
+  <text x="658" y="153" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#fff">C</text>
+  <text x="690" y="153" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">3 H-bonds</text>
+
+  <!-- Strand color legend -->
+  <rect x="590" y="170" width="24" height="10" rx="3" fill="#3b82f6"/>
+  <text x="622" y="179" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569">Leading strand (5' to 3')</text>
+
+  <rect x="590" y="190" width="24" height="10" rx="3" fill="#06b6d4"/>
+  <text x="622" y="199" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569">Complementary strand (3' to 5')</text>
+
+  <!-- Chargaff's rules note -->
+  <rect x="570" y="430" width="210" height="55" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="675" y="449" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1e40af">Chargaff's Rules</text>
+  <text x="675" y="464" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#3b82f6">A pairs with T (2 H-bonds)</text>
+  <text x="675" y="478" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#3b82f6">G pairs with C (3 H-bonds)</text>
+
+  <!-- Helix twist indicators on sides -->
+  <path d="M164,65 Q130,110 164,155 Q198,200 164,245 Q130,290 164,335 Q198,380 164,395" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6,4" opacity="0.4"/>
+  <path d="M436,65 Q470,110 436,155 Q402,200 436,245 Q470,290 436,335 Q402,380 436,395" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Footer note -->
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b" font-style="italic">Diagram shows an untwisted ladder representation for educational clarity. In vivo, DNA forms a right-handed double helix.</text>
+</svg>

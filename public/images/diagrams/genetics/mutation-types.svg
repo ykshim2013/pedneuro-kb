@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+  <defs>
+    <linearGradient id="mtBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="mtShadow" x="-1%" y="-2%" width="102%" height="108%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#94a3b8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="550" fill="url(#mtBg)" rx="8"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Types of Genetic Mutations</text>
+
+  <!-- Column headers -->
+  <text x="60" y="52" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#64748b">Type</text>
+  <text x="195" y="52" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#64748b">DNA Sequence</text>
+  <text x="430" y="52" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#64748b">Codons</text>
+  <text x="610" y="52" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#64748b">Amino Acids</text>
+  <text x="750" y="52" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#64748b">Effect</text>
+  <line x1="20" y1="58" x2="780" y2="58" stroke="#cbd5e1" stroke-width="1"/>
+
+  <!-- ======================== ROW 0: NORMAL REFERENCE ======================== -->
+  <rect x="15" y="62" width="770" height="42" rx="4" fill="#f0fdf4" filter="url(#mtShadow)"/>
+  <rect x="17" y="64" width="4" height="38" rx="2" fill="#22c55e"/>
+
+  <text x="60" y="80" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#166534">Normal</text>
+  <text x="60" y="96" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#166534">(Reference)</text>
+
+  <!-- DNA sequence -->
+  <text x="160" y="88" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#166534">...G A G  C G A  A T G  C T A...</text>
+
+  <!-- Codons -->
+  <rect x="400" y="72" width="38" height="24" rx="4" fill="#bbf7d0"/>
+  <text x="419" y="89" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#166534">GAG</text>
+  <rect x="443" y="72" width="38" height="24" rx="4" fill="#bbf7d0"/>
+  <text x="462" y="89" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#166534">CGA</text>
+  <rect x="486" y="72" width="38" height="24" rx="4" fill="#bbf7d0"/>
+  <text x="505" y="89" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#166534">ATG</text>
+  <rect x="529" y="72" width="38" height="24" rx="4" fill="#bbf7d0"/>
+  <text x="548" y="89" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#166534">CTA</text>
+
+  <!-- Amino acids -->
+  <text x="610" y="88" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#166534">Glu - Arg - Met - Leu</text>
+
+  <!-- Effect -->
+  <text x="750" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#166534">Normal</text>
+
+  <!-- ======================== ROW 1: MISSENSE ======================== -->
+  <rect x="15" y="110" width="770" height="56" rx="4" fill="#ffffff" filter="url(#mtShadow)"/>
+  <rect x="17" y="112" width="4" height="52" rx="2" fill="#f59e0b"/>
+
+  <text x="60" y="134" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#92400e">Missense</text>
+  <text x="60" y="150" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#a16207">Point mutation</text>
+  <text x="60" y="160" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#a16207">1 base changed</text>
+
+  <!-- DNA: GAG -> GTG (A changed to T at position 2) -->
+  <text x="160" y="136" font-family="'Courier New', monospace" font-size="12" fill="#475569">...G</text>
+  <text x="196" y="136" font-family="'Courier New', monospace" font-size="12" fill="#ef4444" font-weight="bold"> T</text>
+  <text x="213" y="136" font-family="'Courier New', monospace" font-size="12" fill="#475569"> G  C G A  A T G  C T A...</text>
+
+  <!-- Red underline for changed base -->
+  <rect x="199" y="139" width="13" height="2" rx="1" fill="#ef4444"/>
+
+  <!-- Codons -->
+  <rect x="400" y="122" width="38" height="24" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="419" y="139" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#92400e">G<tspan fill="#ef4444">T</tspan>G</text>
+  <rect x="443" y="122" width="38" height="24" rx="4" fill="#f0fdf4"/>
+  <text x="462" y="139" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#475569">CGA</text>
+  <rect x="486" y="122" width="38" height="24" rx="4" fill="#f0fdf4"/>
+  <text x="505" y="139" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#475569">ATG</text>
+  <rect x="529" y="122" width="38" height="24" rx="4" fill="#f0fdf4"/>
+  <text x="548" y="139" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#475569">CTA</text>
+
+  <!-- Amino acids -->
+  <text x="610" y="136" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569"><tspan font-weight="bold" fill="#ef4444">Val</tspan> - Arg - Met - Leu</text>
+  <text x="610" y="158" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#ef4444">Glu replaced by Val</text>
+
+  <!-- Effect -->
+  <text x="750" y="134" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#92400e">Altered</text>
+  <text x="750" y="148" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#92400e">protein</text>
+  <text x="750" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#a16207">(e.g., Sickle cell)</text>
+
+  <!-- ======================== ROW 2: NONSENSE ======================== -->
+  <rect x="15" y="172" width="770" height="56" rx="4" fill="#fef2f2" filter="url(#mtShadow)"/>
+  <rect x="17" y="174" width="4" height="52" rx="2" fill="#ef4444"/>
+
+  <text x="60" y="196" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Nonsense</text>
+  <text x="60" y="212" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#b91c1c">Premature stop</text>
+  <text x="60" y="222" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#b91c1c">1 base changed</text>
+
+  <!-- DNA: CGA -> TGA (C changed to T) -->
+  <text x="160" y="198" font-family="'Courier New', monospace" font-size="12" fill="#475569">...G A G </text>
+  <text x="223" y="198" font-family="'Courier New', monospace" font-size="12" fill="#ef4444" font-weight="bold"> T</text>
+  <text x="237" y="198" font-family="'Courier New', monospace" font-size="12" fill="#475569"> G A  A T G  C T A...</text>
+
+  <rect x="226" y="201" width="13" height="2" rx="1" fill="#ef4444"/>
+
+  <!-- Codons -->
+  <rect x="400" y="184" width="38" height="24" rx="4" fill="#f0fdf4"/>
+  <text x="419" y="201" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#475569">GAG</text>
+  <rect x="443" y="184" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="462" y="201" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b"><tspan fill="#ef4444">T</tspan>GA</text>
+  <rect x="486" y="184" width="38" height="24" rx="4" fill="#f5f5f5"/>
+  <text x="505" y="201" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#d4d4d4">---</text>
+  <rect x="529" y="184" width="38" height="24" rx="4" fill="#f5f5f5"/>
+  <text x="548" y="201" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#d4d4d4">---</text>
+
+  <!-- Amino acids -->
+  <text x="610" y="198" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">Glu - <tspan font-weight="bold" fill="#ef4444">STOP</tspan></text>
+  <text x="610" y="218" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#ef4444">Arg replaced by Stop</text>
+
+  <!-- Effect -->
+  <text x="750" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#991b1b">Truncated</text>
+  <text x="750" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#991b1b">protein</text>
+  <text x="750" y="222" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#b91c1c">(Loss of function)</text>
+
+  <!-- ======================== ROW 3: FRAMESHIFT (DELETION) ======================== -->
+  <rect x="15" y="234" width="770" height="56" rx="4" fill="#ffffff" filter="url(#mtShadow)"/>
+  <rect x="17" y="236" width="4" height="52" rx="2" fill="#dc2626"/>
+
+  <text x="60" y="256" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Frameshift</text>
+  <text x="60" y="270" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#b91c1c">(Deletion)</text>
+  <text x="60" y="282" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#b91c1c">1 base deleted</text>
+
+  <!-- DNA: delete the A from GAG -> G_G CGA... becomes GGC GAA TGC TA... -->
+  <text x="160" y="258" font-family="'Courier New', monospace" font-size="12" fill="#475569">...G</text>
+  <text x="178" y="258" font-family="'Courier New', monospace" font-size="12" fill="#ef4444" font-weight="bold"> <tspan text-decoration="line-through">A</tspan></text>
+  <text x="196" y="258" font-family="'Courier New', monospace" font-size="12" fill="#ef4444"> G  C G A  A T G  C T A...</text>
+
+  <!-- Deletion marker -->
+  <text x="184" y="248" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#ef4444" font-weight="bold">X</text>
+
+  <!-- New reading frame codons (shifted) -->
+  <rect x="400" y="244" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="419" y="261" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">GCG</text>
+  <rect x="443" y="244" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="462" y="261" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">AAT</text>
+  <rect x="486" y="244" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="505" y="261" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">GCT</text>
+  <rect x="529" y="244" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="548" y="261" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">A..</text>
+
+  <!-- Amino acids (all wrong) -->
+  <text x="610" y="258" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">Ala - Asn - Ala - ...</text>
+  <text x="610" y="278" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#ef4444">All downstream AAs changed</text>
+
+  <!-- Effect -->
+  <text x="750" y="256" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#991b1b">Garbled</text>
+  <text x="750" y="270" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#991b1b">protein</text>
+  <text x="750" y="282" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#b91c1c">(Usually non-functional)</text>
+
+  <!-- ======================== ROW 4: FRAMESHIFT (INSERTION) ======================== -->
+  <rect x="15" y="296" width="770" height="56" rx="4" fill="#fef2f2" filter="url(#mtShadow)"/>
+  <rect x="17" y="298" width="4" height="52" rx="2" fill="#dc2626"/>
+
+  <text x="60" y="318" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Frameshift</text>
+  <text x="60" y="332" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#b91c1c">(Insertion)</text>
+  <text x="60" y="344" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#b91c1c">1 base inserted</text>
+
+  <!-- DNA: insert T after first G -> GT AG CGA ATG CTA... -->
+  <text x="160" y="320" font-family="'Courier New', monospace" font-size="12" fill="#475569">...G</text>
+  <text x="178" y="320" font-family="'Courier New', monospace" font-size="12" fill="#ef4444" font-weight="bold"> [T]</text>
+  <text x="210" y="320" font-family="'Courier New', monospace" font-size="12" fill="#ef4444"> A G  C G A  A T G  C T...</text>
+
+  <!-- Insertion marker -->
+  <text x="192" y="310" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#ef4444" font-weight="bold">inserted</text>
+
+  <!-- New reading frame codons (shifted) -->
+  <rect x="400" y="306" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="419" y="323" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">GTA</text>
+  <rect x="443" y="306" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="462" y="323" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">GCG</text>
+  <rect x="486" y="306" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="505" y="323" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">AAT</text>
+  <rect x="529" y="306" width="38" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="548" y="323" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#991b1b">GCT</text>
+
+  <!-- Amino acids (all wrong) -->
+  <text x="610" y="320" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">Val - Ala - Asn - Ala</text>
+  <text x="610" y="340" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#ef4444">All downstream AAs changed</text>
+
+  <!-- Effect -->
+  <text x="750" y="318" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#991b1b">Garbled</text>
+  <text x="750" y="332" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#991b1b">protein</text>
+  <text x="750" y="344" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#b91c1c">(Usually non-functional)</text>
+
+  <!-- ======================== ROW 5: SPLICE SITE ======================== -->
+  <rect x="15" y="358" width="770" height="56" rx="4" fill="#ffffff" filter="url(#mtShadow)"/>
+  <rect x="17" y="360" width="4" height="52" rx="2" fill="#7c3aed"/>
+
+  <text x="60" y="380" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6">Splice Site</text>
+  <text x="60" y="394" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#7c3aed">Intron-exon</text>
+  <text x="60" y="404" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#7c3aed">boundary mutation</text>
+
+  <!-- Gene structure showing splice site mutation -->
+  <!-- Exon 1 -->
+  <rect x="160" y="372" width="55" height="24" rx="4" fill="#3b82f6"/>
+  <text x="187" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#fff">Exon 1</text>
+
+  <!-- Intron with mutated GT -->
+  <rect x="220" y="378" width="55" height="12" rx="2" fill="#e2e8f0"/>
+  <text x="247" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#94a3b8">Intron</text>
+
+  <!-- Mutation at splice site -->
+  <rect x="215" y="368" width="16" height="12" rx="2" fill="#ef4444"/>
+  <text x="223" y="377" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="bold" fill="#fff">AT</text>
+  <text x="223" y="365" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#ef4444" font-weight="bold">GT mutated</text>
+
+  <!-- Exon 2 -->
+  <rect x="280" y="372" width="55" height="24" rx="4" fill="#3b82f6"/>
+  <text x="307" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#fff">Exon 2</text>
+
+  <!-- Result: abnormal splicing -->
+  <text x="355" y="383" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569" font-weight="bold">--></text>
+
+  <!-- Abnormal mRNA: intron retained -->
+  <rect x="385" y="372" width="45" height="24" rx="4" fill="#3b82f6"/>
+  <text x="407" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex 1</text>
+  <rect x="432" y="372" width="52" height="24" rx="4" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="458" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#ef4444">Intron</text>
+  <rect x="486" y="372" width="45" height="24" rx="4" fill="#3b82f6"/>
+  <text x="508" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex 2</text>
+
+  <!-- Amino acids -->
+  <text x="610" y="384" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#7c3aed">Intron retained in mRNA</text>
+  <text x="610" y="402" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#7c3aed">or exon skipped</text>
+
+  <!-- Effect -->
+  <text x="750" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#5b21b6">Abnormal</text>
+  <text x="750" y="394" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#5b21b6">splicing</text>
+  <text x="750" y="406" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#7c3aed">(Aberrant protein)</text>
+
+  <!-- ======================== ROW 6: CNV (DELETION) ======================== -->
+  <rect x="15" y="420" width="770" height="56" rx="4" fill="#fef2f2" filter="url(#mtShadow)"/>
+  <rect x="17" y="422" width="4" height="52" rx="2" fill="#9333ea"/>
+
+  <text x="60" y="442" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#581c87">CNV</text>
+  <text x="60" y="456" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#7e22ce">(Large deletion)</text>
+  <text x="60" y="466" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#7e22ce">Whole exon(s) lost</text>
+
+  <!-- Normal gene: 4 exons -->
+  <rect x="160" y="432" width="35" height="22" rx="3" fill="#3b82f6"/>
+  <text x="177" y="447" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex1</text>
+  <line x1="197" y1="443" x2="215" y2="443" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="217" y="432" width="35" height="22" rx="3" fill="#3b82f6"/>
+  <text x="234" y="447" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex2</text>
+  <line x1="254" y1="443" x2="272" y2="443" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="274" y="432" width="35" height="22" rx="3" fill="#3b82f6"/>
+  <text x="291" y="447" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex3</text>
+  <line x1="311" y1="443" x2="329" y2="443" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="331" y="432" width="35" height="22" rx="3" fill="#3b82f6"/>
+  <text x="348" y="447" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex4</text>
+
+  <text x="382" y="447" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#475569" font-weight="bold">--></text>
+
+  <!-- Deleted gene: exons 2-3 missing -->
+  <rect x="415" y="432" width="35" height="22" rx="3" fill="#3b82f6"/>
+  <text x="432" y="447" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex1</text>
+
+  <!-- Deletion gap -->
+  <rect x="455" y="436" width="70" height="14" rx="3" fill="#fecaca" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="490" y="447" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#ef4444">DELETED</text>
+
+  <rect x="530" y="432" width="35" height="22" rx="3" fill="#3b82f6"/>
+  <text x="547" y="447" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="bold" fill="#fff">Ex4</text>
+
+  <!-- Bracket showing deleted region -->
+  <path d="M455,460 L455,466 L525,466 L525,460" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="490" y="476" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#ef4444" font-weight="bold">Exons 2-3 deleted</text>
+
+  <!-- Amino acids -->
+  <text x="610" y="444" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#7e22ce">Large segment of protein</text>
+  <text x="610" y="462" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#7e22ce">missing entirely</text>
+
+  <!-- Effect -->
+  <text x="750" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#581c87">Shortened</text>
+  <text x="750" y="454" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#581c87">or absent</text>
+  <text x="750" y="466" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#7e22ce">(e.g., DMD)</text>
+
+  <!-- ======================== LEGEND ======================== -->
+  <rect x="15" y="490" width="770" height="48" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="35" y="510" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Key:</text>
+
+  <rect x="70" y="500" width="14" height="14" rx="3" fill="#22c55e"/>
+  <text x="90" y="512" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#475569">Normal sequence</text>
+
+  <rect x="195" y="500" width="14" height="14" rx="3" fill="#ef4444"/>
+  <text x="215" y="512" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#475569">Mutated base/region</text>
+
+  <rect x="345" y="500" width="14" height="14" rx="3" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  <text x="365" y="512" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#475569">Altered codon/reading frame</text>
+
+  <rect x="540" y="500" width="14" height="14" rx="3" fill="#3b82f6"/>
+  <text x="560" y="512" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#475569">Exon</text>
+
+  <text x="35" y="530" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#94a3b8" font-style="italic">CNV = Copy Number Variation; DMD = Duchenne Muscular Dystrophy. Amino acid abbreviations use standard 3-letter codes.</text>
+</svg>

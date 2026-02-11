@@ -46,6 +46,8 @@ references:
     pmid: "35184282"
 ---
 
+import ImageViewer from '../../../components/ImageViewer.astro';
+
 ## Molecular Biology Fundamentals
 
 Understanding genetic testing in clinical practice requires foundational knowledge of molecular biology, from DNA structure to protein function.
@@ -60,17 +62,24 @@ DNA (deoxyribonucleic acid) is the hereditary material that encodes all genetic 
 | **Sugar** | Deoxyribose |
 | **Bases** | Adenine (A), Thymine (T), Guanine (G), Cytosine (C) |
 | **Base pairing** | A-T (2 hydrogen bonds), G-C (3 hydrogen bonds) |
-| **Direction** | 5' → 3' (each strand) |
+| **Direction** | 5' to 3' (each strand) |
 | **Human genome** | ~3.2 billion base pairs, ~20,000 protein-coding genes |
 | **Chromosomes** | 23 pairs (22 autosomes + 1 sex chromosome pair) |
+
+<ImageViewer
+  src="/images/diagrams/genetics/dna-structure.svg"
+  alt="DNA double helix structure showing base pairing, antiparallel strands, and sugar-phosphate backbone"
+  caption="DNA double helix: A-T pairs with 2 hydrogen bonds, G-C pairs with 3 hydrogen bonds. Strands run antiparallel (5'→3')."
+  type="diagram"
+/>
 
 ### Central Dogma: DNA → RNA → Protein
 
 The flow of genetic information follows a defined pathway:
 
 **1. Transcription (DNA → RNA)**
-- RNA polymerase reads the template DNA strand (3' → 5')
-- Synthesizes messenger RNA (mRNA) in the 5' → 3' direction
+- RNA polymerase reads the template DNA strand (3' to 5')
+- Synthesizes messenger RNA (mRNA) in the 5' to 3' direction
 - RNA uses uracil (U) instead of thymine (T)
 - Pre-mRNA undergoes splicing to remove introns and join exons
 
@@ -82,6 +91,13 @@ The flow of genetic information follows a defined pathway:
 - Transfer RNA (tRNA) delivers amino acids based on codon-anticodon pairing
 - Amino acid chain folds into a functional protein
 
+<ImageViewer
+  src="/images/diagrams/genetics/central-dogma.svg"
+  alt="Central dogma of molecular biology: DNA transcription to mRNA, translation to protein"
+  caption="Central Dogma: DNA is transcribed to mRNA (replacing T with U), then translated into protein by ribosomes reading triplet codons."
+  type="diagram"
+/>
+
 ### Gene Structure
 
 | Element | Description | Clinical Relevance |
@@ -92,6 +108,13 @@ The flow of genetic information follows a defined pathway:
 | **5' UTR** | Untranslated region before start codon | Regulatory; can affect translation efficiency |
 | **3' UTR** | Untranslated region after stop codon | mRNA stability, microRNA binding sites |
 | **Enhancers** | Distal regulatory elements | Can be thousands of bases from gene; mutations detectable by WGS |
+
+<ImageViewer
+  src="/images/diagrams/genetics/gene-structure.svg"
+  alt="Gene structure showing promoter, UTRs, exons, introns, and the process from DNA to mRNA to protein"
+  caption="Gene structure: Exons (coding) are joined during splicing to form mature mRNA. Introns are removed. Only ~1-2% of the genome codes for protein."
+  type="diagram"
+/>
 
 ### Types of Mutations
 
@@ -107,6 +130,13 @@ The flow of genetic information follows a defined pathway:
 | **Structural variant** | Large rearrangements (inversions, translocations) | Ring chromosome 20 — epilepsy |
 
 > **Clinical Pearl**: The type of mutation often predicts severity. In dystrophinopathies, out-of-frame deletions cause severe Duchenne MD, while in-frame deletions cause milder Becker MD — the "reading frame rule."
+
+<ImageViewer
+  src="/images/diagrams/genetics/mutation-types.svg"
+  alt="Types of genetic mutations: missense, nonsense, frameshift, splice site, CNV with visual examples"
+  caption="Mutation types and their effects on protein: missense changes one amino acid, nonsense creates a premature stop, frameshift disrupts the entire downstream reading frame."
+  type="diagram"
+/>
 
 ## Chromosomal Analysis Methods
 
@@ -157,7 +187,7 @@ CMA is the **first-tier** genetic test recommended by ACMG for children with dev
 - Cannot detect balanced translocations or inversions
 - Cannot detect point mutations (single nucleotide changes)
 - Cannot detect trinucleotide repeat expansions
-- Low-level mosaicism may be missed (<20-30%)
+- Low-level mosaicism may be missed (&lt;20-30%)
 
 **Clinically significant CNVs in epilepsy:**
 
@@ -168,6 +198,13 @@ CMA is the **first-tier** genetic test recommended by ACMG for children with dev
 | 16p13.11 deletion | — | Generalized epilepsy, intellectual disability |
 | 1q21.1 deletion | — | Variable, developmental delay |
 | 22q11.2 deletion | DiGeorge/VCFS | Seizures in ~7% |
+
+<ImageViewer
+  src="/images/diagrams/genetics/testing-resolution.svg"
+  alt="Comparison of genetic testing resolution: karyotype, FISH, CMA, gene panel, WES, WGS"
+  caption="Genetic testing resolution comparison: Karyotype detects changes &gt;5 Mb, CMA detects CNVs &gt;50 kb, while WES and WGS detect single-base changes."
+  type="diagram"
+/>
 
 ## Next-Generation Sequencing (NGS)
 
@@ -273,6 +310,13 @@ WES is now considered a first- or second-tier test for children with suspected g
 | **Cost** | $300-500 | $500-1,500 | $500-2,000 | $2,000-5,000 | $3,000-6,000 |
 | **Turnaround** | 1-2 wk | 2-4 wk | 4-8 wk | 8-16 wk | 8-16 wk |
 
+<ImageViewer
+  src="/images/diagrams/genetics/ngs-comparison.svg"
+  alt="Next-generation sequencing comparison: gene panel vs WES vs WGS genome coverage and features"
+  caption="NGS coverage comparison: Gene panels target specific genes, WES covers all exons (~1-2% of genome), WGS covers the entire genome including non-coding regions."
+  type="diagram"
+/>
+
 ## Variant Interpretation
 
 ### ACMG/AMP Five-Tier Classification
@@ -282,12 +326,19 @@ The American College of Medical Genetics and Genomics (ACMG) and Association for
 | Class | Interpretation | Clinical Action |
 |-------|---------------|----------------|
 | **Pathogenic** | Disease-causing | Act on this finding |
-| **Likely Pathogenic** | >90% probability of being disease-causing | Act on this finding (with appropriate caveats) |
+| **Likely Pathogenic** | &gt;90% probability of being disease-causing | Act on this finding (with appropriate caveats) |
 | **Variant of Uncertain Significance (VUS)** | Insufficient evidence | Do NOT act on this finding; may reclassify over time |
-| **Likely Benign** | >90% probability of being benign | No clinical action |
+| **Likely Benign** | &gt;90% probability of being benign | No clinical action |
 | **Benign** | Not disease-causing | No clinical action |
 
 > **Critical Principle**: A VUS should **never** be used for clinical decision-making. It means "we don't know yet." Approximately 10-30% of VUS are reclassified over time — families should be counseled about periodic reinterpretation.
+
+<ImageViewer
+  src="/images/diagrams/genetics/acmg-classification.svg"
+  alt="ACMG/AMP five-tier variant classification: pathogenic, likely pathogenic, VUS, likely benign, benign"
+  caption="ACMG/AMP 5-tier variant classification (Richards et al., 2015). VUS should NEVER drive clinical decisions — approximately 10-30% are reclassified over time."
+  type="diagram"
+/>
 
 ### Key Evidence Types for Variant Classification
 
@@ -318,7 +369,7 @@ The American College of Medical Genetics and Genomics (ACMG) and Association for
 |-----------|----------------------|
 | Developmental delay / intellectual disability | CMA (first-tier) |
 | Autism spectrum disorder | CMA + Fragile X |
-| Epilepsy onset < 2 years | Epilepsy gene panel or WES |
+| Epilepsy onset &lt; 2 years | Epilepsy gene panel or WES |
 | Drug-resistant epilepsy (≥2 ASMs failed) | WES (trio preferred) |
 | DEE phenotype | WES (trio preferred) |
 | Neuromuscular disease | Specific gene panel or WES |
@@ -344,11 +395,18 @@ The American College of Medical Genetics and Genomics (ACMG) and Association for
 - Mitochondrial genome sequencing → mitochondrial disease
 - Functional studies → variant characterization
 
+<ImageViewer
+  src="/images/diagrams/genetics/testing-algorithm.svg"
+  alt="Stepwise genetic testing algorithm flowchart: CMA then gene panel or WES then WGS"
+  caption="Clinical genetic testing algorithm: Stepwise approach from CMA (first-tier) through WES/gene panel to WGS, with diagnostic yields at each step."
+  type="diagram"
+/>
+
 ### Practical Considerations
 
 | Factor | Details |
 |--------|---------|
-| **Turnaround time** | Gene panel (4-8 wk) < CMA (2-4 wk) < WES (8-16 wk) < WGS (8-16 wk); Rapid WGS: 24-48 hrs |
+| **Turnaround time** | Gene panel (4-8 wk) &lt; CMA (2-4 wk) &lt; WES (8-16 wk) &lt; WGS (8-16 wk); Rapid WGS: 24-48 hrs |
 | **Insurance coverage** | CMA widely covered; WES/WGS coverage improving but variable |
 | **Genetic counseling** | Essential before and after testing — informed consent, incidental findings management |
 | **Re-analysis** | WES/WGS data can be re-analyzed as new gene discoveries are made (every 1-2 years) |

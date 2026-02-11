@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <defs>
+    <linearGradient id="cdBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="dnaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="rnaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="protGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <filter id="shadow1" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#94a3b8" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="url(#cdBg)" rx="8"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Central Dogma of Molecular Biology</text>
+
+  <!-- ======================== DNA BOX ======================== -->
+  <rect x="30" y="55" width="200" height="150" rx="12" fill="url(#dnaGrad)" filter="url(#shadow1)"/>
+  <!-- Double helix icon -->
+  <path d="M80,75 Q95,85 110,75 Q125,65 140,75" fill="none" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M80,82 Q95,72 110,82 Q125,92 140,82" fill="none" stroke="#bfdbfe" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Rungs -->
+  <line x1="88" y1="75" x2="88" y2="82" stroke="#dbeafe" stroke-width="1.5" opacity="0.7"/>
+  <line x1="100" y1="78" x2="100" y2="79" stroke="#dbeafe" stroke-width="1.5" opacity="0.7"/>
+  <line x1="110" y1="75" x2="110" y2="82" stroke="#dbeafe" stroke-width="1.5" opacity="0.7"/>
+  <line x1="120" y1="78" x2="120" y2="79" stroke="#dbeafe" stroke-width="1.5" opacity="0.7"/>
+  <line x1="132" y1="75" x2="132" y2="82" stroke="#dbeafe" stroke-width="1.5" opacity="0.7"/>
+
+  <text x="130" y="105" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">DNA</text>
+  <text x="130" y="125" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#bfdbfe">Double-stranded</text>
+
+  <!-- Sequence display -->
+  <rect x="50" y="138" width="160" height="26" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="130" y="156" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#dbeafe">5'-A T G C G A T C-3'</text>
+  <text x="130" y="175" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#dbeafe">3'-T A C G C T A G-5'</text>
+
+  <!-- Bases label -->
+  <text x="130" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#93c5fd">Contains: A, T, G, C</text>
+
+  <!-- ======================== ARROW 1: Transcription ======================== -->
+  <line x1="235" y1="130" x2="285" y2="130" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrowGray)"/>
+  <rect x="237" y="95" width="56" height="28" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="265" y="106" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#475569" font-weight="600">RNA</text>
+  <text x="265" y="117" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#475569" font-weight="600">Polymerase</text>
+  <text x="265" y="148" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#475569">Transcription</text>
+
+  <!-- ======================== mRNA BOX ======================== -->
+  <rect x="300" y="55" width="200" height="150" rx="12" fill="url(#rnaGrad)" filter="url(#shadow1)"/>
+  <!-- Single strand icon -->
+  <path d="M350,78 Q365,68 380,78 Q395,88 410,78 Q425,68 440,78" fill="none" stroke="#a7f3d0" stroke-width="2.5" stroke-linecap="round"/>
+
+  <text x="400" y="105" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">mRNA</text>
+  <text x="400" y="125" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#a7f3d0">Single-stranded</text>
+
+  <!-- Sequence display -->
+  <rect x="320" y="138" width="160" height="26" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="400" y="156" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#d1fae5">5'-A U G C G A U C-3'</text>
+
+  <!-- Highlight U -->
+  <text x="400" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#a7f3d0">Contains: A, U, G, C</text>
+  <rect x="340" y="181" width="120" height="18" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="400" y="194" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">T (thymine) replaced by U (uracil)</text>
+
+  <!-- ======================== ARROW 2: Translation ======================== -->
+  <line x1="505" y1="130" x2="555" y2="130" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrowGray)"/>
+  <rect x="509" y="95" width="48" height="28" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="533" y="112" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#475569" font-weight="600">Ribosome</text>
+  <text x="533" y="148" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#475569">Translation</text>
+
+  <!-- ======================== PROTEIN BOX ======================== -->
+  <rect x="570" y="55" width="200" height="150" rx="12" fill="url(#protGrad)" filter="url(#shadow1)"/>
+  <!-- Folded protein icon -->
+  <path d="M620,78 C630,65 645,90 655,72 C665,55 680,85 690,72 C700,60 715,80 730,75" fill="none" stroke="#c4b5fd" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="670" y="105" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">Protein</text>
+  <text x="670" y="125" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#c4b5fd">Polypeptide chain</text>
+
+  <!-- Sequence display -->
+  <rect x="590" y="138" width="160" height="26" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="670" y="156" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#ede9fe">Met - Arg - Ile ...</text>
+
+  <text x="670" y="180" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#c4b5fd">20 amino acids</text>
+  <text x="670" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#c4b5fd">Folds into 3D structure</text>
+
+  <!-- ======================== SPLICING NOTE ======================== -->
+  <rect x="120" y="225" width="560" height="48" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1"/>
+  <text x="400" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#92400e">Pre-mRNA Processing (between Transcription and Translation)</text>
+  <text x="400" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#a16207">Introns (non-coding) are removed and exons (coding) are joined together (splicing). 5' cap and 3' poly-A tail are added.</text>
+
+  <!-- ======================== REPLICATION NOTE ======================== -->
+  <!-- Curved arrow from DNA back to itself -->
+  <path d="M130,55 Q130,20 80,20 Q30,20 30,55" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowGray)"/>
+  <text x="80" y="14" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b" font-weight="600">Replication</text>
+
+  <!-- ======================== CODON TABLE MINI ======================== -->
+  <rect x="120" y="283" width="560" height="52" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="400" y="301" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#166534">Codon Reading (3 nucleotides = 1 amino acid)</text>
+  <text x="400" y="320" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#15803d">
+    AUG = Met (Start)  |  CGU = Arg  |  AUC = Ile  |  UAA/UAG/UGA = Stop
+  </text>
+
+  <!-- Footer -->
+  <text x="400" y="345" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8" font-style="italic">Information flows from DNA to RNA to Protein (Francis Crick, 1958)</text>
+</svg>
