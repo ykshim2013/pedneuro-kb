@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --color-primary: #1e40af;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1e3a8a;
+  --color-accent: #0891b2;
+  --color-surface: #f8fafc;
+  --color-surface-dark: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+}
+
+/* Medical image viewer */
+.image-viewer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #000;
+}
+
+.image-viewer img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-viewer:hover img {
+  cursor: zoom-in;
+}
+
+/* Article content styling */
+.article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #334155;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.article-content ul li {
+  list-style-type: disc;
+}
+
+.article-content ol li {
+  list-style-type: decimal;
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.article-content th {
+  background-color: #1e40af;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.article-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.article-content tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.article-content blockquote {
+  border-left: 4px solid #1e40af;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background-color: #eff6ff;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.article-content blockquote p {
+  color: #1e40af;
+  margin-bottom: 0;
+}
+
+.article-content code {
+  background-color: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Difficulty badges */
+.badge-basic {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-intermediate {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-advanced {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+/* Search highlight */
+mark {
+  background-color: #fef08a;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.125rem;
+}

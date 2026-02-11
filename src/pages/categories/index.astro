@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import { categories } from '../../lib/categories';
+import { getCollection } from 'astro:content';
+
+const allArticles = await getCollection('articles');
+
+const articleCountByCategory = categories.map(cat => ({
+  ...cat,
+  articleCount: allArticles.filter(a => a.data.category === cat.id).length,
+}));
+---
+
+<BaseLayout title="All Categories">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-slate-900">All Categories</h1>
+      <p class="text-slate-500 mt-2">Browse pediatric neurology topics by subspecialty area</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {articleCountByCategory.map(cat => (
+        <CategoryCard
+          id={cat.id}
+          name={cat.name}
+          description={cat.description}
+          icon={cat.icon}
+          color={cat.color}
+          articleCount={cat.articleCount}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

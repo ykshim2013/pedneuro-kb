@@ -1,0 +1,139 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import ImageViewer from '../components/ImageViewer.astro';
+import { getCategoryById } from '../lib/categories';
+
+const { frontmatter } = Astro.props;
+const category = getCategoryById(frontmatter.category);
+
+const difficultyClass = {
+  basic: 'badge-basic',
+  intermediate: 'badge-intermediate',
+  advanced: 'badge-advanced',
+}[frontmatter.difficulty] || 'badge-basic';
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="mb-6 text-sm">
+      <ol class="flex items-center gap-2 text-slate-500">
+        <li><a href="/" class="hover:text-blue-600 transition-colors">Home</a></li>
+        <li>/</li>
+        <li>
+          <a href={`/categories/${frontmatter.category}`} class="hover:text-blue-600 transition-colors">
+            {category?.name || frontmatter.category}
+          </a>
+        </li>
+        <li>/</li>
+        <li class="text-slate-800 font-medium">{frontmatter.title}</li>
+      </ol>
+    </nav>
+
+    <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+      <!-- Main content -->
+      <article class="lg:col-span-3">
+        <!-- Article header -->
+        <header class="mb-8">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class={`px-3 py-1 rounded-full text-xs font-semibold ${difficultyClass}`}>
+              {frontmatter.difficulty}
+            </span>
+            {category && (
+              <a
+                href={`/categories/${frontmatter.category}`}
+                class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors"
+              >
+                {category.icon} {category.name}
+              </a>
+            )}
+            {frontmatter.subcategory && (
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">
+                {frontmatter.subcategory}
+              </span>
+            )}
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            {frontmatter.title}
+          </h1>
+
+          <p class="text-lg text-slate-600 mb-4">{frontmatter.description}</p>
+
+          <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500">
+            {frontmatter.author && (
+              <span>By {frontmatter.author}</span>
+            )}
+            <span>Updated: {frontmatter.lastUpdated}</span>
+          </div>
+
+          {frontmatter.tags && (
+            <div class="flex flex-wrap gap-2 mt-4">
+              {frontmatter.tags.map((tag: string) => (
+                <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </header>
+
+        <!-- Featured Image -->
+        {frontmatter.featuredImage && (
+          <ImageViewer
+            src={frontmatter.featuredImage}
+            alt={frontmatter.title}
+            caption={`${frontmatter.title} - Featured Image`}
+          />
+        )}
+
+        <!-- Article body -->
+        <div class="article-content bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+          <slot />
+        </div>
+
+        <!-- References -->
+        {frontmatter.references && frontmatter.references.length > 0 && (
+          <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <h2 class="text-xl font-bold text-slate-900 mb-4">References</h2>
+            <ol class="space-y-3">
+              {frontmatter.references.map((ref: any, i: number) => (
+                <li class="text-sm text-slate-600 leading-relaxed">
+                  <span class="font-semibold text-slate-800">{i + 1}.</span>{' '}
+                  {ref.authors}. {ref.title}.{' '}
+                  <em>{ref.journal}</em>. {ref.year}.
+                  {ref.doi && (
+                    <a
+                      href={`https://doi.org/${ref.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-blue-600 hover:underline ml-1"
+                    >
+                      DOI: {ref.doi}
+                    </a>
+                  )}
+                  {ref.pmid && (
+                    <a
+                      href={`https://pubmed.ncbi.nlm.nih.gov/${ref.pmid}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-blue-600 hover:underline ml-1"
+                    >
+                      PMID: {ref.pmid}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="hidden lg:block lg:col-span-1">
+        <Sidebar currentCategory={frontmatter.category} />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

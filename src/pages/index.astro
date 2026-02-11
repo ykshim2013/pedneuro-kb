@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { categories } from '../lib/categories';
+import { getCollection } from 'astro:content';
+
+const allArticles = await getCollection('articles');
+
+const articleCountByCategory = categories.map(cat => ({
+  ...cat,
+  articleCount: allArticles.filter(a => a.data.category === cat.id).length,
+}));
+
+const recentArticles = allArticles
+  .sort((a, b) => new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime())
+  .slice(0, 6);
+
+const totalArticles = allArticles.length;
+const totalCategories = categories.length;
+---
+
+<BaseLayout title="Home">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-800 via-blue-700 to-cyan-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          Clinical Knowledge Database
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 leading-tight">
+          Pediatric Neurology<br />
+          <span class="text-cyan-300">Knowledge Base</span>
+        </h1>
+        <p class="text-lg text-blue-100 mb-8 leading-relaxed">
+          A comprehensive, structured clinical reference for pediatric neurological disorders.
+          Covering {totalCategories} major categories with evidence-based content, medical imaging, and clinical guidelines.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/search"
+            class="w-full sm:w-auto px-8 py-3 bg-white text-blue-800 rounded-xl font-semibold hover:bg-blue-50 transition-colors shadow-lg"
+          >
+            Search Articles
+          </a>
+          <a
+            href="/categories"
+            class="w-full sm:w-auto px-8 py-3 bg-white/10 backdrop-blur-sm text-white rounded-xl font-semibold hover:bg-white/20 transition-colors border border-white/20"
+          >
+            Browse Categories
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto mt-12">
+        <div class="text-center">
+          <div class="text-3xl font-bold">{totalArticles}</div>
+          <div class="text-sm text-blue-200">Articles</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold">{totalCategories}</div>
+          <div class="text-sm text-blue-200">Categories</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold">5</div>
+          <div class="text-sm text-blue-200">Image Types</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">Categories</h2>
+        <p class="text-slate-500 mt-1">Browse by subspecialty area</p>
+      </div>
+      <a href="/categories" class="text-sm text-blue-600 hover:text-blue-800 font-medium">
+        View all &rarr;
+      </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {articleCountByCategory.map(cat => (
+        <CategoryCard
+          id={cat.id}
+          name={cat.name}
+          description={cat.description}
+          icon={cat.icon}
+          color={cat.color}
+          articleCount={cat.articleCount}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Recent Articles -->
+  {recentArticles.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Recent Articles</h2>
+          <p class="text-slate-500 mt-1">Latest additions and updates</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {recentArticles.map(article => (
+          <ArticleCard
+            title={article.data.title}
+            description={article.data.description}
+            category={article.data.category}
+            difficulty={article.data.difficulty}
+            tags={article.data.tags}
+            lastUpdated={article.data.lastUpdated}
+            slug={article.id}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

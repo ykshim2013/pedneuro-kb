@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { categories } from '../lib/categories';
+import { getCollection } from 'astro:content';
+
+const allArticles = await getCollection('articles');
+
+// Prepare search data for client-side
+const searchData = allArticles.map(article => ({
+  title: article.data.title,
+  description: article.data.description,
+  category: article.data.category,
+  difficulty: article.data.difficulty,
+  tags: article.data.tags,
+  lastUpdated: article.data.lastUpdated,
+  slug: article.id,
+  subcategory: article.data.subcategory || '',
+}));
+---
+
+<BaseLayout title="Search">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-slate-900 mb-4">Search Knowledge Base</h1>
+      <p class="text-slate-500">Search across {allArticles.length} articles in {categories.length} categories</p>
+    </div>
+
+    <!-- Search input -->
+    <div class="relative max-w-2xl mx-auto mb-6">
+      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search by title, description, tags..."
+        class="w-full pl-12 pr-4 py-4 bg-white border border-slate-300 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+        autofocus
+      />
+    </div>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap items-center gap-3 max-w-2xl mx-auto mb-8">
+      <label class="text-sm text-slate-600 font-medium">Filter:</label>
+      <select id="category-filter" class="px-3 py-1.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">All Categories</option>
+        {categories.map(cat => (
+          <option value={cat.id}>{cat.icon} {cat.name}</option>
+        ))}
+      </select>
+      <select id="difficulty-filter" class="px-3 py-1.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">All Levels</option>
+        <option value="basic">Basic</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    </div>
+
+    <!-- Results -->
+    <div id="results-count" class="text-sm text-slate-500 mb-4 hidden"></div>
+
+    <div id="search-results" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {allArticles.map(article => (
+        <div
+          class="search-item"
+          data-title={article.data.title.toLowerCase()}
+          data-description={article.data.description.toLowerCase()}
+          data-category={article.data.category}
+          data-difficulty={article.data.difficulty}
+          data-tags={article.data.tags.join(' ').toLowerCase()}
+        >
+          <ArticleCard
+            title={article.data.title}
+            description={article.data.description}
+            category={article.data.category}
+            difficulty={article.data.difficulty}
+            tags={article.data.tags}
+            lastUpdated={article.data.lastUpdated}
+            slug={article.id}
+          />
+        </div>
+      ))}
+    </div>
+
+    <div id="no-results" class="hidden text-center py-16">
+      <div class="text-4xl mb-4">🔍</div>
+      <h3 class="text-lg font-semibold text-slate-700 mb-2">No results found</h3>
+      <p class="text-slate-500">Try adjusting your search terms or filters</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+  const difficultyFilter = document.getElementById('difficulty-filter') as HTMLSelectElement;
+  const resultsCount = document.getElementById('results-count')!;
+  const noResults = document.getElementById('no-results')!;
+  const items = document.querySelectorAll('.search-item');
+
+  function filterResults() {
+    const query = searchInput.value.toLowerCase().trim();
+    const category = categoryFilter.value;
+    const difficulty = difficultyFilter.value;
+    let visible = 0;
+
+    items.forEach(item => {
+      const el = item as HTMLElement;
+      const title = el.dataset.title || '';
+      const description = el.dataset.description || '';
+      const tags = el.dataset.tags || '';
+      const itemCategory = el.dataset.category || '';
+      const itemDifficulty = el.dataset.difficulty || '';
+
+      const matchesSearch = !query || title.includes(query) || description.includes(query) || tags.includes(query);
+      const matchesCategory = !category || itemCategory === category;
+      const matchesDifficulty = !difficulty || itemDifficulty === difficulty;
+
+      if (matchesSearch && matchesCategory && matchesDifficulty) {
+        el.classList.remove('hidden');
+        visible++;
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+
+    if (query || category || difficulty) {
+      resultsCount.textContent = `${visible} result${visible !== 1 ? 's' : ''} found`;
+      resultsCount.classList.remove('hidden');
+    } else {
+      resultsCount.classList.add('hidden');
+    }
+
+    noResults.classList.toggle('hidden', visible > 0 || items.length === 0);
+  }
+
+  searchInput.addEventListener('input', filterResults);
+  categoryFilter.addEventListener('change', filterResults);
+  difficultyFilter.addEventListener('change', filterResults);
+
+  // Keyboard shortcut: Cmd/Ctrl + K
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+    }
+  });
+</script>

@@ -1,0 +1,93 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+          <span class="text-white font-bold text-lg">PN</span>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold text-slate-900 leading-tight">PedNeuro</h1>
+          <p class="text-xs text-slate-500 leading-tight">Knowledge Base</p>
+        </div>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-1">
+        <a
+          href="/"
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
+            currentPath === '/' ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
+          ]}
+        >
+          Home
+        </a>
+        <a
+          href="/categories"
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
+            currentPath.startsWith('/categories') ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
+          ]}
+        >
+          Categories
+        </a>
+        <a
+          href="/search"
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
+            currentPath === '/search' ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
+          ]}
+        >
+          Search
+        </a>
+      </nav>
+
+      <!-- Search bar -->
+      <div class="hidden sm:flex items-center">
+        <a
+          href="/search"
+          class="flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-lg text-sm text-slate-500 hover:bg-slate-200 transition-colors w-64"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Search articles...
+          <kbd class="ml-auto px-1.5 py-0.5 text-xs bg-white rounded border border-slate-300 text-slate-400">⌘K</kbd>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+    <nav class="px-4 py-3 space-y-1">
+      <a href="/" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Home</a>
+      <a href="/categories" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Categories</a>
+      <a href="/search" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Search</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

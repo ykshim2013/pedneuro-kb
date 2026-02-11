@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { categories, getCategoryById } from '../../lib/categories';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return categories.map(cat => ({
+    params: { category: cat.id },
+  }));
+}
+
+const { category: categoryId } = Astro.params;
+const category = getCategoryById(categoryId!);
+
+if (!category) {
+  return Astro.redirect('/categories');
+}
+
+const allArticles = await getCollection('articles');
+const categoryArticles = allArticles
+  .filter(a => a.data.category === categoryId)
+  .sort((a, b) => new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime());
+
+// Group by difficulty
+const basicArticles = categoryArticles.filter(a => a.data.difficulty === 'basic');
+const intermediateArticles = categoryArticles.filter(a => a.data.difficulty === 'intermediate');
+const advancedArticles = categoryArticles.filter(a => a.data.difficulty === 'advanced');
+---
+
+<BaseLayout title={category.name}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="mb-6 text-sm">
+      <ol class="flex items-center gap-2 text-slate-500">
+        <li><a href="/" class="hover:text-blue-600 transition-colors">Home</a></li>
+        <li>/</li>
+        <li><a href="/categories" class="hover:text-blue-600 transition-colors">Categories</a></li>
+        <li>/</li>
+        <li class="text-slate-800 font-medium">{category.name}</li>
+      </ol>
+    </nav>
+
+    <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+      <div class="lg:col-span-3">
+        <!-- Category Header -->
+        <div class={`bg-gradient-to-br ${category.color} text-white rounded-2xl p-8 mb-8`}>
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-5xl">{category.icon}</span>
+            <div>
+              <h1 class="text-3xl font-bold">{category.name}</h1>
+              <p class="text-white/80 mt-1">{categoryArticles.length} articles</p>
+            </div>
+          </div>
+          <p class="text-white/90 text-lg">{category.description}</p>
+        </div>
+
+        {categoryArticles.length === 0 ? (
+          <div class="text-center py-16 bg-white rounded-xl border border-slate-200">
+            <div class="text-4xl mb-4">📝</div>
+            <h3 class="text-lg font-semibold text-slate-700 mb-2">No articles yet</h3>
+            <p class="text-slate-500">Articles for this category are coming soon.</p>
+          </div>
+        ) : (
+          <div class="space-y-8">
+            {basicArticles.length > 0 && (
+              <div>
+                <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                  Basic Level
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {basicArticles.map(article => (
+                    <ArticleCard
+                      title={article.data.title}
+                      description={article.data.description}
+                      category={article.data.category}
+                      difficulty={article.data.difficulty}
+                      tags={article.data.tags}
+                      lastUpdated={article.data.lastUpdated}
+                      slug={article.id}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {intermediateArticles.length > 0 && (
+              <div>
+                <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                  Intermediate Level
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {intermediateArticles.map(article => (
+                    <ArticleCard
+                      title={article.data.title}
+                      description={article.data.description}
+                      category={article.data.category}
+                      difficulty={article.data.difficulty}
+                      tags={article.data.tags}
+                      lastUpdated={article.data.lastUpdated}
+                      slug={article.id}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {advancedArticles.length > 0 && (
+              <div>
+                <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                  Advanced Level
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {advancedArticles.map(article => (
+                    <ArticleCard
+                      title={article.data.title}
+                      description={article.data.description}
+                      category={article.data.category}
+                      difficulty={article.data.difficulty}
+                      tags={article.data.tags}
+                      lastUpdated={article.data.lastUpdated}
+                      slug={article.id}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="hidden lg:block lg:col-span-1">
+        <Sidebar currentCategory={categoryId} />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
