@@ -1,0 +1,216 @@
+---
+title: "Pediatric EEG Interpretation"
+category: "epilepsy"
+subcategory: "Electroencephalography"
+description: "Age-dependent EEG patterns in children, 10-20 electrode system, normal variants, epileptiform patterns and their associated epilepsy syndromes, and clinical interpretation pearls."
+tags: ["EEG", "electroencephalography", "spike-wave", "hypsarrhythmia", "burst-suppression", "PDR", "epileptiform", "10-20 system"]
+difficulty: "intermediate"
+lastUpdated: "2026-02-11"
+author: "PedNeuro KB"
+references:
+  - title: "American Clinical Neurophysiology Society's Guideline on Continuous Electroencephalography Monitoring in Neonates"
+    authors: "Shellhaas RA, Chang T, Tsuchida T, et al."
+    journal: "Journal of Clinical Neurophysiology"
+    year: 2011
+    doi: "10.1097/WNP.0b013e3182272010"
+    pmid: "21946357"
+  - title: "Neonatal electroencephalography"
+    authors: "Tsuchida TN, Wusthoff CJ, Shellhaas RA, et al."
+    journal: "Journal of Clinical Neurophysiology"
+    year: 2013
+    doi: "10.1097/WNP.0b013e3182872b24"
+    pmid: "23545767"
+  - title: "An Introduction to Epilepsy (NCBI EEG Atlas)"
+    authors: "Bromfield EB, Cavazos JE, Sirven JI, editors"
+    journal: "American Epilepsy Society"
+    year: 2006
+    doi: ""
+    pmid: "20821849"
+  - title: "International League Against Epilepsy classification and definition of epilepsy syndromes with onset in childhood"
+    authors: "Specchio N, Wirrell EC, Scheffer IE, et al."
+    journal: "Epilepsia"
+    year: 2022
+    doi: "10.1111/epi.17241"
+    pmid: "35503717"
+---
+
+## EEG Electrode Placement: The International 10-20 System
+
+The 10-20 system provides standardized electrode placement based on skull landmarks:
+
+| Abbreviation | Region | Side |
+|-------------|--------|------|
+| Fp | Frontopolar | Odd = Left, Even = Right |
+| F | Frontal | z = Midline |
+| T | Temporal | |
+| C | Central | |
+| P | Parietal | |
+| O | Occipital | |
+
+**Numbering convention**: Odd numbers (1, 3, 5, 7) indicate left hemisphere; even numbers (2, 4, 6, 8) indicate right hemisphere; "z" denotes midline.
+
+## Age-Dependent Posterior Dominant Rhythm (PDR)
+
+The PDR matures progressively throughout childhood and is one of the most important features to assess:
+
+| Age | Expected PDR (Hz) | Notes |
+|-----|-------------------|-------|
+| 3 months | 3-4 Hz | Delta-theta range |
+| 6 months | 4-5 Hz | |
+| 1 year | 5-6 Hz | |
+| 2 years | 6-7 Hz | |
+| 3 years | 7-8 Hz | |
+| 5 years | 8 Hz | Approaching alpha range |
+| 8 years | 8-9 Hz | |
+| 10+ years | 9-10+ Hz | Adult-like alpha rhythm |
+
+> **Clinical Pearl**: PDR should be at least **[Age in years + 2] Hz**. For example, a 5-year-old should have PDR ≥7 Hz. A PDR that is slow for age suggests encephalopathy or background abnormality.
+
+## Normal EEG Patterns and Variants
+
+These normal variants are frequently over-interpreted as epileptiform — recognition is essential to avoid misdiagnosis:
+
+| Pattern | Appearance | Age Range | Key Feature |
+|---------|-----------|-----------|------------|
+| Posterior slow waves of youth | Delta waves mixed with posterior alpha | Children < 12 years | NORMAL, resolves with maturation |
+| Mu rhythm | Arch-shaped 8-10 Hz rhythm, central | Any age | Attenuates with contralateral movement |
+| Lambda waves | Sharp occipital transients | Any age | Present during visual scanning |
+| Hypnagogic hypersynchrony | High-amplitude theta bursts | Children (drowsiness) | NORMAL drowsy pattern |
+| POSTS (Positive Occipital Sharp Transients of Sleep) | Positive occipital transients | Adolescents/adults | Normal sleep variant |
+| Wicket spikes | Arciform temporal rhythms | Adults | Often confused with temporal sharp waves |
+| RMTD (Rhythmic Mid-Temporal Theta of Drowsiness) | Theta bursts, temporal | Any age | Normal drowsy variant |
+
+## Normal Background Activity by Age
+
+### Neonatal EEG (Term Infant)
+- Discontinuous pattern transitioning to continuous by 44 weeks conceptional age
+- **Trace alternant** in quiet sleep: bursts 3-8 sec alternating with interburst intervals of 4-8 sec — this is **normal** in neonates
+- Anterior slow dysrhythmia (frontal delta)
+- Multifocal sharp transients are normal in neonates
+- Brush rhythms (beta-delta complexes) — marker of prematurity (Shellhaas et al., *J Clin Neurophysiol*, 2011; Tsuchida et al., 2013)
+
+### Infant EEG (3-12 months)
+- PDR emerges at 3-4 Hz, gradually increases
+- Central theta activity during wakefulness
+- Sleep spindles develop around 6-8 weeks
+- Vertex waves and K-complexes by 5-6 months
+- **Hypnagogic hypersynchrony**: high-amplitude theta during drowsiness — **NORMAL**
+
+### Childhood EEG (1-10 years)
+- PDR follows the [Age + 2] Hz rule
+- Posterior slow waves of youth (delta mixed with alpha) — **NORMAL**
+- Prominent drowsy patterns
+- Hyperventilation response: up to 1 minute of 3 Hz slowing after hyperventilation is **NORMAL**
+
+## Epileptiform EEG Patterns
+
+### Summary Table
+
+| EEG Pattern | Frequency | Distribution | Associated Syndrome |
+|------------|-----------|-------------|-------------------|
+| 3 Hz Spike-and-Wave | 2.5-4 Hz | Generalized, bifrontal max | Childhood Absence Epilepsy |
+| Centrotemporal Spikes | — | C3/C4, T3/T4 | SLECTS (Rolandic Epilepsy) |
+| Hypsarrhythmia | Chaotic | Generalized | Infantile Spasms (West) |
+| Slow Spike-and-Wave | 1.5-2.5 Hz | Generalized, frontal max | Lennox-Gastaut Syndrome |
+| Polyspike-and-Wave | — | Generalized | Juvenile Myoclonic Epilepsy |
+| Burst-Suppression | Periodic | Generalized | Early Infantile DEE |
+| Photoparoxysmal Response | — | Generalized | JME, Dravet Syndrome |
+
+### 3 Hz Spike-and-Wave (Childhood Absence Epilepsy)
+
+- **Frequency**: 2.5-4 Hz (typically 3 Hz)
+- **Amplitude**: 200-400 µV
+- **Distribution**: Generalized, bifrontal maximum
+- **Duration**: 4-20 seconds per burst (often ~10 sec)
+- **Onset/Offset**: Abrupt (like turning a switch on and off)
+- **Activation**: Hyperventilation (most reliable), drowsiness
+- **Inhibition**: Eye opening, alerting, sleep
+- **Background**: Normal between discharges
+
+> **Red flags suggesting NOT typical CAE**: Asymmetry or focal features, abnormal background, polyspikes at onset, very slow frequency (<2.5 Hz).
+
+### Centrotemporal Spikes (SLECTS/Rolandic Epilepsy)
+
+- **Location**: C3/C4, T3/T4 (centrotemporal region)
+- **Morphology**: High-amplitude, blunt spike followed by slow wave
+- **Amplitude**: Often >100-200 µV
+- **Horizontal dipole**: Negative at centrotemporal, positive at frontal — characteristic feature
+- **State**: **Dramatically increased in sleep** (up to 10x more frequent)
+- May be unilateral or bilateral (independent)
+- **Background**: Normal
+
+> **Clinical Pearl**: Spikes may persist 1-2 years after clinical seizures stop. Do NOT chase the EEG — treat the patient!
+
+### Hypsarrhythmia (Infantile Spasms/West Syndrome)
+
+- **Amplitude**: Very high (>200-300 µV, often 500-1000 µV)
+- **Mixture**: Spikes + sharp waves + slow waves
+- **Pattern**: Chaotic, disorganized
+- **Synchrony**: Asynchronous (hemispheres not in sync)
+- **During spasms**: May see electrodecrement or fast rhythm
+- **Background**: Severely abnormal (no normal activity preserved)
+
+**Variants**:
+- Modified hypsarrhythmia: Some degree of synchrony/organization
+- Asymmetric hypsarrhythmia: Suggests focal or structural etiology
+
+> **Urgency**: Recognize and treat promptly — delayed treatment of infantile spasms correlates with worse developmental outcome.
+
+### Slow Spike-and-Wave (Lennox-Gastaut Syndrome)
+
+- **Frequency**: 1.5-2.5 Hz (SLOW compared to CAE)
+- **Distribution**: Generalized, often frontal maximum
+- **Runs**: Long runs during NREM sleep
+- **Background**: Abnormal (slow, disorganized)
+- **Evolution**: Often evolves from prior hypsarrhythmia
+- **Sleep activation**: Generalized paroxysmal fast activity (GPFA), 10-25 Hz, frontal — highly characteristic of LGS
+
+**LGS vs CAE differentiation**:
+
+| Feature | Lennox-Gastaut | Childhood Absence |
+|---------|---------------|-------------------|
+| Spike-wave frequency | <2.5 Hz | ~3 Hz |
+| Background | Abnormal | Normal |
+| Polyspikes | Present | Absent |
+| Prognosis | Severe | Good |
+
+### Burst-Suppression Pattern (Early Infantile DEE)
+
+- **Burst**: High amplitude (150-350 µV), mixed frequencies, duration 1-3 sec
+- **Suppression**: Very low (<10-25 µV), near-isoelectric, duration 3-10 sec
+- **Periodicity**: 3-20 second cycle
+- **Reactivity**: Absent to stimuli
+- **Synchrony**: May be synchronous or asynchronous
+
+**Seen in**:
+- Ohtahara syndrome (Early Infantile Epileptic Encephalopathy)
+- Early myoclonic encephalopathy
+- Severe hypoxic-ischemic encephalopathy
+- Specific genetic etiologies: STXBP1, KCNQ2, SCN2A mutations
+
+**Prognosis**: Generally poor — indicates severe brain dysfunction.
+
+## EEG Interpretation Pearls
+
+1. **Always assess background FIRST**: Normal background = better prognosis; abnormal background = structural/metabolic concern
+2. **Age matters**: Neonatal patterns are fundamentally different from older children. Apply age-appropriate criteria
+3. **State matters**: Many epileptiform patterns increase dramatically in sleep. Always record sleep if possible. SLECTS spikes increase 10x in sleep
+4. **Don't over-read**: Posterior slow of youth, hypnagogic hypersynchrony, wicket spikes, and RMTD are all NORMAL variants
+5. **Clinical correlation is key**: EEG alone does NOT diagnose epilepsy. Normal EEG does NOT exclude epilepsy. Spikes without seizures ≠ epilepsy
+
+## Open-Access EEG Learning Resources
+
+| Resource | Description |
+|----------|-------------|
+| American Epilepsy Society EEG Atlas (NCBI Bookshelf) | Comprehensive atlas covering normal and abnormal findings; CC BY-NC-SA 4.0 licensed |
+| NCBI Developmental EEG Chapter | Detailed coverage of premature, neonatal, infant, and childhood EEG patterns |
+| Child Mind Institute MIPDB | Pediatric EEG database for research and advanced learning |
+| OpenNeuro | Open sharing of neuroimaging data including EEG datasets |
+
+## Key Points
+
+- PDR maturation follows the [Age + 2] Hz rule and is the first feature to assess on any pediatric EEG
+- Normal variants (posterior slow of youth, hypnagogic hypersynchrony, POSTS, wicket spikes) must be distinguished from epileptiform patterns to avoid misdiagnosis
+- Each epilepsy syndrome has a characteristic EEG signature: 3 Hz spike-wave (CAE), centrotemporal spikes (SLECTS), hypsarrhythmia (West), slow spike-wave (LGS), burst-suppression (early DEE)
+- Neonatal EEG interpretation requires knowledge of conceptional age-dependent patterns (Shellhaas et al., 2011; Tsuchida et al., 2013)
+- EEG must always be interpreted in the clinical context — it is a tool to support, not replace, clinical judgment
