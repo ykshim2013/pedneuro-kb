@@ -38,7 +38,7 @@ references:
 
 **Seizure**: Transient signs/symptoms due to abnormal excessive or synchronous neuronal activity in the brain.
 
-**Epilepsy** (Fisher et al., *Epilepsia*, 2014):
+**Epilepsy** ([Fisher et al., *Epilepsia*, 2014](https://doi.org/10.1111/epi.12550)):
 - ≥2 unprovoked seizures occurring >24 hours apart, OR
 - 1 unprovoked seizure with a recurrence risk ≥60% over the next 10 years, OR
 - Diagnosis of an epilepsy syndrome
@@ -47,7 +47,7 @@ references:
 
 ## Three Levels of Diagnosis (ILAE 2017)
 
-The ILAE 2017 framework (Scheffer et al., *Epilepsia*, 2017) established a three-tiered diagnostic approach:
+The ILAE 2017 framework ([Scheffer et al., *Epilepsia*, 2017](https://doi.org/10.1111/epi.13709)) established a three-tiered diagnostic approach:
 
 | Level | Classification | Description |
 |-------|---------------|-------------|
@@ -61,7 +61,7 @@ At each level, **etiology** should be considered: structural, genetic, infectiou
 
 ### Onset-Based Classification
 
-Seizures are classified by onset (Fisher et al., *Epilepsia*, 2017):
+Seizures are classified by onset ([Fisher et al., *Epilepsia*, 2017](https://doi.org/10.1111/epi.13670)):
 
 **Focal Onset** → **Generalized Onset** → **Unknown Onset**
 
@@ -94,7 +94,7 @@ Seizures are classified by onset (Fisher et al., *Epilepsia*, 2017):
 
 ## Epilepsy Syndromes by Age of Onset
 
-The 2022 ILAE Task Force (Specchio et al., *Epilepsia*, 2022) provided updated definitions and classification of childhood epilepsy syndromes:
+The 2022 ILAE Task Force ([Specchio et al., *Epilepsia*, 2022](https://doi.org/10.1111/epi.17241)) provided updated definitions and classification of childhood epilepsy syndromes:
 
 ### Neonates and Infants (0-2 years)
 
@@ -178,10 +178,10 @@ The 2022 ILAE Task Force (Specchio et al., *Epilepsia*, 2022) provided updated d
 
 ## Key Points
 
-- The ILAE 2017 framework classifies epilepsy at three levels: seizure type, epilepsy type, and epilepsy syndrome (Scheffer et al., 2017)
-- Epilepsy can now be diagnosed after a single unprovoked seizure if recurrence risk is ≥60% (Fisher et al., 2014)
+- The ILAE 2017 framework classifies epilepsy at three levels: seizure type, epilepsy type, and epilepsy syndrome ([Scheffer et al., 2017](https://doi.org/10.1111/epi.13709))
+- Epilepsy can now be diagnosed after a single unprovoked seizure if recurrence risk is ≥60% ([Fisher et al., 2014](https://doi.org/10.1111/epi.12550))
 - "Simple partial" and "complex partial" terminology has been replaced by focal seizures with retained or impaired awareness
 - "Secondary generalization" is now termed "focal to bilateral tonic-clonic"
-- The 2022 ILAE Task Force provided updated definitions for childhood epilepsy syndromes with standardized diagnostic criteria (Specchio et al., 2022)
+- The 2022 ILAE Task Force provided updated definitions for childhood epilepsy syndromes with standardized diagnostic criteria ([Specchio et al., 2022](https://doi.org/10.1111/epi.17241))
 - Age of onset is critical for syndrome identification: neonatal DEEs carry the worst prognosis, while self-limited childhood focal epilepsies have excellent outcomes
 - Etiology (structural, genetic, infectious, metabolic, immune, unknown) should be considered at every diagnostic level

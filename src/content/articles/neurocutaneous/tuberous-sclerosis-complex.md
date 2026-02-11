@@ -118,7 +118,7 @@ The 2021 update by Northrup et al. (*Pediatric Neurology*, 2021; PMID 34399110) 
 - Occurs in 5-20% of TSC patients
 - Typically near the foramen of Monro
 - Can cause obstructive hydrocephalus
-- **Management**: Surgical resection or mTOR inhibitor therapy — everolimus demonstrated significant SEGA volume reduction in the EXIST-1 trial (Franz et al., *NEJM*, 2013)
+- **Management**: Surgical resection or mTOR inhibitor therapy — everolimus demonstrated significant SEGA volume reduction in the EXIST-1 trial ([Franz et al., *NEJM*, 2013](https://doi.org/10.1056/NEJMoa1300789))
 
 ### Epilepsy
 - Affects 80-90% of TSC patients
@@ -188,7 +188,7 @@ The 2023 TANDem Consortium published international consensus recommendations for
 
 ## Surveillance Recommendations (2021 Updated Consensus)
 
-Per the 2021 updated consensus (Northrup et al., 2021):
+Per the 2021 updated consensus ([Northrup et al., 2021](https://doi.org/10.1016/j.pediatrneurol.2021.07.011)):
 
 | Organ System | Investigation | Frequency |
 |-------------|---------------|-----------|
@@ -214,7 +214,7 @@ Per the 2021 updated consensus (Northrup et al., 2021):
 - **Vigabatrin**: First-line for infantile spasms in TSC (Level A evidence)
 - **Other AEDs**: Standard approach for focal seizures
 - **Epilepsy surgery**: For drug-resistant focal epilepsy with identifiable tuber
-- **Everolimus for refractory seizures**: The EXIST-3 postextension phase showed sustained efficacy as adjunctive therapy — seizure response rate improved from 31% at week 18 to 57.7% at 2 years, with median seizure frequency reduction of 56.9% at 2 years (Franz et al., *Epilepsia*, 2021)
+- **Everolimus for refractory seizures**: The EXIST-3 postextension phase showed sustained efficacy as adjunctive therapy — seizure response rate improved from 31% at week 18 to 57.7% at 2 years, with median seizure frequency reduction of 56.9% at 2 years ([Franz et al., *Epilepsia*, 2021](https://doi.org/10.1111/epi.17099))
 - **Ketogenic diet**: May be beneficial in drug-resistant cases
 
 ### Everolimus Long-Term Safety (EXIST-3 Postextension)
@@ -228,9 +228,9 @@ Per Franz et al. (*Epilepsia*, 2021; PMID 34693520):
 ## Key Points
 
 - TSC is caused by mutations in TSC1 or TSC2, leading to mTOR pathway hyperactivation
-- The 2021 updated consensus refined diagnostic criteria, notably replacing "cortical dysplasias" with "multiple cortical tubers and/or radial migration lines" and reinstating sclerotic bone lesions as a minor criterion (Northrup et al., 2021)
+- The 2021 updated consensus refined diagnostic criteria, notably replacing "cortical dysplasias" with "multiple cortical tubers and/or radial migration lines" and reinstating sclerotic bone lesions as a minor criterion ([Northrup et al., 2021](https://doi.org/10.1016/j.pediatrneurol.2021.07.011))
 - Epilepsy is the most common neurological manifestation; vigabatrin is first-line for infantile spasms
 - The 2023 TAND Consortium established a "Screen → Act → Repeat" framework with seven natural TAND clusters for systematic neuropsychiatric management (de Vries et al., 2023)
-- Everolimus is disease-modifying therapy targeting the underlying molecular defect, with sustained efficacy for both SEGA and refractory seizures over 2+ years (Franz et al., 2021)
+- Everolimus is disease-modifying therapy targeting the underlying molecular defect, with sustained efficacy for both SEGA and refractory seizures over 2+ years ([Franz et al., 2021](https://doi.org/10.1111/epi.17099))
 - Lifelong multidisciplinary surveillance per the 2021 updated consensus is essential
 - TAND screening should be performed at least annually using structured assessment tools

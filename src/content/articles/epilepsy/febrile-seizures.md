@@ -42,7 +42,7 @@ references:
 
 ## Definition
 
-Febrile seizures (FS) are seizures occurring in children aged 6 months to 5 years, associated with a febrile illness (temperature ≥38°C / 100.4°F), in the absence of central nervous system infection, metabolic disturbance, or history of afebrile seizures. This definition is consistent across most international guidelines, though age cutoffs vary slightly between countries (Corsello et al., *Pediatric Neurology*, 2024).
+Febrile seizures (FS) are seizures occurring in children aged 6 months to 5 years, associated with a febrile illness (temperature ≥38°C / 100.4°F), in the absence of central nervous system infection, metabolic disturbance, or history of afebrile seizures. This definition is consistent across most international guidelines, though age cutoffs vary slightly between countries ([Corsello et al., *Pediatric Neurology*, 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024)).
 
 ## Epidemiology
 
@@ -50,11 +50,11 @@ Febrile seizures (FS) are seizures occurring in children aged 6 months to 5 year
 - **Peak incidence**: 12-18 months of age
 - **Male-to-female ratio**: Slight male predominance (~1.6:1)
 - **Family history**: Present in 25-40% of cases (first-degree relatives)
-- **Most common neurological disorder in pediatric age** (Corsello et al., 2024)
+- **Most common neurological disorder in pediatric age** ([Corsello et al., 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024))
 
 ## Classification
 
-A 2024 systematic review of seven international guidelines (from US, UK, Japan, Mexico, India, and Italy) confirmed that the distinction between simple and complex febrile seizures remains central to management across all countries (Corsello et al., 2024):
+A 2024 systematic review of seven international guidelines (from US, UK, Japan, Mexico, India, and Italy) confirmed that the distinction between simple and complex febrile seizures remains central to management across all countries ([Corsello et al., 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024)):
 
 | Feature | Simple Febrile Seizure | Complex Febrile Seizure |
 |---------|----------------------|------------------------|
@@ -69,10 +69,10 @@ A 2024 systematic review of seven international guidelines (from US, UK, Japan, 
 The pathophysiology of FS involves a complex interplay of genetic and environmental factors (Eilbert & Chan, *JACEP Open*, 2022):
 
 1. **Temperature threshold**: Age-dependent vulnerability of the immature brain to fever
-2. **Genetic susceptibility**: A 2022 GWAS of 7,635 cases identified seven new FS loci and confirmed four previously reported loci (SCN1A, SCN2A, ANO3, 12q21.33). Variants at two loci relate to fever response genes (PTGER3, IL10), and four other loci harbor neuronal excitability genes (BSN, ERC2, GABRG2, HERC1). Collectively, eleven loci explain 2.8% of variance in liability, with SNP heritability of 10.8% (Holm et al., *Brain*, 2022)
+2. **Genetic susceptibility**: A 2022 GWAS of 7,635 cases identified seven new FS loci and confirmed four previously reported loci (SCN1A, SCN2A, ANO3, 12q21.33). Variants at two loci relate to fever response genes (PTGER3, IL10), and four other loci harbor neuronal excitability genes (BSN, ERC2, GABRG2, HERC1). Collectively, eleven loci explain 2.8% of variance in liability, with SNP heritability of 10.8% ([Holm et al., *Brain*, 2022](https://doi.org/10.1093/brain/awab260))
 3. **Cytokine involvement**: IL-1β and other pro-inflammatory cytokines lower seizure threshold; IL10 locus confirmed as a susceptibility gene
 4. **Rate of temperature rise**: May be more important than peak temperature
-5. **Positive genetic correlation with epilepsy**: rg = 0.39 (P = 1.68 × 10⁻⁴), suggesting shared genetic architecture (Holm et al., 2022)
+5. **Positive genetic correlation with epilepsy**: rg = 0.39 (P = 1.68 × 10⁻⁴), suggesting shared genetic architecture ([Holm et al., 2022](https://doi.org/10.1093/brain/awab260))
 
 ## Clinical Evaluation
 
@@ -99,7 +99,7 @@ The pathophysiology of FS involves a complex interplay of genetic and environmen
 - **Consider**: Children 12-18 months, especially if clinically concerning
 - **Not routinely indicated**: Children > 18 months with simple febrile seizure and no meningeal signs
 
-A 2024 systematic review confirmed that LP recommendations vary between countries but all guidelines agree on performing LP when meningitis is clinically suspected (Corsello et al., 2024).
+A 2024 systematic review confirmed that LP recommendations vary between countries but all guidelines agree on performing LP when meningitis is clinically suspected ([Corsello et al., 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024)).
 
 ## Investigations
 
@@ -113,7 +113,7 @@ A 2024 systematic review confirmed that LP recommendations vary between countrie
 - **EEG**: May be considered if focal features or prolonged seizure
 - **MRI Brain**: Consider if focal features, developmental delay, or abnormal neurological exam
 
-> **International variation**: A 2024 systematic review found that some guidelines (Japan, India) recommend more extensive workup including EEG for complex FS, while US/UK guidelines are more conservative (Corsello et al., 2024).
+> **International variation**: A 2024 systematic review found that some guidelines (Japan, India) recommend more extensive workup including EEG for complex FS, while US/UK guidelines are more conservative ([Corsello et al., 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024)).
 
 ## Management
 
@@ -129,15 +129,15 @@ A 2024 systematic review confirmed that LP recommendations vary between countrie
 
 ### Antipyretic Therapy
 - Acetaminophen or ibuprofen for comfort
-- **Does NOT prevent febrile seizure recurrence** — confirmed across all major international guidelines (Corsello et al., 2024; AAP 2008, Level A evidence)
+- **Does NOT prevent febrile seizure recurrence** — confirmed across all major international guidelines ([Corsello et al., 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024); [AAP 2008](https://doi.org/10.1542/peds.2008-0939), Level A evidence)
 
 ### Prophylactic Anticonvulsant Therapy
 - **Continuous prophylaxis**: AAP strongly recommends against routine prophylaxis for simple FS; the potential toxicities outweigh the minimal risks of these benign, self-limited events
 - **Intermittent prophylaxis**: Oral diazepam (0.33 mg/kg q8h during febrile illness) may be considered for recurrent FS in some guidelines (Japan, India), though AAP discourages this approach for simple FS
-- **International variation**: Japanese guidelines are more permissive of intermittent diazepam prophylaxis, particularly for recurrent FS (Corsello et al., 2024)
+- **International variation**: Japanese guidelines are more permissive of intermittent diazepam prophylaxis, particularly for recurrent FS ([Corsello et al., 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024))
 
 ### Hospital Admission Criteria
-Per the 2024 systematic review, admission criteria vary but typically include (Corsello et al., 2024):
+Per the 2024 systematic review, admission criteria vary but typically include ([Corsello et al., 2024](https://doi.org/10.1016/j.pediatrneurol.2024.03.024)):
 - Age < 18 months
 - Complex febrile seizures
 - Prolonged post-ictal state
@@ -158,7 +158,7 @@ Per the 2024 systematic review, admission criteria vary but typically include (C
 - Simple febrile seizures: ~1-2% (slightly above general population risk of ~1%)
 - Complex febrile seizures: ~4-6%
 - Risk factors: complex features, neurodevelopmental abnormality, family history of epilepsy
-- GWAS data show shared genetic architecture between FS susceptibility and epilepsy (Holm et al., *Brain*, 2022)
+- GWAS data show shared genetic architecture between FS susceptibility and epilepsy ([Holm et al., *Brain*, 2022](https://doi.org/10.1093/brain/awab260))
 
 ## Key Points
 

@@ -75,7 +75,7 @@ When a child presents after a first seizure, the following features mandate **em
 | Toxicology screen | If altered mental status or suspicion |
 | CT head | **Only if red flags present** — NOT routine for uncomplicated first seizure |
 
-> **Key Principle**: Routine blood tests are **NOT recommended** for well-appearing children who have returned to baseline after a simple first unprovoked seizure (Hirtz et al., *Neurology*, 2000).
+> **Key Principle**: Routine blood tests are **NOT recommended** for well-appearing children who have returned to baseline after a simple first unprovoked seizure ([Hirtz et al., *Neurology*, 2000](https://doi.org/10.1212/WNL.55.5.616)).
 
 ### Outpatient Workup (Within 1-2 weeks)
 
@@ -96,7 +96,7 @@ When a child presents after a first seizure, the following features mandate **em
 
 ## EEG After First Seizure
 
-- **Abnormal EEG** after a first unprovoked seizure increases recurrence risk to ~60% → meets ILAE criteria for epilepsy diagnosis (Fisher et al., *Epilepsia*, 2014)
+- **Abnormal EEG** after a first unprovoked seizure increases recurrence risk to ~60% → meets ILAE criteria for epilepsy diagnosis ([Fisher et al., *Epilepsia*, 2014](https://doi.org/10.1111/epi.12550))
 - **Normal EEG** does not exclude epilepsy — sensitivity of a single routine EEG is only ~50%
 - **Sleep-deprived EEG** increases sensitivity by 20-30%
 - **Timing**: EEG within 24 hours of seizure has the highest yield for capturing epileptiform discharges
@@ -139,7 +139,7 @@ Genetic testing should be considered when any of the following features are pres
 
 **Step 3**: Whole Genome Sequencing, RNA sequencing, or functional studies (if Steps 1-2 negative)
 
-> Finding a genetic cause changes management in ~36% of DEE patients — including medication selection, avoidance of contraindicated drugs, and eligibility for precision therapies (Symonds et al., 2019).
+> Finding a genetic cause changes management in ~36% of DEE patients — including medication selection, avoidance of contraindicated drugs, and eligibility for precision therapies ([Symonds et al., 2019](https://doi.org/10.1093/brain/awz195)).
 
 ## Recurrence Risk After First Seizure
 
@@ -181,9 +181,9 @@ When evaluating a child after a first seizure, systematically assess:
 
 ## Key Points
 
-- Not all first seizures require emergent neuroimaging — CT head is indicated only when red flags are present (Hirtz et al., 2000)
+- Not all first seizures require emergent neuroimaging — CT head is indicated only when red flags are present ([Hirtz et al., 2000](https://doi.org/10.1212/WNL.55.5.616))
 - EEG and MRI brain should be obtained as part of outpatient workup for all first unprovoked seizures
-- An abnormal EEG after a first seizure increases recurrence risk to ~60%, meeting ILAE criteria for epilepsy diagnosis (Fisher et al., 2014)
+- An abnormal EEG after a first seizure increases recurrence risk to ~60%, meeting ILAE criteria for epilepsy diagnosis ([Fisher et al., 2014](https://doi.org/10.1111/epi.12550))
 - Routine blood tests are NOT recommended for well-appearing children after a first uncomplicated seizure
 - Genetic testing is increasingly important in early-onset and refractory epilepsy, with management-changing yield in ~36% of DEE patients
 - Treatment after a single seizure is optional — decision should involve shared decision-making with the family

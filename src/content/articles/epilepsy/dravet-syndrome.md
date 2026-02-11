@@ -40,7 +40,7 @@ Dravet syndrome (DS) is a severe developmental and epileptic encephalopathy (DEE
 
 ## Epidemiology
 
-- **Incidence**: ~1 in 12,200 live births (Symonds et al., *Brain*, 2019)
+- **Incidence**: ~1 in 12,200 live births ([Symonds et al., *Brain*, 2019](https://doi.org/10.1093/brain/awz195))
 - **Genetics**: >85% caused by SCN1A pathogenic variants; ~90% are de novo
 - **Sex ratio**: Males slightly more commonly affected
 
@@ -104,8 +104,8 @@ This mechanism explains why **sodium channel blockers worsen seizures** in Drave
 | Drug | Brand | Mechanism | Key Evidence |
 |------|-------|-----------|-------------|
 | **Stiripentol** | Diacomit | GABA-A potentiation | FDA-approved 2018; effective add-on to VPA + CLB |
-| **Cannabidiol** | Epidiolex | Multiple (GPR55, TRPV1, adenosine) | Phase 3 trial: 43% reduction in convulsive seizure frequency vs 27% placebo (Devinsky et al., *Lancet*, 2017) |
-| **Fenfluramine** | Fintepla | Serotonin release, sigma-1 agonist | Phase 3 trial: 54% median reduction in monthly convulsive seizure frequency vs 5% placebo; 68% responder rate (Lagae et al., *JAMA Neurology*, 2023) |
+| **Cannabidiol** | Epidiolex | Multiple (GPR55, TRPV1, adenosine) | Phase 3 trial: 43% reduction in convulsive seizure frequency vs 27% placebo ([Devinsky et al., *Lancet*, 2017](https://doi.org/10.1016/S0140-6736(17)31592-8)) |
+| **Fenfluramine** | Fintepla | Serotonin release, sigma-1 agonist | Phase 3 trial: 54% median reduction in monthly convulsive seizure frequency vs 5% placebo; 68% responder rate ([Lagae et al., *JAMA Neurology*, 2023](https://doi.org/10.1001/jamaneurol.2022.3916)) |
 
 **Other options:**
 - Topiramate (add-on)
@@ -147,14 +147,14 @@ This comparison illustrates the critical importance of genetic diagnosis before 
 - **Cognitive outcome**: Variable; ranging from mild to severe intellectual disability
 - **Motor**: Progressive gait abnormalities (crouch gait) in many patients
 - **SUDEP**: Significant risk (~15x general epilepsy population)
-- **Life expectancy**: Reduced, though improving with modern management (Wirrell et al., 2022)
+- **Life expectancy**: Reduced, though improving with modern management ([Wirrell et al., 2022](https://doi.org/10.1684/epd.2022.1459))
 
 ## Key Points
 
-- Dravet syndrome is caused by SCN1A loss-of-function mutations affecting inhibitory interneurons, with an incidence of ~1:12,200 (Symonds et al., 2019)
+- Dravet syndrome is caused by SCN1A loss-of-function mutations affecting inhibitory interneurons, with an incidence of ~1:12,200 ([Symonds et al., 2019](https://doi.org/10.1093/brain/awz195))
 - Sodium channel blockers (phenytoin, carbamazepine, lamotrigine, lacosamide) are **contraindicated** — they worsen seizures and can trigger status epilepticus
 - First-line treatment is valproate + clobazam; three FDA-approved add-on therapies exist (stiripentol, cannabidiol, fenfluramine)
-- Fenfluramine showed 54% median seizure reduction in phase 3 trials (Lagae et al., 2023)
+- Fenfluramine showed 54% median seizure reduction in phase 3 trials ([Lagae et al., 2023](https://doi.org/10.1001/jamaneurol.2022.3916))
 - "Fever + prolonged hemiclonic seizure in infant" should trigger early SCN1A genetic testing
 - SCN1A vs KCNQ2 demonstrates why genetic diagnosis BEFORE medication selection is critical for patient safety
 - Emerging therapies (ASO, gene therapy, CRISPR) target the underlying molecular defect and are in clinical trials

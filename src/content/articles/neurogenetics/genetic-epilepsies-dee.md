@@ -36,7 +36,7 @@ references:
 
 ## Genetic Architecture of Epilepsy
 
-Approximately 40% of epilepsies have a significant genetic component (McTague et al., *Lancet Neurology*, 2016). The genetic architecture spans a spectrum:
+Approximately 40% of epilepsies have a significant genetic component ([McTague et al., *Lancet Neurology*, 2016](https://doi.org/10.1016/S1474-4422(15)00250-1)). The genetic architecture spans a spectrum:
 
 **Rare variants (high effect size)**:
 - De novo mutations in single genes
@@ -50,7 +50,7 @@ Approximately 40% of epilepsies have a significant genetic component (McTague et
 - Associated with idiopathic/genetic generalized epilepsies (IGE/GGE)
 - Cumulative effect determines population risk
 
-Over **800 genes** have been associated with epilepsy, with new genes still being identified (Wang et al., *Human Genetics*, 2024).
+Over **800 genes** have been associated with epilepsy, with new genes still being identified ([Wang et al., *Human Genetics*, 2024](https://doi.org/10.1007/s00439-024-02707-x)).
 
 ## Major Epilepsy Genes
 
@@ -86,7 +86,7 @@ Over **800 genes** have been associated with epilepsy, with new genes still bein
 | **PCDH19** | Cell adhesion | Clustering epilepsy in females |
 
 - PCDH19: X-linked with unique inheritance — affected females (cellular mosaicism) are symptomatic; carrier males are typically unaffected
-- STXBP1: Most common genetic cause of Ohtahara syndrome (Symonds et al., *Brain*, 2019)
+- STXBP1: Most common genetic cause of Ohtahara syndrome ([Symonds et al., *Brain*, 2019](https://doi.org/10.1093/brain/awz195))
 
 ### Other Important Epilepsy Genes
 
@@ -99,7 +99,7 @@ Over **800 genes** have been associated with epilepsy, with new genes still bein
 
 ## Developmental and Epileptic Encephalopathies (DEEs)
 
-DEEs are conditions where both the underlying etiology AND the epileptic activity independently contribute to developmental impairment (Scheffer et al., *Epilepsia*, 2017).
+DEEs are conditions where both the underlying etiology AND the epileptic activity independently contribute to developmental impairment ([Scheffer et al., *Epilepsia*, 2017](https://doi.org/10.1111/epi.13709)).
 
 ### DEE Genes by Age of Onset
 
@@ -124,7 +124,7 @@ DEEs are conditions where both the underlying etiology AND the epileptic activit
 
 ### Incidence Data
 
-A Scottish national cohort study (Symonds et al., *Brain*, 2019) found:
+A Scottish national cohort study ([Symonds et al., *Brain*, 2019](https://doi.org/10.1093/brain/awz195)) found:
 - Overall incidence of childhood-onset genetic epilepsies: **1 in 2,120 live births**
 - Most common: PRRT2 (1:9,970), SCN1A (1:12,200), KCNQ2 (1:17,000)
 - Genetic diagnosis achieved in **31%** of childhood-onset epilepsy cases
@@ -162,7 +162,7 @@ Testing should be considered when any of the following are present:
 ## Key Points
 
 - Over 800 genes are associated with epilepsy, with ~40% of epilepsies having a significant genetic component (McTague et al., 2016)
-- PRRT2 is the most common genetic epilepsy gene (~1:9,970), followed by SCN1A (~1:12,200) and KCNQ2 (~1:17,000) (Symonds et al., 2019)
+- PRRT2 is the most common genetic epilepsy gene (~1:9,970), followed by SCN1A (~1:12,200) and KCNQ2 (~1:17,000) ([Symonds et al., 2019](https://doi.org/10.1093/brain/awz195))
 - The distinction between SCN1A (sodium channel blockers contraindicated) and KCNQ2 (sodium channel blockers first-line) illustrates why genetic diagnosis before medication selection is critical
 - DEEs involve both developmental and epileptic contributions to cognitive impairment — over 800 genes identified
 - Genetic testing yield is highest in early-onset, refractory epilepsies with developmental concerns

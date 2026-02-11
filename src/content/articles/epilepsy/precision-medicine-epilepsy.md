@@ -36,7 +36,7 @@ references:
 
 ## The Precision Medicine Paradigm
 
-Traditional epilepsy treatment follows an empirical approach — selecting antiseizure medications (ASMs) based on seizure type and epilepsy syndrome. Precision medicine transforms this by targeting the **underlying molecular mechanism** identified through genetic testing (Demarest & Brooks-Kayal, *Annu Rev Pharmacol Toxicol*, 2024).
+Traditional epilepsy treatment follows an empirical approach — selecting antiseizure medications (ASMs) based on seizure type and epilepsy syndrome. Precision medicine transforms this by targeting the **underlying molecular mechanism** identified through genetic testing ([Demarest & Brooks-Kayal, *Annu Rev Pharmacol Toxicol*, 2024](https://doi.org/10.1146/annurev-pharmtox-032324-124944)).
 
 **Empirical approach**: Seizure type → ASM selection → Trial and error
 
@@ -55,7 +55,7 @@ Traditional epilepsy treatment follows an empirical approach — selecting antis
 | **FDA-approved add-ons** | Stiripentol, Cannabidiol (Epidiolex), Fenfluramine (Fintepla) |
 | **Other options** | Topiramate, ketogenic diet |
 
-Fenfluramine demonstrated 54% median reduction in monthly convulsive seizure frequency in phase 3 trials (Lagae et al., *JAMA Neurology*, 2023).
+Fenfluramine demonstrated 54% median reduction in monthly convulsive seizure frequency in phase 3 trials ([Lagae et al., *JAMA Neurology*, 2023](https://doi.org/10.1001/jamaneurol.2022.3916)).
 
 ### KCNQ2 — KCNQ2 Epilepsy
 
@@ -89,7 +89,7 @@ Fenfluramine demonstrated 54% median reduction in monthly convulsive seizure fre
 |----------|----------|
 | **Targeted therapy** | mTOR inhibitors: Everolimus (FDA-approved), Sirolimus |
 | **Infantile spasms** | Vigabatrin (first-line, Level A evidence) |
-| **Refractory seizures** | Everolimus — EXIST-3 postextension: 57.7% seizure response rate at 2 years (Franz et al., *Epilepsia*, 2021) |
+| **Refractory seizures** | Everolimus — EXIST-3 postextension: 57.7% seizure response rate at 2 years ([Franz et al., *Epilepsia*, 2021](https://doi.org/10.1111/epi.17099)) |
 
 ### SCN2A — Gain vs Loss of Function
 
@@ -171,10 +171,10 @@ Genetic diagnosis changes clinical management in meaningful ways:
 
 ## Key Points
 
-- Precision medicine in epilepsy shifts treatment from empirical to mechanism-based, guided by genetic diagnosis (Demarest & Brooks-Kayal, 2024)
+- Precision medicine in epilepsy shifts treatment from empirical to mechanism-based, guided by genetic diagnosis ([Demarest & Brooks-Kayal, 2024](https://doi.org/10.1146/annurev-pharmtox-032324-124944))
 - SCN1A (Dravet) vs KCNQ2 is the paradigm example: opposite treatment strategies for different channelopathies
 - GLUT1 deficiency (SLC2A1) is uniquely treated with ketogenic diet, which bypasses the glucose transport defect
-- mTOR inhibitors (everolimus) are disease-modifying therapy for TSC-associated epilepsy (Franz et al., 2021)
+- mTOR inhibitors (everolimus) are disease-modifying therapy for TSC-associated epilepsy ([Franz et al., 2021](https://doi.org/10.1111/epi.17099))
 - SCN2A demonstrates that even within a single gene, gain- vs loss-of-function determines treatment approach
 - Emerging ASO (zorevunersen), gene therapy (ETX101), and CRISPR approaches are in clinical development for Dravet syndrome
 - Genetic diagnosis changes management in ~36% of DEE patients, including medication selection, avoidance of contraindicated drugs, and clinical trial eligibility

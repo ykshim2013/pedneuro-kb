@@ -42,7 +42,7 @@ references:
 
 ## Overview
 
-Duchenne muscular dystrophy (DMD) is the most common and severe form of muscular dystrophy, caused by mutations in the *DMD* gene leading to absent or severely reduced dystrophin protein. It follows an X-linked recessive inheritance pattern, primarily affecting males (Duan et al., *Nature Reviews Disease Primers*, 2021).
+Duchenne muscular dystrophy (DMD) is the most common and severe form of muscular dystrophy, caused by mutations in the *DMD* gene leading to absent or severely reduced dystrophin protein. It follows an X-linked recessive inheritance pattern, primarily affecting males ([Duan et al., *Nature Reviews Disease Primers*, 2021](https://doi.org/10.1038/s41572-021-00248-3)).
 
 ## Epidemiology
 
@@ -70,7 +70,7 @@ Duchenne muscular dystrophy (DMD) is the most common and severe form of muscular
 ### Reading Frame Rule
 - **Out-of-frame mutations** → DMD (no functional dystrophin)
 - **In-frame mutations** → Becker MD (partially functional dystrophin)
-- Applies in ~90% of cases (Duan et al., 2021)
+- Applies in ~90% of cases ([Duan et al., 2021](https://doi.org/10.1038/s41572-021-00248-3))
 
 ## Dystrophin Function
 
@@ -107,7 +107,7 @@ Dystrophin is a critical structural protein in the dystrophin-associated glycopr
 - **Mean IQ**: ~85 (1 SD below population mean)
 - **Learning disabilities**: Present in ~30-50%
 - **ADHD/ASD**: Increased prevalence
-- **Dp71 isoform**: Brain-specific dystrophin isoform; mutations affecting this correlate with more severe cognitive phenotype (Duan et al., 2021)
+- **Dp71 isoform**: Brain-specific dystrophin isoform; mutations affecting this correlate with more severe cognitive phenotype ([Duan et al., 2021](https://doi.org/10.1038/s41572-021-00248-3))
 
 ## Diagnosis
 
@@ -140,13 +140,13 @@ Dystrophin is a critical structural protein in the dystrophin-associated glycopr
 
 Vamorolone is a novel dissociative steroidal anti-inflammatory that retains the anti-inflammatory efficacy of traditional corticosteroids while showing improved safety, particularly regarding bone and metabolic side effects.
 
-- **VISION-DMD Trial (Phase 2b)**: Vamorolone 6 mg/kg/day met the primary endpoint of improvement in Time to Stand velocity vs placebo (P = 0.002) at 24 weeks, with similar efficacy to prednisone 0.75 mg/kg/day (Guglieri et al., *JAMA Network Open*, 2022)
-- **48-Week Extension**: Sustained efficacy with vamorolone 6 mg/kg/day, with advantages over prednisone in safety endpoints including BMI trajectory, bone turnover markers, and adrenal suppression (Dang et al., *Neurology*, 2024)
+- **VISION-DMD Trial (Phase 2b)**: Vamorolone 6 mg/kg/day met the primary endpoint of improvement in Time to Stand velocity vs placebo (P = 0.002) at 24 weeks, with similar efficacy to prednisone 0.75 mg/kg/day ([Guglieri et al., *JAMA Network Open*, 2022](https://doi.org/10.1001/jamanetworkopen.2022.28928))
+- **48-Week Extension**: Sustained efficacy with vamorolone 6 mg/kg/day, with advantages over prednisone in safety endpoints including BMI trajectory, bone turnover markers, and adrenal suppression ([Dang et al., *Neurology*, 2024](https://doi.org/10.1212/WNL.0000000000208112))
 - **FDA approval**: October 26, 2023, for DMD in patients aged ≥2 years
 - **Dose**: 6 mg/kg/day oral suspension
 - **Key advantage**: Acts as a mineralocorticoid receptor antagonist (unlike prednisone), potentially providing cardiovascular benefit
 
-### Cardiac Management (Birnkrant et al., *Lancet Neurology*, 2018)
+### Cardiac Management ([Birnkrant et al., *Lancet Neurology*, 2018](https://doi.org/10.1016/S1474-4422(18)30024-3))
 - **ACE inhibitors or ARBs**: Start by age 10 (or earlier if cardiomyopathy detected)
 - **Beta-blockers**: For heart failure management
 - **Cardiac MRI**: Annual monitoring from age 10
@@ -184,7 +184,7 @@ Delandistrogene moxeparvovec is an AAV-based gene therapy delivering micro-dystr
 - **FDA accelerated approval**: June 2023 (ambulatory patients aged 4-5 years)
 - **FDA expanded approval**: June 2024 (ambulatory patients aged ≥4 years, traditional approval; non-ambulatory patients aged ≥4 years, accelerated approval)
 - **Delivery**: Single IV dose (1.33 × 10¹⁴ vg/kg)
-- **EMBARK Phase 3 Trial** (Mendell et al., *Nature Medicine*, 2024):
+- **EMBARK Phase 3 Trial** ([Mendell et al., *Nature Medicine*, 2024](https://doi.org/10.1038/s41591-024-03304-z)):
   - 125 patients treated (63 delandistrogene, 62 placebo)
   - **Primary endpoint NOT met**: Change in NSAA score at week 52 showed no statistically significant difference (LSM 2.57 vs 1.92; P = 0.2441)
   - **Micro-dystrophin expression**: 34.29% at week 12 (vs 0% placebo)
@@ -207,8 +207,8 @@ Delandistrogene moxeparvovec is an AAV-based gene therapy delivering micro-dystr
 
 - DMD is the most common fatal genetic disorder diagnosed in childhood, caused by mutations in the largest human gene
 - Serum CK is the initial screening test; genetic testing confirms diagnosis
-- Vamorolone (FDA-approved 2023) offers corticosteroid-equivalent efficacy with improved safety profile over prednisone (Guglieri et al., 2022; Dang et al., 2024)
-- Delandistrogene moxeparvovec (Elevidys) received expanded FDA approval in 2024 despite the EMBARK phase 3 trial not meeting its primary endpoint (Mendell et al., 2024)
+- Vamorolone (FDA-approved 2023) offers corticosteroid-equivalent efficacy with improved safety profile over prednisone ([Guglieri et al., 2022](https://doi.org/10.1001/jamanetworkopen.2022.28928); [Dang et al., 2024](https://doi.org/10.1212/WNL.0000000000208112))
+- Delandistrogene moxeparvovec (Elevidys) received expanded FDA approval in 2024 despite the EMBARK phase 3 trial not meeting its primary endpoint ([Mendell et al., 2024](https://doi.org/10.1038/s41591-024-03304-z))
 - Four exon-skipping ASOs are FDA-approved, covering ~25-30% of the DMD population
 - Multidisciplinary care (cardiac, respiratory, orthopedic, rehabilitation) remains essential for optimizing outcomes
 - Carrier females should be screened for cardiac involvement
