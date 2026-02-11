@@ -1,0 +1,381 @@
+---
+title: "Genetic Evaluation Fundamentals: From DNA to Clinical Testing"
+category: "neurogenetics"
+subcategory: "Genetic Testing"
+description: "Molecular biology fundamentals (DNA, RNA, protein), chromosomal microarray (CMA), whole exome sequencing (WES), whole genome sequencing (WGS), variant interpretation (ACMG/AMP criteria), and clinical genetic testing strategy in pediatric neurology."
+tags: ["genetic testing", "DNA", "RNA", "protein", "CMA", "chromosomal microarray", "WES", "whole exome sequencing", "WGS", "whole genome sequencing", "ACMG", "variant interpretation", "gene panel"]
+difficulty: "basic"
+lastUpdated: "2026-02-11"
+author: "PedNeuro KB"
+references:
+  - title: "Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology"
+    authors: "Richards S, Aziz N, Bale S, et al."
+    journal: "Genetics in Medicine"
+    year: 2015
+    doi: "10.1038/gim.2015.30"
+    pmid: "25741868"
+  - title: "Technical standards for the interpretation and reporting of constitutional copy-number variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics (ACMG) and the Clinical Genome Resource (ClinGen)"
+    authors: "Riggs ER, Andersen EF, Cherry AM, et al."
+    journal: "Genetics in Medicine"
+    year: 2020
+    doi: "10.1038/s41436-019-0686-8"
+    pmid: "31690835"
+  - title: "Exome and genome sequencing for pediatric patients with congenital anomalies or intellectual disability: an evidence-based clinical guideline of the American College of Medical Genetics and Genomics (ACMG)"
+    authors: "Manickam K, McClain MR, Demmer LA, et al."
+    journal: "Genetics in Medicine"
+    year: 2021
+    doi: "10.1038/s41436-021-01242-6"
+    pmid: "34211152"
+  - title: "Meta-analysis of the diagnostic and clinical utility of genome and exome sequencing and chromosomal microarray in children with suspected genetic diseases"
+    authors: "Clark MM, Stark Z, Farnaes L, et al."
+    journal: "NPJ Genomic Medicine"
+    year: 2018
+    doi: "10.1038/s41525-018-0053-8"
+    pmid: "30002876"
+  - title: "The genetic landscape of the epileptic encephalopathies of infancy and childhood"
+    authors: "McTague A, Howell KB, Cross JH, Kurian MA, Scheffer IE"
+    journal: "Lancet Neurology"
+    year: 2016
+    doi: "10.1016/S1474-4422(15)00250-1"
+    pmid: "26419558"
+  - title: "Recommendations for the use of chromosomal microarray in pediatric epilepsy: a consensus statement from the International League Against Epilepsy Genetics Commission Diagnostic Methods Task Force"
+    authors: "Sánchez Fernández I, Loddenkemper T, Gaínza-Lein M, et al."
+    journal: "Epilepsia"
+    year: 2022
+    doi: "10.1111/epi.17164"
+    pmid: "35184282"
+---
+
+## Molecular Biology Fundamentals
+
+Understanding genetic testing in clinical practice requires foundational knowledge of molecular biology, from DNA structure to protein function.
+
+### DNA Structure
+
+DNA (deoxyribonucleic acid) is the hereditary material that encodes all genetic information:
+
+| Component | Details |
+|-----------|---------|
+| **Structure** | Double helix — two antiparallel strands |
+| **Sugar** | Deoxyribose |
+| **Bases** | Adenine (A), Thymine (T), Guanine (G), Cytosine (C) |
+| **Base pairing** | A-T (2 hydrogen bonds), G-C (3 hydrogen bonds) |
+| **Direction** | 5' → 3' (each strand) |
+| **Human genome** | ~3.2 billion base pairs, ~20,000 protein-coding genes |
+| **Chromosomes** | 23 pairs (22 autosomes + 1 sex chromosome pair) |
+
+### Central Dogma: DNA → RNA → Protein
+
+The flow of genetic information follows a defined pathway:
+
+**1. Transcription (DNA → RNA)**
+- RNA polymerase reads the template DNA strand (3' → 5')
+- Synthesizes messenger RNA (mRNA) in the 5' → 3' direction
+- RNA uses uracil (U) instead of thymine (T)
+- Pre-mRNA undergoes splicing to remove introns and join exons
+
+**2. Translation (RNA → Protein)**
+- Ribosomes read mRNA in triplets called **codons**
+- Each codon specifies one amino acid (64 codons → 20 amino acids)
+- Start codon: AUG (methionine)
+- Stop codons: UAA, UAG, UGA
+- Transfer RNA (tRNA) delivers amino acids based on codon-anticodon pairing
+- Amino acid chain folds into a functional protein
+
+### Gene Structure
+
+| Element | Description | Clinical Relevance |
+|---------|-------------|-------------------|
+| **Exons** | Coding sequences (~1-2% of genome) | Targeted by WES; contain most disease-causing mutations |
+| **Introns** | Non-coding sequences between exons | Contain regulatory elements; splice site mutations can be pathogenic |
+| **Promoter** | Regulatory region upstream of gene | Mutations can alter gene expression levels |
+| **5' UTR** | Untranslated region before start codon | Regulatory; can affect translation efficiency |
+| **3' UTR** | Untranslated region after stop codon | mRNA stability, microRNA binding sites |
+| **Enhancers** | Distal regulatory elements | Can be thousands of bases from gene; mutations detectable by WGS |
+
+### Types of Mutations
+
+| Mutation Type | Effect | Example |
+|--------------|--------|---------|
+| **Missense** | Single amino acid change | SCN1A p.Arg1648His — Dravet syndrome |
+| **Nonsense** | Premature stop codon → truncated protein | SCN1A p.Arg580* — Dravet syndrome |
+| **Frameshift** | Insertion/deletion shifts reading frame | Dystrophin deletions — DMD |
+| **Splice site** | Disrupts intron-exon junction → abnormal splicing | SMN1 — Spinal muscular atrophy |
+| **In-frame deletion/insertion** | Loss or gain of amino acids without frame shift | Dystrophin in-frame deletions — Becker MD |
+| **Copy number variant (CNV)** | Deletion or duplication of larger DNA segments | 15q11.2 deletion — Angelman syndrome |
+| **Trinucleotide repeat expansion** | Expansion of repeated sequence | CGG repeat — Fragile X syndrome |
+| **Structural variant** | Large rearrangements (inversions, translocations) | Ring chromosome 20 — epilepsy |
+
+> **Clinical Pearl**: The type of mutation often predicts severity. In dystrophinopathies, out-of-frame deletions cause severe Duchenne MD, while in-frame deletions cause milder Becker MD — the "reading frame rule."
+
+## Chromosomal Analysis Methods
+
+### Karyotype
+
+| Feature | Details |
+|---------|---------|
+| **What it detects** | Numerical abnormalities (aneuploidy), large structural rearrangements |
+| **Resolution** | ~5-10 Mb (low resolution) |
+| **Method** | Metaphase chromosome banding (G-banding) |
+| **Turnaround** | 1-2 weeks |
+| **Yield in epilepsy** | Low (~2-3%) |
+| **Still useful for** | Suspected aneuploidy (Down, Turner), balanced translocations |
+
+### FISH (Fluorescence In Situ Hybridization)
+
+| Feature | Details |
+|---------|---------|
+| **What it detects** | Targeted detection of specific loci |
+| **Resolution** | ~100-200 kb |
+| **Method** | Fluorescent probes hybridize to specific chromosomal regions |
+| **Turnaround** | 24-72 hours |
+| **Use in neurology** | Confirming specific deletions (e.g., 22q11.2, 15q11-13) |
+| **Limitation** | Only detects what you target — not genome-wide |
+
+### Chromosomal Microarray (CMA)
+
+CMA is the **first-tier** genetic test recommended by ACMG for children with developmental delay, intellectual disability, autism spectrum disorder, or multiple congenital anomalies (Manickam et al., *Genetics in Medicine*, 2021).
+
+| Feature | Details |
+|---------|---------|
+| **What it detects** | Copy number variants (CNVs): deletions and duplications |
+| **Resolution** | ~50-100 kb (50-100x better than karyotype) |
+| **Types** | SNP array (also detects UPD, LOH) vs aCGH (array CGH) |
+| **Yield in DD/ID** | ~15-20% |
+| **Yield in epilepsy** | ~5-10% (Sánchez Fernández et al., *Epilepsia*, 2022) |
+| **Turnaround** | 2-4 weeks |
+| **Cost** | ~$500-1,500 |
+
+**CMA can detect:**
+- Microdeletions/microduplications (submicroscopic CNVs)
+- Large CNVs (deletions, duplications)
+- Aneuploidy (trisomy, monosomy)
+- Uniparental disomy (UPD) — SNP array only
+- Loss of heterozygosity (LOH) — SNP array only
+
+**CMA limitations:**
+- Cannot detect balanced translocations or inversions
+- Cannot detect point mutations (single nucleotide changes)
+- Cannot detect trinucleotide repeat expansions
+- Low-level mosaicism may be missed (<20-30%)
+
+**Clinically significant CNVs in epilepsy:**
+
+| CNV | Syndrome | Epilepsy Features |
+|-----|----------|------------------|
+| 15q11.2 deletion | Angelman syndrome | Severe epilepsy, developmental delay |
+| 15q13.3 deletion | — | Generalized epilepsy, variable penetrance |
+| 16p13.11 deletion | — | Generalized epilepsy, intellectual disability |
+| 1q21.1 deletion | — | Variable, developmental delay |
+| 22q11.2 deletion | DiGeorge/VCFS | Seizures in ~7% |
+
+## Next-Generation Sequencing (NGS)
+
+### Gene Panels
+
+| Feature | Details |
+|---------|---------|
+| **What it targets** | Curated set of genes (50-500+) associated with a specific phenotype |
+| **Method** | Targeted capture and sequencing of selected genes |
+| **Yield in epilepsy** | ~15-25% (phenotype-specific panels) |
+| **Turnaround** | 4-8 weeks |
+| **Cost** | ~$500-2,000 |
+| **Advantages** | Faster turnaround, fewer VUS, lower cost, higher coverage per gene |
+| **Disadvantages** | Limited to genes on the panel; must choose the right panel for the phenotype |
+
+**Common panel types in pediatric neurology:**
+
+| Panel | Target | Examples |
+|-------|--------|---------|
+| Epilepsy panel | 100-500+ epilepsy genes | SCN1A, KCNQ2, STXBP1, CDKL5 |
+| Neuromuscular panel | NMD genes | DMD, SMN1, LMNA, RYR1 |
+| Leukodystrophy panel | White matter disease genes | ASPA, GALC, PLP1 |
+| Mitochondrial panel | Nuclear + mtDNA genes | POLG, SURF1, MT-ND genes |
+
+### Whole Exome Sequencing (WES)
+
+WES is now considered a first- or second-tier test for children with suspected genetic conditions (Manickam et al., *Genetics in Medicine*, 2021).
+
+| Feature | Details |
+|---------|---------|
+| **What it targets** | All exons (~1-2% of genome, ~20,000 genes) |
+| **What it detects** | Single nucleotide variants (SNVs), small insertions/deletions (indels) |
+| **Yield in epilepsy/DEE** | ~25-40% (McTague et al., *Lancet Neurology*, 2016) |
+| **Yield in undiagnosed disease** | ~25-35% |
+| **Trio analysis** | Proband + both parents (preferred for de novo variant detection) |
+| **Turnaround** | 8-16 weeks |
+| **Cost** | ~$2,000-5,000 |
+
+**WES advantages:**
+- Broad coverage of coding regions
+- Can identify unexpected genes (not limited by clinical hypothesis)
+- Trio analysis enables de novo variant detection
+- Re-analysis possible as new gene-disease associations are published
+
+**WES limitations:**
+
+| Limitation | Consequence |
+|-----------|-------------|
+| Misses non-coding variants | Regulatory, deep intronic variants not captured |
+| Poor coverage of GC-rich regions | Some first exons poorly covered |
+| Cannot detect structural variants | Large CNVs, inversions missed |
+| Cannot detect repeat expansions | Fragile X, Huntington disease missed |
+| Generates many VUS | ~40-60% of identified variants are VUS |
+| Does not sequence mitochondrial DNA | Separate testing required |
+
+### Whole Genome Sequencing (WGS)
+
+| Feature | Details |
+|---------|---------|
+| **What it targets** | Entire genome (~3.2 billion bases) including non-coding regions |
+| **What it detects** | SNVs, indels, CNVs, structural variants, some repeat expansions |
+| **Additional yield over WES** | ~5-10% (Clark et al., *NPJ Genomic Medicine*, 2018) |
+| **Turnaround** | 8-16 weeks (rapid WGS: 24-48 hours in some centers) |
+| **Cost** | ~$3,000-6,000 |
+
+**WGS advantages over WES:**
+- Uniform coverage (no capture bias)
+- Detects non-coding regulatory variants
+- Better detection of structural variants and CNVs
+- Can detect some trinucleotide repeat expansions
+- Single test replaces CMA + WES
+
+**WGS limitations:**
+- Higher cost
+- More variants of uncertain significance (VUS)
+- Interpretation of non-coding variants remains challenging
+- Larger data storage and analysis requirements
+- Incidental findings management
+
+**When to consider WGS over WES:**
+
+| Scenario | Rationale |
+|----------|-----------|
+| CMA + WES negative | WGS provides additional yield |
+| Suspected structural variant | Better SV detection |
+| Suspected non-coding variant | Covers regulatory regions |
+| Rapid diagnosis needed (NICU) | Rapid WGS available at select centers |
+| Research setting | Comprehensive variant detection |
+
+### Comparison of Genetic Testing Methods
+
+| Feature | Karyotype | CMA | Gene Panel | WES | WGS |
+|---------|-----------|-----|-----------|-----|-----|
+| **Resolution** | 5-10 Mb | 50-100 kb | Single base | Single base | Single base |
+| **Genome coverage** | Whole (low res) | Whole (CNV only) | 50-500 genes | ~20,000 genes | Whole genome |
+| **SNVs/Indels** | No | No | Yes | Yes | Yes |
+| **CNVs** | Large only | Yes | Limited | Limited | Yes |
+| **SVs** | Large only | No | No | No | Yes |
+| **Repeat expansions** | No | No | Targeted | No | Some |
+| **Non-coding variants** | No | No | No | No | Yes |
+| **Balanced rearrangements** | Yes | No | No | No | Yes |
+| **Yield in epilepsy** | 2-3% | 5-10% | 15-25% | 25-40% | 30-45% |
+| **Cost** | $300-500 | $500-1,500 | $500-2,000 | $2,000-5,000 | $3,000-6,000 |
+| **Turnaround** | 1-2 wk | 2-4 wk | 4-8 wk | 8-16 wk | 8-16 wk |
+
+## Variant Interpretation
+
+### ACMG/AMP Five-Tier Classification
+
+The American College of Medical Genetics and Genomics (ACMG) and Association for Molecular Pathology (AMP) jointly established a standardized framework for variant classification (Richards et al., *Genetics in Medicine*, 2015):
+
+| Class | Interpretation | Clinical Action |
+|-------|---------------|----------------|
+| **Pathogenic** | Disease-causing | Act on this finding |
+| **Likely Pathogenic** | >90% probability of being disease-causing | Act on this finding (with appropriate caveats) |
+| **Variant of Uncertain Significance (VUS)** | Insufficient evidence | Do NOT act on this finding; may reclassify over time |
+| **Likely Benign** | >90% probability of being benign | No clinical action |
+| **Benign** | Not disease-causing | No clinical action |
+
+> **Critical Principle**: A VUS should **never** be used for clinical decision-making. It means "we don't know yet." Approximately 10-30% of VUS are reclassified over time — families should be counseled about periodic reinterpretation.
+
+### Key Evidence Types for Variant Classification
+
+| Evidence Category | Examples |
+|-------------------|---------|
+| **Population data** | Variant frequency in gnomAD, ExAC databases |
+| **Computational predictions** | SIFT, PolyPhen-2, CADD scores, splice predictors |
+| **Functional data** | In vitro assays, animal models, electrophysiology |
+| **Segregation** | Co-segregation with disease in family |
+| **De novo status** | Confirmed absent in parents (trio analysis) |
+| **Clinical databases** | ClinVar submissions, HGMD, literature reports |
+
+### Important Databases
+
+| Database | Purpose | URL |
+|----------|---------|-----|
+| **ClinVar** | Variant-disease associations, classification | ncbi.nlm.nih.gov/clinvar |
+| **gnomAD** | Population allele frequencies | gnomad.broadinstitute.org |
+| **OMIM** | Gene-disease relationships | omim.org |
+| **ClinGen** | Gene-disease validity curation | clinicalgenome.org |
+| **UniProt** | Protein structure and function | uniprot.org |
+
+## Clinical Genetic Testing Strategy
+
+### When to Order Genetic Testing in Pediatric Neurology
+
+| Indication | Recommended First Test |
+|-----------|----------------------|
+| Developmental delay / intellectual disability | CMA (first-tier) |
+| Autism spectrum disorder | CMA + Fragile X |
+| Epilepsy onset < 2 years | Epilepsy gene panel or WES |
+| Drug-resistant epilepsy (≥2 ASMs failed) | WES (trio preferred) |
+| DEE phenotype | WES (trio preferred) |
+| Neuromuscular disease | Specific gene panel or WES |
+| Dysmorphic features + seizures | CMA → WES |
+| Family history of epilepsy | Targeted testing or gene panel |
+
+### Stepwise Testing Algorithm
+
+**Step 1: Chromosomal Microarray (CMA)**
+- First-tier for developmental delay, intellectual disability, ASD
+- Also useful as first test in epilepsy with additional features (dysmorphic, DD/ID)
+- Yield: ~5-10% in epilepsy, ~15-20% in DD/ID
+
+**Step 2: Gene Panel or Whole Exome Sequencing**
+- Specific phenotype (e.g., Dravet-like) → Gene panel (faster, fewer VUS)
+- Unknown or broad phenotype → WES trio (broader coverage, ~25-40% yield)
+- ACMG 2021 guideline supports WES/WGS as first- or second-tier test (Manickam et al., 2021)
+
+**Step 3: Advanced Testing (if Steps 1-2 negative)**
+- Whole Genome Sequencing → detects non-coding variants, SVs
+- RNA sequencing → detects aberrant splicing
+- Methylation analysis → imprinting disorders (Angelman, Prader-Willi)
+- Mitochondrial genome sequencing → mitochondrial disease
+- Functional studies → variant characterization
+
+### Practical Considerations
+
+| Factor | Details |
+|--------|---------|
+| **Turnaround time** | Gene panel (4-8 wk) < CMA (2-4 wk) < WES (8-16 wk) < WGS (8-16 wk); Rapid WGS: 24-48 hrs |
+| **Insurance coverage** | CMA widely covered; WES/WGS coverage improving but variable |
+| **Genetic counseling** | Essential before and after testing — informed consent, incidental findings management |
+| **Re-analysis** | WES/WGS data can be re-analyzed as new gene discoveries are made (every 1-2 years) |
+| **Trio vs proband-only** | Trio preferred for de novo detection and variant filtering (reduces candidates ~10-fold) |
+
+### Clinical Impact of Genetic Diagnosis
+
+A genetic diagnosis changes management in approximately **36%** of DEE patients (McTague et al., *Lancet Neurology*, 2016). Specific examples:
+
+| Gene | Clinical Impact of Diagnosis |
+|------|----------------------------|
+| **SCN1A** (Dravet) | Avoid sodium channel blockers (contraindicated); use VPA + CLB |
+| **KCNQ2** | Sodium channel blockers often effective (opposite to SCN1A) |
+| **SLC2A1** (GLUT1) | Ketogenic diet is the definitive treatment |
+| **TSC1/TSC2** | mTOR inhibitors (everolimus) for seizures and tumors |
+| **CDKL5** | Ganaxolone (FDA-approved 2022) |
+| **PRRT2** | Low-dose carbamazepine usually effective; excellent prognosis |
+| **DEPDC5** | mTOR pathway involvement; surgical candidacy assessment |
+| **Pyridoxine-dependent epilepsy (ALDH7A1)** | Lifelong pyridoxine supplementation |
+
+## Key Points
+
+- The central dogma (DNA → RNA → Protein) underlies all genetic testing — understanding gene structure (exons, introns, regulatory regions) explains why different tests have different yields
+- CMA is the ACMG-recommended first-tier test for developmental delay/ID/ASD, detecting CNVs at ~50-100 kb resolution with 5-10% yield in epilepsy (Sánchez Fernández et al., 2022)
+- WES targets the ~1-2% of the genome that codes for protein (exons) and has the highest yield in epilepsy/DEE at ~25-40% (McTague et al., 2016)
+- WGS covers the entire genome including non-coding regions and provides ~5-10% additional yield over WES (Clark et al., 2018)
+- ACMG/AMP 5-tier variant classification (pathogenic to benign) is the standard framework — VUS should never drive clinical decisions (Richards et al., 2015)
+- The recommended stepwise approach is CMA → Gene panel/WES → WGS/RNA-seq → Functional studies
+- Genetic diagnosis changes management in ~36% of DEE patients, including medication selection, contraindicated drug avoidance, and eligibility for precision therapies
+- Trio analysis (proband + both parents) is preferred for WES/WGS as it enables de novo variant detection and reduces candidate variants ~10-fold

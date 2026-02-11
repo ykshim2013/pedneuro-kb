@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="headGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2a2a4a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="45" fill="#0d0d1a" stroke="#333355" stroke-width="1"/>
+  <text x="400" y="30" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="18" font-weight="bold">International 10-20 Electrode Placement System</text>
+  <!-- Head outline - top down view -->
+  <ellipse cx="400" cy="275" rx="200" ry="220" fill="none" stroke="#445566" stroke-width="3"/>
+  <!-- Nose indicator -->
+  <path d="M400,55 L385,78 Q400,85 415,78 Z" fill="none" stroke="#445566" stroke-width="2"/>
+  <text x="400" y="50" text-anchor="middle" fill="#667788" font-family="Consolas, monospace" font-size="11">NASION</text>
+  <!-- Ear indicators -->
+  <ellipse cx="195" cy="275" rx="12" ry="25" fill="none" stroke="#445566" stroke-width="2"/>
+  <ellipse cx="605" cy="275" rx="12" ry="25" fill="none" stroke="#445566" stroke-width="2"/>
+  <text x="165" y="280" text-anchor="middle" fill="#667788" font-family="Consolas, monospace" font-size="10">Left</text>
+  <text x="635" y="280" text-anchor="middle" fill="#667788" font-family="Consolas, monospace" font-size="10">Right</text>
+  <!-- Inion -->
+  <text x="400" y="505" text-anchor="middle" fill="#667788" font-family="Consolas, monospace" font-size="11">INION</text>
+  <!-- Midline guides (faint) -->
+  <line x1="400" y1="80" x2="400" y2="470" stroke="#222244" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="210" y1="275" x2="590" y2="275" stroke="#222244" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- Electrode positions -->
+  <!-- Row 1: Fp1, Fpz (not standard but reference), Fp2 -->
+  <!-- Fp1 - left frontal pole -->
+  <circle cx="355" cy="105" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="355" y="110" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">Fp1</text>
+  <!-- Fp2 - right frontal pole -->
+  <circle cx="445" cy="105" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="445" y="110" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">Fp2</text>
+  <!-- Row 2: F7, F3, Fz, F4, F8 -->
+  <circle cx="248" cy="170" r="16" fill="#1a1a2e" stroke="#ffbb33" stroke-width="2" filter="url(#glow)"/>
+  <text x="248" y="175" text-anchor="middle" fill="#ffbb33" font-family="Consolas, monospace" font-size="11" font-weight="bold">F7</text>
+  <circle cx="335" cy="175" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="335" y="180" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">F3</text>
+  <circle cx="400" cy="180" r="16" fill="#1a1a2e" stroke="#66bbff" stroke-width="2" filter="url(#glow)"/>
+  <text x="400" y="185" text-anchor="middle" fill="#66bbff" font-family="Consolas, monospace" font-size="11" font-weight="bold">Fz</text>
+  <circle cx="465" cy="175" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="465" y="180" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">F4</text>
+  <circle cx="552" cy="170" r="16" fill="#1a1a2e" stroke="#ffbb33" stroke-width="2" filter="url(#glow)"/>
+  <text x="552" y="175" text-anchor="middle" fill="#ffbb33" font-family="Consolas, monospace" font-size="11" font-weight="bold">F8</text>
+  <!-- Row 3: T3, C3, Cz, C4, T4 -->
+  <circle cx="215" cy="275" r="16" fill="#1a1a2e" stroke="#ffbb33" stroke-width="2" filter="url(#glow)"/>
+  <text x="215" y="280" text-anchor="middle" fill="#ffbb33" font-family="Consolas, monospace" font-size="11" font-weight="bold">T3</text>
+  <circle cx="315" cy="275" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="315" y="280" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">C3</text>
+  <circle cx="400" cy="275" r="16" fill="#1a1a2e" stroke="#66bbff" stroke-width="2" filter="url(#glow)"/>
+  <text x="400" y="280" text-anchor="middle" fill="#66bbff" font-family="Consolas, monospace" font-size="11" font-weight="bold">Cz</text>
+  <circle cx="485" cy="275" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="485" y="280" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">C4</text>
+  <circle cx="585" cy="275" r="16" fill="#1a1a2e" stroke="#ffbb33" stroke-width="2" filter="url(#glow)"/>
+  <text x="585" y="280" text-anchor="middle" fill="#ffbb33" font-family="Consolas, monospace" font-size="11" font-weight="bold">T4</text>
+  <!-- Row 4: T5, P3, Pz, P4, T6 -->
+  <circle cx="248" cy="375" r="16" fill="#1a1a2e" stroke="#ffbb33" stroke-width="2" filter="url(#glow)"/>
+  <text x="248" y="380" text-anchor="middle" fill="#ffbb33" font-family="Consolas, monospace" font-size="11" font-weight="bold">T5</text>
+  <circle cx="335" cy="370" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="335" y="375" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">P3</text>
+  <circle cx="400" cy="365" r="16" fill="#1a1a2e" stroke="#66bbff" stroke-width="2" filter="url(#glow)"/>
+  <text x="400" y="370" text-anchor="middle" fill="#66bbff" font-family="Consolas, monospace" font-size="11" font-weight="bold">Pz</text>
+  <circle cx="465" cy="370" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="465" y="375" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">P4</text>
+  <circle cx="552" cy="375" r="16" fill="#1a1a2e" stroke="#ffbb33" stroke-width="2" filter="url(#glow)"/>
+  <text x="552" y="380" text-anchor="middle" fill="#ffbb33" font-family="Consolas, monospace" font-size="11" font-weight="bold">T6</text>
+  <!-- Row 5: O1, O2 -->
+  <circle cx="355" cy="445" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="355" y="450" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">O1</text>
+  <circle cx="445" cy="445" r="16" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+  <text x="445" y="450" text-anchor="middle" fill="#00ff88" font-family="Consolas, monospace" font-size="11" font-weight="bold">O2</text>
+  <!-- Legend -->
+  <rect x="620" y="60" width="170" height="120" fill="#0d0d1a" stroke="#333355" stroke-width="1" rx="5"/>
+  <text x="705" y="80" text-anchor="middle" fill="#aabbcc" font-family="Consolas, monospace" font-size="12" font-weight="bold">Legend</text>
+  <circle cx="640" cy="98" r="6" fill="none" stroke="#00ff88" stroke-width="2"/>
+  <text x="655" y="102" fill="#00ff88" font-family="Consolas, monospace" font-size="10">Odd = Left (1,3,5,7)</text>
+  <circle cx="640" cy="120" r="6" fill="none" stroke="#00ff88" stroke-width="2"/>
+  <text x="655" y="124" fill="#00ff88" font-family="Consolas, monospace" font-size="10">Even = Right (2,4,6,8)</text>
+  <circle cx="640" cy="142" r="6" fill="none" stroke="#66bbff" stroke-width="2"/>
+  <text x="655" y="146" fill="#66bbff" font-family="Consolas, monospace" font-size="10">z = Midline (zero)</text>
+  <circle cx="640" cy="164" r="6" fill="none" stroke="#ffbb33" stroke-width="2"/>
+  <text x="655" y="168" fill="#ffbb33" font-family="Consolas, monospace" font-size="10">Temporal chain</text>
+  <!-- Distance markers -->
+  <text x="15" y="80" fill="#556677" font-family="Consolas, monospace" font-size="10">Fp = Frontal pole</text>
+  <text x="15" y="95" fill="#556677" font-family="Consolas, monospace" font-size="10">F  = Frontal</text>
+  <text x="15" y="110" fill="#556677" font-family="Consolas, monospace" font-size="10">C  = Central</text>
+  <text x="15" y="125" fill="#556677" font-family="Consolas, monospace" font-size="10">P  = Parietal</text>
+  <text x="15" y="140" fill="#556677" font-family="Consolas, monospace" font-size="10">O  = Occipital</text>
+  <text x="15" y="155" fill="#556677" font-family="Consolas, monospace" font-size="10">T  = Temporal</text>
+  <!-- 10-20 distance annotations -->
+  <text x="15" y="185" fill="#667788" font-family="Consolas, monospace" font-size="10">Distances: 10% and 20%</text>
+  <text x="15" y="200" fill="#667788" font-family="Consolas, monospace" font-size="10">of total skull distance</text>
+</svg>

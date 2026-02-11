@@ -1,0 +1,271 @@
+---
+interface Annotation {
+  id: string;
+  x: number;
+  y: number;
+  label: string;
+  description: string;
+}
+
+interface Props {
+  id: string;
+  title: string;
+  imagePath: string;
+  imageAlt: string;
+  annotations: Annotation[];
+  difficulty?: 'basic' | 'intermediate' | 'advanced';
+  caption?: string;
+  source?: string;
+  license?: string;
+  compact?: boolean;
+  syndrome?: string;
+  frequency?: string;
+  distribution?: string;
+  clinicalSignificance?: string;
+}
+
+const {
+  id,
+  title,
+  imagePath,
+  imageAlt,
+  annotations,
+  difficulty = 'basic',
+  caption,
+  source,
+  license,
+  compact = false,
+  syndrome,
+  frequency,
+  distribution,
+  clinicalSignificance,
+} = Astro.props;
+
+const difficultyColors = {
+  basic: { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-300' },
+  intermediate: { bg: 'bg-amber-100', text: 'text-amber-800', border: 'border-amber-300' },
+  advanced: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-300' },
+};
+
+const colors = difficultyColors[difficulty];
+---
+
+<div
+  class:list={[
+    'annotated-eeg rounded-xl border border-slate-200 overflow-hidden bg-white shadow-sm',
+    compact ? 'my-6' : 'my-8',
+  ]}
+  data-eeg-id={id}
+  id={id}
+>
+  <!-- Header -->
+  <div class="flex items-center justify-between px-4 py-3 bg-slate-50 border-b border-slate-200">
+    <div class="flex items-center gap-3">
+      <span class={`px-2 py-0.5 rounded text-xs font-semibold ${colors.bg} ${colors.text}`}>
+        {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+      </span>
+      <h4 class="text-sm font-bold text-slate-800">{title}</h4>
+      {syndrome && (
+        <span class="hidden sm:inline text-xs text-slate-500">— {syndrome}</span>
+      )}
+    </div>
+    <button
+      class="annotation-toggle px-3 py-1 text-xs font-medium rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+      data-target={id}
+      aria-label="Toggle annotations"
+    >
+      Hide Annotations
+    </button>
+  </div>
+
+  <!-- Image container with overlay markers -->
+  <div class="eeg-image-container relative bg-slate-900 cursor-crosshair">
+    <img
+      src={imagePath}
+      alt={imageAlt}
+      loading="lazy"
+      class:list={[
+        'w-full h-auto block',
+        compact ? 'max-h-[350px] object-contain' : 'max-h-[500px] object-contain',
+      ]}
+    />
+
+    <!-- Annotation markers -->
+    <div class="annotation-overlay absolute inset-0" data-overlay={id}>
+      {annotations.map((ann, index) => (
+        <button
+          class="annotation-marker absolute transform -translate-x-1/2 -translate-y-1/2 group"
+          style={`left: ${ann.x}%; top: ${ann.y}%;`}
+          data-annotation-id={ann.id}
+          aria-label={ann.label}
+        >
+          {/* Pulsing ring */}
+          <span class="absolute inset-0 w-7 h-7 -ml-[2px] -mt-[2px] rounded-full bg-amber-400/30 animate-ping" />
+          {/* Marker dot */}
+          <span class="relative flex items-center justify-center w-6 h-6 rounded-full bg-amber-500 text-white text-[10px] font-bold shadow-lg border-2 border-white hover:bg-amber-400 transition-colors z-10">
+            {index + 1}
+          </span>
+          {/* Tooltip */}
+          <span class="annotation-tooltip absolute z-50 hidden group-hover:block bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-slate-900/95 text-white text-xs shadow-xl border border-slate-600 pointer-events-none">
+            <strong class="block text-amber-300 mb-1">{ann.label}</strong>
+            <span class="text-slate-200 leading-relaxed">{ann.description}</span>
+            <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-900 border-r border-b border-slate-600 rotate-45" />
+          </span>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <!-- Info bar -->
+  <div class="px-4 py-3 bg-slate-50 border-t border-slate-200">
+    {/* Pattern details */}
+    {(frequency || distribution) && (
+      <div class="flex flex-wrap gap-4 mb-2 text-xs text-slate-600">
+        {frequency && (
+          <span><strong class="text-slate-700">Frequency:</strong> {frequency}</span>
+        )}
+        {distribution && (
+          <span><strong class="text-slate-700">Distribution:</strong> {distribution}</span>
+        )}
+      </div>
+    )}
+
+    {clinicalSignificance && (
+      <p class="text-xs text-slate-600 leading-relaxed mb-2">
+        <strong class="text-slate-700">Clinical Significance:</strong> {clinicalSignificance}
+      </p>
+    )}
+
+    {/* Attribution */}
+    {(source || license || caption) && (
+      <div class="flex items-center justify-between text-[10px] text-slate-400 pt-2 border-t border-slate-100">
+        {caption && <span class="italic">{caption}</span>}
+        <div class="flex gap-3">
+          {source && <span>Source: {source}</span>}
+          {license && <span>License: {license}</span>}
+        </div>
+      </div>
+    )}
+
+    {/* Annotation legend (expandable) */}
+    {annotations.length > 0 && (
+      <details class="mt-2 pt-2 border-t border-slate-100">
+        <summary class="text-xs font-medium text-blue-600 cursor-pointer hover:text-blue-800">
+          Annotation Legend ({annotations.length} markers)
+        </summary>
+        <ol class="mt-2 space-y-1">
+          {annotations.map((ann, index) => (
+            <li class="flex items-start gap-2 text-xs text-slate-600">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] font-bold flex items-center justify-center">
+                {index + 1}
+              </span>
+              <div>
+                <strong class="text-slate-700">{ann.label}</strong>
+                <span class="text-slate-500"> — {ann.description}</span>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </details>
+    )}
+  </div>
+</div>
+
+<style>
+  .annotation-marker {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  .annotation-marker .annotation-tooltip {
+    display: none;
+  }
+
+  .annotation-marker:hover .annotation-tooltip,
+  .annotation-marker:focus .annotation-tooltip {
+    display: block;
+  }
+
+  .annotation-marker .animate-ping {
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  /* Mobile: make markers larger for touch */
+  @media (max-width: 640px) {
+    .annotation-marker span.relative {
+      width: 2rem;
+      height: 2rem;
+      font-size: 11px;
+    }
+
+    .annotation-tooltip {
+      width: 200px !important;
+      left: 0 !important;
+      transform: translateX(-40%) !important;
+    }
+  }
+</style>
+
+<script>
+  // Toggle annotations on/off
+  document.querySelectorAll('.annotation-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const overlay = document.querySelector(`[data-overlay="${targetId}"]`);
+      if (!overlay) return;
+
+      const isHidden = overlay.classList.contains('hidden');
+      if (isHidden) {
+        overlay.classList.remove('hidden');
+        btn.textContent = 'Hide Annotations';
+      } else {
+        overlay.classList.add('hidden');
+        btn.textContent = 'Show Annotations';
+      }
+    });
+  });
+
+  // Click marker to keep tooltip open on mobile
+  document.querySelectorAll('.annotation-marker').forEach((marker) => {
+    marker.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const tooltip = marker.querySelector('.annotation-tooltip');
+      if (!tooltip) return;
+
+      // Close all other open tooltips
+      document.querySelectorAll('.annotation-tooltip.force-show').forEach((t) => {
+        if (t !== tooltip) {
+          t.classList.remove('force-show');
+          t.style.display = '';
+        }
+      });
+
+      // Toggle this tooltip
+      const isShowing = tooltip.classList.contains('force-show');
+      if (isShowing) {
+        tooltip.classList.remove('force-show');
+        tooltip.style.display = '';
+      } else {
+        tooltip.classList.add('force-show');
+        tooltip.style.display = 'block';
+      }
+    });
+  });
+
+  // Close tooltips when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.annotation-tooltip.force-show').forEach((t) => {
+      t.classList.remove('force-show');
+      t.style.display = '';
+    });
+  });
+</script>

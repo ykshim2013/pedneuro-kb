@@ -34,6 +34,20 @@ references:
     pmid: "35503717"
 ---
 
+import AnnotatedEEG from '../../../components/AnnotatedEEG.astro';
+import { getPatternById } from '../../../data/eeg-atlas';
+
+export const electrodes = getPatternById('electrode-placement');
+export const normalPdr = getPatternById('normal-pdr');
+export const pdrMat = getPatternById('pdr-maturation');
+export const normalSleep = getPatternById('normal-sleep');
+export const spikeWave = getPatternById('spike-wave-3hz');
+export const ctSpikes = getPatternById('centrotemporal-spikes');
+export const hypsa = getPatternById('hypsarrhythmia');
+export const burstSupp = getPatternById('burst-suppression');
+
+> **Interactive EEG Atlas**: This article includes annotated EEG diagrams. Click or hover on the numbered markers to explore key features. For the full atlas with all patterns, visit the [EEG Atlas page](/eeg-atlas).
+
 ## EEG Electrode Placement: The International 10-20 System
 
 The 10-20 system provides standardized electrode placement based on skull landmarks:
@@ -48,6 +62,19 @@ The 10-20 system provides standardized electrode placement based on skull landma
 | O | Occipital | |
 
 **Numbering convention**: Odd numbers (1, 3, 5, 7) indicate left hemisphere; even numbers (2, 4, 6, 8) indicate right hemisphere; "z" denotes midline.
+
+{electrodes && <AnnotatedEEG
+  id={electrodes.id}
+  title={electrodes.title}
+  imagePath={electrodes.imagePath}
+  imageAlt={electrodes.imageAlt}
+  annotations={electrodes.annotations}
+  difficulty={electrodes.difficulty}
+  clinicalSignificance={electrodes.clinicalSignificance}
+  source={electrodes.source}
+  license={electrodes.license}
+  compact={true}
+/>}
 
 ## Age-Dependent Posterior Dominant Rhythm (PDR)
 
@@ -66,13 +93,41 @@ The PDR matures progressively throughout childhood and is one of the most import
 
 > **Clinical Pearl**: PDR should be at least **[Age in years + 2] Hz**. For example, a 5-year-old should have PDR ≥7 Hz. A PDR that is slow for age suggests encephalopathy or background abnormality.
 
+{normalPdr && <AnnotatedEEG
+  id={normalPdr.id}
+  title={normalPdr.title}
+  imagePath={normalPdr.imagePath}
+  imageAlt={normalPdr.imageAlt}
+  annotations={normalPdr.annotations}
+  difficulty={normalPdr.difficulty}
+  frequency={normalPdr.frequency}
+  distribution={normalPdr.distribution}
+  clinicalSignificance={normalPdr.clinicalSignificance}
+  source={normalPdr.source}
+  license={normalPdr.license}
+  compact={true}
+/>}
+
+{pdrMat && <AnnotatedEEG
+  id={pdrMat.id}
+  title={pdrMat.title}
+  imagePath={pdrMat.imagePath}
+  imageAlt={pdrMat.imageAlt}
+  annotations={pdrMat.annotations}
+  difficulty={pdrMat.difficulty}
+  clinicalSignificance={pdrMat.clinicalSignificance}
+  source={pdrMat.source}
+  license={pdrMat.license}
+  compact={true}
+/>}
+
 ## Normal EEG Patterns and Variants
 
 These normal variants are frequently over-interpreted as epileptiform — recognition is essential to avoid misdiagnosis:
 
 | Pattern | Appearance | Age Range | Key Feature |
 |---------|-----------|-----------|------------|
-| Posterior slow waves of youth | Delta waves mixed with posterior alpha | Children < 12 years | NORMAL, resolves with maturation |
+| Posterior slow waves of youth | Delta waves mixed with posterior alpha | Children &lt; 12 years | NORMAL, resolves with maturation |
 | Mu rhythm | Arch-shaped 8-10 Hz rhythm, central | Any age | Attenuates with contralateral movement |
 | Lambda waves | Sharp occipital transients | Any age | Present during visual scanning |
 | Hypnagogic hypersynchrony | High-amplitude theta bursts | Children (drowsiness) | NORMAL drowsy pattern |
@@ -102,6 +157,19 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 - Prominent drowsy patterns
 - Hyperventilation response: up to 1 minute of 3 Hz slowing after hyperventilation is **NORMAL**
 
+{normalSleep && <AnnotatedEEG
+  id={normalSleep.id}
+  title={normalSleep.title}
+  imagePath={normalSleep.imagePath}
+  imageAlt={normalSleep.imageAlt}
+  annotations={normalSleep.annotations}
+  difficulty={normalSleep.difficulty}
+  clinicalSignificance={normalSleep.clinicalSignificance}
+  source={normalSleep.source}
+  license={normalSleep.license}
+  compact={true}
+/>}
+
 ## Epileptiform EEG Patterns
 
 ### Summary Table
@@ -127,7 +195,23 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 - **Inhibition**: Eye opening, alerting, sleep
 - **Background**: Normal between discharges
 
-> **Red flags suggesting NOT typical CAE**: Asymmetry or focal features, abnormal background, polyspikes at onset, very slow frequency (<2.5 Hz).
+> **Red flags suggesting NOT typical CAE**: Asymmetry or focal features, abnormal background, polyspikes at onset, very slow frequency (&lt;2.5 Hz).
+
+{spikeWave && <AnnotatedEEG
+  id={spikeWave.id}
+  title={spikeWave.title}
+  imagePath={spikeWave.imagePath}
+  imageAlt={spikeWave.imageAlt}
+  annotations={spikeWave.annotations}
+  difficulty={spikeWave.difficulty}
+  syndrome={spikeWave.syndrome}
+  frequency={spikeWave.frequency}
+  distribution={spikeWave.distribution}
+  clinicalSignificance={spikeWave.clinicalSignificance}
+  source={spikeWave.source}
+  license={spikeWave.license}
+  compact={true}
+/>}
 
 ### Centrotemporal Spikes (SLECTS/Rolandic Epilepsy)
 
@@ -140,6 +224,21 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 - **Background**: Normal
 
 > **Clinical Pearl**: Spikes may persist 1-2 years after clinical seizures stop. Do NOT chase the EEG — treat the patient!
+
+{ctSpikes && <AnnotatedEEG
+  id={ctSpikes.id}
+  title={ctSpikes.title}
+  imagePath={ctSpikes.imagePath}
+  imageAlt={ctSpikes.imageAlt}
+  annotations={ctSpikes.annotations}
+  difficulty={ctSpikes.difficulty}
+  syndrome={ctSpikes.syndrome}
+  distribution={ctSpikes.distribution}
+  clinicalSignificance={ctSpikes.clinicalSignificance}
+  source={ctSpikes.source}
+  license={ctSpikes.license}
+  compact={true}
+/>}
 
 ### Hypsarrhythmia (Infantile Spasms/West Syndrome)
 
@@ -156,6 +255,21 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 
 > **Urgency**: Recognize and treat promptly — delayed treatment of infantile spasms correlates with worse developmental outcome.
 
+{hypsa && <AnnotatedEEG
+  id={hypsa.id}
+  title={hypsa.title}
+  imagePath={hypsa.imagePath}
+  imageAlt={hypsa.imageAlt}
+  annotations={hypsa.annotations}
+  difficulty={hypsa.difficulty}
+  syndrome={hypsa.syndrome}
+  distribution={hypsa.distribution}
+  clinicalSignificance={hypsa.clinicalSignificance}
+  source={hypsa.source}
+  license={hypsa.license}
+  compact={true}
+/>}
+
 ### Slow Spike-and-Wave (Lennox-Gastaut Syndrome)
 
 - **Frequency**: 1.5-2.5 Hz (SLOW compared to CAE)
@@ -169,7 +283,7 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 
 | Feature | Lennox-Gastaut | Childhood Absence |
 |---------|---------------|-------------------|
-| Spike-wave frequency | <2.5 Hz | ~3 Hz |
+| Spike-wave frequency | &lt;2.5 Hz | ~3 Hz |
 | Background | Abnormal | Normal |
 | Polyspikes | Present | Absent |
 | Prognosis | Severe | Good |
@@ -177,7 +291,7 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 ### Burst-Suppression Pattern (Early Infantile DEE)
 
 - **Burst**: High amplitude (150-350 µV), mixed frequencies, duration 1-3 sec
-- **Suppression**: Very low (<10-25 µV), near-isoelectric, duration 3-10 sec
+- **Suppression**: Very low (&lt;10-25 µV), near-isoelectric, duration 3-10 sec
 - **Periodicity**: 3-20 second cycle
 - **Reactivity**: Absent to stimuli
 - **Synchrony**: May be synchronous or asynchronous
@@ -189,6 +303,21 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 - Specific genetic etiologies: STXBP1, KCNQ2, SCN2A mutations
 
 **Prognosis**: Generally poor — indicates severe brain dysfunction.
+
+{burstSupp && <AnnotatedEEG
+  id={burstSupp.id}
+  title={burstSupp.title}
+  imagePath={burstSupp.imagePath}
+  imageAlt={burstSupp.imageAlt}
+  annotations={burstSupp.annotations}
+  difficulty={burstSupp.difficulty}
+  syndrome={burstSupp.syndrome}
+  distribution={burstSupp.distribution}
+  clinicalSignificance={burstSupp.clinicalSignificance}
+  source={burstSupp.source}
+  license={burstSupp.license}
+  compact={true}
+/>}
 
 ## EEG Interpretation Pearls
 
@@ -206,6 +335,7 @@ These normal variants are frequently over-interpreted as epileptiform — recogn
 | NCBI Developmental EEG Chapter | Detailed coverage of premature, neonatal, infant, and childhood EEG patterns |
 | Child Mind Institute MIPDB | Pediatric EEG database for research and advanced learning |
 | OpenNeuro | Open sharing of neuroimaging data including EEG datasets |
+| [PedNeuro EEG Atlas](/eeg-atlas) | Interactive annotated EEG atlas with 12 patterns from basic to advanced |
 
 ## Key Points
 

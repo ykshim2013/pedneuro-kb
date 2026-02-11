@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EEGAtlasCard from '../components/EEGAtlasCard.astro';
+import AnnotatedEEG from '../components/AnnotatedEEG.astro';
+import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } from '../data/eeg-atlas';
+---
+
+<BaseLayout title="EEG Atlas">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-amber-700 via-amber-600 to-yellow-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-4">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          Interactive Learning Resource
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
+          Pediatric EEG Atlas
+        </h1>
+        <p class="text-base text-amber-100 mb-6 leading-relaxed">
+          Interactive annotated EEG patterns organized from basic to advanced.
+          Click or hover on numbered markers to explore key features of each pattern.
+        </p>
+        <div class="flex items-center justify-center gap-6 text-sm">
+          <span class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+            {basicPatterns.length} Basic
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-amber-300"></span>
+            {intermediatePatterns.length} Intermediate
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+            {advancedPatterns.length} Advanced
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter tabs + card grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Filter tabs -->
+    <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
+      <button class="atlas-filter-btn active px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white" data-filter="all">
+        All ({allPatterns.length})
+      </button>
+      <button class="atlas-filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="basic">
+        Basic ({basicPatterns.length})
+      </button>
+      <button class="atlas-filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="intermediate">
+        Intermediate ({intermediatePatterns.length})
+      </button>
+      <button class="atlas-filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="advanced">
+        Advanced ({advancedPatterns.length})
+      </button>
+    </div>
+
+    <!-- Card grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-12" id="atlas-card-grid">
+      {allPatterns.map(pattern => (
+        <EEGAtlasCard
+          id={pattern.id}
+          title={pattern.title}
+          imagePath={pattern.imagePath}
+          difficulty={pattern.difficulty}
+          syndrome={pattern.syndrome}
+          description={pattern.description}
+          annotationCount={pattern.annotations.length}
+        />
+      ))}
+    </div>
+
+    <!-- Full viewers -->
+    <div class="space-y-8" id="atlas-viewers">
+      <!-- Basic patterns -->
+      <div class="atlas-section" data-section="basic">
+        <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-green-500"></span>
+          Basic Patterns
+        </h2>
+        {basicPatterns.map(pattern => (
+          <AnnotatedEEG
+            id={pattern.id}
+            title={pattern.title}
+            imagePath={pattern.imagePath}
+            imageAlt={pattern.imageAlt}
+            annotations={pattern.annotations}
+            difficulty={pattern.difficulty}
+            syndrome={pattern.syndrome}
+            frequency={pattern.frequency}
+            distribution={pattern.distribution}
+            clinicalSignificance={pattern.clinicalSignificance}
+            source={pattern.source}
+            license={pattern.license}
+          />
+        ))}
+      </div>
+
+      <!-- Intermediate patterns -->
+      <div class="atlas-section" data-section="intermediate">
+        <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+          Intermediate Patterns
+        </h2>
+        {intermediatePatterns.map(pattern => (
+          <AnnotatedEEG
+            id={pattern.id}
+            title={pattern.title}
+            imagePath={pattern.imagePath}
+            imageAlt={pattern.imageAlt}
+            annotations={pattern.annotations}
+            difficulty={pattern.difficulty}
+            syndrome={pattern.syndrome}
+            frequency={pattern.frequency}
+            distribution={pattern.distribution}
+            clinicalSignificance={pattern.clinicalSignificance}
+            source={pattern.source}
+            license={pattern.license}
+          />
+        ))}
+      </div>
+
+      <!-- Advanced patterns -->
+      <div class="atlas-section" data-section="advanced">
+        <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500"></span>
+          Advanced Patterns
+        </h2>
+        {advancedPatterns.map(pattern => (
+          <AnnotatedEEG
+            id={pattern.id}
+            title={pattern.title}
+            imagePath={pattern.imagePath}
+            imageAlt={pattern.imageAlt}
+            annotations={pattern.annotations}
+            difficulty={pattern.difficulty}
+            syndrome={pattern.syndrome}
+            frequency={pattern.frequency}
+            distribution={pattern.distribution}
+            clinicalSignificance={pattern.clinicalSignificance}
+            source={pattern.source}
+            license={pattern.license}
+          />
+        ))}
+      </div>
+    </div>
+
+    <!-- Back to article link -->
+    <div class="mt-8 text-center">
+      <a href="/articles/epilepsy/pediatric-eeg-interpretation" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to Pediatric EEG Interpretation article
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Filter tabs
+  const filterBtns = document.querySelectorAll('.atlas-filter-btn');
+  const cards = document.querySelectorAll('.eeg-atlas-card');
+  const sections = document.querySelectorAll('.atlas-section');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      // Update active button
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'bg-blue-600', 'text-white');
+        b.classList.add('bg-slate-100', 'text-slate-600');
+      });
+      btn.classList.add('active', 'bg-blue-600', 'text-white');
+      btn.classList.remove('bg-slate-100', 'text-slate-600');
+
+      // Filter cards
+      cards.forEach(card => {
+        const difficulty = card.getAttribute('data-difficulty');
+        if (filter === 'all' || difficulty === filter) {
+          (card as HTMLElement).style.display = '';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+
+      // Filter sections
+      sections.forEach(section => {
+        const sectionType = section.getAttribute('data-section');
+        if (filter === 'all' || sectionType === filter) {
+          (section as HTMLElement).style.display = '';
+        } else {
+          (section as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // URL hash support for direct linking
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const target = document.getElementById(hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+  }
+</script>

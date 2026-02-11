@@ -1,0 +1,75 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  imagePath: string;
+  difficulty: 'basic' | 'intermediate' | 'advanced';
+  syndrome?: string;
+  description: string;
+  annotationCount: number;
+}
+
+const { id, title, imagePath, difficulty, syndrome, description, annotationCount } = Astro.props;
+
+const difficultyColors = {
+  basic: { bg: 'bg-green-100', text: 'text-green-800', dot: 'bg-green-500' },
+  intermediate: { bg: 'bg-amber-100', text: 'text-amber-800', dot: 'bg-amber-500' },
+  advanced: { bg: 'bg-red-100', text: 'text-red-800', dot: 'bg-red-500' },
+};
+
+const colors = difficultyColors[difficulty];
+---
+
+<a
+  href={`#${id}`}
+  class="eeg-atlas-card block rounded-xl border border-slate-200 overflow-hidden bg-white shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-200 group"
+  data-difficulty={difficulty}
+>
+  <!-- Image preview -->
+  <div class="relative h-40 bg-slate-900 overflow-hidden">
+    <img
+      src={imagePath}
+      alt={title}
+      loading="lazy"
+      class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+    />
+    <div class="absolute top-2 left-2">
+      <span class={`px-2 py-0.5 rounded text-[10px] font-semibold ${colors.bg} ${colors.text}`}>
+        {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+      </span>
+    </div>
+    <div class="absolute bottom-2 right-2">
+      <span class="px-2 py-0.5 rounded bg-black/60 text-white text-[10px]">
+        {annotationCount} annotations
+      </span>
+    </div>
+  </div>
+
+  <!-- Card body -->
+  <div class="p-3">
+    <h3 class="text-sm font-bold text-slate-800 mb-1 group-hover:text-blue-700 transition-colors line-clamp-1">
+      {title}
+    </h3>
+    {syndrome && (
+      <p class="text-xs text-blue-600 font-medium mb-1">{syndrome}</p>
+    )}
+    <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
+      {description}
+    </p>
+  </div>
+</a>
+
+<style>
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
