@@ -143,57 +143,49 @@ export const basicPatterns: EEGPattern[] = [
     description:
       'The posterior dominant rhythm (PDR) is the dominant frequency recorded over the occipital regions during relaxed wakefulness with eyes closed. In adults it is 8-13 Hz (alpha band). It attenuates with eye opening and is best seen in bipolar longitudinal montage.',
     difficulty: 'basic',
-    imagePath: '/images/eeg/normal-pdr.svg',
+    imagePath: '/images/eeg/normal-pdr-real.jpg',
     imageAlt:
-      'Multi-channel EEG trace showing normal posterior dominant alpha rhythm at 10 Hz over occipital channels with attenuation upon eye opening',
+      'Clinical EEG recording showing normal 10 Hz posterior dominant rhythm (alpha) in a 32-year-old patient during relaxed wakefulness with eyes closed',
     frequency: '8-13 Hz (alpha)',
     distribution: 'Occipital, bilateral',
     clinicalSignificance:
       'PDR maturation follows the [Age+2] Hz rule in early childhood (e.g., 6 Hz at age 4). A PDR that is slow for age suggests diffuse encephalopathy. Asymmetry of >1 Hz or >50% amplitude suggests a structural or functional lesion on the lower-amplitude or slower side.',
     annotations: [
       {
-        id: 'alpha-o1',
-        x: 72,
-        y: 78,
-        label: 'Alpha rhythm (O1)',
+        id: 'alpha-posterior',
+        x: 15,
+        y: 75,
+        label: 'Alpha rhythm (posterior channels)',
         description:
-          'Prominent 10 Hz sinusoidal alpha activity over left occipital channel. Amplitude typically 20-60 microvolts in adults.',
+          'Prominent 10 Hz sinusoidal alpha activity over posterior (occipital) channels. Amplitude typically 20-60 microvolts in adults. This is the posterior dominant rhythm (PDR).',
       },
       {
-        id: 'alpha-o2',
-        x: 72,
-        y: 85,
-        label: 'Alpha rhythm (O2)',
+        id: 'sinusoidal-morphology',
+        x: 50,
+        y: 70,
+        label: 'Sinusoidal morphology',
         description:
-          'Symmetric 10 Hz alpha activity over right occipital channel. Symmetry with O1 is normal; >50% amplitude asymmetry is abnormal.',
-      },
-      {
-        id: 'eyes-open',
-        x: 85,
-        y: 50,
-        label: 'Eyes open - attenuation',
-        description:
-          'Alpha rhythm attenuates (blocks) with eye opening. This reactivity confirms a physiologic PDR. Lack of reactivity is abnormal.',
+          'The alpha rhythm shows a characteristic regular, sinusoidal waveform. Well-formed, symmetric alpha indicates normal thalamocortical function.',
       },
       {
         id: 'frontal-low-amp',
         x: 30,
-        y: 15,
+        y: 20,
         label: 'Frontal low-amplitude fast activity',
         description:
           'Normal low-amplitude beta activity (13-30 Hz) predominates over frontal regions during wakefulness. Higher amplitude beta may be seen with benzodiazepine or barbiturate use.',
       },
       {
-        id: 'anterior-spread',
-        x: 45,
-        y: 50,
-        label: 'Anterior gradient',
+        id: 'anterior-gradient',
+        x: 70,
+        y: 45,
+        label: 'Anterior-posterior gradient',
         description:
           'Normal anterior-to-posterior amplitude gradient: lower amplitude anteriorly, higher posteriorly. Reversal of this gradient is abnormal.',
       },
     ],
-    source: 'Niedermeyer E, da Silva FL. Electroencephalography: Basic Principles, Clinical Applications, and Related Fields. 5th ed. Lippincott Williams & Wilkins; 2005.',
-    license: 'Educational use - original diagram',
+    source: 'Nascimento FA, et al. Seminar in epileptology: Normal awake and sleep patterns, interictal abnormalities, and ictal patterns on scalp EEG. Epileptic Disord. 2025;27:803-842. PMC12574496. Figure 1.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'pdr-maturation',
@@ -273,23 +265,15 @@ export const basicPatterns: EEGPattern[] = [
     description:
       'Sleep architecture produces characteristic EEG patterns including vertex sharp transients (V-waves), sleep spindles, and K-complexes. Recognizing normal sleep graphoelements is essential to avoid misinterpreting them as epileptiform discharges.',
     difficulty: 'basic',
-    imagePath: '/images/eeg/normal-sleep.svg',
+    imagePath: '/images/eeg/normal-sleep-real.jpg',
     imageAlt:
-      'Multi-channel EEG trace showing normal NREM sleep stage 2 features including vertex waves, sleep spindles, and K-complexes',
+      'Clinical EEG recording showing normal NREM stage N2 sleep with sleep spindles, K-complexes, and positive occipital sharp transients of sleep (POSTS)',
     clinicalSignificance:
       'Sleep architecture development is age-dependent. Sleep spindles appear by 6-8 weeks post-term and must not be confused with epileptiform discharges. Vertex waves emerge by 3-4 months. Absent or asymmetric spindles may indicate thalamic or hemispheric dysfunction.',
     annotations: [
       {
-        id: 'vertex-wave',
-        x: 20,
-        y: 42,
-        label: 'Vertex sharp transient (V-wave)',
-        description:
-          'Sharply contoured, surface-negative wave maximal at Cz during drowsiness and light NREM sleep (N1). Amplitude up to 200 microvolts. Appears by 3-4 months of age.',
-      },
-      {
         id: 'sleep-spindle',
-        x: 45,
+        x: 35,
         y: 30,
         label: 'Sleep spindle',
         description:
@@ -297,30 +281,30 @@ export const basicPatterns: EEGPattern[] = [
       },
       {
         id: 'k-complex',
-        x: 70,
+        x: 55,
         y: 45,
         label: 'K-complex',
         description:
           'High-amplitude biphasic wave (initial sharp negative, then slower positive component) followed by a sleep spindle. Maximal at vertex/frontal regions. Hallmark of NREM stage N2. Appears by approximately 5 months of age.',
       },
       {
-        id: 'slow-wave',
-        x: 85,
-        y: 65,
-        label: 'Delta slowing (N3)',
+        id: 'posts',
+        x: 75,
+        y: 70,
+        label: 'POSTS',
         description:
-          'High-amplitude (>75 microvolts) delta activity (0.5-2 Hz) occupying >20% of an epoch defines NREM stage N3 (slow-wave sleep). Prominent in children, decreases with age.',
+          'Positive occipital sharp transients of sleep. Surface-positive sharp waves over occipital regions during light sleep. A normal sleep variant that should not be mistaken for epileptiform activity.',
       },
       {
-        id: 'posts',
-        x: 30,
-        y: 82,
-        label: 'Positive occipital sharp transients of sleep (POSTS)',
+        id: 'background',
+        x: 20,
+        y: 60,
+        label: 'N2 sleep background',
         description:
-          'Positive sharp waves over occipital regions during light sleep. Surface-positive, may appear in runs. A normal sleep variant that should not be mistaken for epileptiform activity.',
+          'Mixed-frequency background with theta and delta activity during NREM stage N2. Sleep spindles and K-complexes define this stage. Normal sleep architecture preservation is an important finding.',
       },
     ],
-    source: 'Berry RB, et al. The AASM Manual for the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications. Version 2.6. American Academy of Sleep Medicine; 2020.',
-    license: 'Educational use - original diagram',
+    source: 'Nascimento FA, et al. Seminar in epileptology: Normal awake and sleep patterns, interictal abnormalities, and ictal patterns on scalp EEG. Epileptic Disord. 2025;27:803-842. PMC12574496. Figure 8.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
 ];

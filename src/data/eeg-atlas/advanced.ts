@@ -7,9 +7,9 @@ export const advancedPatterns: EEGPattern[] = [
     description:
       'Hypsarrhythmia is a severely disorganized, high-amplitude, chaotic interictal EEG pattern pathognomonic of infantile spasms (West syndrome). It is characterized by near-continuous high-amplitude (>300 microvolts) slow waves mixed with multifocal spikes and sharp waves, with loss of normal background organization and interhemispheric asynchrony.',
     difficulty: 'advanced',
-    imagePath: '/images/eeg/hypsarrhythmia.svg',
+    imagePath: '/images/eeg/hypsarrhythmia-real.jpg',
     imageAlt:
-      'Multi-channel EEG showing classic hypsarrhythmia pattern with chaotic high-amplitude slow waves, multifocal spikes, interhemispheric asynchrony, and electrodecrement during a spasm',
+      'Clinical EEG recording showing hypsarrhythmia pattern in an infant with epileptic spasms, with chaotic high-amplitude slow waves and multifocal spikes',
     syndrome: 'Infantile Spasms (West Syndrome)',
     distribution: 'Generalized, chaotic',
     clinicalSignificance:
@@ -25,11 +25,11 @@ export const advancedPatterns: EEGPattern[] = [
       },
       {
         id: 'asynchrony',
-        x: 50,
+        x: 55,
         y: 20,
         label: 'Interhemispheric asynchrony',
         description:
-          'Left and right hemisphere activity is asynchronous and independent. This lack of interhemispheric synchrony distinguishes hypsarrhythmia from other high-amplitude patterns and reflects severe disruption of normal bilateral cortical connectivity.',
+          'Left and right hemisphere activity is asynchronous and independent. This lack of interhemispheric synchrony distinguishes hypsarrhythmia from other high-amplitude patterns.',
       },
       {
         id: 'multifocal-spikes',
@@ -41,23 +41,15 @@ export const advancedPatterns: EEGPattern[] = [
       },
       {
         id: 'no-normal-bg',
-        x: 15,
-        y: 72,
+        x: 75,
+        y: 70,
         label: 'Absence of normal background',
         description:
           'All normal age-expected patterns are absent: no recognizable PDR, no sleep spindles, no organized sleep-wake differentiation. The entire recording is dominated by the chaotic hypsarrhythmic pattern.',
       },
-      {
-        id: 'electrodecrement',
-        x: 78,
-        y: 45,
-        label: 'Electrodecrement during spasm',
-        description:
-          'During an infantile spasm, a sudden generalized electrodecremental response (diffuse voltage attenuation or flattening) occurs, often lasting 1-3 seconds. This ictal electrodecrement may be accompanied by a high-amplitude slow wave or fast activity and correlates with the clinical spasm (flexor, extensor, or mixed).',
-      },
     ],
-    source: 'Hrachovy RA, Frost JD Jr. Infantile epileptic encephalopathy with hypsarrhythmia (infantile spasms/West syndrome). J Clin Neurophysiol. 2003;20(6):408-425.',
-    license: 'Educational use - original diagram',
+    source: 'Nascimento FA, et al. Seminar in epileptology: Normal awake and sleep patterns, interictal abnormalities, and ictal patterns on scalp EEG. Epileptic Disord. 2025;27:803-842. PMC12574496. Figure 20.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'burst-suppression',
@@ -65,9 +57,9 @@ export const advancedPatterns: EEGPattern[] = [
     description:
       'Burst-suppression is a severe EEG pattern consisting of alternating periods of high-amplitude mixed-frequency bursts and near-isoelectric suppression. In neonates, it is the hallmark of early infantile developmental and epileptic encephalopathy (DEE), formerly Ohtahara syndrome. It may also be seen in severe hypoxic-ischemic encephalopathy (HIE), deep anesthesia, and hypothermia.',
     difficulty: 'advanced',
-    imagePath: '/images/eeg/burst-suppression.svg',
+    imagePath: '/images/eeg/burst-suppression-real.jpg',
     imageAlt:
-      'Multi-channel EEG showing burst-suppression pattern with alternating high-amplitude bursts of mixed sharp and slow activity and periods of near-isoelectric suppression',
+      'Clinical neonatal EEG recording showing burst-suppression pattern with alternating high-amplitude bursts and near-isoelectric suppression periods',
     syndrome: 'Early Infantile DEE (Ohtahara syndrome)',
     distribution: 'Generalized, periodic',
     clinicalSignificance:
@@ -75,39 +67,31 @@ export const advancedPatterns: EEGPattern[] = [
     annotations: [
       {
         id: 'burst-phase',
-        x: 22,
+        x: 25,
         y: 35,
         label: 'Burst phase',
         description:
-          'High-amplitude (150-300+ microvolts) bursts lasting 1-10 seconds, containing a mixture of sharp waves, spikes, and slow waves. Bursts may contain epileptiform elements including polyspikes. The burst morphology is often invariant and stereotyped.',
+          'High-amplitude (150-300+ microvolts) bursts lasting 1-10 seconds, containing a mixture of sharp waves, spikes, and slow waves. Bursts may contain epileptiform elements including polyspikes.',
       },
       {
         id: 'suppression-phase',
         x: 55,
-        y: 50,
+        y: 55,
         label: 'Suppression phase',
         description:
           'Periods of marked voltage attenuation (<10 microvolts) lasting 2-20 seconds. Near-isoelectric suppression reflects profound cortical inactivity. In Ohtahara syndrome, suppression intervals are typically 3-5 seconds.',
       },
       {
-        id: 'isoelectric',
-        x: 60,
-        y: 70,
-        label: 'Near-isoelectric suppression (<10 uV)',
-        description:
-          'During suppression, voltage falls to near-isoelectric levels. True electrocerebral inactivity (<2 microvolts) is more ominous. The degree of voltage suppression correlates with severity of the underlying pathology.',
-      },
-      {
         id: 'periodicity',
-        x: 85,
-        y: 30,
+        x: 80,
+        y: 35,
         label: 'Cycle periodicity',
         description:
-          'Burst-suppression demonstrates quasi-periodic cycling with relatively regular burst-suppression intervals. Cycle length (burst + suppression) is typically 3-20 seconds. Shorter suppression intervals and reactive burst-suppression (where stimulation triggers a burst) carry a relatively better prognosis than non-reactive patterns.',
+          'Burst-suppression demonstrates quasi-periodic cycling with relatively regular burst-suppression intervals. Cycle length (burst + suppression) is typically 3-20 seconds.',
       },
     ],
-    source: 'Ohtahara S, Yamatogi Y. Ohtahara syndrome: with special reference to its developmental aspects for differentiating from early myoclonic encephalopathy. Epilepsy Res. 2006;70(Suppl 1):S58-S67.',
-    license: 'Educational use - original diagram',
+    source: 'Alkhateeb M, et al. Neuromonitoring in neonatal-onset epileptic encephalopathies. Front Neurol. 2021;12:623625. PMC7884638. Figure 2.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'slow-spike-wave',
@@ -115,9 +99,9 @@ export const advancedPatterns: EEGPattern[] = [
     description:
       'Slow spike-and-wave (SSW) complexes at 1.5-2.5 Hz are the electrographic hallmark of Lennox-Gastaut syndrome (LGS). Unlike the regular 3 Hz spike-wave of CAE, SSW is slower, more irregular, and occurs on an abnormal background. Generalized paroxysmal fast activity (GPFA) during sleep is another key electrographic feature of LGS.',
     difficulty: 'advanced',
-    imagePath: '/images/eeg/slow-spike-wave.svg',
+    imagePath: '/images/eeg/slow-spike-wave-real.jpg',
     imageAlt:
-      'Multi-channel EEG showing generalized slow spike-and-wave complexes at 1.5-2.5 Hz with frontal predominance and diffusely slow background in Lennox-Gastaut syndrome',
+      'Clinical EEG recording showing generalized slow (<2.5 Hz) spike-and-wave discharges with frontal predominance in a patient with Lennox-Gastaut syndrome',
     syndrome: 'Lennox-Gastaut Syndrome',
     frequency: '1.5-2.5 Hz',
     distribution: 'Generalized, frontal maximum',
@@ -127,22 +111,22 @@ export const advancedPatterns: EEGPattern[] = [
       {
         id: 'slow-frequency',
         x: 35,
-        y: 25,
-        label: 'Slow frequency (1.5-2.5 Hz)',
+        y: 30,
+        label: 'Slow frequency (<2.5 Hz)',
         description:
-          'The spike-and-wave repetition rate is 1.5-2.5 Hz, distinctly slower than the 3 Hz of CAE. This slow frequency reflects more widespread and severe cortical dysfunction. Individual complexes may vary in morphology within a burst.',
+          'The spike-and-wave repetition rate is 1.5-2.5 Hz, distinctly slower than the 3 Hz of CAE. This slow frequency reflects more widespread and severe cortical dysfunction.',
       },
       {
         id: 'frontal-predominance',
-        x: 50,
+        x: 20,
         y: 15,
         label: 'Frontal predominance',
         description:
-          'SSW complexes are typically of maximal amplitude over frontal regions (Fp1/Fp2, F3/F4, Fz). The frontal predominance is more marked than in CAE. Voltage may be asymmetric, suggesting a lateralized structural lesion in some cases.',
+          'SSW complexes are typically of maximal amplitude over frontal regions (Fp1/Fp2, F3/F4, Fz). The frontal predominance is more marked than in CAE.',
       },
       {
         id: 'abnormal-background',
-        x: 20,
+        x: 65,
         y: 65,
         label: 'Abnormal (slow) background',
         description:
@@ -150,15 +134,15 @@ export const advancedPatterns: EEGPattern[] = [
       },
       {
         id: 'gpfa',
-        x: 75,
-        y: 50,
-        label: 'GPFA (generalized paroxysmal fast activity)',
+        x: 80,
+        y: 45,
+        label: 'GPFA during sleep',
         description:
-          'Runs of generalized fast activity (10-25 Hz) lasting 1-10 seconds, seen predominantly during NREM sleep. GPFA is highly characteristic of LGS and may correlate with subtle tonic seizures. Presence of GPFA supports the LGS diagnosis even when SSW is not prominent.',
+          'Runs of generalized fast activity (10-25 Hz) seen predominantly during NREM sleep. GPFA is highly characteristic of LGS and may correlate with subtle tonic seizures.',
       },
     ],
-    source: 'Arzimanoglou A, et al. Lennox-Gastaut syndrome: a consensus approach on diagnosis, assessment, management, and trial methodology. Lancet Neurol. 2009;8(1):82-93.',
-    license: 'Educational use - original diagram',
+    source: 'Nascimento FA, et al. Seminar in epileptology: Normal awake and sleep patterns, interictal abnormalities, and ictal patterns on scalp EEG. Epileptic Disord. 2025;27:803-842. PMC12574496. Figure 16.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'neonatal-eeg',
