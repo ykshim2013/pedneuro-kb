@@ -2,12 +2,17 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EEGAtlasCard from '../components/EEGAtlasCard.astro';
 import AnnotatedEEG from '../components/AnnotatedEEG.astro';
-import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } from '../data/eeg-atlas';
+import {
+  allBrainImagingPatterns,
+  basicPatterns,
+  intermediatePatterns,
+  advancedPatterns,
+} from '../data/brain-imaging';
 ---
 
-<BaseLayout title="EEG Atlas">
+<BaseLayout title="Brain Imaging Atlas">
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-amber-700 via-amber-600 to-yellow-500 text-white">
+  <section class="bg-gradient-to-br from-purple-700 via-purple-600 to-indigo-500 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
       <div class="text-center max-w-3xl mx-auto">
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-4">
@@ -17,11 +22,11 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
           Interactive Learning Resource
         </div>
         <h1 class="text-3xl sm:text-4xl font-extrabold mb-3 leading-tight">
-          Pediatric EEG Atlas
+          Pediatric Brain Imaging Atlas
         </h1>
-        <p class="text-sm text-amber-100 mb-5 leading-relaxed">
-          Interactive annotated EEG patterns organized from basic to advanced.
-          Click or hover on numbered markers to explore key features.
+        <p class="text-sm text-purple-100 mb-5 leading-relaxed">
+          Interactive annotated brain imaging patterns for pediatric neurology.
+          Click or hover on numbered markers to explore key findings.
         </p>
         <div class="flex items-center justify-center gap-6 text-sm">
           <span class="flex items-center gap-1.5">
@@ -44,8 +49,8 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <!-- Filter tabs -->
     <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
-      <button class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white" data-filter="all">
-        All ({allPatterns.length})
+      <button class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium bg-purple-600 text-white" data-filter="all">
+        All ({allBrainImagingPatterns.length})
       </button>
       <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="basic">
         Basic ({basicPatterns.length})
@@ -60,7 +65,7 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
 
     <!-- Card grid -->
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-12" id="card-grid">
-      {allPatterns.map(pattern => (
+      {allBrainImagingPatterns.map(pattern => (
         <EEGAtlasCard
           id={pattern.id}
           title={pattern.title}
@@ -69,7 +74,7 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
           syndrome={pattern.syndrome}
           description={pattern.description}
           annotationCount={pattern.annotations.length}
-          modality="eeg"
+          modality="mri"
         />
       ))}
     </div>
@@ -90,12 +95,12 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
             annotations={pattern.annotations}
             difficulty={pattern.difficulty}
             syndrome={pattern.syndrome}
-            frequency={pattern.frequency}
-            distribution={pattern.distribution}
+            sequence={pattern.sequence}
+            plane={pattern.plane}
             clinicalSignificance={pattern.clinicalSignificance}
             source={pattern.source}
             license={pattern.license}
-            modality="eeg"
+            modality="mri"
           />
         ))}
       </div>
@@ -114,12 +119,12 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
             annotations={pattern.annotations}
             difficulty={pattern.difficulty}
             syndrome={pattern.syndrome}
-            frequency={pattern.frequency}
-            distribution={pattern.distribution}
+            sequence={pattern.sequence}
+            plane={pattern.plane}
             clinicalSignificance={pattern.clinicalSignificance}
             source={pattern.source}
             license={pattern.license}
-            modality="eeg"
+            modality="mri"
           />
         ))}
       </div>
@@ -138,98 +143,71 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
             annotations={pattern.annotations}
             difficulty={pattern.difficulty}
             syndrome={pattern.syndrome}
-            frequency={pattern.frequency}
-            distribution={pattern.distribution}
+            sequence={pattern.sequence}
+            plane={pattern.plane}
             clinicalSignificance={pattern.clinicalSignificance}
             source={pattern.source}
             license={pattern.license}
-            modality="eeg"
+            modality="mri"
           />
         ))}
       </div>
     </div>
 
-    <!-- Real EEG Image Resources -->
-    <div class="mt-12 rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+    <!-- Brain Imaging Resources -->
+    <div class="mt-12 rounded-xl border border-purple-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-6">
       <div class="flex items-start gap-3 mb-4">
-        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+        <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
           <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </div>
         <div>
-          <h2 class="text-lg font-bold text-slate-800">Real EEG Image Resources</h2>
+          <h2 class="text-lg font-bold text-slate-800">Brain Imaging Resources</h2>
           <p class="text-sm text-slate-600 mt-1">
-            The diagrams above are educational illustrations. For real clinical EEG recordings, explore these open-access resources:
+            The diagrams above are educational illustrations. For real clinical neuroimaging, explore these resources:
           </p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK390354/" target="_blank" rel="noopener noreferrer"
-           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
+        <a href="https://radiopaedia.org/articles/paediatric-brain?lang=us" target="_blank" rel="noopener noreferrer"
+           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
           <div class="flex items-center gap-2 mb-2">
             <span class="px-2 py-0.5 bg-green-100 text-green-800 text-[10px] font-semibold rounded">Free</span>
-            <h3 class="text-sm font-bold text-slate-800 group-hover:text-blue-700">NCBI EEG Atlas (AES)</h3>
+            <h3 class="text-sm font-bold text-slate-800 group-hover:text-purple-700">Radiopaedia — Pediatric Brain</h3>
             <svg class="w-3.5 h-3.5 text-slate-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">American Epilepsy Society atlas with real EEG recordings covering normal and abnormal findings. CC BY-NC-SA 4.0.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">Comprehensive open-access radiology reference with pediatric brain imaging cases, anatomy tutorials, and pathology examples.</p>
         </a>
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK390356/" target="_blank" rel="noopener noreferrer"
-           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
+        <a href="https://www.ajnr.org/content/by/section/Pediatric%20Neuroimaging" target="_blank" rel="noopener noreferrer"
+           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
           <div class="flex items-center gap-2 mb-2">
-            <span class="px-2 py-0.5 bg-green-100 text-green-800 text-[10px] font-semibold rounded">Free</span>
-            <h3 class="text-sm font-bold text-slate-800 group-hover:text-blue-700">Developmental EEG (NCBI)</h3>
+            <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[10px] font-semibold rounded">AJNR</span>
+            <h3 class="text-sm font-bold text-slate-800 group-hover:text-purple-700">AJNR Pediatric Neuroimaging</h3>
             <svg class="w-3.5 h-3.5 text-slate-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">Premature, neonatal, infant, and childhood EEG patterns with real clinical recordings and age-specific features.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">American Journal of Neuroradiology peer-reviewed cases and reviews in pediatric neuroimaging with high-quality images.</p>
         </a>
         <a href="https://www.epilepsydiagnosis.org/" target="_blank" rel="noopener noreferrer"
-           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
+           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
           <div class="flex items-center gap-2 mb-2">
             <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[10px] font-semibold rounded">ILAE</span>
-            <h3 class="text-sm font-bold text-slate-800 group-hover:text-blue-700">EpilepsyDiagnosis.org</h3>
+            <h3 class="text-sm font-bold text-slate-800 group-hover:text-purple-700">ILAE Neuroimaging Commission</h3>
             <svg class="w-3.5 h-3.5 text-slate-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">ILAE official diagnostic manual with real EEG examples, video-EEG correlates, and MRI images for each epilepsy syndrome.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">ILAE recommended epilepsy MRI protocols, structural imaging guidelines, and educational materials for neuroimaging in epilepsy.</p>
         </a>
-        <a href="https://eeg-atlas.com/" target="_blank" rel="noopener noreferrer"
-           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
+        <a href="https://brain-development.org/" target="_blank" rel="noopener noreferrer"
+           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all group">
           <div class="flex items-center gap-2 mb-2">
             <span class="px-2 py-0.5 bg-green-100 text-green-800 text-[10px] font-semibold rounded">Free</span>
-            <h3 class="text-sm font-bold text-slate-800 group-hover:text-blue-700">EEG-Atlas.com</h3>
+            <h3 class="text-sm font-bold text-slate-800 group-hover:text-purple-700">Brain Development Database</h3>
             <svg class="w-3.5 h-3.5 text-slate-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">Online EEG atlas based on the Cleveland Classification with interactive recordings and clinical annotations.</p>
-        </a>
-        <a href="https://www.acns.org/research/critical-care-eeg-monitoring-research-consortium-ccemrc/education" target="_blank" rel="noopener noreferrer"
-           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[10px] font-semibold rounded">ACNS</span>
-            <h3 class="text-sm font-bold text-slate-800 group-hover:text-blue-700">ACNS Critical Care EEG</h3>
-            <svg class="w-3.5 h-3.5 text-slate-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-          </div>
-          <p class="text-xs text-slate-500 leading-relaxed">ACNS standardized EEG terminology (2021) with training modules, real EEG examples, and self-assessment tools.</p>
-        </a>
-        <a href="https://www.epilepsydiagnosis.org/syndrome/ects-eeg.html" target="_blank" rel="noopener noreferrer"
-           class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[10px] font-semibold rounded">ILAE</span>
-            <h3 class="text-sm font-bold text-slate-800 group-hover:text-blue-700">SeLECTS EEG Examples</h3>
-            <svg class="w-3.5 h-3.5 text-slate-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-          </div>
-          <p class="text-xs text-slate-500 leading-relaxed">ILAE detailed EEG examples for SeLECTS (Rolandic) showing centrotemporal spikes, horizontal dipole, and sleep activation.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">Normative pediatric brain MRI data from the Brain Development Cooperative Group for developmental comparison and research.</p>
         </a>
       </div>
-    </div>
-
-    <div class="mt-8 text-center">
-      <a href="/articles/epilepsy/pediatric-eeg-interpretation" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-        </svg>
-        Back to Pediatric EEG Interpretation article
-      </a>
     </div>
   </section>
 </BaseLayout>
@@ -244,10 +222,10 @@ import { allPatterns, basicPatterns, intermediatePatterns, advancedPatterns } fr
     btn.addEventListener('click', () => {
       const filter = btn.getAttribute('data-filter');
       filterBtns.forEach(b => {
-        b.classList.remove('active', 'bg-blue-600', 'text-white');
+        b.classList.remove('active', 'bg-purple-600', 'text-white');
         b.classList.add('bg-slate-100', 'text-slate-600');
       });
-      btn.classList.add('active', 'bg-blue-600', 'text-white');
+      btn.classList.add('active', 'bg-purple-600', 'text-white');
       btn.classList.remove('bg-slate-100', 'text-slate-600');
 
       cards.forEach(card => {
