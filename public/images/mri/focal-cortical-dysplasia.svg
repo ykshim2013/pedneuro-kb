@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <!-- Gradient for blurred GM-WM junction -->
+    <linearGradient id="blurredJunction" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#999999"/>
+      <stop offset="100%" stop-color="#cccccc"/>
+    </linearGradient>
+    <!-- Gradient for transmantle sign -->
+    <linearGradient id="transmantleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffdd88"/>
+      <stop offset="50%" stop-color="#eebb66"/>
+      <stop offset="100%" stop-color="#ddaa55"/>
+    </linearGradient>
+    <!-- Normal GM gradient -->
+    <linearGradient id="normalGM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#888888"/>
+      <stop offset="100%" stop-color="#666666"/>
+    </linearGradient>
+    <!-- Normal WM -->
+    <linearGradient id="normalWM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cccccc"/>
+      <stop offset="100%" stop-color="#bbbbbb"/>
+    </linearGradient>
+    <!-- Glow filter for FLAIR hyperintensity -->
+    <filter id="flairGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Blur for GM-WM blurring -->
+    <filter id="junctionBlur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="56" fill="#0d0d1a"/>
+  <text x="400" y="30" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="bold" fill="#bb77ff">Focal Cortical Dysplasia — FLAIR</text>
+  <text x="400" y="48" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#8899aa">Most common cause of drug-resistant focal epilepsy in children</text>
+
+  <!-- === CORONAL BRAIN CROSS-SECTION === -->
+  <!-- Brain outline -->
+  <g transform="translate(400, 290)">
+    <!-- Outer brain shape - coronal view -->
+    <path d="M0,-180 C80,-185 160,-170 200,-130 C235,-95 240,-40 235,10 C230,60 210,100 180,130 C150,155 100,170 60,175 C30,178 10,178 0,178 C-10,178 -30,178 -60,175 C-100,170 -150,155 -180,130 C-210,100 -230,60 -235,10 C-240,-40 -235,-95 -200,-130 C-160,-170 -80,-185 0,-180 Z" fill="#444444" stroke="#555555" stroke-width="1.5"/>
+
+    <!-- Interhemispheric fissure -->
+    <line x1="0" y1="-180" x2="0" y2="-70" stroke="#333333" stroke-width="2"/>
+    <line x1="0" y1="130" x2="0" y2="178" stroke="#333333" stroke-width="2"/>
+
+    <!-- Falx cerebri -->
+    <line x1="0" y1="-180" x2="0" y2="178" stroke="#333333" stroke-width="1" stroke-dasharray="3,6" opacity="0.4"/>
+
+    <!-- === RIGHT HEMISPHERE (viewer's left) - NORMAL === -->
+    <!-- Normal cortex (gray matter) -->
+    <path d="M-10,-170 C-70,-175 -145,-160 -185,-125 C-220,-90 -225,-35 -220,10 C-215,55 -198,92 -170,120 C-142,145 -95,158 -55,163 C-30,166 -15,166 -10,166" fill="none" stroke="#888888" stroke-width="12" opacity="0.7"/>
+
+    <!-- Normal white matter interior -->
+    <path d="M-10,-155 C-60,-158 -130,-145 -170,-115 C-200,-85 -205,-35 -200,10 C-195,50 -180,82 -155,108 C-130,130 -90,143 -55,147 C-30,150 -15,150 -10,150" fill="#bbbbbb" stroke="none"/>
+
+    <!-- Clear GM-WM boundary on normal side -->
+    <path d="M-10,-155 C-60,-158 -130,-145 -170,-115 C-200,-85 -205,-35 -200,10 C-195,50 -180,82 -155,108 C-130,130 -90,143 -55,147" fill="none" stroke="#777777" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+    <!-- Right lateral ventricle -->
+    <path d="M-15,-40 C-25,-50 -65,-55 -75,-30 C-80,-10 -70,15 -55,25 C-40,35 -20,30 -15,20 Z" fill="#222233" stroke="#333344" stroke-width="1"/>
+
+    <!-- === LEFT HEMISPHERE (viewer's right) - FCD === -->
+    <!-- Normal cortex on left (non-FCD areas) -->
+    <path d="M10,-170 C70,-175 145,-160 185,-125 C220,-90 225,-35 220,10 C215,55 198,92 170,120 C142,145 95,158 55,163 C30,166 15,166 10,166" fill="none" stroke="#888888" stroke-width="12" opacity="0.7"/>
+
+    <!-- White matter on left side -->
+    <path d="M10,-155 C60,-158 130,-145 170,-115 C200,-85 205,-35 200,10 C195,50 180,82 155,108 C130,130 90,143 55,147 C30,150 15,150 10,150" fill="#bbbbbb" stroke="none"/>
+
+    <!-- Left lateral ventricle -->
+    <path d="M15,-40 C25,-50 65,-55 75,-30 C80,-10 70,15 55,25 C40,35 20,30 15,20 Z" fill="#222233" stroke="#333344" stroke-width="1"/>
+
+    <!-- === FCD LESION in left frontal lobe === -->
+    <!-- Thickened cortex region (outlined in red) -->
+    <path d="M40,-165 C65,-168 100,-162 130,-148 C145,-140 155,-128 150,-115" fill="none" stroke="#cc4444" stroke-width="16" stroke-linecap="round" opacity="0.8"/>
+    <path d="M40,-165 C65,-168 100,-162 130,-148 C145,-140 155,-128 150,-115" fill="none" stroke="#aa3333" stroke-width="2" stroke-dasharray="5,3"/>
+
+    <!-- Blurred GM-WM junction beneath FCD -->
+    <ellipse cx="100" cy="-130" rx="55" ry="25" fill="url(#blurredJunction)" opacity="0.6" filter="url(#junctionBlur)"/>
+
+    <!-- Transmantle sign - bright FLAIR band from cortex to ventricle -->
+    <path d="M95,-155 C90,-130 80,-100 70,-70 C60,-50 50,-35 40,-15" fill="none" stroke="#ffdd88" stroke-width="10" opacity="0.7" filter="url(#flairGlow)"/>
+    <path d="M95,-155 C90,-130 80,-100 70,-70 C60,-50 50,-35 40,-15" fill="none" stroke="#ffeeaa" stroke-width="4" opacity="0.9"/>
+
+    <!-- Cortical thickening - enhanced area -->
+    <path d="M55,-165 C75,-167 105,-160 125,-150" fill="none" stroke="#cc4444" stroke-width="3"/>
+  </g>
+
+  <!-- === LABELS AND LEADER LINES === -->
+
+  <!-- Label: Cortical thickening (left FCD) -->
+  <line x1="530" y1="108" x2="620" y2="88" stroke="#cc4444" stroke-width="1" opacity="0.8"/>
+  <circle cx="530" cy="108" r="3" fill="#cc4444"/>
+  <text x="625" y="85" font-family="Consolas, monospace" font-size="11" fill="#cc4444">Cortical thickening</text>
+  <text x="625" y="98" font-family="Consolas, monospace" font-size="9" fill="#996666">(thickened, dysplastic cortex)</text>
+
+  <!-- Label: Blurred GM-WM junction -->
+  <line x1="510" y1="150" x2="630" y2="130" stroke="#aaaaaa" stroke-width="1" opacity="0.8"/>
+  <circle cx="510" cy="150" r="3" fill="#aaaaaa"/>
+  <text x="635" y="127" font-family="Consolas, monospace" font-size="11" fill="#cccccc">Blurred GM-WM junction</text>
+  <text x="635" y="140" font-family="Consolas, monospace" font-size="9" fill="#888888">(loss of sharp boundary)</text>
+
+  <!-- Label: Transmantle sign -->
+  <line x1="480" y1="210" x2="620" y2="185" stroke="#ffdd88" stroke-width="1" opacity="0.8"/>
+  <circle cx="480" cy="210" r="3" fill="#ffdd88"/>
+  <text x="625" y="178" font-family="Consolas, monospace" font-size="11" fill="#ffdd88">Transmantle sign</text>
+  <text x="625" y="191" font-family="Consolas, monospace" font-size="9" fill="#aa9955">(FLAIR band: cortex to ventricle)</text>
+
+  <!-- Label: Normal GM-WM (right hemisphere) -->
+  <line x1="270" y1="155" x2="90" y2="140" stroke="#88aa88" stroke-width="1" opacity="0.8"/>
+  <circle cx="270" cy="155" r="3" fill="#88aa88"/>
+  <text x="20" y="132" font-family="Consolas, monospace" font-size="11" fill="#88aa88">Normal GM-WM</text>
+  <text x="20" y="145" font-family="Consolas, monospace" font-size="9" fill="#668866">(sharp gray-white boundary)</text>
+
+  <!-- Hemisphere labels -->
+  <text x="300" y="78" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#6677aa">R</text>
+  <text x="500" y="78" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#6677aa">L</text>
+
+  <!-- Ventricle labels -->
+  <text x="355" y="265" text-anchor="middle" font-family="Consolas, monospace" font-size="8" fill="#555577">Lat. ventricle</text>
+  <text x="445" y="265" text-anchor="middle" font-family="Consolas, monospace" font-size="8" fill="#555577">Lat. ventricle</text>
+
+  <!-- Orientation markers -->
+  <text x="15" y="290" font-family="Consolas, monospace" font-size="10" fill="#556677">R</text>
+  <text x="775" y="290" text-anchor="end" font-family="Consolas, monospace" font-size="10" fill="#556677">L</text>
+
+  <!-- Footer info -->
+  <rect x="0" y="475" width="800" height="25" fill="#0d0d1a" opacity="0.7"/>
+  <text x="400" y="491" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#667788">FCD Type IIb: balloon cells + cortical dyslamination + transmantle sign on MRI</text>
+</svg>

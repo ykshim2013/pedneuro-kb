@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .title-text { font-family: Consolas, monospace; fill: #bb77ff; font-size: 15px; font-weight: bold; }
+      .panel-title { font-family: Consolas, monospace; fill: #eeddff; font-size: 13px; font-weight: bold; }
+      .label-text { font-family: Consolas, monospace; fill: #cccccc; font-size: 9.5px; }
+      .age-text { font-family: Consolas, monospace; fill: #999999; font-size: 9px; }
+      .footer-text { font-family: Consolas, monospace; fill: #888888; font-size: 10px; }
+      .compare-text { font-family: Consolas, monospace; fill: #aaaacc; font-size: 9px; }
+      .brain-outline { fill: #2a2a3e; stroke: #555577; stroke-width: 1.2; }
+      .brainstem { fill: #333350; stroke: #555577; stroke-width: 1; }
+      .cerebellum { fill: #2e2e48; stroke: #555577; stroke-width: 1; }
+      .corpus-callosum { fill: none; stroke: #777799; stroke-width: 2; }
+      .ventricle { fill: #1a1a30; stroke: #444466; stroke-width: 0.8; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect width="800" height="40" fill="#0d0d1a"/>
+  <text x="400" y="26" text-anchor="middle" class="title-text">Posterior Fossa Tumors in Children -- Sagittal MRI</text>
+
+  <!-- ==================== PANEL 1: Medulloblastoma ==================== -->
+  <g transform="translate(20, 50)">
+    <!-- Panel background -->
+    <rect x="0" y="0" width="240" height="360" rx="6" fill="#12122a" stroke="#333355" stroke-width="1"/>
+    <text x="120" y="22" text-anchor="middle" class="panel-title">Medulloblastoma</text>
+
+    <!-- Sagittal brain outline - cerebrum dome -->
+    <path d="M50,160 Q50,70 120,55 Q190,42 200,80 Q210,110 210,160 Q210,180 200,195 L185,210"
+          class="brain-outline"/>
+
+    <!-- Corpus callosum -->
+    <path d="M75,145 Q90,125 120,118 Q155,112 185,125 Q192,130 190,140"
+          class="corpus-callosum"/>
+
+    <!-- Thalamus/deep gray -->
+    <ellipse cx="150" cy="165" rx="28" ry="18" fill="#383858" stroke="#555577" stroke-width="0.8"/>
+
+    <!-- Brainstem -->
+    <path d="M140,185 Q135,195 132,220 Q130,250 128,275 Q126,290 130,305 Q132,310 140,312 Q148,310 150,305 Q152,290 150,275 Q148,250 145,220 Q142,195 140,185"
+          class="brainstem"/>
+
+    <!-- Cerebellum (behind brainstem, lower) -->
+    <path d="M128,230 Q100,225 80,245 Q65,265 70,290 Q78,315 105,325 Q130,330 155,325 Q180,315 188,290 Q193,265 178,245 Q160,225 150,230"
+          class="cerebellum"/>
+    <!-- Cerebellar folia lines -->
+    <line x1="85" y1="270" x2="115" y2="265" stroke="#444466" stroke-width="0.6"/>
+    <line x1="88" y1="285" x2="118" y2="280" stroke="#444466" stroke-width="0.6"/>
+    <line x1="92" y1="300" x2="120" y2="296" stroke="#444466" stroke-width="0.6"/>
+    <line x1="148" y1="265" x2="175" y2="270" stroke="#444466" stroke-width="0.6"/>
+    <line x1="150" y1="280" x2="175" y2="285" stroke="#444466" stroke-width="0.6"/>
+    <line x1="148" y1="296" x2="172" y2="300" stroke="#444466" stroke-width="0.6"/>
+
+    <!-- 4th ventricle area (normally small) - now filled with tumor -->
+    <!-- TUMOR: Medulloblastoma - solid mass in vermis/4th ventricle -->
+    <ellipse cx="138" cy="258" rx="22" ry="25" fill="#cc5566" fill-opacity="0.85" stroke="#ee6677" stroke-width="1.5"/>
+    <!-- Tumor internal texture - solid appearance -->
+    <circle cx="132" cy="252" r="3" fill="#dd6677" fill-opacity="0.5"/>
+    <circle cx="142" cy="262" r="4" fill="#bb4455" fill-opacity="0.5"/>
+    <circle cx="136" cy="268" r="2.5" fill="#dd6677" fill-opacity="0.4"/>
+    <circle cx="146" cy="250" r="2" fill="#bb4455" fill-opacity="0.4"/>
+
+    <!-- Tumor label line -->
+    <line x1="160" y1="258" x2="200" y2="240" stroke="#cc5566" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="175" y="236" class="label-text" fill="#cc5566" font-size="8">TUMOR</text>
+
+    <!-- Labels -->
+    <text x="120" y="340" text-anchor="middle" class="label-text" fill="#cc9999">Solid, midline,</text>
+    <text x="120" y="352" text-anchor="middle" class="label-text" fill="#cc9999">restricted diffusion</text>
+    <text x="120" y="370" text-anchor="middle" class="age-text">Peak: 3-8 years</text>
+  </g>
+
+  <!-- ==================== PANEL 2: Pilocytic Astrocytoma ==================== -->
+  <g transform="translate(280, 50)">
+    <rect x="0" y="0" width="240" height="360" rx="6" fill="#12122a" stroke="#333355" stroke-width="1"/>
+    <text x="120" y="22" text-anchor="middle" class="panel-title">Pilocytic Astrocytoma</text>
+
+    <!-- Sagittal brain outline - cerebrum dome -->
+    <path d="M50,160 Q50,70 120,55 Q190,42 200,80 Q210,110 210,160 Q210,180 200,195 L185,210"
+          class="brain-outline"/>
+
+    <!-- Corpus callosum -->
+    <path d="M75,145 Q90,125 120,118 Q155,112 185,125 Q192,130 190,140"
+          class="corpus-callosum"/>
+
+    <!-- Thalamus -->
+    <ellipse cx="150" cy="165" rx="28" ry="18" fill="#383858" stroke="#555577" stroke-width="0.8"/>
+
+    <!-- Brainstem -->
+    <path d="M140,185 Q135,195 132,220 Q130,250 128,275 Q126,290 130,305 Q132,310 140,312 Q148,310 150,305 Q152,290 150,275 Q148,250 145,220 Q142,195 140,185"
+          class="brainstem"/>
+
+    <!-- Cerebellum -->
+    <path d="M128,230 Q100,225 80,245 Q65,265 70,290 Q78,315 105,325 Q130,330 155,325 Q180,315 188,290 Q193,265 178,245 Q160,225 150,230"
+          class="cerebellum"/>
+    <!-- Folia -->
+    <line x1="85" y1="270" x2="110" y2="265" stroke="#444466" stroke-width="0.6"/>
+    <line x1="88" y1="285" x2="112" y2="280" stroke="#444466" stroke-width="0.6"/>
+
+    <!-- 4th ventricle (open in this case) -->
+    <path d="M135,235 L138,255 L132,255 Z" class="ventricle"/>
+
+    <!-- TUMOR: Cystic mass in cerebellar hemisphere -->
+    <!-- Cyst (dark center) -->
+    <circle cx="100" cy="280" r="28" fill="#333355" stroke="#555588" stroke-width="1.2"/>
+    <!-- Cyst fluid appearance -->
+    <circle cx="100" cy="280" r="24" fill="#2a2a50" fill-opacity="0.7"/>
+    <!-- Enhancing mural nodule -->
+    <circle cx="118" cy="268" r="11" fill="#ff8844" fill-opacity="0.9" stroke="#ffaa66" stroke-width="1.5"/>
+    <!-- Nodule enhancement pattern -->
+    <circle cx="116" cy="266" r="3" fill="#ffbb77" fill-opacity="0.5"/>
+
+    <!-- Label lines -->
+    <line x1="85" y1="258" x2="55" y2="238" stroke="#555588" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="30" y="235" class="label-text" fill="#8888aa" font-size="8">CYST</text>
+    <line x1="128" y1="264" x2="185" y2="240" stroke="#ff8844" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="170" y="236" class="label-text" fill="#ff8844" font-size="8">NODULE</text>
+
+    <!-- Labels -->
+    <text x="120" y="340" text-anchor="middle" class="label-text" fill="#ffaa77">Cyst + enhancing nodule</text>
+    <text x="120" y="370" text-anchor="middle" class="age-text">Peak: 5-15 years</text>
+  </g>
+
+  <!-- ==================== PANEL 3: DIPG / DMG ==================== -->
+  <g transform="translate(540, 50)">
+    <rect x="0" y="0" width="240" height="360" rx="6" fill="#12122a" stroke="#333355" stroke-width="1"/>
+    <text x="120" y="22" text-anchor="middle" class="panel-title">DIPG / DMG</text>
+
+    <!-- Sagittal brain outline - cerebrum dome -->
+    <path d="M50,160 Q50,70 120,55 Q190,42 200,80 Q210,110 210,160 Q210,180 200,195 L185,210"
+          class="brain-outline"/>
+
+    <!-- Corpus callosum -->
+    <path d="M75,145 Q90,125 120,118 Q155,112 185,125 Q192,130 190,140"
+          class="corpus-callosum"/>
+
+    <!-- Thalamus -->
+    <ellipse cx="150" cy="165" rx="28" ry="18" fill="#383858" stroke="#555577" stroke-width="0.8"/>
+
+    <!-- Brainstem - EXPANDED PONS (much larger than other panels) -->
+    <path d="M140,185 Q130,195 120,220 Q110,245 108,265 Q106,280 112,295 Q118,310 140,315 Q162,310 168,295 Q174,280 172,265 Q170,245 160,220 Q150,195 140,185"
+          fill="#8899cc" fill-opacity="0.7" stroke="#99aadd" stroke-width="1.5"/>
+    <!-- T2 hyperintense signal pattern within expanded pons -->
+    <ellipse cx="140" cy="248" rx="22" ry="35" fill="#99aadd" fill-opacity="0.3"/>
+    <ellipse cx="138" cy="240" rx="12" ry="15" fill="#aabbee" fill-opacity="0.2"/>
+    <ellipse cx="142" cy="260" rx="14" ry="12" fill="#aabbee" fill-opacity="0.15"/>
+
+    <!-- Basilar artery engulfed (small line within mass) -->
+    <path d="M138,215 Q136,235 137,255 Q138,275 139,290" fill="none" stroke="#ff6666" stroke-width="1.2" stroke-dasharray="2,2"/>
+    <text x="150" y="238" class="label-text" fill="#ff6666" font-size="7">BA</text>
+
+    <!-- Cerebellum (compressed) -->
+    <path d="M108,280 Q85,278 75,290 Q68,305 75,318 Q85,328 110,330 Q135,332 160,330 Q185,328 195,318 Q202,305 195,290 Q185,278 172,280"
+          class="cerebellum"/>
+    <line x1="90" y1="305" x2="120" y2="302" stroke="#444466" stroke-width="0.6"/>
+    <line x1="150" y1="302" x2="180" y2="305" stroke="#444466" stroke-width="0.6"/>
+
+    <!-- 4th ventricle compressed -->
+    <path d="M130,278 L132,285 L128,285 Z" fill="#1a1a30" stroke="#444466" stroke-width="0.5"/>
+
+    <!-- Label -->
+    <line x1="170" y1="248" x2="210" y2="230" stroke="#8899cc" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="185" y="226" class="label-text" fill="#8899cc" font-size="8">EXPANDED</text>
+    <text x="195" y="236" class="label-text" fill="#8899cc" font-size="8">PONS</text>
+
+    <!-- Labels -->
+    <text x="120" y="340" text-anchor="middle" class="label-text" fill="#99aadd">Diffuse pontine expansion</text>
+    <text x="120" y="370" text-anchor="middle" class="age-text">Peak: 5-10 years</text>
+  </g>
+
+  <!-- ==================== Comparison Bar ==================== -->
+  <rect x="20" y="420" width="760" height="40" rx="5" fill="#0d0d1a" stroke="#333355" stroke-width="0.8"/>
+
+  <!-- Medulloblastoma -->
+  <circle cx="60" cy="440" r="5" fill="#cc5566"/>
+  <text x="72" y="444" class="compare-text" fill="#cc9999">Most common malignant</text>
+
+  <!-- Pilocytic -->
+  <circle cx="310" cy="440" r="5" fill="#ff8844"/>
+  <text x="322" y="444" class="compare-text" fill="#ffaa77">Best prognosis</text>
+
+  <!-- DIPG -->
+  <circle cx="530" cy="440" r="5" fill="#8899cc"/>
+  <text x="542" y="444" class="compare-text" fill="#99aadd">Worst prognosis</text>
+
+  <!-- Footer -->
+  <text x="400" y="485" text-anchor="middle" class="footer-text">Most common solid tumors in pediatric neurology</text>
+</svg>

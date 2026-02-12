@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <!-- Glow for tubers -->
+    <filter id="tuberGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Glow for SEGA -->
+    <filter id="segaGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Subtle glow for migration lines -->
+    <filter id="migrationGlow">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="56" fill="#0d0d1a"/>
+  <text x="400" y="28" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="bold" fill="#bb77ff">Tuberous Sclerosis Complex — Axial FLAIR</text>
+  <text x="400" y="48" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#8899aa">Cortical tubers  |  Subependymal nodules  |  SEGA</text>
+
+  <!-- === AXIAL BRAIN CROSS-SECTION === -->
+  <g transform="translate(400, 275)">
+    <!-- Outer brain shape - axial view (elliptical) -->
+    <ellipse cx="0" cy="0" rx="220" ry="175" fill="#444444" stroke="#555555" stroke-width="1.5"/>
+
+    <!-- Interhemispheric fissure - front -->
+    <line x1="0" y1="-175" x2="0" y2="-90" stroke="#333333" stroke-width="2.5"/>
+    <!-- Interhemispheric fissure - back -->
+    <line x1="0" y1="90" x2="0" y2="175" stroke="#333333" stroke-width="2.5"/>
+
+    <!-- White matter interior -->
+    <ellipse cx="0" cy="0" rx="185" ry="145" fill="#aaaaaa" stroke="none"/>
+
+    <!-- Cortex ring (gray matter) -->
+    <ellipse cx="0" cy="0" rx="220" ry="175" fill="none" stroke="#777777" stroke-width="1"/>
+
+    <!-- Sulci markings -->
+    <line x1="-140" y1="-120" x2="-110" y2="-95" stroke="#555555" stroke-width="1.5"/>
+    <line x1="-180" y1="-80" x2="-150" y2="-65" stroke="#555555" stroke-width="1.5"/>
+    <line x1="-190" y1="-30" x2="-160" y2="-25" stroke="#555555" stroke-width="1.5"/>
+    <line x1="-175" y1="50" x2="-150" y2="40" stroke="#555555" stroke-width="1.5"/>
+    <line x1="-130" y1="115" x2="-105" y2="95" stroke="#555555" stroke-width="1.5"/>
+    <line x1="140" y1="-120" x2="110" y2="-95" stroke="#555555" stroke-width="1.5"/>
+    <line x1="180" y1="-80" x2="150" y2="-65" stroke="#555555" stroke-width="1.5"/>
+    <line x1="190" y1="-30" x2="160" y2="-25" stroke="#555555" stroke-width="1.5"/>
+    <line x1="175" y1="50" x2="150" y2="40" stroke="#555555" stroke-width="1.5"/>
+    <line x1="130" y1="115" x2="105" y2="95" stroke="#555555" stroke-width="1.5"/>
+
+    <!-- === LATERAL VENTRICLES === -->
+    <!-- Left lateral ventricle (viewer's right) -->
+    <path d="M15,-55 C20,-70 45,-80 70,-70 C85,-60 90,-35 85,-10 C80,20 60,45 40,55 C25,60 18,50 15,35 Z" fill="#222233" stroke="#333344" stroke-width="1"/>
+    <!-- Right lateral ventricle (viewer's left) -->
+    <path d="M-15,-55 C-20,-70 -45,-80 -70,-70 C-85,-60 -90,-35 -85,-10 C-80,20 -60,45 -40,55 C-25,60 -18,50 -15,35 Z" fill="#222233" stroke="#333344" stroke-width="1"/>
+
+    <!-- Third ventricle -->
+    <ellipse cx="0" cy="-10" rx="5" ry="20" fill="#222233" stroke="#333344" stroke-width="0.5"/>
+
+    <!-- Foramen of Monro connections -->
+    <line x1="-15" y1="-30" x2="-5" y2="-20" stroke="#333344" stroke-width="1"/>
+    <line x1="15" y1="-30" x2="5" y2="-20" stroke="#333344" stroke-width="1"/>
+
+    <!-- === CORTICAL TUBERS (FLAIR hyperintense) === -->
+    <!-- Tuber 1: Left frontal -->
+    <ellipse cx="-80" cy="-130" rx="22" ry="14" fill="#ffdd88" opacity="0.75" filter="url(#tuberGlow)"/>
+    <!-- Tuber 2: Right frontal -->
+    <ellipse cx="100" cy="-110" rx="18" ry="12" fill="#ffdd88" opacity="0.7" filter="url(#tuberGlow)"/>
+    <!-- Tuber 3: Left parietal -->
+    <ellipse cx="-150" cy="-45" rx="20" ry="16" fill="#ffdd88" opacity="0.72" filter="url(#tuberGlow)"/>
+    <!-- Tuber 4: Right temporal -->
+    <ellipse cx="165" cy="30" rx="17" ry="13" fill="#ffdd88" opacity="0.68" filter="url(#tuberGlow)"/>
+    <!-- Tuber 5: Left occipital -->
+    <ellipse cx="-100" cy="110" rx="24" ry="14" fill="#ffdd88" opacity="0.74" filter="url(#tuberGlow)"/>
+    <!-- Tuber 6: Right parietal -->
+    <ellipse cx="140" cy="-70" rx="15" ry="12" fill="#ffdd88" opacity="0.65" filter="url(#tuberGlow)"/>
+    <!-- Tuber 7: Left temporal -->
+    <ellipse cx="-170" cy="40" rx="16" ry="11" fill="#ffdd88" opacity="0.7" filter="url(#tuberGlow)"/>
+
+    <!-- === SUBEPENDYMAL NODULES (along ventricle walls) === -->
+    <!-- SEN 1: Right ventricle anterior wall -->
+    <circle cx="-50" cy="-65" r="6" fill="#ddddff" opacity="0.85"/>
+    <circle cx="-50" cy="-65" r="3" fill="#eeeeff"/>
+    <!-- SEN 2: Right ventricle posterior -->
+    <circle cx="-55" cy="30" r="5" fill="#ddddff" opacity="0.8"/>
+    <circle cx="-55" cy="30" r="2.5" fill="#eeeeff"/>
+    <!-- SEN 3: Left ventricle body -->
+    <circle cx="60" cy="-20" r="5.5" fill="#ddddff" opacity="0.82"/>
+    <circle cx="60" cy="-20" r="2.5" fill="#eeeeff"/>
+    <!-- SEN 4: Left ventricle posterior -->
+    <circle cx="45" cy="35" r="4.5" fill="#ddddff" opacity="0.78"/>
+    <circle cx="45" cy="35" r="2" fill="#eeeeff"/>
+
+    <!-- === SEGA at LEFT foramen of Monro === -->
+    <ellipse cx="22" cy="-42" rx="14" ry="12" fill="#ff8866" opacity="0.9" filter="url(#segaGlow)"/>
+    <ellipse cx="22" cy="-42" rx="8" ry="7" fill="#ffaa88" opacity="0.7"/>
+
+    <!-- === RADIAL MIGRATION LINES === -->
+    <!-- Migration line 1: from right ventricle toward right frontal cortex -->
+    <line x1="-40" y1="-70" x2="-80" y2="-125" stroke="#aabbcc" stroke-width="3" opacity="0.4" filter="url(#migrationGlow)"/>
+    <line x1="-40" y1="-70" x2="-80" y2="-125" stroke="#bbccdd" stroke-width="1.5" opacity="0.5"/>
+    <!-- Migration line 2: from left ventricle toward left parietal -->
+    <line x1="70" y1="-55" x2="135" y2="-68" stroke="#aabbcc" stroke-width="3" opacity="0.35" filter="url(#migrationGlow)"/>
+    <line x1="70" y1="-55" x2="135" y2="-68" stroke="#bbccdd" stroke-width="1.5" opacity="0.45"/>
+    <!-- Migration line 3: from left ventricle toward temporal -->
+    <line x1="55" y1="40" x2="155" y2="30" stroke="#aabbcc" stroke-width="3" opacity="0.35" filter="url(#migrationGlow)"/>
+    <line x1="55" y1="40" x2="155" y2="30" stroke="#bbccdd" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- === LABELS AND LEADER LINES === -->
+
+  <!-- Label: Cortical tubers -->
+  <line x1="250" y1="143" x2="55" y2="115" stroke="#ffdd88" stroke-width="1" opacity="0.7"/>
+  <circle cx="250" cy="143" r="3" fill="#ffdd88"/>
+  <text x="15" y="108" font-family="Consolas, monospace" font-size="11" fill="#ffdd88">Cortical tubers</text>
+  <text x="15" y="121" font-family="Consolas, monospace" font-size="9" fill="#aa9955">(FLAIR hyperintense)</text>
+
+  <!-- Label: Subependymal nodules -->
+  <line x1="345" y1="242" x2="95" y2="260" stroke="#ddddff" stroke-width="1" opacity="0.7"/>
+  <circle cx="345" cy="242" r="3" fill="#ddddff"/>
+  <text x="15" y="255" font-family="Consolas, monospace" font-size="11" fill="#ddddff">Subependymal nodules (SEN)</text>
+  <text x="15" y="268" font-family="Consolas, monospace" font-size="9" fill="#9999bb">(along ventricular walls)</text>
+
+  <!-- Label: SEGA -->
+  <line x1="422" y1="233" x2="645" y2="155" stroke="#ff8866" stroke-width="1" opacity="0.7"/>
+  <circle cx="422" cy="233" r="3" fill="#ff8866"/>
+  <text x="650" y="148" font-family="Consolas, monospace" font-size="11" fill="#ff8866">SEGA at foramen of Monro</text>
+  <text x="650" y="161" font-family="Consolas, monospace" font-size="9" fill="#aa6644">(enhancing, may obstruct CSF)</text>
+
+  <!-- Label: Radial migration lines -->
+  <line x1="535" y1="275" x2="650" y2="300" stroke="#aabbcc" stroke-width="1" opacity="0.7"/>
+  <circle cx="535" cy="275" r="3" fill="#aabbcc"/>
+  <text x="655" y="295" font-family="Consolas, monospace" font-size="11" fill="#aabbcc">Radial migration lines</text>
+  <text x="655" y="308" font-family="Consolas, monospace" font-size="9" fill="#778899">(ventricle to cortex bands)</text>
+
+  <!-- Orientation markers -->
+  <text x="400" y="82" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#556677">A</text>
+  <text x="400" y="468" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#556677">P</text>
+  <text x="155" y="280" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#556677">R</text>
+  <text x="645" y="280" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#556677">L</text>
+
+  <!-- Footer -->
+  <rect x="0" y="475" width="800" height="25" fill="#0d0d1a" opacity="0.7"/>
+  <text x="400" y="491" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#667788">TSC diagnostic criteria: cortical tubers + SENs + SEGA | Monitor SEGA growth with serial MRI</text>
+</svg>

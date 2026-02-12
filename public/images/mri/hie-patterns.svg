@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <!-- Glow for ischemic areas -->
+    <filter id="ischemiaGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Stronger glow for deep gray matter -->
+    <filter id="deepGrayGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="56" fill="#0d0d1a"/>
+  <text x="400" y="28" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="bold" fill="#bb77ff">Hypoxic-Ischemic Injury Patterns — DWI / T1</text>
+  <text x="400" y="48" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#8899aa">DWI is most sensitive in first 24-72 hours</text>
+
+  <!-- Center divider -->
+  <line x1="400" y1="56" x2="400" y2="475" stroke="#444466" stroke-width="2"/>
+
+  <!-- === LEFT PANEL: WATERSHED (Partial Prolonged) === -->
+  <rect x="50" y="62" width="300" height="28" rx="4" fill="#333355" opacity="0.6"/>
+  <text x="200" y="81" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#bb77ff">Watershed (Partial Prolonged)</text>
+
+  <!-- Axial brain - left panel -->
+  <g transform="translate(200, 260)">
+    <!-- Outer brain -->
+    <ellipse cx="0" cy="0" rx="145" ry="120" fill="#444444" stroke="#555555" stroke-width="1.2"/>
+
+    <!-- Interhemispheric fissure -->
+    <line x1="0" y1="-120" x2="0" y2="-55" stroke="#333333" stroke-width="2"/>
+    <line x1="0" y1="55" x2="0" y2="120" stroke="#333333" stroke-width="2"/>
+
+    <!-- White matter -->
+    <ellipse cx="0" cy="0" rx="120" ry="98" fill="#aaaaaa" stroke="none"/>
+
+    <!-- Cortex (gray matter ring) -->
+    <ellipse cx="0" cy="0" rx="145" ry="120" fill="none" stroke="#777777" stroke-width="1"/>
+
+    <!-- Lateral ventricles -->
+    <path d="M-8,-35 C-12,-48 -35,-55 -48,-42 C-55,-32 -55,-12 -48,0 C-40,15 -25,25 -15,28 C-10,30 -8,22 -8,15 Z" fill="#222233" stroke="#333344" stroke-width="0.8"/>
+    <path d="M8,-35 C12,-48 35,-55 48,-42 C55,-32 55,-12 48,0 C40,15 25,25 15,28 C10,30 8,22 8,15 Z" fill="#222233" stroke="#333344" stroke-width="0.8"/>
+
+    <!-- Basal ganglia (NORMAL - medium gray) -->
+    <ellipse cx="-30" cy="-15" rx="16" ry="12" fill="#777777" stroke="#666666" stroke-width="0.8"/>
+    <ellipse cx="30" cy="-15" rx="16" ry="12" fill="#777777" stroke="#666666" stroke-width="0.8"/>
+
+    <!-- Thalami (NORMAL) -->
+    <ellipse cx="-15" cy="5" rx="12" ry="9" fill="#777777" stroke="#666666" stroke-width="0.8"/>
+    <ellipse cx="15" cy="5" rx="12" ry="9" fill="#777777" stroke="#666666" stroke-width="0.8"/>
+
+    <!-- === WATERSHED ZONES (bright/yellow) === -->
+    <!-- ACA/MCA border zone - right parasagittal -->
+    <path d="M35,-95 C50,-80 58,-55 55,-30" fill="none" stroke="#ffdd88" stroke-width="18" stroke-linecap="round" opacity="0.55" filter="url(#ischemiaGlow)"/>
+    <path d="M35,-95 C50,-80 58,-55 55,-30" fill="none" stroke="#ffee99" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- ACA/MCA border zone - left parasagittal -->
+    <path d="M-35,-95 C-50,-80 -58,-55 -55,-30" fill="none" stroke="#ffdd88" stroke-width="18" stroke-linecap="round" opacity="0.55" filter="url(#ischemiaGlow)"/>
+    <path d="M-35,-95 C-50,-80 -58,-55 -55,-30" fill="none" stroke="#ffee99" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- MCA/PCA border zone - right posterior -->
+    <path d="M70,-10 C78,20 70,55 50,80" fill="none" stroke="#ffdd88" stroke-width="16" stroke-linecap="round" opacity="0.5" filter="url(#ischemiaGlow)"/>
+    <path d="M70,-10 C78,20 70,55 50,80" fill="none" stroke="#ffee99" stroke-width="7" stroke-linecap="round" opacity="0.45"/>
+
+    <!-- MCA/PCA border zone - left posterior -->
+    <path d="M-70,-10 C-78,20 -70,55 -50,80" fill="none" stroke="#ffdd88" stroke-width="16" stroke-linecap="round" opacity="0.5" filter="url(#ischemiaGlow)"/>
+    <path d="M-70,-10 C-78,20 -70,55 -50,80" fill="none" stroke="#ffee99" stroke-width="7" stroke-linecap="round" opacity="0.45"/>
+
+    <!-- Territory boundary annotations -->
+    <text x="-45" y="-105" font-family="Consolas, monospace" font-size="7" fill="#aabbcc" text-anchor="middle">ACA</text>
+    <text x="45" y="-105" font-family="Consolas, monospace" font-size="7" fill="#aabbcc" text-anchor="middle">ACA</text>
+    <text x="0" y="-60" font-family="Consolas, monospace" font-size="7" fill="#aabbcc" text-anchor="middle">MCA</text>
+    <text x="0" y="80" font-family="Consolas, monospace" font-size="7" fill="#aabbcc" text-anchor="middle">PCA</text>
+  </g>
+
+  <!-- Left panel labels -->
+  <line x1="255" y1="180" x2="320" y2="155" stroke="#ffdd88" stroke-width="1" opacity="0.7"/>
+  <circle cx="255" cy="180" r="2.5" fill="#ffdd88"/>
+  <text x="255" y="148" font-family="Consolas, monospace" font-size="9" fill="#ffdd88" text-anchor="middle">Border zone</text>
+  <text x="255" y="158" font-family="Consolas, monospace" font-size="9" fill="#ffdd88" text-anchor="middle">ischemia</text>
+
+  <!-- Normal BG label -->
+  <text x="200" y="253" text-anchor="middle" font-family="Consolas, monospace" font-size="8" fill="#88aa88">BG/Thal: normal</text>
+
+  <!-- Clinical outcome -->
+  <rect x="55" y="405" width="290" height="38" rx="4" fill="#1a1a2e" stroke="#445566" stroke-width="1"/>
+  <text x="200" y="421" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#aabbcc">Cognitive deficits</text>
+  <text x="200" y="435" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#88aa88">Relative motor sparing</text>
+
+  <!-- === RIGHT PANEL: PROFOUND (Acute Total) === -->
+  <rect x="450" y="62" width="300" height="28" rx="4" fill="#553333" opacity="0.6"/>
+  <text x="600" y="81" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#bb77ff">Profound (Acute Total)</text>
+
+  <!-- Axial brain - right panel -->
+  <g transform="translate(600, 260)">
+    <!-- Outer brain -->
+    <ellipse cx="0" cy="0" rx="145" ry="120" fill="#444444" stroke="#555555" stroke-width="1.2"/>
+
+    <!-- Interhemispheric fissure -->
+    <line x1="0" y1="-120" x2="0" y2="-55" stroke="#333333" stroke-width="2"/>
+    <line x1="0" y1="55" x2="0" y2="120" stroke="#333333" stroke-width="2"/>
+
+    <!-- White matter (normal-appearing) -->
+    <ellipse cx="0" cy="0" rx="120" ry="98" fill="#aaaaaa" stroke="none"/>
+
+    <!-- Cortex ring -->
+    <ellipse cx="0" cy="0" rx="145" ry="120" fill="none" stroke="#777777" stroke-width="1"/>
+
+    <!-- Lateral ventricles -->
+    <path d="M-8,-35 C-12,-48 -35,-55 -48,-42 C-55,-32 -55,-12 -48,0 C-40,15 -25,25 -15,28 C-10,30 -8,22 -8,15 Z" fill="#222233" stroke="#333344" stroke-width="0.8"/>
+    <path d="M8,-35 C12,-48 35,-55 48,-42 C55,-32 55,-12 48,0 C40,15 25,25 15,28 C10,30 8,22 8,15 Z" fill="#222233" stroke="#333344" stroke-width="0.8"/>
+
+    <!-- === BILATERAL BASAL GANGLIA - BRIGHT (injured) === -->
+    <!-- Left putamen -->
+    <ellipse cx="-35" cy="-18" rx="18" ry="14" fill="#ff7744" opacity="0.8" filter="url(#deepGrayGlow)"/>
+    <ellipse cx="-35" cy="-18" rx="12" ry="9" fill="#ff9966" opacity="0.5"/>
+    <!-- Right putamen -->
+    <ellipse cx="35" cy="-18" rx="18" ry="14" fill="#ff7744" opacity="0.8" filter="url(#deepGrayGlow)"/>
+    <ellipse cx="35" cy="-18" rx="12" ry="9" fill="#ff9966" opacity="0.5"/>
+
+    <!-- === BILATERAL THALAMI - BRIGHT (injured) === -->
+    <ellipse cx="-16" cy="8" rx="14" ry="11" fill="#ff7744" opacity="0.75" filter="url(#deepGrayGlow)"/>
+    <ellipse cx="-16" cy="8" rx="9" ry="7" fill="#ff9966" opacity="0.45"/>
+    <ellipse cx="16" cy="8" rx="14" ry="11" fill="#ff7744" opacity="0.75" filter="url(#deepGrayGlow)"/>
+    <ellipse cx="16" cy="8" rx="9" ry="7" fill="#ff9966" opacity="0.45"/>
+
+    <!-- === PERIROLANDIC CORTEX - highlighted === -->
+    <!-- Central/rolandic region - parasagittal -->
+    <path d="M-20,-115 C-10,-110 10,-110 20,-115" fill="none" stroke="#ff9966" stroke-width="10" stroke-linecap="round" opacity="0.6" filter="url(#deepGrayGlow)"/>
+    <path d="M-20,-115 C-10,-110 10,-110 20,-115" fill="none" stroke="#ffaa77" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Normal peripheral WM label area -->
+    <text x="85" y="-50" font-family="Consolas, monospace" font-size="7" fill="#88aa88" text-anchor="middle">WM:</text>
+    <text x="85" y="-40" font-family="Consolas, monospace" font-size="7" fill="#88aa88" text-anchor="middle">normal</text>
+  </g>
+
+  <!-- Right panel labels -->
+  <line x1="635" y1="242" x2="720" y2="210" stroke="#ff7744" stroke-width="1" opacity="0.7"/>
+  <circle cx="635" cy="242" r="2.5" fill="#ff7744"/>
+  <text x="660" y="203" font-family="Consolas, monospace" font-size="9" fill="#ff7744">Deep gray matter</text>
+  <text x="660" y="213" font-family="Consolas, monospace" font-size="9" fill="#ff7744">injury (BG + Thal)</text>
+
+  <!-- Perirolandic label -->
+  <line x1="600" y1="148" x2="690" y2="130" stroke="#ff9966" stroke-width="1" opacity="0.7"/>
+  <circle cx="600" cy="148" r="2.5" fill="#ff9966"/>
+  <text x="695" y="128" font-family="Consolas, monospace" font-size="9" fill="#ff9966">Perirolandic cortex</text>
+
+  <!-- Clinical outcome -->
+  <rect x="455" y="405" width="290" height="38" rx="4" fill="#1a1a2e" stroke="#664444" stroke-width="1"/>
+  <text x="600" y="421" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#ff9977">Dyskinetic CP, severe motor impairment</text>
+  <text x="600" y="435" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#aabbcc">Feeding/swallowing difficulties</text>
+
+  <!-- Center divider labels -->
+  <text x="400" y="105" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#666688">vs.</text>
+  <rect x="375" y="450" width="50" height="18" rx="3" fill="#0d0d1a"/>
+  <text x="400" y="463" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#666688">HIE</text>
+
+  <!-- Footer -->
+  <rect x="0" y="475" width="800" height="25" fill="#0d0d1a" opacity="0.7"/>
+  <text x="400" y="491" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#667788">Watershed = border zone vulnerability | Profound = metabolically active deep gray matter vulnerability</text>
+</svg>

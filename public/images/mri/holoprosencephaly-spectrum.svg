@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .title-text { font-family: Consolas, monospace; fill: #bb77ff; font-size: 15px; font-weight: bold; }
+      .panel-title { font-family: Consolas, monospace; fill: #eeddff; font-size: 13px; font-weight: bold; }
+      .severity-text { font-family: Consolas, monospace; fill: #cc6666; font-size: 10px; }
+      .label-text { font-family: Consolas, monospace; fill: #cccccc; font-size: 9.5px; }
+      .note-text { font-family: Consolas, monospace; fill: #999999; font-size: 8.5px; font-style: italic; }
+      .footer-text { font-family: Consolas, monospace; fill: #999999; font-size: 10px; font-style: italic; }
+      .footer-text2 { font-family: Consolas, monospace; fill: #777777; font-size: 9px; }
+      .arrow-label { font-family: Consolas, monospace; fill: #ccaa77; font-size: 11px; font-weight: bold; }
+      .brain-outline { fill: #2a2a3e; stroke: #666688; stroke-width: 1.5; }
+      .ventricle { fill: #1a1a30; stroke: #555577; stroke-width: 1; }
+      .fissure { stroke: #555577; stroke-width: 1.5; }
+      .falx { stroke: #888899; stroke-width: 1.5; }
+      .thalamus { fill: #3d3d5a; stroke: #555577; stroke-width: 1; }
+    </style>
+    <linearGradient id="severityGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cc3333"/>
+      <stop offset="50%" stop-color="#cc8833"/>
+      <stop offset="100%" stop-color="#cccc33"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect width="800" height="40" fill="#0d0d1a"/>
+  <text x="400" y="26" text-anchor="middle" class="title-text">Holoprosencephaly Spectrum -- Axial MRI</text>
+
+  <!-- ==================== PANEL 1: Alobar (Most Severe) ==================== -->
+  <g transform="translate(20, 50)">
+    <!-- Panel background -->
+    <rect x="0" y="0" width="240" height="340" rx="6" fill="#12122a" stroke="#333355" stroke-width="1"/>
+    <text x="120" y="22" text-anchor="middle" class="panel-title">Alobar (Most Severe)</text>
+    <text x="120" y="36" text-anchor="middle" class="severity-text">No separation</text>
+
+    <!-- Single brain mass - NO interhemispheric fissure -->
+    <!-- Completely fused, single mass appearance -->
+    <ellipse cx="120" cy="175" rx="95" ry="90" class="brain-outline"/>
+
+    <!-- NO midline fissure at all - brain is one continuous mass -->
+
+    <!-- Monoventricle - single large horseshoe/crescent ventricle -->
+    <path d="M65,145 Q60,160 58,180 Q57,200 60,220 Q65,240 80,250
+             Q100,258 120,260 Q140,258 160,250 Q175,240 180,220
+             Q183,200 182,180 Q180,160 175,145 Q165,135 150,132
+             Q135,130 120,132 Q105,130 90,132 Q75,135 65,145 Z"
+          class="ventricle"/>
+
+    <!-- Fused thalami - single central mass -->
+    <ellipse cx="120" cy="190" rx="30" ry="25" class="thalamus"/>
+    <!-- Label for fused thalami -->
+    <line x1="150" y1="190" x2="195" y2="175" stroke="#555577" stroke-width="0.6" stroke-dasharray="3,2"/>
+    <text x="162" y="172" class="label-text" font-size="8" fill="#8888aa">Fused</text>
+    <text x="158" y="182" class="label-text" font-size="8" fill="#8888aa">thalami</text>
+
+    <!-- Monoventricle label -->
+    <line x1="90" y1="150" x2="45" y2="120" stroke="#555577" stroke-width="0.6" stroke-dasharray="3,2"/>
+    <text x="15" y="115" class="label-text" font-size="8" fill="#8888aa">Mono-</text>
+    <text x="15" y="125" class="label-text" font-size="8" fill="#8888aa">ventricle</text>
+
+    <!-- Cortical surface - minimal sulcation (agyria-like) -->
+    <!-- Very smooth surface, almost no sulci -->
+
+    <!-- No falx, no fissure notation -->
+    <text x="120" y="102" text-anchor="middle" class="label-text" font-size="8" fill="#cc6666">No falx or fissure</text>
+
+    <!-- Additional labels -->
+    <text x="120" y="295" text-anchor="middle" class="label-text" fill="#ccaaaa">No separation</text>
+    <text x="120" y="320" text-anchor="middle" class="note-text">Cyclopia, proboscis</text>
+  </g>
+
+  <!-- ==================== PANEL 2: Semilobar ==================== -->
+  <g transform="translate(280, 50)">
+    <rect x="0" y="0" width="240" height="340" rx="6" fill="#12122a" stroke="#333355" stroke-width="1"/>
+    <text x="120" y="22" text-anchor="middle" class="panel-title">Semilobar</text>
+    <text x="120" y="36" text-anchor="middle" class="severity-text" fill="#cc8833">Partial separation</text>
+
+    <!-- Brain outline - slight indentation posteriorly -->
+    <ellipse cx="120" cy="175" rx="95" ry="90" class="brain-outline"/>
+
+    <!-- Partial interhemispheric fissure - POSTERIOR ONLY -->
+    <!-- Fissure starts about halfway and goes to posterior -->
+    <line x1="120" y1="210" x2="120" y2="265" class="falx" stroke-dasharray="none"/>
+    <!-- Falx present posteriorly -->
+    <line x1="120" y1="210" x2="120" y2="265" stroke="#aaaacc" stroke-width="1" stroke-dasharray="none"/>
+
+    <!-- Anterior brain is still fused - no fissure anteriorly -->
+    <!-- Show smooth anterior contour -->
+
+    <!-- Partially separated ventricles - connected anteriorly -->
+    <!-- Anterior connected portion -->
+    <path d="M80,140 Q75,155 78,170 Q82,180 95,182 Q110,180 115,170 Q118,160 120,155
+             Q122,160 125,170 Q128,180 145,182 Q158,180 162,170 Q165,155 160,140
+             Q150,132 135,130 Q120,128 105,130 Q90,132 80,140 Z"
+          class="ventricle"/>
+
+    <!-- Posterior partially separated ventricles -->
+    <!-- Left -->
+    <path d="M78,170 Q72,195 70,215 Q68,235 75,248 Q82,255 92,252 Q98,245 100,225 Q102,205 95,182"
+          class="ventricle"/>
+    <!-- Right -->
+    <path d="M162,170 Q168,195 170,215 Q172,235 165,248 Q158,255 148,252 Q142,245 140,225 Q138,205 145,182"
+          class="ventricle"/>
+
+    <!-- Partially fused thalami -->
+    <ellipse cx="112" cy="195" rx="18" ry="16" class="thalamus"/>
+    <ellipse cx="128" cy="195" rx="18" ry="16" class="thalamus"/>
+    <!-- Slight separation line -->
+    <line x1="120" y1="182" x2="120" y2="208" stroke="#444466" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+    <!-- Sulci suggestions in posterior separated region -->
+    <path d="M100,230 Q105,240 102,250" fill="none" stroke="#3a3a55" stroke-width="0.6"/>
+    <path d="M140,230 Q135,240 138,250" fill="none" stroke="#3a3a55" stroke-width="0.6"/>
+
+    <!-- Label: posterior fissure -->
+    <line x1="132" y1="240" x2="185" y2="230" stroke="#aaaacc" stroke-width="0.6" stroke-dasharray="3,2"/>
+    <text x="150" y="227" class="label-text" font-size="8" fill="#aaaacc">Posterior</text>
+    <text x="152" y="237" class="label-text" font-size="8" fill="#aaaacc">falx only</text>
+
+    <!-- Label: anterior fusion -->
+    <line x1="120" y1="120" x2="175" y2="105" stroke="#cc8833" stroke-width="0.6" stroke-dasharray="3,2"/>
+    <text x="145" y="100" class="label-text" font-size="8" fill="#cc8833">Anterior</text>
+    <text x="147" y="110" class="label-text" font-size="8" fill="#cc8833">fused</text>
+
+    <!-- Additional labels -->
+    <text x="120" y="295" text-anchor="middle" class="label-text" fill="#ccbb88">Partial posterior</text>
+    <text x="120" y="307" text-anchor="middle" class="label-text" fill="#ccbb88">separation</text>
+    <text x="120" y="328" text-anchor="middle" class="note-text">Moderate facial dysmorphism</text>
+  </g>
+
+  <!-- ==================== PANEL 3: Lobar (Least Severe) ==================== -->
+  <g transform="translate(540, 50)">
+    <rect x="0" y="0" width="240" height="340" rx="6" fill="#12122a" stroke="#333355" stroke-width="1"/>
+    <text x="120" y="22" text-anchor="middle" class="panel-title">Lobar (Least Severe)</text>
+    <text x="120" y="36" text-anchor="middle" class="severity-text" fill="#bbbb44">Nearly separated</text>
+
+    <!-- Brain outline with nearly complete separation -->
+    <ellipse cx="120" cy="175" rx="95" ry="90" class="brain-outline"/>
+
+    <!-- Nearly complete interhemispheric fissure -->
+    <!-- Most of the fissure present except small anterior gap -->
+    <line x1="120" y1="95" x2="120" y2="130" class="falx"/>
+    <!-- Small gap at frontal region -->
+    <line x1="120" y1="145" x2="120" y2="265" class="falx"/>
+
+    <!-- Sulci - more normal appearing -->
+    <path d="M85,130 Q90,145 87,160" fill="none" stroke="#3a3a55" stroke-width="0.8"/>
+    <path d="M70,175 Q78,195 75,215" fill="none" stroke="#3a3a55" stroke-width="0.8"/>
+    <path d="M155,130 Q150,145 153,160" fill="none" stroke="#3a3a55" stroke-width="0.8"/>
+    <path d="M170,175 Q162,195 165,215" fill="none" stroke="#3a3a55" stroke-width="0.8"/>
+    <path d="M80,230 Q88,245 85,258" fill="none" stroke="#3a3a55" stroke-width="0.8"/>
+    <path d="M160,230 Q152,245 155,258" fill="none" stroke="#3a3a55" stroke-width="0.8"/>
+
+    <!-- Nearly normal lateral ventricles but with FUSED FRONTAL HORNS -->
+    <!-- Fused frontal horn region (no septum pellucidum) -->
+    <path d="M92,138 Q88,150 90,160 Q95,168 105,165 Q112,160 115,152 Q118,145 120,140
+             Q122,145 125,152 Q128,160 135,165 Q145,168 150,160 Q152,150 148,138
+             Q140,130 130,128 Q120,126 110,128 Q100,130 92,138 Z"
+          class="ventricle"/>
+
+    <!-- Left lateral ventricle body and occipital horn (separated) -->
+    <path d="M90,160 Q85,180 82,200 Q80,220 83,238 Q88,248 95,245 Q100,235 102,215 Q104,195 105,165"
+          class="ventricle"/>
+    <!-- Right lateral ventricle body and occipital horn (separated) -->
+    <path d="M150,160 Q155,180 158,200 Q160,220 157,238 Q152,248 145,245 Q140,235 138,215 Q136,195 135,165"
+          class="ventricle"/>
+
+    <!-- Separated thalami -->
+    <ellipse cx="107" cy="192" rx="14" ry="14" class="thalamus"/>
+    <ellipse cx="133" cy="192" rx="14" ry="14" class="thalamus"/>
+    <!-- Clear separation -->
+    <line x1="120" y1="180" x2="120" y2="205" stroke="#555577" stroke-width="1"/>
+
+    <!-- Label: absent septum pellucidum -->
+    <line x1="120" y1="138" x2="175" y2="110" stroke="#bbbb44" stroke-width="0.6" stroke-dasharray="3,2"/>
+    <text x="145" y="106" class="label-text" font-size="8" fill="#bbbb44">Absent</text>
+    <text x="142" y="116" class="label-text" font-size="8" fill="#bbbb44">septum</text>
+
+    <!-- Label: fused frontal horns -->
+    <line x1="110" y1="148" x2="48" y2="120" stroke="#bbbb44" stroke-width="0.6" stroke-dasharray="3,2"/>
+    <text x="15" y="115" class="label-text" font-size="8" fill="#bbbb44">Fused</text>
+    <text x="15" y="125" class="label-text" font-size="8" fill="#bbbb44">frontal</text>
+    <text x="15" y="135" class="label-text" font-size="8" fill="#bbbb44">horns</text>
+
+    <!-- Label: mostly present fissure -->
+    <line x1="128" y1="220" x2="190" y2="215" stroke="#aaaacc" stroke-width="0.6" stroke-dasharray="3,2"/>
+    <text x="152" y="210" class="label-text" font-size="8" fill="#aaaacc">Fissure</text>
+    <text x="152" y="220" class="label-text" font-size="8" fill="#aaaacc">present</text>
+
+    <!-- Additional labels -->
+    <text x="120" y="295" text-anchor="middle" class="label-text" fill="#bbcc88">Nearly separated,</text>
+    <text x="120" y="307" text-anchor="middle" class="label-text" fill="#bbcc88">fused frontal horns</text>
+    <text x="120" y="328" text-anchor="middle" class="note-text">Subtle facial features</text>
+  </g>
+
+  <!-- ==================== Severity Arrow Bar ==================== -->
+  <rect x="20" y="400" width="760" height="45" rx="5" fill="#0d0d1a" stroke="#333355" stroke-width="0.8"/>
+
+  <!-- Severity gradient bar -->
+  <rect x="60" y="412" width="600" height="10" rx="4" fill="url(#severityGrad)" fill-opacity="0.7"/>
+  <!-- Arrow head on right side -->
+  <polygon points="660,417 680,417 670,407" fill="#cccc33" fill-opacity="0.7"/>
+  <polygon points="60,417 40,417 50,407" fill="#cc3333" fill-opacity="0.7"/>
+  <!-- Reversed: arrow from severe to mild -->
+  <polygon points="660,417 680,417 670,427" fill="#cccc33" fill-opacity="0.7"/>
+  <polygon points="60,417 40,417 50,427" fill="#cc3333" fill-opacity="0.7"/>
+
+  <!-- Severity labels -->
+  <text x="50" y="440" text-anchor="middle" class="label-text" fill="#cc5555" font-size="9">MOST SEVERE</text>
+  <text x="670" y="440" text-anchor="middle" class="label-text" fill="#bbbb55" font-size="9">LEAST SEVERE</text>
+  <text x="360" y="440" text-anchor="middle" class="arrow-label">Severity Spectrum</text>
+
+  <!-- ==================== Footer ==================== -->
+  <text x="400" y="472" text-anchor="middle" class="footer-text">"The face predicts the brain"</text>
+  <text x="400" y="488" text-anchor="middle" class="footer-text2">Facial severity correlates with brain malformation</text>
+</svg>

@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .title-text { font-family: Consolas, monospace; fill: #bb77ff; font-size: 15px; font-weight: bold; }
+      .subtitle-text { font-family: Consolas, monospace; fill: #9988cc; font-size: 11px; }
+      .label-text { font-family: Consolas, monospace; fill: #cccccc; font-size: 10px; }
+      .territory-label { font-family: Consolas, monospace; font-size: 13px; font-weight: bold; }
+      .legend-title { font-family: Consolas, monospace; fill: #ddddee; font-size: 11px; font-weight: bold; }
+      .legend-text { font-family: Consolas, monospace; fill: #aaaacc; font-size: 9.5px; }
+      .footer-text { font-family: Consolas, monospace; fill: #888888; font-size: 10px; }
+    </style>
+    <!-- Clip path for brain outline -->
+    <clipPath id="brainClip">
+      <ellipse cx="310" cy="265" rx="195" ry="180"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect width="800" height="52" fill="#0d0d1a"/>
+  <text x="400" y="24" text-anchor="middle" class="title-text">Arterial Territory Strokes -- Vascular Distribution Map</text>
+  <text x="400" y="43" text-anchor="middle" class="subtitle-text">DWI is the most sensitive acute sequence</text>
+
+  <!-- ==================== Axial Brain Cross Section ==================== -->
+  <g transform="translate(0, 10)">
+
+    <!-- Brain outline (axial view at level of lateral ventricles) -->
+    <ellipse cx="310" cy="265" rx="195" ry="180" fill="#2a2a3e" stroke="#666688" stroke-width="1.5"/>
+
+    <!-- Interhemispheric fissure -->
+    <line x1="310" y1="85" x2="310" y2="445" stroke="#444466" stroke-width="1.5"/>
+
+    <!-- Cortical sulci suggestions -->
+    <!-- Left hemisphere sulci -->
+    <path d="M200,130 Q210,150 205,170" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M160,180 Q170,210 165,240" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M140,260 Q155,290 150,320" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M230,120 Q235,145 228,165" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M180,140 Q190,165 185,190" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <!-- Right hemisphere sulci -->
+    <path d="M420,130 Q410,150 415,170" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M460,180 Q450,210 455,240" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M480,260 Q465,290 470,320" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M390,120 Q385,145 392,165" fill="none" stroke="#3a3a55" stroke-width="1"/>
+    <path d="M440,140 Q430,165 435,190" fill="none" stroke="#3a3a55" stroke-width="1"/>
+
+    <!-- ===== VASCULAR TERRITORIES (semi-transparent overlays) ===== -->
+
+    <!-- ACA Territory - medial frontal and parietal (near midline, anterior) -->
+    <!-- Left ACA -->
+    <path d="M270,100 Q265,130 268,180 Q270,230 275,280 Q280,330 285,380 Q290,410 310,430
+             L310,100 Z"
+          fill="#4444cc" fill-opacity="0.3" clip-path="url(#brainClip)"/>
+    <!-- Right ACA -->
+    <path d="M310,100 L310,430 Q330,410 335,380 Q340,330 345,280 Q348,230 350,180 Q353,130 348,100 Z"
+          fill="#4444cc" fill-opacity="0.3" clip-path="url(#brainClip)"/>
+    <!-- ACA border lines -->
+    <path d="M270,100 Q265,130 268,180 Q270,230 275,280 Q280,330 285,380 Q290,410 310,430"
+          fill="none" stroke="#6666ee" stroke-width="0.8" stroke-dasharray="4,3" clip-path="url(#brainClip)"/>
+    <path d="M310,430 Q330,410 335,380 Q340,330 345,280 Q348,230 350,180 Q353,130 348,100"
+          fill="none" stroke="#6666ee" stroke-width="0.8" stroke-dasharray="4,3" clip-path="url(#brainClip)"/>
+
+    <!-- MCA Territory - lateral cortex, largest area -->
+    <!-- Left MCA -->
+    <path d="M115,160 Q120,130 145,110 Q180,90 230,88 Q255,88 270,100
+             Q265,130 268,180 Q270,230 275,280 Q280,330 285,380 Q280,400 260,415
+             Q220,430 180,420 Q140,400 125,360 Q115,320 115,280 Q115,220 115,160 Z"
+          fill="#cc4444" fill-opacity="0.3" clip-path="url(#brainClip)"/>
+    <!-- Right MCA -->
+    <path d="M348,100 Q363,88 390,88 Q430,90 465,110 Q495,130 505,160
+             Q505,220 505,280 Q505,320 495,360 Q480,400 440,420 Q400,430 360,415
+             Q340,400 335,380 Q340,330 345,280 Q348,230 350,180 Q353,130 348,100 Z"
+          fill="#cc4444" fill-opacity="0.3" clip-path="url(#brainClip)"/>
+    <!-- MCA border lines -->
+    <path d="M270,100 Q265,130 268,180 Q270,230 275,280 Q280,330 285,380 Q280,400 260,415"
+          fill="none" stroke="#ee5555" stroke-width="0.8" stroke-dasharray="4,3" clip-path="url(#brainClip)"/>
+    <path d="M348,100 Q353,130 350,180 Q348,230 345,280 Q340,330 335,380 Q340,400 360,415"
+          fill="none" stroke="#ee5555" stroke-width="0.8" stroke-dasharray="4,3" clip-path="url(#brainClip)"/>
+
+    <!-- PCA Territory - occipital and medial temporal (posterior) -->
+    <!-- Left PCA -->
+    <path d="M260,415 Q220,430 180,420 Q160,430 175,440 Q220,448 270,445 Q290,440 310,430
+             Q295,425 285,380 Q280,400 260,415 Z"
+          fill="#44aa44" fill-opacity="0.35" clip-path="url(#brainClip)"/>
+    <!-- Right PCA -->
+    <path d="M360,415 Q400,430 440,420 Q460,430 445,440 Q400,448 348,445 Q328,440 310,430
+             Q325,425 335,380 Q340,400 360,415 Z"
+          fill="#44aa44" fill-opacity="0.35" clip-path="url(#brainClip)"/>
+
+    <!-- Lenticulostriate Territory - basal ganglia, internal capsule -->
+    <!-- Left -->
+    <ellipse cx="270" cy="240" rx="30" ry="35" fill="#cc8844" fill-opacity="0.4"/>
+    <!-- Right -->
+    <ellipse cx="350" cy="240" rx="30" ry="35" fill="#cc8844" fill-opacity="0.4"/>
+
+    <!-- Vertebrobasilar hint - posterior edge -->
+    <path d="M260,420 Q280,445 310,445 Q340,445 360,420 Q340,440 310,445 Q280,440 260,420 Z"
+          fill="#448888" fill-opacity="0.5" clip-path="url(#brainClip)"/>
+
+    <!-- ===== ANATOMICAL STRUCTURES ===== -->
+
+    <!-- Lateral ventricles -->
+    <!-- Left lateral ventricle -->
+    <path d="M265,200 Q260,220 262,250 Q264,275 270,290 Q275,295 280,290
+             Q290,265 295,240 Q298,220 295,205 Q290,195 280,195 Q270,195 265,200 Z"
+          fill="#1a1a30" stroke="#555577" stroke-width="1"/>
+    <!-- Left frontal horn -->
+    <path d="M280,195 Q285,180 290,175 Q295,172 298,178 Q298,190 295,205"
+          fill="#1a1a30" stroke="#555577" stroke-width="1"/>
+    <!-- Left occipital horn -->
+    <path d="M270,290 Q265,310 260,325 Q258,332 262,335 Q268,332 272,320 Q275,305 280,290"
+          fill="#1a1a30" stroke="#555577" stroke-width="1"/>
+
+    <!-- Right lateral ventricle -->
+    <path d="M355,200 Q360,220 358,250 Q356,275 350,290 Q345,295 340,290
+             Q330,265 325,240 Q322,220 325,205 Q330,195 340,195 Q350,195 355,200 Z"
+          fill="#1a1a30" stroke="#555577" stroke-width="1"/>
+    <!-- Right frontal horn -->
+    <path d="M340,195 Q335,180 330,175 Q325,172 322,178 Q322,190 325,205"
+          fill="#1a1a30" stroke="#555577" stroke-width="1"/>
+    <!-- Right occipital horn -->
+    <path d="M350,290 Q355,310 360,325 Q362,332 358,335 Q352,332 348,320 Q345,305 340,290"
+          fill="#1a1a30" stroke="#555577" stroke-width="1"/>
+
+    <!-- 3rd ventricle -->
+    <rect x="305" y="220" width="10" height="40" rx="3" fill="#1a1a30" stroke="#555577" stroke-width="0.8"/>
+
+    <!-- Caudate nuclei (heads) -->
+    <ellipse cx="285" cy="210" rx="8" ry="14" fill="#3d3d5a" stroke="#555577" stroke-width="0.8"/>
+    <ellipse cx="335" cy="210" rx="8" ry="14" fill="#3d3d5a" stroke="#555577" stroke-width="0.8"/>
+
+    <!-- Thalami -->
+    <ellipse cx="295" cy="250" rx="14" ry="18" fill="#3d3d5a" stroke="#555577" stroke-width="0.8"/>
+    <ellipse cx="325" cy="250" rx="14" ry="18" fill="#3d3d5a" stroke="#555577" stroke-width="0.8"/>
+
+    <!-- Lentiform nuclei (putamen + globus pallidus) -->
+    <path d="M245,225 Q238,240 240,260 Q245,275 255,270 Q262,255 260,240 Q258,225 245,225 Z"
+          fill="#3d3d5a" stroke="#555577" stroke-width="0.8"/>
+    <path d="M375,225 Q382,240 380,260 Q375,275 365,270 Q358,255 360,240 Q362,225 375,225 Z"
+          fill="#3d3d5a" stroke="#555577" stroke-width="0.8"/>
+
+    <!-- Internal capsule hints -->
+    <path d="M263,225 Q270,240 272,255" fill="none" stroke="#555577" stroke-width="1.5"/>
+    <path d="M357,225 Q350,240 348,255" fill="none" stroke="#555577" stroke-width="1.5"/>
+
+    <!-- ===== TERRITORY LABELS ON BRAIN ===== -->
+    <text x="180" y="250" text-anchor="middle" class="territory-label" fill="#ff6666" font-weight="bold">MCA</text>
+    <text x="440" y="250" text-anchor="middle" class="territory-label" fill="#ff6666" font-weight="bold">MCA</text>
+    <text x="310" y="155" text-anchor="middle" class="territory-label" fill="#7777ee" font-weight="bold">ACA</text>
+    <text x="310" y="420" text-anchor="middle" class="territory-label" fill="#55cc55" font-weight="bold">PCA</text>
+    <text x="270" y="245" text-anchor="middle" class="territory-label" fill="#eebb66" font-size="10">LS</text>
+    <text x="350" y="245" text-anchor="middle" class="territory-label" fill="#eebb66" font-size="10">LS</text>
+
+    <!-- Orientation markers -->
+    <text x="310" y="78" text-anchor="middle" class="label-text" fill="#777799" font-size="11">A</text>
+    <text x="310" y="456" text-anchor="middle" class="label-text" fill="#777799" font-size="11">P</text>
+    <text x="108" y="268" text-anchor="middle" class="label-text" fill="#777799" font-size="11">R</text>
+    <text x="512" y="268" text-anchor="middle" class="label-text" fill="#777799" font-size="11">L</text>
+
+  </g>
+
+  <!-- ==================== LEGEND ==================== -->
+  <g transform="translate(580, 80)">
+    <rect x="0" y="0" width="195" height="250" rx="6" fill="#0d0d1a" stroke="#333355" stroke-width="1"/>
+    <text x="97" y="24" text-anchor="middle" class="legend-title">Vascular Territories</text>
+
+    <!-- MCA -->
+    <rect x="15" y="40" width="16" height="16" rx="2" fill="#cc4444" fill-opacity="0.6" stroke="#ee5555" stroke-width="0.8"/>
+    <text x="40" y="50" class="legend-text" fill="#ff8888">MCA</text>
+    <text x="40" y="62" class="legend-text">Lateral cortex</text>
+    <text x="40" y="72" class="legend-text" fill="#ff8888" font-size="8">(most common)</text>
+
+    <!-- ACA -->
+    <rect x="15" y="84" width="16" height="16" rx="2" fill="#4444cc" fill-opacity="0.6" stroke="#6666ee" stroke-width="0.8"/>
+    <text x="40" y="94" class="legend-text" fill="#8888ff">ACA</text>
+    <text x="40" y="106" class="legend-text">Medial cortex</text>
+
+    <!-- PCA -->
+    <rect x="15" y="118" width="16" height="16" rx="2" fill="#44aa44" fill-opacity="0.6" stroke="#55cc55" stroke-width="0.8"/>
+    <text x="40" y="128" class="legend-text" fill="#77dd77">PCA</text>
+    <text x="40" y="140" class="legend-text">Occipital,</text>
+    <text x="40" y="150" class="legend-text">medial temporal</text>
+
+    <!-- Lenticulostriate -->
+    <rect x="15" y="162" width="16" height="16" rx="2" fill="#cc8844" fill-opacity="0.6" stroke="#eebb66" stroke-width="0.8"/>
+    <text x="40" y="172" class="legend-text" fill="#eebb66">Lenticulostriate</text>
+    <text x="40" y="184" class="legend-text">Basal ganglia, IC</text>
+
+    <!-- VB -->
+    <rect x="15" y="196" width="16" height="16" rx="2" fill="#448888" fill-opacity="0.6" stroke="#66aaaa" stroke-width="0.8"/>
+    <text x="40" y="206" class="legend-text" fill="#66cccc">VB</text>
+    <text x="40" y="218" class="legend-text">Brainstem,</text>
+    <text x="40" y="228" class="legend-text">cerebellum</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="490" text-anchor="middle" class="footer-text">Axial view at the level of lateral ventricles</text>
+</svg>

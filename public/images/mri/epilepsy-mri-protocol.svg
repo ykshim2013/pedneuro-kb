@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .label-text { font-family: Consolas, monospace; font-size: 10px; fill: #ccccdd; }
+      .title-text { font-family: Consolas, monospace; font-size: 15px; fill: #bb77ff; font-weight: bold; }
+      .subtitle-text { font-family: Consolas, monospace; font-size: 10px; fill: #8888aa; }
+      .panel-title { font-family: Consolas, monospace; font-size: 12px; font-weight: bold; }
+      .panel-desc { font-family: Consolas, monospace; font-size: 8.5px; fill: #aaaacc; }
+      .footer-text { font-family: Consolas, monospace; font-size: 9px; fill: #8888aa; }
+      .tiny-label { font-family: Consolas, monospace; font-size: 7.5px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#0d0d1a"/>
+  <text x="400" y="26" text-anchor="middle" class="title-text">Epilepsy MRI Protocol &#x2014; Key Sequences</text>
+
+  <!-- ============================== -->
+  <!-- Panel 1: T1 3D Volumetric (top-left) -->
+  <!-- ============================== -->
+  <g transform="translate(15, 50)">
+    <rect x="0" y="0" width="378" height="200" fill="#0f0f25" stroke="#4488cc" stroke-width="2" rx="8"/>
+    <rect x="0" y="0" width="378" height="28" fill="#4488cc" opacity="0.15" rx="8"/>
+    <rect x="0" y="14" width="378" height="14" fill="#4488cc" opacity="0.15"/>
+    <text x="189" y="20" text-anchor="middle" class="panel-title" fill="#4488cc">T1 3D Volumetric</text>
+
+    <!-- Axial brain schematic -->
+    <g transform="translate(120, 118)">
+      <ellipse cx="0" cy="0" rx="62" ry="52" fill="#667788" stroke="#778899" stroke-width="0.8"/>
+      <line x1="0" y1="-54" x2="0" y2="54" stroke="#444466" stroke-width="1.2"/>
+      <!-- White matter -->
+      <ellipse cx="-20" cy="-3" rx="28" ry="18" fill="#8899aa"/>
+      <ellipse cx="20" cy="-3" rx="28" ry="18" fill="#8899aa"/>
+      <!-- Ventricles -->
+      <path d="M -3,-14 Q -10,-18 -16,-12 Q -18,-6 -12,-4 L -4,-8 Q -2,2 -6,12 L -2,12 Q 0,2 0,-8 Z" fill="#333355"/>
+      <path d="M 3,-14 Q 10,-18 16,-12 Q 18,-6 12,-4 L 4,-8 Q 2,2 6,12 L 2,12 Q 0,2 0,-8 Z" fill="#333355"/>
+
+      <!-- Cortical thickness measurement markers -->
+      <line x1="-45" y1="-32" x2="-55" y2="-40" stroke="#4488cc" stroke-width="1.5"/>
+      <line x1="-50" y1="-28" x2="-60" y2="-36" stroke="#4488cc" stroke-width="1.5"/>
+      <line x1="-48" y1="-30" x2="-58" y2="-38" stroke="#66aaee" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <!-- Double arrow for thickness -->
+      <line x1="-52" y1="-42" x2="-56" y2="-34" stroke="#66aaee" stroke-width="1"/>
+      <circle cx="-45" cy="-32" r="2" fill="#4488cc"/>
+      <circle cx="-55" cy="-40" r="2" fill="#4488cc"/>
+    </g>
+
+    <!-- Cortical dysplasia highlight region -->
+    <g transform="translate(120, 118)">
+      <path d="M 35,-38 Q 42,-42 48,-35 Q 50,-28 44,-26 Q 38,-30 35,-38 Z"
+            fill="#4488cc" opacity="0.35" stroke="#4488cc" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="58" y="-30" class="tiny-label" fill="#66aaee">FCD?</text>
+    </g>
+
+    <!-- Description text -->
+    <text x="230" y="75" class="panel-desc" fill="#ccddee">Anatomy</text>
+    <text x="230" y="90" class="panel-desc">&#x2022; Hippocampal volumetry</text>
+    <text x="230" y="105" class="panel-desc">&#x2022; Cortical dysplasia detection</text>
+    <text x="230" y="120" class="panel-desc">&#x2022; Cortical thickness analysis</text>
+    <text x="230" y="140" class="panel-desc" fill="#4488cc">1mm isotropic resolution</text>
+    <text x="230" y="155" class="panel-desc" fill="#4488cc">3D acquisition</text>
+
+    <!-- Thickness measurement label -->
+    <text x="40" y="185" class="tiny-label" fill="#4488cc">Cortical thickness</text>
+  </g>
+
+  <!-- ============================== -->
+  <!-- Panel 2: T2 Coronal Oblique (top-right) -->
+  <!-- ============================== -->
+  <g transform="translate(407, 50)">
+    <rect x="0" y="0" width="378" height="200" fill="#0f0f25" stroke="#44aa66" stroke-width="2" rx="8"/>
+    <rect x="0" y="0" width="378" height="28" fill="#44aa66" opacity="0.15" rx="8"/>
+    <rect x="0" y="14" width="378" height="14" fill="#44aa66" opacity="0.15"/>
+    <text x="189" y="20" text-anchor="middle" class="panel-title" fill="#44aa66">T2 Coronal Oblique</text>
+
+    <!-- Coronal brain schematic -->
+    <g transform="translate(110, 120)">
+      <!-- Brain outline (coronal) -->
+      <path d="M 0,-60 Q -55,-58 -70,-20 Q -78,15 -65,45 Q -50,60 -30,65 Q -10,68 0,68 Q 10,68 30,65 Q 50,60 65,45 Q 78,15 70,-20 Q 55,-58 0,-60 Z"
+            fill="#667788" stroke="#778899" stroke-width="0.8"/>
+      <!-- Interhemispheric fissure top portion -->
+      <line x1="0" y1="-62" x2="0" y2="-20" stroke="#444466" stroke-width="1.5"/>
+      <!-- Falx -->
+      <line x1="0" y1="-20" x2="0" y2="5" stroke="#444466" stroke-width="1"/>
+
+      <!-- Lateral ventricles (coronal) -->
+      <path d="M -5,-15 Q -12,-18 -22,-10 Q -25,-2 -18,5 Q -10,2 -5,0 Z" fill="#333355"/>
+      <path d="M 5,-15 Q 12,-18 22,-10 Q 25,-2 18,5 Q 10,2 5,0 Z" fill="#333355"/>
+
+      <!-- Third ventricle -->
+      <ellipse cx="0" cy="-5" rx="3" ry="8" fill="#333355"/>
+
+      <!-- Hippocampi highlighted -->
+      <!-- Left hippocampus (normal) -->
+      <ellipse cx="-25" cy="30" rx="16" ry="8" fill="#667788" stroke="#44aa66" stroke-width="2"/>
+      <!-- Right hippocampus (normal) -->
+      <ellipse cx="25" cy="30" rx="16" ry="8" fill="#667788" stroke="#44aa66" stroke-width="2"/>
+
+      <!-- Temporal horns -->
+      <ellipse cx="-25" cy="18" rx="6" ry="4" fill="#333355" opacity="0.6"/>
+      <ellipse cx="25" cy="18" rx="6" ry="4" fill="#333355" opacity="0.6"/>
+
+      <!-- Hippocampal labels -->
+      <text x="-25" y="50" text-anchor="middle" class="tiny-label" fill="#44aa66">Hippocampus</text>
+    </g>
+
+    <!-- Description -->
+    <text x="225" y="75" class="panel-desc" fill="#ccddee">Hippocampal Assessment</text>
+    <text x="225" y="90" class="panel-desc">&#x2022; Hippocampal structure</text>
+    <text x="225" y="105" class="panel-desc">&#x2022; MTS detection</text>
+    <text x="225" y="120" class="panel-desc">&#x2022; Internal architecture</text>
+    <text x="225" y="140" class="panel-desc" fill="#44aa66">Perpendicular to</text>
+    <text x="225" y="155" class="panel-desc" fill="#44aa66">hippocampal long axis</text>
+  </g>
+
+  <!-- ============================== -->
+  <!-- Panel 3: FLAIR (bottom-left) -->
+  <!-- ============================== -->
+  <g transform="translate(15, 258)">
+    <rect x="0" y="0" width="378" height="200" fill="#0f0f25" stroke="#cc8844" stroke-width="2" rx="8"/>
+    <rect x="0" y="0" width="378" height="28" fill="#cc8844" opacity="0.15" rx="8"/>
+    <rect x="0" y="14" width="378" height="14" fill="#cc8844" opacity="0.15"/>
+    <text x="189" y="20" text-anchor="middle" class="panel-title" fill="#cc8844">FLAIR</text>
+
+    <!-- Axial brain schematic -->
+    <g transform="translate(120, 118)">
+      <ellipse cx="0" cy="0" rx="62" ry="52" fill="#556677" stroke="#667788" stroke-width="0.8"/>
+      <line x1="0" y1="-54" x2="0" y2="54" stroke="#444466" stroke-width="1.2"/>
+      <!-- White matter (dark on FLAIR) -->
+      <ellipse cx="-20" cy="-3" rx="28" ry="18" fill="#445566"/>
+      <ellipse cx="20" cy="-3" rx="28" ry="18" fill="#445566"/>
+      <!-- Ventricles (dark, CSF suppressed) -->
+      <path d="M -3,-14 Q -10,-18 -16,-12 Q -18,-6 -12,-4 L -4,-8 Q -2,2 -6,12 L -2,12 Q 0,2 0,-8 Z" fill="#222244"/>
+      <path d="M 3,-14 Q 10,-18 16,-12 Q 18,-6 12,-4 L 4,-8 Q 2,2 6,12 L 2,12 Q 0,2 0,-8 Z" fill="#222244"/>
+
+      <!-- FLAIR hyperintense lesions (bright spots) -->
+      <!-- Cortical/juxtacortical bright spot 1 -->
+      <ellipse cx="-35" cy="-20" rx="8" ry="6" fill="#eedd88" opacity="0.8" stroke="#cc8844" stroke-width="1"/>
+      <!-- Cortical bright spot 2 -->
+      <ellipse cx="30" cy="15" rx="6" ry="5" fill="#eedd88" opacity="0.8" stroke="#cc8844" stroke-width="1"/>
+      <!-- Subcortical bright spot -->
+      <ellipse cx="-15" cy="20" rx="5" ry="4" fill="#eedd88" opacity="0.7" stroke="#cc8844" stroke-width="1"/>
+    </g>
+
+    <!-- Lesion pointers -->
+    <line x1="83" y1="96" x2="68" y2="86" stroke="#cc8844" stroke-width="0.8"/>
+    <text x="35" y="84" class="tiny-label" fill="#cc8844">FCD / Tuber</text>
+
+    <line x1="152" y1="133" x2="170" y2="140" stroke="#cc8844" stroke-width="0.8"/>
+    <text x="172" y="145" class="tiny-label" fill="#cc8844">Gliosis</text>
+
+    <!-- Description -->
+    <text x="230" y="75" class="panel-desc" fill="#ccddee">Signal Abnormalities</text>
+    <text x="230" y="90" class="panel-desc">&#x2022; Focal cortical dysplasia</text>
+    <text x="230" y="105" class="panel-desc">&#x2022; Tubers (TSC)</text>
+    <text x="230" y="120" class="panel-desc">&#x2022; Gliosis</text>
+    <text x="230" y="135" class="panel-desc">&#x2022; Encephalitis</text>
+    <text x="230" y="155" class="panel-desc" fill="#cc8844">CSF-suppressed: bright</text>
+    <text x="230" y="170" class="panel-desc" fill="#cc8844">lesions stand out</text>
+  </g>
+
+  <!-- ============================== -->
+  <!-- Panel 4: DWI/ADC (bottom-right) -->
+  <!-- ============================== -->
+  <g transform="translate(407, 258)">
+    <rect x="0" y="0" width="378" height="200" fill="#0f0f25" stroke="#cc4444" stroke-width="2" rx="8"/>
+    <rect x="0" y="0" width="378" height="28" fill="#cc4444" opacity="0.15" rx="8"/>
+    <rect x="0" y="14" width="378" height="14" fill="#cc4444" opacity="0.15"/>
+    <text x="189" y="20" text-anchor="middle" class="panel-title" fill="#cc4444">DWI / ADC</text>
+
+    <!-- Axial brain schematic -->
+    <g transform="translate(110, 118)">
+      <ellipse cx="0" cy="0" rx="62" ry="52" fill="#556677" stroke="#667788" stroke-width="0.8"/>
+      <line x1="0" y1="-54" x2="0" y2="54" stroke="#444466" stroke-width="1.2"/>
+      <!-- White matter -->
+      <ellipse cx="-20" cy="-3" rx="28" ry="18" fill="#556677"/>
+      <ellipse cx="20" cy="-3" rx="28" ry="18" fill="#556677"/>
+      <!-- Ventricles -->
+      <path d="M -3,-14 Q -10,-18 -16,-12 Q -18,-6 -12,-4 L -4,-8 Q -2,2 -6,12 L -2,12 Q 0,2 0,-8 Z" fill="#333355"/>
+      <path d="M 3,-14 Q 10,-18 16,-12 Q 18,-6 12,-4 L 4,-8 Q 2,2 6,12 L 2,12 Q 0,2 0,-8 Z" fill="#333355"/>
+
+      <!-- DWI bright region (restricted diffusion) -->
+      <path d="M 15,-25 Q 30,-35 42,-22 Q 48,-10 40,0 Q 28,8 18,-5 Q 10,-15 15,-25 Z"
+            fill="#ff6644" opacity="0.6" stroke="#cc4444" stroke-width="1.5"/>
+      <!-- Bright core -->
+      <path d="M 22,-20 Q 32,-28 38,-18 Q 42,-8 35,-2 Q 26,2 22,-10 Q 18,-15 22,-20 Z"
+            fill="#ffaa88" opacity="0.7"/>
+    </g>
+
+    <!-- DWI label -->
+    <line x1="155" y1="95" x2="175" y2="82" stroke="#cc4444" stroke-width="0.8"/>
+    <text x="177" y="80" class="tiny-label" fill="#cc4444">Restricted diffusion</text>
+
+    <!-- DWI/ADC comparison mini panels -->
+    <g transform="translate(240, 70)">
+      <rect x="0" y="0" width="55" height="38" fill="#222244" stroke="#555577" stroke-width="0.5" rx="3"/>
+      <text x="27" y="12" text-anchor="middle" class="tiny-label" fill="#cc4444">DWI</text>
+      <!-- Bright spot in DWI -->
+      <circle cx="27" cy="25" r="8" fill="#ffaa88" opacity="0.7"/>
+      <text x="27" y="28" text-anchor="middle" font-family="Consolas, monospace" font-size="6" fill="#cc4444">bright</text>
+    </g>
+    <g transform="translate(305, 70)">
+      <rect x="0" y="0" width="55" height="38" fill="#222244" stroke="#555577" stroke-width="0.5" rx="3"/>
+      <text x="27" y="12" text-anchor="middle" class="tiny-label" fill="#6688cc">ADC</text>
+      <!-- Dark spot in ADC -->
+      <circle cx="27" cy="25" r="8" fill="#223344" stroke="#6688cc" stroke-width="0.5"/>
+      <text x="27" y="28" text-anchor="middle" font-family="Consolas, monospace" font-size="6" fill="#6688cc">dark</text>
+    </g>
+    <text x="298" y="120" text-anchor="middle" class="tiny-label" fill="#aaaacc">= true restriction</text>
+
+    <!-- Description -->
+    <text x="230" y="138" class="panel-desc" fill="#ccddee">Acute Pathology</text>
+    <text x="230" y="153" class="panel-desc">&#x2022; Cytotoxic edema</text>
+    <text x="230" y="168" class="panel-desc">&#x2022; Acute ischemia</text>
+    <text x="230" y="183" class="panel-desc">&#x2022; Active seizure focus</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="466" width="800" height="34" fill="#0d0d1a"/>
+  <text x="400" y="480" text-anchor="middle" class="footer-text" fill="#8888aa">ILAE recommended &#x2022; Thin coronal oblique perpendicular to hippocampal long axis</text>
+  <text x="400" y="493" text-anchor="middle" class="footer-text" fill="#666688" font-size="8">Approximate &#x2014; not to scale &#x2022; Educational schematic</text>
+</svg>

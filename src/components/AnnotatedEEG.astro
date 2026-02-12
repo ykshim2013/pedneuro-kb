@@ -21,6 +21,9 @@ interface Props {
   syndrome?: string;
   frequency?: string;
   distribution?: string;
+  sequence?: string;
+  plane?: string;
+  modality?: 'eeg' | 'mri';
   clinicalSignificance?: string;
 }
 
@@ -38,6 +41,9 @@ const {
   syndrome,
   frequency,
   distribution,
+  sequence,
+  plane,
+  modality = 'eeg',
   clinicalSignificance,
 } = Astro.props;
 
@@ -47,7 +53,13 @@ const difficultyColors = {
   advanced: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-300' },
 };
 
+const modalityColors = {
+  eeg: { marker: 'bg-amber-500', markerHover: 'hover:bg-amber-400', pulse: 'bg-amber-400/30', accent: 'text-amber-300', legend: 'bg-amber-500' },
+  mri: { marker: 'bg-purple-500', markerHover: 'hover:bg-purple-400', pulse: 'bg-purple-400/30', accent: 'text-purple-300', legend: 'bg-purple-500' },
+};
+
 const colors = difficultyColors[difficulty];
+const mColors = modalityColors[modality];
 ---
 
 <div
@@ -100,14 +112,14 @@ const colors = difficultyColors[difficulty];
           aria-label={ann.label}
         >
           {/* Pulsing ring */}
-          <span class="absolute inset-0 w-7 h-7 -ml-[2px] -mt-[2px] rounded-full bg-amber-400/30 animate-ping" />
+          <span class={`absolute inset-0 w-7 h-7 -ml-[2px] -mt-[2px] rounded-full ${mColors.pulse} animate-ping`} />
           {/* Marker dot */}
-          <span class="relative flex items-center justify-center w-6 h-6 rounded-full bg-amber-500 text-white text-[10px] font-bold shadow-lg border-2 border-white hover:bg-amber-400 transition-colors z-10">
+          <span class={`relative flex items-center justify-center w-6 h-6 rounded-full ${mColors.marker} text-white text-[10px] font-bold shadow-lg border-2 border-white ${mColors.markerHover} transition-colors z-10`}>
             {index + 1}
           </span>
           {/* Tooltip */}
           <span class="annotation-tooltip absolute z-50 hidden group-hover:block bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 px-3 py-2 rounded-lg bg-slate-900/95 text-white text-xs shadow-xl border border-slate-600 pointer-events-none">
-            <strong class="block text-amber-300 mb-1">{ann.label}</strong>
+            <strong class={`block ${mColors.accent} mb-1`}>{ann.label}</strong>
             <span class="text-slate-200 leading-relaxed">{ann.description}</span>
             <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-900 border-r border-b border-slate-600 rotate-45" />
           </span>
@@ -119,13 +131,19 @@ const colors = difficultyColors[difficulty];
   <!-- Info bar -->
   <div class="px-4 py-3 bg-slate-50 border-t border-slate-200">
     {/* Pattern details */}
-    {(frequency || distribution) && (
+    {(frequency || distribution || sequence || plane) && (
       <div class="flex flex-wrap gap-4 mb-2 text-xs text-slate-600">
         {frequency && (
           <span><strong class="text-slate-700">Frequency:</strong> {frequency}</span>
         )}
         {distribution && (
           <span><strong class="text-slate-700">Distribution:</strong> {distribution}</span>
+        )}
+        {sequence && (
+          <span><strong class="text-slate-700">Sequence:</strong> {sequence}</span>
+        )}
+        {plane && (
+          <span><strong class="text-slate-700">Plane:</strong> {plane}</span>
         )}
       </div>
     )}
@@ -156,7 +174,7 @@ const colors = difficultyColors[difficulty];
         <ol class="mt-2 space-y-1">
           {annotations.map((ann, index) => (
             <li class="flex items-start gap-2 text-xs text-slate-600">
-              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] font-bold flex items-center justify-center">
+              <span class={`flex-shrink-0 w-5 h-5 rounded-full ${mColors.legend} text-white text-[10px] font-bold flex items-center justify-center`}>
                 {index + 1}
               </span>
               <div>

@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .label-text { font-family: Consolas, monospace; font-size: 10px; fill: #ccccdd; }
+      .title-text { font-family: Consolas, monospace; font-size: 15px; fill: #bb77ff; font-weight: bold; }
+      .subtitle-text { font-family: Consolas, monospace; font-size: 11px; fill: #8888aa; }
+      .panel-label { font-family: Consolas, monospace; font-size: 12px; fill: #ddddee; font-weight: bold; }
+      .milestone-text { font-family: Consolas, monospace; font-size: 9px; fill: #aaaacc; }
+      .tiny-label { font-family: Consolas, monospace; font-size: 7.5px; fill: #99aacc; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="52" fill="#0d0d1a"/>
+  <text x="400" y="24" text-anchor="middle" class="title-text">Myelination Milestones &#x2014; T1 MRI Signal Progression</text>
+  <text x="400" y="42" text-anchor="middle" class="subtitle-text">Caudal &#x2192; Rostral, Central &#x2192; Peripheral</text>
+
+  <!-- Panel backgrounds -->
+  <!-- Panel 1: Birth -->
+  <g transform="translate(30, 68)">
+    <rect x="0" y="0" width="175" height="230" fill="#12122a" stroke="#333355" stroke-width="1" rx="6"/>
+    <text x="87" y="22" text-anchor="middle" class="panel-label">Birth</text>
+
+    <!-- Mini brain -->
+    <g transform="translate(87, 130)">
+      <!-- Skull outline -->
+      <ellipse cx="0" cy="0" rx="70" ry="58" fill="#222240" stroke="#444466" stroke-width="1"/>
+      <!-- Brain parenchyma - gray matter -->
+      <ellipse cx="0" cy="0" rx="65" ry="53" fill="#777799"/>
+      <!-- Interhemispheric fissure -->
+      <line x1="0" y1="-55" x2="0" y2="55" stroke="#444466" stroke-width="1.5"/>
+
+      <!-- Unmyelinated white matter (dark) -->
+      <ellipse cx="-22" cy="-5" rx="30" ry="22" fill="#444466"/>
+      <ellipse cx="22" cy="-5" rx="30" ry="22" fill="#444466"/>
+
+      <!-- Ventricles -->
+      <path d="M -3,-18 Q -8,-22 -18,-20 Q -24,-15 -22,-8 Q -18,-3 -10,-8 Q -5,-14 -3,-5 Q -2,5 -7,15 L -3,15 Q 0,5 0,-5 Q 0,-14 -3,-18 Z" fill="#222240" opacity="0.7"/>
+      <path d="M 3,-18 Q 8,-22 18,-20 Q 24,-15 22,-8 Q 18,-3 10,-8 Q 5,-14 3,-5 Q 2,5 7,15 L 3,15 Q 0,5 0,-5 Q 0,-14 3,-18 Z" fill="#222240" opacity="0.7"/>
+
+      <!-- PLIC - bright (myelinated) -->
+      <path d="M -14,-10 L -18,8 L -15,10 L -11,-8 Z" fill="#e8e8f0" stroke="#ffffff" stroke-width="0.3"/>
+      <path d="M 14,-10 L 18,8 L 15,10 L 11,-8 Z" fill="#e8e8f0" stroke="#ffffff" stroke-width="0.3"/>
+
+      <!-- Label for PLIC -->
+      <text x="0" y="48" text-anchor="middle" class="tiny-label">PLIC bright</text>
+    </g>
+  </g>
+
+  <!-- Panel 2: 6 months -->
+  <g transform="translate(218, 68)">
+    <rect x="0" y="0" width="175" height="230" fill="#12122a" stroke="#333355" stroke-width="1" rx="6"/>
+    <text x="87" y="22" text-anchor="middle" class="panel-label">6 Months</text>
+
+    <g transform="translate(87, 130)">
+      <ellipse cx="0" cy="0" rx="70" ry="58" fill="#222240" stroke="#444466" stroke-width="1"/>
+      <ellipse cx="0" cy="0" rx="65" ry="53" fill="#777799"/>
+      <line x1="0" y1="-55" x2="0" y2="55" stroke="#444466" stroke-width="1.5"/>
+
+      <!-- White matter - partially myelinated -->
+      <ellipse cx="-22" cy="-5" rx="30" ry="22" fill="#555577"/>
+      <ellipse cx="22" cy="-5" rx="30" ry="22" fill="#555577"/>
+
+      <!-- Ventricles -->
+      <path d="M -3,-18 Q -8,-22 -18,-20 Q -24,-15 -22,-8 Q -18,-3 -10,-8 Q -5,-14 -3,-5 Q -2,5 -7,15 L -3,15 Q 0,5 0,-5 Q 0,-14 -3,-18 Z" fill="#222240" opacity="0.7"/>
+      <path d="M 3,-18 Q 8,-22 18,-20 Q 24,-15 22,-8 Q 18,-3 10,-8 Q 5,-14 3,-5 Q 2,5 7,15 L 3,15 Q 0,5 0,-5 Q 0,-14 3,-18 Z" fill="#222240" opacity="0.7"/>
+
+      <!-- PLIC bright -->
+      <path d="M -14,-10 L -18,8 L -15,10 L -11,-8 Z" fill="#e8e8f0"/>
+      <path d="M 14,-10 L 18,8 L 15,10 L 11,-8 Z" fill="#e8e8f0"/>
+
+      <!-- Splenium CC bright -->
+      <ellipse cx="0" cy="18" rx="14" ry="6" fill="#e8e8f0"/>
+
+      <!-- Genu CC - partially bright -->
+      <ellipse cx="0" cy="-20" rx="12" ry="5" fill="#c0c0d8"/>
+
+      <!-- Central WM more myelinated -->
+      <ellipse cx="-20" cy="0" rx="12" ry="10" fill="#b0b0cc" opacity="0.6"/>
+      <ellipse cx="20" cy="0" rx="12" ry="10" fill="#b0b0cc" opacity="0.6"/>
+
+      <text x="0" y="48" text-anchor="middle" class="tiny-label">PLIC + Splenium + Genu CC</text>
+    </g>
+  </g>
+
+  <!-- Panel 3: 12 months -->
+  <g transform="translate(406, 68)">
+    <rect x="0" y="0" width="175" height="230" fill="#12122a" stroke="#333355" stroke-width="1" rx="6"/>
+    <text x="87" y="22" text-anchor="middle" class="panel-label">12 Months</text>
+
+    <g transform="translate(87, 130)">
+      <ellipse cx="0" cy="0" rx="70" ry="58" fill="#222240" stroke="#444466" stroke-width="1"/>
+      <ellipse cx="0" cy="0" rx="65" ry="53" fill="#777799"/>
+      <line x1="0" y1="-55" x2="0" y2="55" stroke="#444466" stroke-width="1.5"/>
+
+      <!-- White matter - mostly myelinated -->
+      <ellipse cx="-22" cy="-5" rx="30" ry="22" fill="#c8c8e0"/>
+      <ellipse cx="22" cy="-5" rx="30" ry="22" fill="#c8c8e0"/>
+
+      <!-- Frontal subcortical still incomplete -->
+      <path d="M -40,-35 Q -30,-45 -10,-42 Q -5,-40 -5,-35 Q -5,-28 -15,-28 Q -30,-28 -40,-35 Z" fill="#888899" opacity="0.7"/>
+      <path d="M 40,-35 Q 30,-45 10,-42 Q 5,-40 5,-35 Q 5,-28 15,-28 Q 30,-28 40,-35 Z" fill="#888899" opacity="0.7"/>
+
+      <!-- Ventricles -->
+      <path d="M -3,-18 Q -8,-22 -18,-20 Q -24,-15 -22,-8 Q -18,-3 -10,-8 Q -5,-14 -3,-5 Q -2,5 -7,15 L -3,15 Q 0,5 0,-5 Q 0,-14 -3,-18 Z" fill="#222240" opacity="0.7"/>
+      <path d="M 3,-18 Q 8,-22 18,-20 Q 24,-15 22,-8 Q 18,-3 10,-8 Q 5,-14 3,-5 Q 2,5 7,15 L 3,15 Q 0,5 0,-5 Q 0,-14 3,-18 Z" fill="#222240" opacity="0.7"/>
+
+      <!-- CC fully bright -->
+      <ellipse cx="0" cy="-20" rx="13" ry="5" fill="#e8e8f0"/>
+      <rect x="-3" y="-20" width="6" height="38" fill="#e8e8f0" rx="2" opacity="0.5"/>
+      <ellipse cx="0" cy="18" rx="14" ry="6" fill="#e8e8f0"/>
+
+      <!-- PLIC -->
+      <path d="M -14,-10 L -18,8 L -15,10 L -11,-8 Z" fill="#e8e8f0"/>
+      <path d="M 14,-10 L 18,8 L 15,10 L 11,-8 Z" fill="#e8e8f0"/>
+
+      <text x="0" y="48" text-anchor="middle" class="tiny-label">Most WM bright, frontal incomplete</text>
+    </g>
+  </g>
+
+  <!-- Panel 4: 24 months -->
+  <g transform="translate(594, 68)">
+    <rect x="0" y="0" width="175" height="230" fill="#12122a" stroke="#333355" stroke-width="1" rx="6"/>
+    <text x="87" y="22" text-anchor="middle" class="panel-label">24 Months</text>
+
+    <g transform="translate(87, 130)">
+      <ellipse cx="0" cy="0" rx="70" ry="58" fill="#222240" stroke="#444466" stroke-width="1"/>
+      <ellipse cx="0" cy="0" rx="65" ry="53" fill="#777799"/>
+      <line x1="0" y1="-55" x2="0" y2="55" stroke="#444466" stroke-width="1.5"/>
+
+      <!-- White matter - fully myelinated (bright) -->
+      <ellipse cx="-22" cy="-5" rx="30" ry="22" fill="#e8e8f0"/>
+      <ellipse cx="22" cy="-5" rx="30" ry="22" fill="#e8e8f0"/>
+
+      <!-- Ventricles -->
+      <path d="M -3,-18 Q -8,-22 -18,-20 Q -24,-15 -22,-8 Q -18,-3 -10,-8 Q -5,-14 -3,-5 Q -2,5 -7,15 L -3,15 Q 0,5 0,-5 Q 0,-14 -3,-18 Z" fill="#222240" opacity="0.7"/>
+      <path d="M 3,-18 Q 8,-22 18,-20 Q 24,-15 22,-8 Q 18,-3 10,-8 Q 5,-14 3,-5 Q 2,5 7,15 L 3,15 Q 0,5 0,-5 Q 0,-14 3,-18 Z" fill="#222240" opacity="0.7"/>
+
+      <!-- CC fully bright -->
+      <ellipse cx="0" cy="-20" rx="13" ry="5" fill="#e8e8f0"/>
+      <rect x="-3" y="-20" width="6" height="38" fill="#e8e8f0" rx="2" opacity="0.5"/>
+      <ellipse cx="0" cy="18" rx="14" ry="6" fill="#e8e8f0"/>
+
+      <!-- PLIC -->
+      <path d="M -14,-10 L -18,8 L -15,10 L -11,-8 Z" fill="#e8e8f0"/>
+      <path d="M 14,-10 L 18,8 L 15,10 L 11,-8 Z" fill="#e8e8f0"/>
+
+      <text x="0" y="48" text-anchor="middle" class="tiny-label">Adult-like myelination pattern</text>
+    </g>
+  </g>
+
+  <!-- Progress arrows between panels -->
+  <g fill="#bb77ff" opacity="0.6">
+    <polygon points="210,183 218,178 218,188"/>
+    <polygon points="398,183 406,178 406,188"/>
+    <polygon points="586,183 594,178 594,188"/>
+  </g>
+
+  <!-- Timeline section -->
+  <g transform="translate(30, 320)">
+    <rect x="0" y="0" width="740" height="90" fill="#0d0d1a" rx="6"/>
+
+    <text x="370" y="22" text-anchor="middle" class="label-text" fill="#bb77ff" font-size="11" font-weight="bold">Myelination Timeline (T1-Weighted Signal)</text>
+
+    <!-- Timeline arrow -->
+    <line x1="40" y1="50" x2="700" y2="50" stroke="#555577" stroke-width="2"/>
+    <polygon points="700,50 692,45 692,55" fill="#555577"/>
+
+    <!-- Milestone markers -->
+    <!-- Birth - PLIC -->
+    <circle cx="70" cy="50" r="5" fill="#e8e8f0" stroke="#bb77ff" stroke-width="1.5"/>
+    <text x="70" y="40" text-anchor="middle" class="milestone-text" fill="#e8e8f0">PLIC</text>
+    <text x="70" y="70" text-anchor="middle" class="milestone-text">Birth</text>
+
+    <!-- 3mo - Cerebellar WM -->
+    <circle cx="190" cy="50" r="5" fill="#e8e8f0" stroke="#bb77ff" stroke-width="1.5"/>
+    <text x="190" y="36" text-anchor="middle" class="milestone-text" fill="#e8e8f0">Cerebellar</text>
+    <text x="190" y="70" text-anchor="middle" class="milestone-text">3 mo</text>
+
+    <!-- 4mo - Splenium -->
+    <circle cx="310" cy="50" r="5" fill="#e8e8f0" stroke="#bb77ff" stroke-width="1.5"/>
+    <text x="310" y="40" text-anchor="middle" class="milestone-text" fill="#e8e8f0">Splenium CC</text>
+    <text x="310" y="70" text-anchor="middle" class="milestone-text">4 mo</text>
+
+    <!-- 6mo - Genu -->
+    <circle cx="430" cy="50" r="5" fill="#e8e8f0" stroke="#bb77ff" stroke-width="1.5"/>
+    <text x="430" y="40" text-anchor="middle" class="milestone-text" fill="#e8e8f0">Genu CC</text>
+    <text x="430" y="70" text-anchor="middle" class="milestone-text">6 mo</text>
+
+    <!-- 12-24mo - Frontal WM -->
+    <circle cx="590" cy="50" r="5" fill="#e8e8f0" stroke="#bb77ff" stroke-width="1.5"/>
+    <text x="590" y="40" text-anchor="middle" class="milestone-text" fill="#e8e8f0">Frontal WM</text>
+    <text x="590" y="70" text-anchor="middle" class="milestone-text">12-24 mo</text>
+
+    <!-- Connecting dashes between milestones -->
+    <line x1="75" y1="50" x2="185" y2="50" stroke="#bb77ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="195" y1="50" x2="305" y2="50" stroke="#bb77ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="315" y1="50" x2="425" y2="50" stroke="#bb77ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="435" y1="50" x2="585" y2="50" stroke="#bb77ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 430)">
+    <rect x="0" y="0" width="740" height="55" fill="#0d0d1a" rx="6"/>
+
+    <rect x="20" y="12" width="18" height="12" fill="#444466" stroke="#555577" stroke-width="0.5" rx="2"/>
+    <text x="44" y="22" class="label-text" font-size="9.5">Unmyelinated WM</text>
+
+    <rect x="160" y="12" width="18" height="12" fill="#888899" stroke="#999aab" stroke-width="0.5" rx="2"/>
+    <text x="184" y="22" class="label-text" font-size="9.5">Partially Myelinated</text>
+
+    <rect x="320" y="12" width="18" height="12" fill="#e8e8f0" stroke="#ffffff" stroke-width="0.5" rx="2"/>
+    <text x="344" y="22" class="label-text" font-size="9.5">Myelinated WM (T1 bright)</text>
+
+    <rect x="520" y="12" width="18" height="12" fill="#777799" stroke="#8888aa" stroke-width="0.5" rx="2"/>
+    <text x="544" y="22" class="label-text" font-size="9.5">Gray Matter</text>
+
+    <text x="20" y="42" class="label-text" font-size="8.5" fill="#8888aa">PLIC = Posterior Limb of Internal Capsule &#x2022; CC = Corpus Callosum &#x2022; WM = White Matter</text>
+    <text x="560" y="42" class="label-text" font-size="8" fill="#666688">Approximate &#x2014; not to scale</text>
+  </g>
+</svg>
