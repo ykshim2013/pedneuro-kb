@@ -7,9 +7,9 @@ export const basicPatterns: BrainImagingPattern[] = [
     description:
       'Axial T1-weighted MRI demonstrating normal pediatric brain anatomy. Identification of lobar anatomy, deep gray structures, ventricular system, and major white matter tracts is the foundation for recognizing pathologic findings on neuroimaging.',
     difficulty: 'basic',
-    imagePath: '/images/mri/normal-brain-anatomy.svg',
+    imagePath: '/images/mri/normal-brain-anatomy-real.jpg',
     imageAlt:
-      'Axial T1-weighted MRI diagram of normal pediatric brain showing labeled lobar anatomy, lateral ventricles, basal ganglia, thalamus, and corpus callosum',
+      'Clinical axial T1 MRI of a 9-year-old boy at basal ganglia and fourth ventricle levels showing labeled regions-of-interest including posterior and anterior limbs of internal capsule, corpus callosum, caudate nucleus, putamen, thalamus, and frontal white matter',
     modality: 'MRI',
     sequence: 'T1-weighted',
     plane: 'Axial',
@@ -73,8 +73,8 @@ export const basicPatterns: BrainImagingPattern[] = [
           'Largest white matter commissure connecting the hemispheres; agenesis is a recognized malformation.',
       },
     ],
-    source: 'Barkovich AJ. Pediatric Neuroimaging. 6th ed. Wolters Kluwer; 2019.',
-    license: 'Educational diagram',
+    source: 'Grafe D, et al. Quantitative T1 mapping of the normal brain from early infancy to adulthood. Pediatr Radiol. 2021;51(11):2058-2068. PMC7897197. Figure 1.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'myelination-milestones',
@@ -82,9 +82,9 @@ export const basicPatterns: BrainImagingPattern[] = [
     description:
       'Myelination progresses in an orderly caudal-to-rostral and central-to-peripheral pattern during normal brain development. T1 and T2 signal changes on MRI reflect myelin maturation, with T1 shortening preceding T2 shortening by approximately 2-3 months. Knowledge of normal myelination milestones is essential for identifying delayed or abnormal white matter development.',
     difficulty: 'basic',
-    imagePath: '/images/mri/myelination-milestones.svg',
+    imagePath: '/images/mri/myelination-milestones-real.jpg',
     imageAlt:
-      'Four-panel axial MRI timeline showing progressive myelination from birth through 24 months, with labeled structures at each milestone',
+      'Clinical axial MRI comparison showing progressive myelination across five children aged 4 to 72 months on TI1, MP2RAGE, MP-RAGE, and T2-weighted sequences with age-dependent white matter signal changes',
     modality: 'MRI',
     sequence: 'T1 and T2',
     plane: 'Axial',
@@ -140,8 +140,8 @@ export const basicPatterns: BrainImagingPattern[] = [
           'T1 shortening (bright) precedes T2 shortening (dark) during myelination by approximately 2-3 months.',
       },
     ],
-    source: 'Barkovich AJ. MR of the normal neonatal brain. AJNR. 1990;11(4):677-683.',
-    license: 'Educational diagram',
+    source: 'Kuhne F, et al. Assessment of myelination in infants and young children by T1 relaxation time measurements using the MP2RAGE sequence. Pediatr Radiol. 2021;51(11):2058-2068. PMC8476383. Figure 5.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'epilepsy-mri-protocol',
@@ -149,9 +149,9 @@ export const basicPatterns: BrainImagingPattern[] = [
     description:
       'The ILAE Neuroimaging Task Force recommends a dedicated epilepsy MRI protocol that includes specific sequences optimized for detecting epileptogenic lesions. Standard brain MRI is insufficient and may miss up to 50% of structural abnormalities relevant to epilepsy surgery planning.',
     difficulty: 'basic',
-    imagePath: '/images/mri/epilepsy-mri-protocol.svg',
+    imagePath: '/images/mri/epilepsy-mri-protocol-real.jpg',
     imageAlt:
-      'Five-panel comparison of epilepsy MRI protocol sequences showing T1 3D volumetric, T2 coronal oblique, FLAIR, DWI/ADC, and SWI sequences with labeled features',
+      'Clinical MRI panels comparing DWI and T2 FLAIR sequences across different epilepsy-related conditions including status epilepticus, acute ischemic infarction, autoimmune encephalitis, and PRES',
     modality: 'MRI',
     sequence: 'Multiple',
     plane: 'Multiple',
@@ -199,7 +199,7 @@ export const basicPatterns: BrainImagingPattern[] = [
           'Susceptibility-weighted imaging detects calcifications, blood products, and cavernous malformations often missed on conventional sequences.',
       },
     ],
-    source: 'Bernasconi A et al. Epilepsia. 2019;60(6):1054-1068.',
-    license: 'Educational diagram',
+    source: 'Huang TH, et al. Brain imaging in epilepsy -- focus on diffusion-weighted imaging. Diagnostics (Basel). 2022;12(11):2602. PMC9689253. Figure 3.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
 ];

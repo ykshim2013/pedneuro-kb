@@ -7,9 +7,9 @@ export const advancedPatterns: BrainImagingPattern[] = [
     description:
       'Leukodystrophies are inherited white matter disorders with characteristic MRI patterns that narrow the differential diagnosis. Key differentiating features include the direction of progression (centrifugal vs centripetal), regional predominance (anterior vs posterior), involvement of subcortical U-fibers, and presence of contrast enhancement. MR spectroscopy provides additional diagnostic clues.',
     difficulty: 'advanced',
-    imagePath: '/images/mri/leukodystrophy-patterns.svg',
+    imagePath: '/images/mri/leukodystrophy-patterns-real.jpg',
     imageAlt:
-      'Four-panel axial T2/FLAIR MRI comparison showing characteristic white matter patterns of periventricular (MLD/Krabbe), subcortical U-fiber (Canavan), frontal-predominant (Alexander), and posterior-predominant (X-ALD) leukodystrophies',
+      'Clinical axial FLAIR MRI and quantitative maps comparing normal control (13 years), vanishing white matter disease patient (12 years), and metachromatic leukodystrophy patient (15 years) showing distinct white matter patterns',
     modality: 'MRI',
     sequence: 'T2 / FLAIR',
     plane: 'Axial',
@@ -57,8 +57,8 @@ export const advancedPatterns: BrainImagingPattern[] = [
           'Direction of progression (centrifugal vs centripetal) and regional predominance (anterior vs posterior) narrows the differential diagnosis significantly.',
       },
     ],
-    source: 'van der Knaap MS, Bugiani M. Acta Neuropathol. 2017;134(3):351-382.',
-    license: 'Educational diagram',
+    source: 'Stellingwerff MD, et al. Quantitative MRI distinguishes different leukodystrophies and correlates with clinical measures. Eur Radiol. 2024;35(4):1845-1857. PMC11914348. Figure 1.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'posterior-fossa-tumors',
@@ -66,9 +66,9 @@ export const advancedPatterns: BrainImagingPattern[] = [
     description:
       'Posterior fossa tumors are the most common solid brain tumors in children. The four major types are medulloblastoma, pilocytic astrocytoma, ependymoma, and diffuse intrinsic pontine glioma (DIPG/DMG). Each has characteristic imaging features that guide diagnosis, surgical planning, and prognostication.',
     difficulty: 'advanced',
-    imagePath: '/images/mri/posterior-fossa-tumors.svg',
+    imagePath: '/images/mri/posterior-fossa-tumors-real.jpg',
     imageAlt:
-      'Sagittal T1 post-contrast and T2 MRI panels showing characteristic imaging features of medulloblastoma (midline vermian), pilocytic astrocytoma (cyst with mural nodule), DIPG (diffuse pontine expansion), and ependymoma (extending through foramina)',
+      'Clinical MRI of SHH-activated medulloblastoma in a child showing lateral cerebellar hemisphere mass on multiple sequences including T1, T2, FLAIR, DWI, and post-contrast imaging',
     modality: 'MRI',
     sequence: 'T1 post-contrast / T2',
     plane: 'Sagittal',
@@ -116,8 +116,8 @@ export const advancedPatterns: BrainImagingPattern[] = [
           'Obstructive hydrocephalus from 4th ventricle compression. Dilated lateral and 3rd ventricles. May present with headache, vomiting, papilledema.',
       },
     ],
-    source: 'Udaka YT, Packer RJ. Neurol Clin. 2018;36(3):533-556.',
-    license: 'Educational diagram',
+    source: 'Lieb JM, et al. Infratentorielle Hirntumoren bei Kindern [Pediatric posterior fossa tumors]. Radiologie (Heidelberg). 2023;63(8):583-591. PMC10382353. Figure 1.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'arterial-territory-strokes',
@@ -125,9 +125,9 @@ export const advancedPatterns: BrainImagingPattern[] = [
     description:
       'Pediatric stroke etiology differs fundamentally from adults, with arteriopathies (focal cerebral arteriopathy, moyamoya) being more common than atherosclerosis. Recognition of arterial territory patterns on MRI is essential for rapid diagnosis. DWI is the most sensitive acute imaging sequence, and MRA/CTA is essential to evaluate for underlying arteriopathy.',
     difficulty: 'advanced',
-    imagePath: '/images/mri/arterial-territory-strokes.svg',
+    imagePath: '/images/mri/arterial-territory-strokes-real.jpg',
     imageAlt:
-      'Axial DWI and MRA MRI showing arterial territory distributions of MCA, ACA, PCA, lenticulostriate, and vertebrobasilar territories with corresponding clinical deficits',
+      'Clinical axial DWI, ADC, and ASL MRI of a 6-month-old infant showing large area of restricted diffusion and decreased cerebral blood flow in the left MCA territory consistent with acute ischemic stroke',
     modality: 'MRI',
     sequence: 'DWI / MRA / FLAIR',
     plane: 'Axial',
@@ -175,8 +175,8 @@ export const advancedPatterns: BrainImagingPattern[] = [
           'Brainstem, cerebellum. Vertigo, ataxia, cranial nerve palsies, crossed signs. Posterior circulation strokes are less common but often missed.',
       },
     ],
-    source: 'Mackay MT et al. Lancet Neurol. 2011;10(1):52-60.',
-    license: 'Educational diagram',
+    source: 'Akbar A, Creeden S. Acute ischemic stroke in an infant with COVID-19 infection and delayed diagnosis of neurofibromatosis type 1. Cureus. 2024;16(1):e51524. PMC10759935. Figure 2.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'holoprosencephaly-spectrum',
@@ -184,9 +184,9 @@ export const advancedPatterns: BrainImagingPattern[] = [
     description:
       'Holoprosencephaly (HPE) is the most common forebrain malformation, resulting from incomplete cleavage of the prosencephalon. It exists on a severity spectrum from alobar (complete failure of hemispheric separation) to lobar (mostly separated hemispheres with subtle fusion). The middle interhemispheric variant (MIH) is an atypical form with selective posterior frontal and parietal nonseparation.',
     difficulty: 'advanced',
-    imagePath: '/images/mri/holoprosencephaly-spectrum.svg',
+    imagePath: '/images/mri/holoprosencephaly-spectrum-real.jpg',
     imageAlt:
-      'Four-panel axial and coronal MRI comparison showing the holoprosencephaly spectrum from alobar (single monoventricle) through semilobar and lobar forms to the middle interhemispheric variant',
+      'Clinical MRI panels showing holoprosencephaly spectrum: alobar HPE (2-day-old neonate with monoventricle and fused thalami), semilobar HPE (anterior lobe fusion with posterior division), and middle interhemispheric variant (posterior frontal and parietal fusion)',
     modality: 'MRI',
     sequence: 'T1 / T2',
     plane: 'Axial and Coronal',
@@ -234,7 +234,7 @@ export const advancedPatterns: BrainImagingPattern[] = [
           'Severity of brain malformation correlates with facial dysmorphism ("the face predicts the brain"). Ranges from cyclopia (alobar) to midface hypoplasia (lobar).',
       },
     ],
-    source: 'Dubourg C et al. Orphanet J Rare Dis. 2007;2:8.',
-    license: 'Educational diagram',
+    source: 'Malta M, et al. Holoprosencephaly: review of embryology, clinical phenotypes, etiology and management. Children (Basel). 2023;10(4):647. PMC10137117. Figure 1.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
 ];

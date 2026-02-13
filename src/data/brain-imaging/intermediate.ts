@@ -7,9 +7,9 @@ export const intermediatePatterns: BrainImagingPattern[] = [
     description:
       'Mesial temporal sclerosis (MTS) is the most common structural abnormality found in patients with temporal lobe epilepsy. MRI findings include hippocampal volume loss, increased T2/FLAIR signal, loss of internal architecture, and ipsilateral temporal horn dilation. Quantitative hippocampal volumetry increases diagnostic sensitivity, and concordance with EEG lateralization is essential for surgical planning.',
     difficulty: 'intermediate',
-    imagePath: '/images/mri/mesial-temporal-sclerosis.svg',
+    imagePath: '/images/mri/mesial-temporal-sclerosis-real.jpg',
     imageAlt:
-      'Coronal FLAIR MRI showing asymmetric hippocampi with right-sided volume loss, increased signal, and ipsilateral temporal horn dilation consistent with mesial temporal sclerosis',
+      'Clinical coronal and axial MRI showing marked hippocampal asymmetry with hippocampal atrophy and increased T2/FLAIR signal intensity consistent with mesial temporal sclerosis',
     modality: 'MRI',
     sequence: 'FLAIR / T2 coronal',
     plane: 'Coronal',
@@ -58,8 +58,8 @@ export const intermediatePatterns: BrainImagingPattern[] = [
           'Ipsilateral fornix and mammillary body atrophy from Wallerian degeneration of the hippocampal efferent pathway.',
       },
     ],
-    source: 'Cendes F et al. Neurology. 1993;43(4):719-725.',
-    license: 'Educational diagram',
+    source: 'Villamizar-Torres D, et al. Mesial temporal sclerosis and epilepsy: a narrative review. Acta Epileptologica. 2024;6:30. PMC11960268. Figure 3.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'focal-cortical-dysplasia',
@@ -67,9 +67,9 @@ export const intermediatePatterns: BrainImagingPattern[] = [
     description:
       'Focal cortical dysplasia is the most common cause of drug-resistant focal epilepsy requiring surgery in children. MRI features include cortical thickening, blurring of the gray-white matter junction, and the transmantle sign (a hyperintense band extending from cortex to ventricle on FLAIR), which is pathognomonic for FCD type IIb. Detection requires dedicated epilepsy MRI protocol, preferably at 3T.',
     difficulty: 'intermediate',
-    imagePath: '/images/mri/focal-cortical-dysplasia.svg',
+    imagePath: '/images/mri/focal-cortical-dysplasia-real.jpg',
     imageAlt:
-      'Coronal FLAIR MRI showing focal cortical thickening, blurred gray-white junction, and transmantle sign extending from cortex to ventricle consistent with focal cortical dysplasia type IIb',
+      'Clinical coronal SPOILED GRE and FLAIR MRI showing abnormal hyperintense signal band extending from ventricle to subcortical area (transmantle sign) with cortical thickening characteristic of focal cortical dysplasia type IIb',
     modality: 'MRI',
     sequence: 'FLAIR / T1',
     plane: 'Coronal',
@@ -118,8 +118,8 @@ export const intermediatePatterns: BrainImagingPattern[] = [
           'Normal gray-white matter differentiation on contralateral side for comparison.',
       },
     ],
-    source: 'Blumcke I et al. Epilepsia. 2011;52(1):158-174.',
-    license: 'Educational diagram',
+    source: 'Matsuo T, et al. Case report: the origin of transmantle-like features. Front Radiol. 2022;2:927764. PMC10365096. Figure 2.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'cortical-tubers-tsc',
@@ -127,9 +127,9 @@ export const intermediatePatterns: BrainImagingPattern[] = [
     description:
       'Tuberous sclerosis complex (TSC) is characterized by hamartomatous lesions throughout the brain including cortical tubers, subependymal nodules (SENs), subependymal giant cell astrocytomas (SEGAs), and white matter radial migration lines. Cortical tubers are the epileptogenic lesion, and their number and location correlate with seizure severity and cognitive outcome.',
     difficulty: 'intermediate',
-    imagePath: '/images/mri/cortical-tubers-tsc.svg',
+    imagePath: '/images/mri/cortical-tubers-tsc-real.jpg',
     imageAlt:
-      'Axial FLAIR MRI showing multiple cortical tubers as hyperintense cortical/subcortical lesions, subependymal nodules along ventricular walls, and white matter radial migration lines in tuberous sclerosis complex',
+      'Clinical axial T2-weighted MRI of a 12-year-old male with TSC showing cortical tubers as hyperintense areas, subependymal nodules along ventricular borders, radial migration line, and white matter cystic lesion',
     modality: 'MRI',
     sequence: 'FLAIR / T1 / T2',
     plane: 'Axial',
@@ -178,8 +178,8 @@ export const intermediatePatterns: BrainImagingPattern[] = [
           'Tubers are typically multiple and distributed across both hemispheres; tuber count correlates with seizure severity and cognitive outcome.',
       },
     ],
-    source: 'Northrup H et al. Pediatr Neurol. 2021;123:50-66.',
-    license: 'Educational diagram',
+    source: 'von Ranke FM, et al. Imaging of tuberous sclerosis complex: a pictorial review. Radiol Bras. 2017;50(1):48-54. PMC5347503. Figure 2.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
   {
     id: 'hie-patterns',
@@ -187,9 +187,9 @@ export const intermediatePatterns: BrainImagingPattern[] = [
     description:
       'Hypoxic-ischemic encephalopathy (HIE) produces distinct injury patterns on MRI depending on the severity and duration of the insult. Partial prolonged hypoxia causes watershed (border zone) white matter injury, while acute total asphyxia causes profound injury to metabolically active deep gray structures (basal ganglia and thalami). DWI is the most sensitive sequence in the acute phase.',
     difficulty: 'intermediate',
-    imagePath: '/images/mri/hie-patterns.svg',
+    imagePath: '/images/mri/hie-patterns-real.jpg',
     imageAlt:
-      'Axial DWI and T1 MRI comparison showing watershed pattern (parasagittal white matter injury) and profound pattern (bilateral basal ganglia and thalami injury) of hypoxic-ischemic encephalopathy',
+      'Clinical neonatal MRI showing HIE injury patterns on DWI/ADC: watershed (peripheral) type with bilateral diffusion restriction, basal ganglia-thalamus (central) pattern, and global pattern with widespread diffusion restriction',
     modality: 'MRI',
     sequence: 'DWI / T1 / T2',
     plane: 'Axial',
@@ -246,7 +246,7 @@ export const intermediatePatterns: BrainImagingPattern[] = [
           'Watershed pattern: cognitive deficits, relative motor sparing. Profound pattern: dyskinetic/spastic CP, severe motor impairment.',
       },
     ],
-    source: 'Barkovich AJ et al. AJNR. 2006;27(3):533-547.',
-    license: 'Educational diagram',
+    source: 'Lakatos A, et al. Neurodevelopmental effect of intracranial hemorrhage observed in hypoxic ischemic brain injury in hypothermia-treated asphyxiated neonates -- an MRI study. BMC Pediatr. 2019;19:430. PMC6849254. Figure 3.',
+    license: 'CC BY 4.0 (Creative Commons Attribution 4.0 International)',
   },
 ];
