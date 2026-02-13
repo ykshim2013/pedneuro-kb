@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Consolas, monospace">
+  <defs>
+    <style>
+      .label { fill: #e0e0e0; font-size: 11px; }
+      .title { fill: #55cc88; font-size: 18px; font-weight: bold; }
+      .orient { fill: #55cc88; font-size: 14px; font-weight: bold; }
+      .leader { stroke: #888; stroke-width: 0.7; fill: none; }
+      .structure-label { fill: #ffffff; font-size: 10px; }
+      .sub-label { fill: #cccccc; font-size: 9px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" class="title">Coronal Brain Section -- Hippocampal Level</text>
+
+  <!-- Orientation markers -->
+  <text x="100" y="265" text-anchor="middle" class="orient">R</text>
+  <text x="700" y="265" text-anchor="middle" class="orient">L</text>
+  <text x="400" y="52" text-anchor="middle" class="orient">S</text>
+  <text x="400" y="488" text-anchor="middle" class="orient">I</text>
+
+  <!-- Brain outline (butterfly/coronal shape) -->
+  <path d="M 400,60
+           Q 480,58 540,75 Q 610,100 650,150 Q 680,200 680,250
+           Q 680,300 660,340 Q 640,370 610,385
+           Q 580,395 555,410 Q 530,430 520,450
+           Q 500,460 480,450 Q 460,430 440,415 Q 420,405 400,400
+           Q 380,405 360,415 Q 340,430 320,450
+           Q 300,460 280,450 Q 270,430 245,410
+           Q 220,395 190,385 Q 160,370 140,340
+           Q 120,300 120,250
+           Q 120,200 150,150 Q 190,100 260,75 Q 320,58 400,60 Z"
+        fill="#2a2a3e" stroke="#667" stroke-width="1.5"/>
+
+  <!-- Cortical ribbon -->
+  <path d="M 400,60
+           Q 480,58 540,75 Q 610,100 650,150 Q 680,200 680,250
+           Q 680,300 660,340 Q 640,370 610,385
+           Q 580,395 555,410 Q 530,430 520,450
+           Q 500,460 480,450 Q 460,430 440,415 Q 420,405 400,400
+           Q 380,405 360,415 Q 340,430 320,450
+           Q 300,460 280,450 Q 270,430 245,410
+           Q 220,395 190,385 Q 160,370 140,340
+           Q 120,300 120,250
+           Q 120,200 150,150 Q 190,100 260,75 Q 320,58 400,60 Z"
+        fill="none" stroke="#cc8866" stroke-width="6" opacity="0.4"/>
+
+  <!-- Sulci on cortical surface -->
+  <path d="M 280,62 Q 275,82 280,100" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 340,58 Q 338,78 342,95" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 460,58 Q 462,78 458,95" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 520,62 Q 525,82 520,100" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 160,180 Q 148,195 155,215" fill="none" stroke="#445" stroke-width="1.2"/>
+  <path d="M 640,180 Q 652,195 645,215" fill="none" stroke="#445" stroke-width="1.2"/>
+
+  <!-- Interhemispheric fissure (top) -->
+  <line x1="400" y1="60" x2="400" y2="100" stroke="#1a1a2e" stroke-width="2.5"/>
+
+  <!-- Corpus callosum (top connecting bridge) -->
+  <path d="M 260,115 Q 330,100 400,98 Q 470,100 540,115" fill="none" stroke="#44aadd" stroke-width="5" opacity="0.6"/>
+  <path d="M 260,115 Q 330,108 400,106 Q 470,108 540,115" fill="#44aadd" opacity="0.3"/>
+
+  <!-- Cingulate gyrus (medial, above CC) -->
+  <path d="M 300,100 Q 350,88 400,86 Q 450,88 500,100" fill="none" stroke="#cc8866" stroke-width="3" opacity="0.4"/>
+
+  <!-- Lateral ventricles (body, paired) - right side -->
+  <path d="M 310,130 Q 340,125 365,130 Q 375,140 370,155 Q 355,165 330,160 Q 310,150 310,130 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+  <!-- Left side -->
+  <path d="M 490,130 Q 460,125 435,130 Q 425,140 430,155 Q 445,165 470,160 Q 490,150 490,130 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+
+  <!-- Third ventricle (narrow midline) -->
+  <path d="M 395,160 Q 393,190 393,220 Q 395,240 400,245 Q 405,240 407,220 Q 407,190 405,160 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+
+  <!-- Caudate nucleus - right -->
+  <path d="M 330,130 Q 340,140 345,155 Q 340,165 325,160 Q 315,150 320,135 Z"
+        fill="#cc7744" opacity="0.5" stroke="#cc8866" stroke-width="1"/>
+  <!-- Caudate nucleus - left -->
+  <path d="M 470,130 Q 460,140 455,155 Q 460,165 475,160 Q 485,150 480,135 Z"
+        fill="#cc7744" opacity="0.5" stroke="#cc8866" stroke-width="1"/>
+
+  <!-- Putamen and GP - right -->
+  <ellipse cx="290" cy="195" rx="32" ry="38" fill="#dd6655" opacity="0.4" stroke="#dd7766" stroke-width="1"/>
+  <!-- GP medial portion - right -->
+  <ellipse cx="315" cy="200" rx="14" ry="25" fill="#ee9966" opacity="0.4" stroke="#eeaa77" stroke-width="1"/>
+  <!-- Putamen and GP - left -->
+  <ellipse cx="510" cy="195" rx="32" ry="38" fill="#dd6655" opacity="0.4" stroke="#dd7766" stroke-width="1"/>
+  <!-- GP medial portion - left -->
+  <ellipse cx="485" cy="200" rx="14" ry="25" fill="#ee9966" opacity="0.4" stroke="#eeaa77" stroke-width="1"/>
+
+  <!-- Sylvian fissure - right -->
+  <path d="M 230,230 Q 240,250 235,270" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+  <!-- Sylvian fissure - left -->
+  <path d="M 570,230 Q 560,250 565,270" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+
+  <!-- Thalami (paired, flanking 3rd ventricle) -->
+  <ellipse cx="370" cy="210" rx="25" ry="18" fill="#cc7744" opacity="0.4" stroke="#cc8866" stroke-width="1"/>
+  <ellipse cx="430" cy="210" rx="25" ry="18" fill="#cc7744" opacity="0.4" stroke="#cc8866" stroke-width="1"/>
+
+  <!-- Internal capsule hints -->
+  <path d="M 335,170 Q 338,185 340,200" fill="none" stroke="#44aadd" stroke-width="2.5" opacity="0.5"/>
+  <path d="M 465,170 Q 462,185 460,200" fill="none" stroke="#44aadd" stroke-width="2.5" opacity="0.5"/>
+
+  <!-- Temporal horn of lateral ventricle - right -->
+  <path d="M 280,320 Q 290,310 310,310 Q 330,315 335,330 Q 330,340 310,342 Q 290,340 280,320 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+  <!-- Temporal horn - left -->
+  <path d="M 520,320 Q 510,310 490,310 Q 470,315 465,330 Q 470,340 490,342 Q 510,340 520,320 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+
+  <!-- Hippocampus - right (at floor of temporal horn) -->
+  <path d="M 295,340 Q 310,345 330,342 Q 345,350 340,365 Q 325,375 305,370 Q 285,365 280,355 Q 282,345 295,340 Z"
+        fill="#55cc88" opacity="0.45" stroke="#55cc88" stroke-width="1.2"/>
+  <!-- Hippocampus - left -->
+  <path d="M 505,340 Q 490,345 470,342 Q 455,350 460,365 Q 475,375 495,370 Q 515,365 520,355 Q 518,345 505,340 Z"
+        fill="#55cc88" opacity="0.45" stroke="#55cc88" stroke-width="1.2"/>
+
+  <!-- Amygdala - right (anterior-superior to hippocampus) -->
+  <ellipse cx="268" cy="320" rx="16" ry="14" fill="#dd6699" opacity="0.45" stroke="#dd6699" stroke-width="1"/>
+  <!-- Amygdala - left -->
+  <ellipse cx="532" cy="320" rx="16" ry="14" fill="#dd6699" opacity="0.45" stroke="#dd6699" stroke-width="1"/>
+
+  <!-- Tentorium cerebelli (inferior, as dashed line) -->
+  <path d="M 150,420 Q 250,400 400,395 Q 550,400 650,420"
+        fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Cerebellum hint below tentorium -->
+  <path d="M 300,430 Q 350,420 400,418 Q 450,420 500,430"
+        fill="none" stroke="#aa77ff" stroke-width="2" opacity="0.4"/>
+  <path d="M 320,445 Q 360,435 400,433 Q 440,435 480,445"
+        fill="none" stroke="#aa77ff" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Falx cerebri (midline superior) -->
+  <line x1="400" y1="60" x2="400" y2="98" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- ===== LABELS AND LEADER LINES ===== -->
+
+  <!-- Corpus callosum -->
+  <line x1="400" y1="100" x2="400" y2="75" class="leader"/>
+  <text x="400" y="72" text-anchor="middle" class="structure-label" fill="#44aadd">Corpus Callosum</text>
+
+  <!-- Cingulate gyrus -->
+  <line x1="460" y1="90" x2="560" y2="70" class="leader"/>
+  <text x="565" y="73" class="sub-label">Cingulate Gyrus</text>
+
+  <!-- Lateral ventricle (body) - right -->
+  <line x1="340" y1="140" x2="200" y2="115" class="leader"/>
+  <text x="115" y="118" class="structure-label" fill="#5588aa">Lat. Ventricle</text>
+
+  <!-- Third ventricle -->
+  <line x1="400" y1="200" x2="400" y2="250" class="leader"/>
+  <text x="400" y="263" text-anchor="middle" class="sub-label" fill="#5588aa">3rd Ventricle</text>
+
+  <!-- Caudate - right -->
+  <line x1="325" y1="145" x2="205" y2="148" class="leader"/>
+  <text x="145" y="151" class="structure-label">Caudate</text>
+
+  <!-- Putamen - left -->
+  <line x1="540" y1="190" x2="640" y2="175" class="leader"/>
+  <text x="645" y="178" class="structure-label" fill="#dd7766">Putamen</text>
+
+  <!-- Globus pallidus - left -->
+  <line x1="498" y1="200" x2="635" y2="198" class="leader"/>
+  <text x="640" y="201" class="sub-label" fill="#eeaa77">Globus Pallidus</text>
+
+  <!-- Thalamus -->
+  <line x1="430" y1="225" x2="555" y2="250" class="leader"/>
+  <text x="560" y="253" class="structure-label">Thalamus</text>
+
+  <!-- Sylvian fissure - right -->
+  <line x1="230" y1="250" x2="140" y2="250" class="leader"/>
+  <text x="125" y="253" text-anchor="end" class="sub-label">Sylvian Fissure</text>
+
+  <!-- Temporal horn - right -->
+  <line x1="300" y1="312" x2="180" y2="300" class="leader"/>
+  <text x="100" y="303" class="structure-label" fill="#5588aa">Temporal Horn</text>
+
+  <!-- Hippocampus - right -->
+  <line x1="310" y1="372" x2="178" y2="395" class="leader"/>
+  <text x="95" y="398" class="label" fill="#55cc88">Hippocampus</text>
+
+  <!-- Hippocampus - left -->
+  <line x1="490" y1="372" x2="600" y2="395" class="leader"/>
+  <text x="605" y="398" class="label" fill="#55cc88">Hippocampus</text>
+
+  <!-- Amygdala - right -->
+  <line x1="255" y1="310" x2="155" y2="335" class="leader"/>
+  <text x="95" y="338" class="structure-label" fill="#dd6699">Amygdala</text>
+
+  <!-- Amygdala - left -->
+  <line x1="545" y1="310" x2="632" y2="330" class="leader"/>
+  <text x="637" y="333" class="structure-label" fill="#dd6699">Amygdala</text>
+
+  <!-- Internal capsule -->
+  <line x1="462" y1="185" x2="580" y2="145" class="leader"/>
+  <text x="585" y="148" class="sub-label" fill="#44aadd">Int. Capsule</text>
+
+  <!-- Tentorium -->
+  <line x1="500" y1="403" x2="590" y2="430" class="leader"/>
+  <text x="595" y="433" class="sub-label">Tentorium Cerebelli</text>
+
+  <!-- Cerebellum hint -->
+  <text x="400" y="460" text-anchor="middle" class="sub-label" fill="#aa77ff">Cerebellum (inferior)</text>
+
+  <!-- Legend -->
+  <rect x="20" y="420" width="10" height="10" fill="#55cc88" opacity="0.6"/>
+  <text x="35" y="429" class="sub-label">Hippocampus</text>
+  <rect x="20" y="436" width="10" height="10" fill="#dd6699" opacity="0.6"/>
+  <text x="35" y="445" class="sub-label">Amygdala</text>
+  <rect x="20" y="452" width="10" height="10" fill="#cc7744" opacity="0.6"/>
+  <text x="35" y="461" class="sub-label">Deep Gray Nuclei</text>
+  <rect x="20" y="468" width="10" height="10" fill="#0d0d2a" stroke="#335577" stroke-width="0.5"/>
+  <text x="35" y="477" class="sub-label">CSF / Ventricles</text>
+</svg>

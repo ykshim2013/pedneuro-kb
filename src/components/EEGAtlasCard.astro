@@ -7,7 +7,7 @@ interface Props {
   syndrome?: string;
   description: string;
   annotationCount: number;
-  modality?: 'eeg' | 'mri';
+  modality?: 'eeg' | 'mri' | 'anatomy' | 'ct';
 }
 
 const { id, title, imagePath, difficulty, syndrome, description, annotationCount, modality = 'eeg' } = Astro.props;

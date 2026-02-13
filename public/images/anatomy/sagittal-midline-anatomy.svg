@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Consolas, monospace">
+  <defs>
+    <style>
+      .label { fill: #e0e0e0; font-size: 11px; }
+      .title { fill: #55cc88; font-size: 18px; font-weight: bold; }
+      .orient { fill: #55cc88; font-size: 14px; font-weight: bold; }
+      .leader { stroke: #888; stroke-width: 0.7; fill: none; }
+      .structure-label { fill: #ffffff; font-size: 10px; }
+      .sub-label { fill: #cccccc; font-size: 9px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" class="title">Midsagittal Brain Section</text>
+
+  <!-- Orientation markers -->
+  <text x="80" y="258" text-anchor="middle" class="orient">A</text>
+  <text x="720" y="258" text-anchor="middle" class="orient">P</text>
+  <text x="400" y="52" text-anchor="middle" class="orient">S</text>
+  <text x="400" y="490" text-anchor="middle" class="orient">I</text>
+
+  <!-- Cerebral hemisphere outline (large dome) -->
+  <path d="M 160,300 Q 130,260 130,200 Q 130,120 200,80 Q 280,45 380,42 Q 500,40 580,75 Q 640,105 660,160 Q 675,210 660,270 Q 650,300 620,320"
+        fill="#2a2a3e" stroke="#667" stroke-width="1.5"/>
+
+  <!-- Cortical ribbon -->
+  <path d="M 160,300 Q 130,260 130,200 Q 130,120 200,80 Q 280,45 380,42 Q 500,40 580,75 Q 640,105 660,160 Q 675,210 660,270 Q 650,300 620,320"
+        fill="none" stroke="#cc8866" stroke-width="6" opacity="0.4"/>
+
+  <!-- Sulci marks on cortex -->
+  <path d="M 220,72 Q 230,95 225,110" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 300,50 Q 305,75 298,95" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 380,44 Q 382,68 376,88" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 460,48 Q 465,72 458,92" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 540,65 Q 548,88 540,108" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 610,100 Q 622,125 615,145" fill="none" stroke="#445" stroke-width="1.5"/>
+  <path d="M 650,175 Q 662,198 656,218" fill="none" stroke="#445" stroke-width="1.5"/>
+
+  <!-- Cingulate gyrus (medial, above CC) -->
+  <path d="M 240,155 Q 300,130 400,128 Q 500,130 560,155" fill="#cc8866" opacity="0.2" stroke="#cc8866" stroke-width="1"/>
+
+  <!-- Corpus callosum -->
+  <!-- Genu -->
+  <path d="M 265,195 Q 260,180 268,168 Q 280,155 310,148" fill="#44aadd" opacity="0.5" stroke="#44aadd" stroke-width="1"/>
+  <!-- Body -->
+  <path d="M 310,148 Q 400,140 490,148" fill="#44aadd" opacity="0.5" stroke="#44aadd" stroke-width="1"/>
+  <!-- CC body fill area -->
+  <path d="M 265,195 Q 260,180 268,168 Q 280,155 310,148 Q 400,140 490,148 Q 530,155 548,168 Q 558,180 555,200 Q 500,190 400,188 Q 300,190 265,195 Z"
+        fill="#44aadd" opacity="0.35"/>
+  <!-- Splenium -->
+  <path d="M 490,148 Q 530,155 548,168 Q 558,180 555,200" fill="#44aadd" opacity="0.5" stroke="#44aadd" stroke-width="1"/>
+
+  <!-- Lateral ventricle body (dark space below CC) -->
+  <path d="M 290,200 Q 380,195 490,200 Q 510,205 520,215 Q 510,220 490,218 Q 380,215 290,218 Q 275,215 270,210 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+
+  <!-- Third ventricle (narrow midline space) -->
+  <path d="M 380,225 Q 375,250 378,275 Q 380,290 385,295 Q 390,290 392,275 Q 395,250 390,225 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+
+  <!-- Thalamus (around 3rd ventricle) -->
+  <ellipse cx="415" cy="255" rx="40" ry="28" fill="#cc7744" opacity="0.4" stroke="#cc8866" stroke-width="1"/>
+
+  <!-- Hypothalamus (below thalamus) -->
+  <ellipse cx="355" cy="290" rx="25" ry="15" fill="#dd6699" opacity="0.35" stroke="#dd6699" stroke-width="1"/>
+
+  <!-- Massa intermedia hint -->
+  <ellipse cx="385" cy="255" rx="5" ry="8" fill="#cc7744" opacity="0.6"/>
+
+  <!-- Cerebral aqueduct -->
+  <path d="M 445,290 Q 450,310 455,325" fill="none" stroke="#335577" stroke-width="2.5"/>
+
+  <!-- Fourth ventricle (diamond shape) -->
+  <path d="M 455,325 Q 460,340 470,350 Q 460,365 450,370 Q 440,365 435,350 Q 440,340 455,325 Z"
+        fill="#0d0d2a" stroke="#335577" stroke-width="0.8"/>
+
+  <!-- Brainstem -->
+  <!-- Midbrain -->
+  <path d="M 410,300 Q 430,300 445,310 Q 455,320 455,325 Q 440,325 420,320 Q 410,315 410,300 Z"
+        fill="#ee9966" opacity="0.4" stroke="#eeaa77" stroke-width="1"/>
+
+  <!-- Pons (bulging) -->
+  <path d="M 410,320 Q 400,335 395,355 Q 392,370 400,380 Q 415,395 435,390 Q 450,380 458,365 Q 460,350 455,335 Q 445,325 435,320 Z"
+        fill="#ffaa44" opacity="0.35" stroke="#ffaa44" stroke-width="1"/>
+
+  <!-- Medulla (tapering) -->
+  <path d="M 400,380 Q 395,400 390,420 Q 388,440 392,455 Q 400,465 410,460 Q 420,450 425,430 Q 430,410 430,390 Q 425,385 415,385 Z"
+        fill="#dd9955" opacity="0.35" stroke="#dd9955" stroke-width="1"/>
+
+  <!-- Spinal cord continuation -->
+  <path d="M 392,455 Q 390,470 388,480" fill="none" stroke="#dd9955" stroke-width="2" opacity="0.5"/>
+  <path d="M 410,460 Q 408,472 406,480" fill="none" stroke="#dd9955" stroke-width="2" opacity="0.5"/>
+
+  <!-- Cerebellum (posterior fossa) -->
+  <path d="M 470,330 Q 520,310 580,320 Q 630,340 640,370 Q 640,410 610,435 Q 570,455 520,450 Q 480,440 460,420 Q 445,400 450,375 Z"
+        fill="#aa77ff" opacity="0.25" stroke="#aa77ff" stroke-width="1.2"/>
+  <!-- Cerebellar folia (lobulation lines) -->
+  <path d="M 475,350 Q 530,340 580,350" fill="none" stroke="#aa77ff" stroke-width="0.8" opacity="0.5"/>
+  <path d="M 468,370 Q 530,358 595,370" fill="none" stroke="#aa77ff" stroke-width="0.8" opacity="0.5"/>
+  <path d="M 462,390 Q 525,378 600,393" fill="none" stroke="#aa77ff" stroke-width="0.8" opacity="0.5"/>
+  <path d="M 465,410 Q 520,400 590,415" fill="none" stroke="#aa77ff" stroke-width="0.8" opacity="0.5"/>
+  <path d="M 475,430 Q 520,420 575,435" fill="none" stroke="#aa77ff" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Tentorium cerebelli -->
+  <path d="M 450,325 Q 500,310 570,315" fill="none" stroke="#667" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Pituitary gland (in sella) -->
+  <ellipse cx="340" cy="320" rx="12" ry="8" fill="#dd6699" opacity="0.6" stroke="#dd6699" stroke-width="1"/>
+  <!-- Pituitary stalk -->
+  <line x1="345" y1="312" x2="350" y2="298" stroke="#dd6699" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Pineal gland -->
+  <ellipse cx="540" cy="215" rx="7" ry="5" fill="#55cc88" opacity="0.6" stroke="#55cc88" stroke-width="1"/>
+
+  <!-- Optic chiasm hint -->
+  <path d="M 310,305 Q 325,310 340,305" fill="none" stroke="#ffaa44" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- ===== LABELS AND LEADER LINES ===== -->
+
+  <!-- Cerebral hemisphere -->
+  <line x1="350" y1="80" x2="200" y2="60" class="leader"/>
+  <text x="100" y="63" class="label">Cerebral Hemisphere</text>
+
+  <!-- Corpus callosum labels -->
+  <line x1="262" y1="180" x2="148" y2="155" class="leader"/>
+  <text x="100" y="158" class="structure-label" fill="#44aadd">CC Genu</text>
+  <line x1="400" y1="145" x2="400" y2="110" class="leader"/>
+  <text x="370" y="108" class="structure-label" fill="#44aadd">CC Body</text>
+  <line x1="555" y1="185" x2="620" y2="165" class="leader"/>
+  <text x="625" y="168" class="structure-label" fill="#44aadd">CC Splenium</text>
+
+  <!-- Cingulate gyrus -->
+  <line x1="420" y1="135" x2="480" y2="98" class="leader"/>
+  <text x="485" y="101" class="sub-label">Cingulate Gyrus</text>
+
+  <!-- Lateral ventricle -->
+  <line x1="390" y1="208" x2="300" y2="232" class="leader"/>
+  <text x="200" y="235" class="structure-label" fill="#5588aa">Lat. Ventricle</text>
+
+  <!-- Third ventricle -->
+  <line x1="385" y1="265" x2="300" y2="280" class="leader"/>
+  <text x="210" y="283" class="structure-label" fill="#5588aa">3rd Ventricle</text>
+
+  <!-- Thalamus -->
+  <line x1="440" y1="245" x2="530" y2="230" class="leader"/>
+  <text x="535" y="233" class="structure-label">Thalamus</text>
+
+  <!-- Hypothalamus -->
+  <line x1="340" y1="278" x2="220" y2="265" class="leader"/>
+  <text x="135" y="268" class="structure-label" fill="#dd6699">Hypothalamus</text>
+
+  <!-- Pituitary -->
+  <line x1="340" y1="328" x2="240" y2="360" class="leader"/>
+  <text x="150" y="363" class="structure-label" fill="#dd6699">Pituitary Gland</text>
+
+  <!-- Pineal -->
+  <line x1="547" y1="215" x2="620" y2="205" class="leader"/>
+  <text x="625" y="208" class="structure-label" fill="#55cc88">Pineal Gland</text>
+
+  <!-- Cerebral aqueduct -->
+  <line x1="450" y1="308" x2="510" y2="290" class="leader"/>
+  <text x="515" y="293" class="sub-label" fill="#5588aa">Aqueduct</text>
+
+  <!-- Midbrain -->
+  <line x1="425" y1="310" x2="490" y2="270" class="leader"/>
+  <text x="495" y="273" class="structure-label" fill="#eeaa77">Midbrain</text>
+
+  <!-- Pons -->
+  <line x1="400" y1="365" x2="325" y2="400" class="leader"/>
+  <text x="270" y="403" class="structure-label" fill="#ffaa44">Pons</text>
+
+  <!-- Medulla -->
+  <line x1="405" y1="440" x2="325" y2="455" class="leader"/>
+  <text x="265" y="458" class="structure-label" fill="#dd9955">Medulla</text>
+
+  <!-- Fourth ventricle -->
+  <line x1="455" y1="348" x2="510" y2="345" class="leader"/>
+  <text x="515" y="348" class="structure-label" fill="#5588aa">4th Ventricle</text>
+
+  <!-- Cerebellum -->
+  <line x1="560" y1="395" x2="640" y2="400" class="leader"/>
+  <text x="645" y="403" class="label" fill="#aa77ff">Cerebellum</text>
+
+  <!-- Tentorium -->
+  <line x1="510" y1="312" x2="570" y2="300" class="leader"/>
+  <text x="575" y="303" class="sub-label">Tentorium</text>
+
+  <!-- Legend -->
+  <rect x="20" y="420" width="10" height="10" fill="#44aadd" opacity="0.6"/>
+  <text x="35" y="429" class="sub-label">Corpus Callosum / White Matter</text>
+  <rect x="20" y="436" width="10" height="10" fill="#cc7744" opacity="0.6"/>
+  <text x="35" y="445" class="sub-label">Thalamus / Gray Nuclei</text>
+  <rect x="20" y="452" width="10" height="10" fill="#0d0d2a" stroke="#335577" stroke-width="0.5"/>
+  <text x="35" y="461" class="sub-label">CSF / Ventricles</text>
+  <rect x="20" y="468" width="10" height="10" fill="#aa77ff" opacity="0.5"/>
+  <text x="35" y="477" class="sub-label">Cerebellum</text>
+</svg>

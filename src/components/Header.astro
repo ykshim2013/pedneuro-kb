@@ -55,6 +55,24 @@ const currentPath = Astro.url.pathname;
           Brain Imaging
         </a>
         <a
+          href="/brain-anatomy"
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
+            currentPath === '/brain-anatomy' ? 'bg-emerald-50 text-emerald-700' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
+          ]}
+        >
+          Brain Anatomy
+        </a>
+        <a
+          href="/ct-atlas"
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
+            currentPath === '/ct-atlas' ? 'bg-teal-50 text-teal-700' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
+          ]}
+        >
+          CT Atlas
+        </a>
+        <a
           href="/search"
           class:list={[
             'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
@@ -99,6 +117,8 @@ const currentPath = Astro.url.pathname;
       <a href="/categories" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Categories</a>
       <a href="/eeg-atlas" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">EEG Atlas</a>
       <a href="/brain-imaging" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Brain Imaging</a>
+      <a href="/brain-anatomy" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Brain Anatomy</a>
+      <a href="/ct-atlas" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">CT Atlas</a>
       <a href="/search" class="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Search</a>
     </nav>
   </div>

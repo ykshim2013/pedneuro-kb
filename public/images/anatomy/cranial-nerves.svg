@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Consolas, monospace">
+  <defs>
+    <radialGradient id="brain-bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#282848" />
+      <stop offset="100%" stop-color="#1a1a2e" />
+    </radialGradient>
+    <marker id="nerve-end" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+      <circle cx="2" cy="2" r="1.5" fill="#55cc88" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e" />
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" fill="#55cc88" font-size="18" font-weight="bold">Cranial Nerves -- Ventral View</text>
+  <line x1="220" y1="36" x2="580" y2="36" stroke="#55cc88" stroke-opacity="0.3" stroke-width="1" />
+
+  <!-- Orientation -->
+  <text x="400" y="50" fill="#888" font-size="9" text-anchor="middle">ANTERIOR</text>
+  <text x="400" y="495" fill="#888" font-size="9" text-anchor="middle">POSTERIOR</text>
+  <text x="52" y="270" fill="#888" font-size="9" text-anchor="middle">RIGHT</text>
+  <text x="748" y="270" fill="#888" font-size="9" text-anchor="middle">LEFT</text>
+
+  <!-- ====== BRAIN OUTLINE (ventral view) ====== -->
+
+  <!-- Frontal Lobes -->
+  <path d="M330,65 Q300,70 280,90 Q260,115 255,145 Q250,175 260,200 Q270,215 295,225 Q325,232 355,230" fill="url(#brain-bg)" stroke="#444" stroke-width="1.5" />
+  <path d="M470,65 Q500,70 520,90 Q540,115 545,145 Q550,175 540,200 Q530,215 505,225 Q475,232 445,230" fill="url(#brain-bg)" stroke="#444" stroke-width="1.5" />
+  <!-- Interhemispheric fissure -->
+  <line x1="400" y1="58" x2="400" y2="120" stroke="#555" stroke-width="1" stroke-dasharray="3,2" />
+
+  <!-- Olfactory Bulbs (under frontal lobes) -->
+  <ellipse cx="370" cy="115" rx="25" ry="8" fill="#333" stroke="#555" stroke-width="1" transform="rotate(-10,370,115)" />
+  <ellipse cx="430" cy="115" rx="25" ry="8" fill="#333" stroke="#555" stroke-width="1" transform="rotate(10,430,115)" />
+
+  <!-- Olfactory Tracts -->
+  <line x1="370" y1="123" x2="385" y2="155" stroke="#555" stroke-width="1.5" />
+  <line x1="430" y1="123" x2="415" y2="155" stroke="#555" stroke-width="1.5" />
+
+  <!-- Optic Chiasm -->
+  <path d="M355,170 L385,185 L400,180 L415,185 L445,170" fill="none" stroke="#ffaa44" stroke-width="2.5" />
+  <path d="M385,185 L400,195 L415,185" fill="none" stroke="#ffaa44" stroke-width="2.5" />
+  <!-- Optic nerves going forward -->
+  <line x1="355" y1="170" x2="330" y2="148" stroke="#ffaa44" stroke-width="2" />
+  <line x1="445" y1="170" x2="470" y2="148" stroke="#ffaa44" stroke-width="2" />
+  <!-- Optic tracts going back -->
+  <line x1="385" y1="195" x2="355" y2="218" stroke="#ffaa44" stroke-width="1.5" />
+  <line x1="415" y1="195" x2="445" y2="218" stroke="#ffaa44" stroke-width="1.5" />
+
+  <!-- Temporal Lobes -->
+  <path d="M255,215 Q220,235 200,265 Q185,300 195,335 Q205,360 235,375 Q270,385 310,380 Q340,375 360,360" fill="url(#brain-bg)" stroke="#444" stroke-width="1.5" />
+  <path d="M545,215 Q580,235 600,265 Q615,300 605,335 Q595,360 565,375 Q530,385 490,380 Q460,375 440,360" fill="url(#brain-bg)" stroke="#444" stroke-width="1.5" />
+
+  <!-- Brainstem -->
+  <!-- Midbrain -->
+  <path d="M370,220 Q365,240 362,260 Q360,275 365,290 Q370,298 400,300 Q430,298 435,290 Q440,275 438,260 Q435,240 430,220" fill="#222240" stroke="#555" stroke-width="1.5" />
+  <text x="400" y="265" text-anchor="middle" fill="#444" font-size="7">Midbrain</text>
+
+  <!-- Interpeduncular Fossa -->
+  <path d="M385,240 Q395,248 400,250 Q405,248 415,240" fill="none" stroke="#555" stroke-width="0.8" />
+
+  <!-- Pons -->
+  <path d="M355,300 Q350,320 355,345 Q365,360 400,365 Q435,360 445,345 Q450,320 445,300" fill="#222240" stroke="#555" stroke-width="1.5" />
+  <text x="400" y="338" text-anchor="middle" fill="#444" font-size="7">Pons</text>
+
+  <!-- Medulla -->
+  <path d="M370,365 Q365,385 363,405 Q362,420 365,435 Q370,448 390,455 Q400,458 410,455 Q430,448 435,435 Q438,420 437,405 Q435,385 430,365" fill="#222240" stroke="#555" stroke-width="1.5" />
+  <text x="400" y="420" text-anchor="middle" fill="#444" font-size="7">Medulla</text>
+
+  <!-- Pyramids on medulla -->
+  <line x1="400" y1="370" x2="400" y2="450" stroke="#555" stroke-width="0.5" stroke-dasharray="2,2" />
+
+  <!-- Olives (lateral medulla) -->
+  <ellipse cx="375" cy="405" rx="6" ry="15" fill="#2a2a4a" stroke="#555" stroke-width="0.8" />
+  <ellipse cx="425" cy="405" rx="6" ry="15" fill="#2a2a4a" stroke="#555" stroke-width="0.8" />
+
+  <!-- Cerebellum (posterior) -->
+  <path d="M310,390 Q290,410 300,440 Q320,465 400,470 Q480,465 500,440 Q510,410 490,390" fill="#1e1e38" stroke="#444" stroke-width="1.2" stroke-dasharray="4,3" />
+  <text x="400" y="460" text-anchor="middle" fill="#444" font-size="7">Cerebellum</text>
+
+  <!-- ====== CRANIAL NERVES ====== -->
+
+  <!-- CN I - Olfactory (Special Sensory - Green) -->
+  <line x1="350" y1="110" x2="310" y2="85" stroke="#55cc88" stroke-width="2.5" />
+  <line x1="430" y1="110" x2="490" y2="85" stroke="#55cc88" stroke-width="2.5" />
+  <!-- Filaments -->
+  <line x1="310" y1="85" x2="295" y2="72" stroke="#55cc88" stroke-width="1" />
+  <line x1="310" y1="85" x2="310" y2="70" stroke="#55cc88" stroke-width="1" />
+  <line x1="310" y1="85" x2="325" y2="72" stroke="#55cc88" stroke-width="1" />
+
+  <!-- CN II - Optic (Special Sensory - Green) -->
+  <!-- Already drawn as optic nerves/chiasm above, just use the color -->
+  <!-- Add small green markers at nerve origins -->
+  <circle cx="330" cy="148" r="3" fill="#55cc88" fill-opacity="0.4" stroke="#55cc88" stroke-width="1" />
+  <circle cx="470" cy="148" r="3" fill="#55cc88" fill-opacity="0.4" stroke="#55cc88" stroke-width="1" />
+
+  <!-- CN III - Oculomotor (Motor - Red) from interpeduncular fossa -->
+  <line x1="392" y1="248" x2="320" y2="225" stroke="#dd4444" stroke-width="2.2" />
+  <line x1="408" y1="248" x2="480" y2="225" stroke="#dd4444" stroke-width="2.2" />
+
+  <!-- CN IV - Trochlear (Motor - Red) wraps from dorsal midbrain -->
+  <path d="M365,285 Q340,278 315,265 Q295,255 280,240" fill="none" stroke="#dd4444" stroke-width="1.8" stroke-dasharray="4,2" />
+  <path d="M435,285 Q460,278 485,265 Q505,255 520,240" fill="none" stroke="#dd4444" stroke-width="1.8" stroke-dasharray="4,2" />
+
+  <!-- CN V - Trigeminal (Mixed - Purple) from lateral pons, LARGE root -->
+  <path d="M355,315 Q330,310 305,300 Q280,290 255,278" fill="none" stroke="#aa77ff" stroke-width="3.5" />
+  <path d="M445,315 Q470,310 495,300 Q520,290 545,278" fill="none" stroke="#aa77ff" stroke-width="3.5" />
+
+  <!-- CN VI - Abducens (Motor - Red) from pontomedullary junction midline -->
+  <line x1="390" y1="365" x2="345" y2="350" stroke="#dd4444" stroke-width="1.8" />
+  <line x1="410" y1="365" x2="455" y2="350" stroke="#dd4444" stroke-width="1.8" />
+
+  <!-- CN VII - Facial (Mixed - Purple) from pontomedullary junction lateral -->
+  <path d="M365,367 Q340,365 310,358 Q285,350 260,338" fill="none" stroke="#aa77ff" stroke-width="2.2" />
+  <path d="M435,367 Q460,365 490,358 Q515,350 540,338" fill="none" stroke="#aa77ff" stroke-width="2.2" />
+
+  <!-- CN VIII - Vestibulocochlear (Special Sensory - Green) lateral to VII at CPA -->
+  <path d="M360,372 Q335,372 308,368 Q280,362 252,352" fill="none" stroke="#55cc88" stroke-width="2.2" />
+  <path d="M440,372 Q465,372 492,368 Q520,362 548,352" fill="none" stroke="#55cc88" stroke-width="2.2" />
+
+  <!-- CN IX - Glossopharyngeal (Mixed - Purple) from postolivary sulcus -->
+  <path d="M369,395 Q345,392 320,385 Q295,378 270,368" fill="none" stroke="#aa77ff" stroke-width="1.8" />
+  <path d="M431,395 Q455,392 480,385 Q505,378 530,368" fill="none" stroke="#aa77ff" stroke-width="1.8" />
+
+  <!-- CN X - Vagus (Mixed - Purple) from postolivary sulcus below IX -->
+  <path d="M368,402 Q342,400 315,395 Q288,388 262,380" fill="none" stroke="#aa77ff" stroke-width="1.8" />
+  <path d="M432,402 Q458,400 485,395 Q512,388 538,380" fill="none" stroke="#aa77ff" stroke-width="1.8" />
+
+  <!-- CN XI - Accessory (Motor - Red) from lateral medulla and upper cord -->
+  <path d="M365,430 Q340,432 312,430 Q285,425 258,415 Q240,408 225,398" fill="none" stroke="#dd4444" stroke-width="1.8" />
+  <path d="M435,430 Q460,432 488,430 Q515,425 542,415 Q560,408 575,398" fill="none" stroke="#dd4444" stroke-width="1.8" />
+
+  <!-- CN XII - Hypoglossal (Motor - Red) from preolivary sulcus -->
+  <line x1="383" y1="408" x2="340" y2="418" stroke="#dd4444" stroke-width="1.8" />
+  <line x1="417" y1="408" x2="460" y2="418" stroke="#dd4444" stroke-width="1.8" />
+  <line x1="340" y1="418" x2="310" y2="425" stroke="#dd4444" stroke-width="1.8" />
+  <line x1="460" y1="418" x2="490" y2="425" stroke="#dd4444" stroke-width="1.8" />
+
+  <!-- ====== LABELS (Right side labels for nerves) ====== -->
+
+  <!-- CN I -->
+  <line x1="295" y1="72" x2="120" y2="68" stroke="#55cc88" stroke-width="0.6" />
+  <circle cx="295" cy="72" r="1.5" fill="#55cc88" />
+  <text x="20" y="65" fill="#55cc88" font-size="9" font-weight="bold">CN I</text>
+  <text x="58" y="65" fill="#55cc88" font-size="8">Olfactory</text>
+
+  <!-- CN II -->
+  <line x1="330" y1="148" x2="120" y2="105" stroke="#55cc88" stroke-width="0.6" />
+  <circle cx="330" cy="148" r="1.5" fill="#55cc88" />
+  <text x="20" y="102" fill="#55cc88" font-size="9" font-weight="bold">CN II</text>
+  <text x="58" y="102" fill="#55cc88" font-size="8">Optic</text>
+
+  <!-- CN III -->
+  <line x1="320" y1="225" x2="120" y2="150" stroke="#dd4444" stroke-width="0.6" />
+  <circle cx="320" cy="225" r="1.5" fill="#dd4444" />
+  <text x="20" y="147" fill="#dd4444" font-size="9" font-weight="bold">CN III</text>
+  <text x="65" y="147" fill="#dd4444" font-size="8">Oculomotor</text>
+
+  <!-- CN IV -->
+  <line x1="280" y1="240" x2="120" y2="188" stroke="#dd4444" stroke-width="0.6" />
+  <circle cx="280" cy="240" r="1.5" fill="#dd4444" />
+  <text x="20" y="185" fill="#dd4444" font-size="9" font-weight="bold">CN IV</text>
+  <text x="62" y="185" fill="#dd4444" font-size="8">Trochlear</text>
+
+  <!-- CN V -->
+  <line x1="255" y1="278" x2="120" y2="230" stroke="#aa77ff" stroke-width="0.6" />
+  <circle cx="255" cy="278" r="1.5" fill="#aa77ff" />
+  <text x="20" y="227" fill="#aa77ff" font-size="9" font-weight="bold">CN V</text>
+  <text x="57" y="227" fill="#aa77ff" font-size="8">Trigeminal</text>
+
+  <!-- CN VI -->
+  <line x1="345" y1="350" x2="120" y2="280" stroke="#dd4444" stroke-width="0.6" />
+  <circle cx="345" cy="350" r="1.5" fill="#dd4444" />
+  <text x="20" y="277" fill="#dd4444" font-size="9" font-weight="bold">CN VI</text>
+  <text x="62" y="277" fill="#dd4444" font-size="8">Abducens</text>
+
+  <!-- CN VII -->
+  <line x1="260" y1="338" x2="120" y2="315" stroke="#aa77ff" stroke-width="0.6" />
+  <circle cx="260" cy="338" r="1.5" fill="#aa77ff" />
+  <text x="20" y="312" fill="#aa77ff" font-size="9" font-weight="bold">CN VII</text>
+  <text x="65" y="312" fill="#aa77ff" font-size="8">Facial</text>
+
+  <!-- CN VIII -->
+  <line x1="252" y1="352" x2="120" y2="345" stroke="#55cc88" stroke-width="0.6" />
+  <circle cx="252" cy="352" r="1.5" fill="#55cc88" />
+  <text x="20" y="342" fill="#55cc88" font-size="9" font-weight="bold">CN VIII</text>
+  <text x="68" y="342" fill="#55cc88" font-size="8">Vestibulocochlear</text>
+
+  <!-- CN IX -->
+  <line x1="270" y1="368" x2="120" y2="375" stroke="#aa77ff" stroke-width="0.6" />
+  <circle cx="270" cy="368" r="1.5" fill="#aa77ff" />
+  <text x="20" y="372" fill="#aa77ff" font-size="9" font-weight="bold">CN IX</text>
+  <text x="62" y="372" fill="#aa77ff" font-size="8">Glossopharyngeal</text>
+
+  <!-- CN X -->
+  <line x1="262" y1="380" x2="120" y2="400" stroke="#aa77ff" stroke-width="0.6" />
+  <circle cx="262" cy="380" r="1.5" fill="#aa77ff" />
+  <text x="20" y="397" fill="#aa77ff" font-size="9" font-weight="bold">CN X</text>
+  <text x="58" y="397" fill="#aa77ff" font-size="8">Vagus</text>
+
+  <!-- CN XI -->
+  <line x1="225" y1="398" x2="120" y2="430" stroke="#dd4444" stroke-width="0.6" />
+  <circle cx="225" cy="398" r="1.5" fill="#dd4444" />
+  <text x="20" y="427" fill="#dd4444" font-size="9" font-weight="bold">CN XI</text>
+  <text x="62" y="427" fill="#dd4444" font-size="8">Accessory</text>
+
+  <!-- CN XII -->
+  <line x1="310" y1="425" x2="120" y2="458" stroke="#dd4444" stroke-width="0.6" />
+  <circle cx="310" cy="425" r="1.5" fill="#dd4444" />
+  <text x="20" y="455" fill="#dd4444" font-size="9" font-weight="bold">CN XII</text>
+  <text x="65" y="455" fill="#dd4444" font-size="8">Hypoglossal</text>
+
+  <!-- ====== RIGHT SIDE LABELS (for left-side nerve exits) ====== -->
+  <!-- Mirrored labels on right for key structures -->
+
+  <!-- Optic Chiasm label -->
+  <line x1="415" y1="185" x2="570" y2="160" stroke="#ffaa44" stroke-width="0.6" />
+  <circle cx="415" cy="185" r="1.5" fill="#ffaa44" />
+  <text x="575" y="157" fill="#ffaa44" font-size="9" font-weight="bold">Optic Chiasm</text>
+
+  <!-- CPA label -->
+  <line x1="548" y1="352" x2="625" y2="315" stroke="#888" stroke-width="0.6" />
+  <circle cx="548" cy="352" r="1.5" fill="#888" />
+  <text x="630" y="310" fill="#888" font-size="8">Cerebellopontine</text>
+  <text x="630" y="320" fill="#888" font-size="8">Angle (CPA)</text>
+
+  <!-- Interpeduncular fossa -->
+  <line x1="400" y1="250" x2="560" y2="230" stroke="#888" stroke-width="0.6" />
+  <circle cx="400" cy="250" r="1.5" fill="#888" />
+  <text x="565" y="227" fill="#888" font-size="8">Interpeduncular</text>
+  <text x="565" y="237" fill="#888" font-size="8">Fossa</text>
+
+  <!-- Postolivary sulcus label -->
+  <line x1="431" y1="400" x2="565" y2="395" stroke="#888" stroke-width="0.6" />
+  <circle cx="431" cy="400" r="1.5" fill="#888" />
+  <text x="570" y="392" fill="#888" font-size="8">Postolivary Sulcus</text>
+  <text x="570" y="402" fill="#888" font-size="7" font-style="italic">(IX, X, XI exit)</text>
+
+  <!-- Preolivary sulcus label -->
+  <line x1="417" y1="412" x2="565" y2="418" stroke="#888" stroke-width="0.6" />
+  <circle cx="417" cy="412" r="1.5" fill="#888" />
+  <text x="570" y="418" fill="#888" font-size="8">Preolivary Sulcus</text>
+  <text x="570" y="428" fill="#888" font-size="7" font-style="italic">(XII exit)</text>
+
+  <!-- ====== COLOR LEGEND ====== -->
+  <rect x="600" y="60" width="185" height="95" rx="5" fill="#1a1a2e" stroke="#444" stroke-width="1" />
+  <text x="692" y="77" text-anchor="middle" fill="#888" font-size="9" font-weight="bold">Functional Color Code</text>
+
+  <line x1="615" y1="92" x2="640" y2="92" stroke="#dd4444" stroke-width="2.5" />
+  <text x="645" y="96" fill="#dd4444" font-size="8">Motor (III, IV, VI, XI, XII)</text>
+
+  <line x1="615" y1="108" x2="640" y2="108" stroke="#44aadd" stroke-width="2.5" />
+  <text x="645" y="112" fill="#44aadd" font-size="8">Sensory</text>
+
+  <line x1="615" y1="124" x2="640" y2="124" stroke="#aa77ff" stroke-width="2.5" />
+  <text x="645" y="128" fill="#aa77ff" font-size="8">Mixed (V, VII, IX, X)</text>
+
+  <line x1="615" y1="140" x2="640" y2="140" stroke="#55cc88" stroke-width="2.5" />
+  <text x="645" y="144" fill="#55cc88" font-size="8">Special Sensory (I, II, VIII)</text>
+</svg>

@@ -23,7 +23,9 @@ interface Props {
   distribution?: string;
   sequence?: string;
   plane?: string;
-  modality?: 'eeg' | 'mri';
+  view?: string;
+  window?: string;
+  modality?: 'eeg' | 'mri' | 'anatomy' | 'ct';
   clinicalSignificance?: string;
 }
 
@@ -43,6 +45,8 @@ const {
   distribution,
   sequence,
   plane,
+  view,
+  window: ctWindow,
   modality = 'eeg',
   clinicalSignificance,
 } = Astro.props;
@@ -56,6 +60,8 @@ const difficultyColors = {
 const modalityColors = {
   eeg: { marker: 'bg-amber-500', markerHover: 'hover:bg-amber-400', pulse: 'bg-amber-400/30', accent: 'text-amber-300', legend: 'bg-amber-500' },
   mri: { marker: 'bg-purple-500', markerHover: 'hover:bg-purple-400', pulse: 'bg-purple-400/30', accent: 'text-purple-300', legend: 'bg-purple-500' },
+  anatomy: { marker: 'bg-emerald-500', markerHover: 'hover:bg-emerald-400', pulse: 'bg-emerald-400/30', accent: 'text-emerald-300', legend: 'bg-emerald-500' },
+  ct: { marker: 'bg-teal-500', markerHover: 'hover:bg-teal-400', pulse: 'bg-teal-400/30', accent: 'text-teal-300', legend: 'bg-teal-500' },
 };
 
 const colors = difficultyColors[difficulty];
@@ -131,7 +137,7 @@ const mColors = modalityColors[modality];
   <!-- Info bar -->
   <div class="px-4 py-3 bg-slate-50 border-t border-slate-200">
     {/* Pattern details */}
-    {(frequency || distribution || sequence || plane) && (
+    {(frequency || distribution || sequence || plane || view || ctWindow) && (
       <div class="flex flex-wrap gap-4 mb-2 text-xs text-slate-600">
         {frequency && (
           <span><strong class="text-slate-700">Frequency:</strong> {frequency}</span>
@@ -144,6 +150,12 @@ const mColors = modalityColors[modality];
         )}
         {plane && (
           <span><strong class="text-slate-700">Plane:</strong> {plane}</span>
+        )}
+        {view && (
+          <span><strong class="text-slate-700">View:</strong> {view}</span>
+        )}
+        {ctWindow && (
+          <span><strong class="text-slate-700">Window:</strong> {ctWindow}</span>
         )}
       </div>
     )}

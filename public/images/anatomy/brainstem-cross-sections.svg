@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Consolas, monospace">
+  <defs>
+    <radialGradient id="nucleus-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#aa77ff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#aa77ff" stop-opacity="0.2" />
+    </radialGradient>
+    <radialGradient id="motor-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dd4444" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#dd4444" stop-opacity="0.15" />
+    </radialGradient>
+    <radialGradient id="sensory-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#44aadd" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#44aadd" stop-opacity="0.15" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e" />
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="#55cc88" font-size="18" font-weight="bold">Brainstem Cross-Sections</text>
+  <line x1="220" y1="38" x2="580" y2="38" stroke="#55cc88" stroke-opacity="0.3" stroke-width="1" />
+
+  <!-- Panel separators -->
+  <line x1="267" y1="50" x2="267" y2="495" stroke="#333" stroke-width="1" stroke-dasharray="4,4" />
+  <line x1="533" y1="50" x2="533" y2="495" stroke="#333" stroke-width="1" stroke-dasharray="4,4" />
+
+  <!-- ====================================================== -->
+  <!-- PANEL 1: MIDBRAIN (left, center at 134, 240) -->
+  <!-- ====================================================== -->
+  <text x="134" y="60" text-anchor="middle" fill="#55cc88" font-size="14" font-weight="bold">Midbrain</text>
+  <text x="134" y="74" text-anchor="middle" fill="#888" font-size="9">(Superior Colliculus Level)</text>
+
+  <!-- Orientation markers -->
+  <text x="134" y="92" text-anchor="middle" fill="#666" font-size="8">DORSAL</text>
+  <text x="134" y="420" text-anchor="middle" fill="#666" font-size="8">VENTRAL</text>
+
+  <!-- Outer contour of midbrain cross-section -->
+  <path d="M60,250 Q55,200 70,160 Q85,125 110,110 Q134,100 158,110 Q183,125 198,160 Q213,200 208,250 Q210,300 200,340 Q185,370 160,380 Q134,388 108,380 Q83,370 68,340 Q58,300 60,250 Z" fill="#222240" stroke="#555" stroke-width="1.5" />
+
+  <!-- Superior Colliculus (tectum, dorsal bumps) -->
+  <ellipse cx="112" cy="118" rx="18" ry="12" fill="#aa77ff" fill-opacity="0.3" stroke="#aa77ff" stroke-width="1.5" />
+  <ellipse cx="156" cy="118" rx="18" ry="12" fill="#aa77ff" fill-opacity="0.3" stroke="#aa77ff" stroke-width="1.5" />
+
+  <!-- Cerebral Aqueduct (small circle, dorsal) -->
+  <circle cx="134" cy="148" r="8" fill="#44aadd" fill-opacity="0.3" stroke="#44aadd" stroke-width="1.5" />
+
+  <!-- Periaqueductal Gray (ring around aqueduct) -->
+  <circle cx="134" cy="148" r="18" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="3,2" />
+
+  <!-- Red Nucleus (paired circles in tegmentum) -->
+  <circle cx="112" cy="210" r="14" fill="url(#nucleus-grad)" stroke="#aa77ff" stroke-width="1.5" />
+  <circle cx="156" cy="210" r="14" fill="url(#nucleus-grad)" stroke="#aa77ff" stroke-width="1.5" />
+
+  <!-- Substantia Nigra (dark band) -->
+  <path d="M78,270 Q90,260 110,258 Q134,255 158,258 Q178,260 190,270" fill="none" stroke="#ffaa44" stroke-width="3" />
+  <path d="M82,275 Q95,265 112,263 Q134,260 156,263 Q173,265 186,275" fill="#ffaa44" fill-opacity="0.2" stroke="none" />
+
+  <!-- Cerebral Peduncles (ventral, large paired) -->
+  <path d="M68,290 Q70,320 78,348 Q88,368 108,376 Q120,380 134,376" fill="url(#motor-grad)" stroke="#dd4444" stroke-width="1.5" />
+  <path d="M200,290 Q198,320 190,348 Q180,368 160,376 Q148,380 134,376" fill="url(#motor-grad)" stroke="#dd4444" stroke-width="1.5" />
+  <!-- Dividing line at midline for peduncles -->
+  <line x1="134" y1="285" x2="134" y2="376" stroke="#dd4444" stroke-width="0.5" stroke-dasharray="2,2" stroke-opacity="0.5" />
+
+  <!-- Midbrain Labels -->
+  <!-- Superior Colliculus -->
+  <line x1="156" y1="110" x2="230" y2="100" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="156" cy="110" r="1.5" fill="#55cc88" />
+  <text x="215" y="97" fill="#aa77ff" font-size="8">Superior</text>
+  <text x="215" y="107" fill="#aa77ff" font-size="8">Colliculus</text>
+
+  <!-- Aqueduct -->
+  <line x1="142" y1="148" x2="220" y2="140" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="142" cy="148" r="1.5" fill="#55cc88" />
+  <text x="196" y="137" fill="#44aadd" font-size="8">Cerebral</text>
+  <text x="196" y="147" fill="#44aadd" font-size="8">Aqueduct</text>
+
+  <!-- PAG -->
+  <line x1="115" y1="138" x2="42" y2="132" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="115" cy="138" r="1.5" fill="#55cc88" />
+  <text x="15" y="125" fill="#888" font-size="7">Periaqueductal</text>
+  <text x="15" y="134" fill="#888" font-size="7">Gray (PAG)</text>
+
+  <!-- Red Nucleus -->
+  <line x1="112" y1="196" x2="42" y2="188" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="112" cy="196" r="1.5" fill="#55cc88" />
+  <text x="15" y="183" fill="#aa77ff" font-size="8">Red</text>
+  <text x="15" y="193" fill="#aa77ff" font-size="8">Nucleus</text>
+
+  <!-- Substantia Nigra -->
+  <line x1="134" y1="268" x2="42" y2="258" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="134" cy="268" r="1.5" fill="#55cc88" />
+  <text x="15" y="249" fill="#ffaa44" font-size="8">Substantia</text>
+  <text x="15" y="259" fill="#ffaa44" font-size="8">Nigra</text>
+
+  <!-- Cerebral Peduncle -->
+  <line x1="100" y1="345" x2="42" y2="350" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="100" cy="345" r="1.5" fill="#55cc88" />
+  <text x="15" y="344" fill="#dd4444" font-size="8">Cerebral</text>
+  <text x="15" y="354" fill="#dd4444" font-size="8">Peduncle</text>
+
+  <!-- Tegmentum label -->
+  <text x="134" y="235" text-anchor="middle" fill="#666" font-size="7" font-style="italic">Tegmentum</text>
+
+  <!-- ====================================================== -->
+  <!-- PANEL 2: PONS (center at 400, 240) -->
+  <!-- ====================================================== -->
+  <text x="400" y="60" text-anchor="middle" fill="#55cc88" font-size="14" font-weight="bold">Pons</text>
+  <text x="400" y="74" text-anchor="middle" fill="#888" font-size="9">(Mid-Pontine Level)</text>
+
+  <!-- Orientation markers -->
+  <text x="400" y="92" text-anchor="middle" fill="#666" font-size="8">DORSAL</text>
+  <text x="400" y="420" text-anchor="middle" fill="#666" font-size="8">VENTRAL</text>
+
+  <!-- Outer contour of pons cross-section -->
+  <!-- Wider shape with lateral extensions for middle cerebellar peduncles -->
+  <path d="M310,220 Q305,170 320,135 Q335,110 365,100 Q400,95 435,100 Q465,110 480,135 Q495,170 490,220" fill="#222240" stroke="#555" stroke-width="1.5" />
+  <!-- Basis pontis (large ventral bulge) -->
+  <path d="M310,220 Q305,280 310,320 Q320,370 355,390 Q400,400 445,390 Q480,370 490,320 Q495,280 490,220" fill="#222240" stroke="#555" stroke-width="1.5" />
+
+  <!-- Middle Cerebellar Peduncles (lateral extensions) -->
+  <path d="M310,180 Q290,185 278,200 Q270,215 275,235 Q280,248 295,255 Q310,258 310,240" fill="#222240" stroke="#555" stroke-width="1.5" />
+  <path d="M490,180 Q510,185 522,200 Q530,215 525,235 Q520,248 505,255 Q490,258 490,240" fill="#222240" stroke="#555" stroke-width="1.5" />
+
+  <!-- Fourth Ventricle (dorsal, diamond-like) -->
+  <path d="M385,108 L370,125 L385,142 L415,142 L430,125 L415,108 Z" fill="#44aadd" fill-opacity="0.25" stroke="#44aadd" stroke-width="1.5" />
+
+  <!-- Tegmentum (dorsal to basis pontis) -->
+  <path d="M325,155 Q330,190 335,215 Q340,225 400,228 Q460,225 465,215 Q470,190 475,155" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3,2" />
+  <text x="400" y="195" text-anchor="middle" fill="#666" font-size="7" font-style="italic">Tegmentum</text>
+
+  <!-- Boundary between tegmentum and basis pontis -->
+  <line x1="330" y1="230" x2="470" y2="230" stroke="#888" stroke-width="1" stroke-dasharray="4,3" />
+
+  <!-- Transverse fibers in basis pontis -->
+  <g stroke="#555" stroke-width="0.5" stroke-opacity="0.6">
+    <line x1="325" y1="260" x2="475" y2="260" />
+    <line x1="320" y1="280" x2="480" y2="280" />
+    <line x1="325" y1="300" x2="475" y2="300" />
+    <line x1="330" y1="320" x2="470" y2="320" />
+    <line x1="340" y1="340" x2="460" y2="340" />
+    <line x1="355" y1="360" x2="445" y2="360" />
+  </g>
+
+  <!-- CN nuclei region indication -->
+  <ellipse cx="380" cy="170" rx="12" ry="8" fill="#aa77ff" fill-opacity="0.25" stroke="#aa77ff" stroke-width="1" stroke-dasharray="2,2" />
+  <ellipse cx="420" cy="170" rx="12" ry="8" fill="#aa77ff" fill-opacity="0.25" stroke="#aa77ff" stroke-width="1" stroke-dasharray="2,2" />
+
+  <!-- Pons Labels -->
+  <!-- Fourth Ventricle -->
+  <line x1="430" y1="120" x2="510" y2="110" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="430" cy="120" r="1.5" fill="#55cc88" />
+  <text x="488" y="107" fill="#44aadd" font-size="8">Fourth</text>
+  <text x="488" y="117" fill="#44aadd" font-size="8">Ventricle</text>
+
+  <!-- Middle Cerebellar Peduncle -->
+  <line x1="278" y1="215" x2="280" y2="152" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="278" cy="215" r="1.5" fill="#55cc88" />
+  <text x="272" y="147" fill="#888" font-size="7" text-anchor="end">Middle Cerebellar</text>
+  <text x="272" y="157" fill="#888" font-size="7" text-anchor="end">Peduncle</text>
+
+  <line x1="522" y1="215" x2="520" y2="152" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="522" cy="215" r="1.5" fill="#55cc88" />
+  <text x="527" y="147" fill="#888" font-size="7">Middle Cerebellar</text>
+  <text x="527" y="157" fill="#888" font-size="7">Peduncle</text>
+
+  <!-- Basis Pontis -->
+  <line x1="400" y1="310" x2="500" y2="330" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="400" cy="310" r="1.5" fill="#55cc88" />
+  <text x="505" y="325" fill="#dd4444" font-size="8">Basis Pontis</text>
+  <text x="505" y="335" fill="#dd4444" font-size="7" font-style="italic">(transverse fibers)</text>
+
+  <!-- CN Nuclei -->
+  <line x1="380" y1="163" x2="330" y2="155" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="380" cy="163" r="1.5" fill="#55cc88" />
+  <text x="300" y="152" fill="#aa77ff" font-size="7" text-anchor="end">CN Nuclei</text>
+
+  <!-- ====================================================== -->
+  <!-- PANEL 3: MEDULLA (right, center at 666, 240) -->
+  <!-- ====================================================== -->
+  <text x="666" y="60" text-anchor="middle" fill="#55cc88" font-size="14" font-weight="bold">Medulla</text>
+  <text x="666" y="74" text-anchor="middle" fill="#888" font-size="9">(Mid-Medullary Level)</text>
+
+  <!-- Orientation markers -->
+  <text x="666" y="92" text-anchor="middle" fill="#666" font-size="8">DORSAL</text>
+  <text x="666" y="420" text-anchor="middle" fill="#666" font-size="8">VENTRAL</text>
+
+  <!-- Outer contour of medulla cross-section -->
+  <path d="M590,230 Q585,180 598,145 Q612,115 640,105 Q666,100 692,105 Q720,115 734,145 Q747,180 742,230 Q745,290 738,330 Q725,360 700,372 Q666,380 632,372 Q607,360 594,330 Q587,290 590,230 Z" fill="#222240" stroke="#555" stroke-width="1.5" />
+
+  <!-- Central Canal (small dorsal circle) -->
+  <circle cx="666" cy="135" r="5" fill="#44aadd" fill-opacity="0.3" stroke="#44aadd" stroke-width="1.5" />
+
+  <!-- Gracile Nucleus (dorsal, medial) -->
+  <ellipse cx="652" cy="115" rx="10" ry="7" fill="url(#sensory-grad)" stroke="#44aadd" stroke-width="1.5" />
+  <ellipse cx="680" cy="115" rx="10" ry="7" fill="url(#sensory-grad)" stroke="#44aadd" stroke-width="1.5" />
+
+  <!-- Cuneate Nucleus (dorsal, lateral) -->
+  <ellipse cx="632" cy="125" rx="10" ry="7" fill="url(#sensory-grad)" stroke="#44aadd" stroke-width="1.2" />
+  <ellipse cx="700" cy="125" rx="10" ry="7" fill="url(#sensory-grad)" stroke="#44aadd" stroke-width="1.2" />
+
+  <!-- Inferior Cerebellar Peduncles (lateral) -->
+  <path d="M590,170 Q575,175 565,190 Q558,205 562,222 Q568,235 580,240 Q590,242 595,230" fill="#222240" stroke="#555" stroke-width="1.5" />
+  <path d="M742,170 Q757,175 767,190 Q774,205 770,222 Q764,235 752,240 Q742,242 737,230" fill="#222240" stroke="#555" stroke-width="1.5" />
+
+  <!-- Inferior Olivary Nuclei (lateral to pyramids, large oval) -->
+  <path d="M618,260 Q610,240 615,220 Q620,205 632,200 Q642,198 648,210 Q652,225 648,250 Q644,268 635,275 Q625,278 618,260 Z" fill="#aa77ff" fill-opacity="0.2" stroke="#aa77ff" stroke-width="1.5" />
+  <path d="M714,260 Q722,240 717,220 Q712,205 700,200 Q690,198 684,210 Q680,225 684,250 Q688,268 697,275 Q707,278 714,260 Z" fill="#aa77ff" fill-opacity="0.2" stroke="#aa77ff" stroke-width="1.5" />
+
+  <!-- Pyramids (ventral, paired) -->
+  <path d="M642,295 Q640,320 643,345 Q648,362 658,370 Q666,374 674,370 Q684,362 689,345 Q692,320 690,295" fill="url(#motor-grad)" stroke="#dd4444" stroke-width="1.5" />
+  <!-- Midline division of pyramids -->
+  <line x1="666" y1="295" x2="666" y2="374" stroke="#dd4444" stroke-width="0.8" stroke-dasharray="2,2" />
+
+  <!-- Medulla Labels -->
+  <!-- Central Canal -->
+  <line x1="673" y1="135" x2="745" y2="135" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="673" cy="135" r="1.5" fill="#55cc88" />
+  <text x="748" y="133" fill="#44aadd" font-size="8">Central</text>
+  <text x="748" y="143" fill="#44aadd" font-size="8">Canal</text>
+
+  <!-- Gracile Nucleus -->
+  <line x1="666" y1="108" x2="666" y2="96" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="666" cy="108" r="1.5" fill="#55cc88" />
+  <text x="666" y="93" text-anchor="middle" fill="#44aadd" font-size="7">Gracile N.</text>
+
+  <!-- Cuneate Nucleus -->
+  <line x1="625" y1="120" x2="580" y2="112" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="625" cy="120" r="1.5" fill="#55cc88" />
+  <text x="555" y="110" fill="#44aadd" font-size="7">Cuneate N.</text>
+
+  <!-- Inf Cerebellar Peduncle -->
+  <line x1="570" y1="205" x2="555" y2="175" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="570" cy="205" r="1.5" fill="#55cc88" />
+  <text x="540" y="168" fill="#888" font-size="7" text-anchor="end">Inferior</text>
+  <text x="540" y="178" fill="#888" font-size="7" text-anchor="end">Cerebellar</text>
+  <text x="540" y="188" fill="#888" font-size="7" text-anchor="end">Peduncle</text>
+
+  <!-- Inferior Olivary Nucleus -->
+  <line x1="618" y1="240" x2="570" y2="255" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="618" cy="240" r="1.5" fill="#55cc88" />
+  <text x="545" y="250" fill="#aa77ff" font-size="8" text-anchor="end">Inferior</text>
+  <text x="545" y="260" fill="#aa77ff" font-size="8" text-anchor="end">Olivary N.</text>
+
+  <!-- Pyramids -->
+  <line x1="666" y1="350" x2="750" y2="360" stroke="#55cc88" stroke-width="0.7" />
+  <circle cx="666" cy="350" r="1.5" fill="#55cc88" />
+  <text x="755" y="355" fill="#dd4444" font-size="8" font-weight="bold">Pyramids</text>
+  <text x="755" y="365" fill="#dd4444" font-size="7" font-style="italic">(corticospinal tract)</text>
+
+  <!-- ====================================================== -->
+  <!-- COLOR LEGEND -->
+  <!-- ====================================================== -->
+  <rect x="240" y="440" width="320" height="55" rx="5" fill="#1a1a2e" stroke="#444" stroke-width="1" />
+  <text x="400" y="456" text-anchor="middle" fill="#888" font-size="9" font-weight="bold">Color Key</text>
+
+  <!-- Motor -->
+  <rect x="260" y="463" width="14" height="10" rx="2" fill="#dd4444" fill-opacity="0.5" stroke="#dd4444" stroke-width="1" />
+  <text x="280" y="472" fill="#dd4444" font-size="8">Motor Pathways</text>
+
+  <!-- Sensory -->
+  <rect x="390" y="463" width="14" height="10" rx="2" fill="#44aadd" fill-opacity="0.5" stroke="#44aadd" stroke-width="1" />
+  <text x="410" y="472" fill="#44aadd" font-size="8">Sensory / CSF</text>
+
+  <!-- Nuclei -->
+  <rect x="260" y="479" width="14" height="10" rx="2" fill="#aa77ff" fill-opacity="0.5" stroke="#aa77ff" stroke-width="1" />
+  <text x="280" y="488" fill="#aa77ff" font-size="8">Nuclei</text>
+
+  <!-- Special -->
+  <rect x="390" y="479" width="14" height="10" rx="2" fill="#ffaa44" fill-opacity="0.5" stroke="#ffaa44" stroke-width="1" />
+  <text x="410" y="488" fill="#ffaa44" font-size="8">Substantia Nigra</text>
+</svg>

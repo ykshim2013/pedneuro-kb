@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Consolas, monospace">
+  <defs>
+    <marker id="csf-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#44aadd" />
+    </marker>
+    <marker id="label-dot" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+      <circle cx="2" cy="2" r="2" fill="#55cc88" />
+    </marker>
+    <filter id="glow-blue">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <linearGradient id="csf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#44aadd" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#44aadd" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e" />
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#55cc88" font-size="18" font-weight="bold">Ventricular System and CSF Flow Pathway</text>
+  <line x1="200" y1="40" x2="600" y2="40" stroke="#55cc88" stroke-opacity="0.3" stroke-width="1" />
+
+  <!-- Orientation -->
+  <text x="30" y="260" fill="#888" font-size="10" text-anchor="middle">ANTERIOR</text>
+  <text x="770" y="260" fill="#888" font-size="10" text-anchor="middle">POSTERIOR</text>
+  <text x="400" y="58" fill="#888" font-size="10" text-anchor="middle">SUPERIOR</text>
+  <text x="400" y="490" fill="#888" font-size="10" text-anchor="middle">INFERIOR</text>
+
+  <!-- Brain outline (schematic sagittal/3-quarter cutaway) -->
+  <ellipse cx="400" cy="230" rx="340" ry="200" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="6,4" />
+
+  <!-- Superior Sagittal Sinus (top) -->
+  <path d="M160,80 Q400,50 640,80" fill="none" stroke="#dd6699" stroke-width="3" />
+  <text x="400" y="72" text-anchor="middle" fill="#dd6699" font-size="9">Superior Sagittal Sinus</text>
+
+  <!-- Arachnoid Granulations -->
+  <g fill="#dd6699" fill-opacity="0.6">
+    <ellipse cx="300" cy="82" rx="10" ry="6" />
+    <ellipse cx="340" cy="78" rx="8" ry="5" />
+    <ellipse cx="380" cy="76" rx="9" ry="5" />
+    <ellipse cx="420" cy="76" rx="9" ry="5" />
+    <ellipse cx="460" cy="78" rx="8" ry="5" />
+    <ellipse cx="500" cy="82" rx="10" ry="6" />
+  </g>
+
+  <!-- Label: Arachnoid Granulations -->
+  <line x1="520" y1="82" x2="620" y2="95" stroke="#dd6699" stroke-width="0.8" />
+  <text x="622" y="99" fill="#dd6699" font-size="9">Arachnoid Granulations</text>
+  <text x="622" y="110" fill="#dd6699" font-size="8" font-style="italic">(CSF reabsorption)</text>
+
+  <!-- Subarachnoid Space indication -->
+  <path d="M170,100 Q400,85 630,100" fill="none" stroke="#44aadd" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.5" />
+  <text x="180" y="108" fill="#44aadd" font-size="8" fill-opacity="0.7">Subarachnoid Space</text>
+
+  <!-- LEFT LATERAL VENTRICLE -->
+  <g>
+    <!-- Frontal Horn -->
+    <path d="M200,170 Q180,190 190,215 Q200,230 220,225" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Body -->
+    <path d="M220,225 Q260,210 310,215 Q340,218 360,225" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Atrium (trigone) -->
+    <path d="M360,225 Q380,220 395,230 Q400,240 390,250" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Temporal Horn (going down and forward) -->
+    <path d="M360,225 Q340,250 310,270 Q280,285 260,280" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Occipital Horn -->
+    <path d="M395,230 Q420,225 440,230 Q455,235 460,245" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Close the shape roughly -->
+    <path d="M200,170 Q210,160 230,165 Q280,170 310,175 Q350,180 380,190 Q400,200 395,230" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="1.5" />
+  </g>
+
+  <!-- RIGHT LATERAL VENTRICLE (mirror, slightly offset for 3/4 view) -->
+  <g>
+    <!-- Frontal Horn -->
+    <path d="M220,150 Q200,168 208,190 Q216,200 235,198" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Body -->
+    <path d="M235,198 Q275,185 325,188 Q355,190 375,198" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Atrium -->
+    <path d="M375,198 Q395,193 408,202 Q412,212 405,220" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Temporal Horn -->
+    <path d="M375,198 Q355,220 325,238 Q295,250 278,246" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Occipital Horn -->
+    <path d="M408,202 Q432,198 452,202 Q465,207 468,216" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+    <!-- Upper boundary -->
+    <path d="M220,150 Q230,142 248,145 Q296,150 326,155 Q366,162 394,172 Q412,180 408,202" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="1.5" />
+  </g>
+
+  <!-- Choroid Plexus in lateral ventricles -->
+  <path d="M270,200 Q280,195 290,200 Q300,205 310,200 Q320,195 330,200 Q340,205 350,200" fill="none" stroke="#ffaa44" stroke-width="2" />
+  <path d="M285,220 Q295,215 305,220 Q315,225 325,220 Q335,215 345,220 Q355,225 360,220" fill="none" stroke="#ffaa44" stroke-width="2" />
+
+  <!-- Foramen of Monro (Interventricular Foramen) - connecting to 3rd ventricle -->
+  <ellipse cx="310" cy="258" rx="12" ry="8" fill="#44aadd" fill-opacity="0.4" stroke="#55cc88" stroke-width="2" />
+
+  <!-- Third Ventricle (midline, slit-like) -->
+  <path d="M298,268 Q295,290 296,310 Q298,325 302,335 Q310,345 318,335 Q322,325 324,310 Q325,290 322,268" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+
+  <!-- Choroid Plexus in 3rd ventricle -->
+  <path d="M304,280 Q308,276 312,280 Q316,284 312,288" fill="none" stroke="#ffaa44" stroke-width="1.5" />
+
+  <!-- Cerebral Aqueduct (of Sylvius) -->
+  <path d="M310,345 L310,355 Q308,365 310,380 L310,390" fill="none" stroke="#44aadd" stroke-width="3" />
+  <path d="M306,345 L306,355 Q304,365 306,380 L306,390" fill="none" stroke="#44aadd" stroke-width="1" stroke-opacity="0.4" />
+  <path d="M314,345 L314,355 Q316,365 314,380 L314,390" fill="none" stroke="#44aadd" stroke-width="1" stroke-opacity="0.4" />
+
+  <!-- Fourth Ventricle (diamond-shaped) -->
+  <path d="M310,390 L280,415 L310,445 L340,415 Z" fill="url(#csf-grad)" stroke="#44aadd" stroke-width="2" />
+
+  <!-- Choroid Plexus in 4th ventricle -->
+  <path d="M292,415 Q298,410 304,415 Q310,420 316,415 Q322,410 328,415" fill="none" stroke="#ffaa44" stroke-width="1.5" />
+
+  <!-- Foramen of Magendie (midline exit, inferior) -->
+  <path d="M304,445 Q310,458 316,445" fill="none" stroke="#55cc88" stroke-width="2" />
+  <circle cx="310" cy="455" r="4" fill="#55cc88" fill-opacity="0.5" stroke="#55cc88" stroke-width="1.5" />
+
+  <!-- Foramina of Luschka (lateral exits) -->
+  <circle cx="270" cy="420" r="4" fill="#55cc88" fill-opacity="0.5" stroke="#55cc88" stroke-width="1.5" />
+  <line x1="280" y1="415" x2="274" y2="420" stroke="#44aadd" stroke-width="1.5" />
+  <circle cx="350" cy="420" r="4" fill="#55cc88" fill-opacity="0.5" stroke="#55cc88" stroke-width="1.5" />
+  <line x1="340" y1="415" x2="346" y2="420" stroke="#44aadd" stroke-width="1.5" />
+
+  <!-- CSF FLOW ARROWS -->
+  <!-- From choroid plexus through lateral ventricles toward Monro -->
+  <path d="M340,205 Q330,230 320,252" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" stroke-dasharray="4,2" />
+  <path d="M345,225 Q335,240 325,255" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" stroke-dasharray="4,2" />
+
+  <!-- Through Monro into 3rd ventricle -->
+  <path d="M310,266 L310,275" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" />
+
+  <!-- Down 3rd ventricle to aqueduct -->
+  <path d="M310,335 L310,348" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" />
+
+  <!-- Through aqueduct to 4th ventricle -->
+  <path d="M310,382 L310,395" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" />
+
+  <!-- Out through Magendie -->
+  <path d="M310,448 L310,468" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" />
+
+  <!-- Out through Luschka (left) -->
+  <path d="M266,420 L248,425" fill="none" stroke="#44aadd" stroke-width="1.5" />
+  <path d="M266,424 L248,430" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" />
+
+  <!-- Out through Luschka (right) -->
+  <path d="M354,424 L372,430" fill="none" stroke="#44aadd" stroke-width="1.5" marker-end="url(#csf-arrow)" />
+
+  <!-- CSF circulation up to arachnoid granulations -->
+  <path d="M310,470 Q250,470 200,440 Q140,400 110,320 Q90,240 100,170 Q115,110 180,90 Q240,75 300,82" fill="none" stroke="#44aadd" stroke-width="1.2" marker-end="url(#csf-arrow)" stroke-dasharray="6,3" stroke-opacity="0.6" />
+  <path d="M372,432 Q440,450 490,430 Q560,400 600,320 Q630,240 620,170 Q610,110 550,90 Q510,78 470,80" fill="none" stroke="#44aadd" stroke-width="1.2" marker-end="url(#csf-arrow)" stroke-dasharray="6,3" stroke-opacity="0.6" />
+
+  <!-- LABELS WITH LEADER LINES -->
+
+  <!-- Left Lateral Ventricle label -->
+  <line x1="190" y1="195" x2="90" y2="145" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="190" cy="195" r="2" fill="#55cc88" />
+  <text x="20" y="140" fill="#55cc88" font-size="10" font-weight="bold">Left Lateral Ventricle</text>
+
+  <!-- Right Lateral Ventricle label -->
+  <line x1="420" y1="175" x2="530" y2="128" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="420" cy="175" r="2" fill="#55cc88" />
+  <text x="535" y="125" fill="#55cc88" font-size="10" font-weight="bold">Right Lateral Ventricle</text>
+
+  <!-- Frontal Horn -->
+  <line x1="200" y1="160" x2="100" y2="170" stroke="#44aadd" stroke-width="0.7" />
+  <circle cx="200" cy="160" r="1.5" fill="#44aadd" />
+  <text x="30" y="175" fill="#44aadd" font-size="8">Frontal Horn</text>
+
+  <!-- Body label -->
+  <line x1="290" y1="180" x2="140" y2="200" stroke="#44aadd" stroke-width="0.7" />
+  <circle cx="290" cy="180" r="1.5" fill="#44aadd" />
+  <text x="70" y="205" fill="#44aadd" font-size="8">Body</text>
+
+  <!-- Atrium label -->
+  <line x1="400" y1="235" x2="500" y2="245" stroke="#44aadd" stroke-width="0.7" />
+  <circle cx="400" cy="235" r="1.5" fill="#44aadd" />
+  <text x="505" y="249" fill="#44aadd" font-size="8">Atrium (Trigone)</text>
+
+  <!-- Temporal Horn -->
+  <line x1="270" y1="278" x2="170" y2="310" stroke="#44aadd" stroke-width="0.7" />
+  <circle cx="270" cy="278" r="1.5" fill="#44aadd" />
+  <text x="90" y="315" fill="#44aadd" font-size="8">Temporal Horn</text>
+
+  <!-- Occipital Horn -->
+  <line x1="458" y1="235" x2="520" y2="270" stroke="#44aadd" stroke-width="0.7" />
+  <circle cx="458" cy="235" r="1.5" fill="#44aadd" />
+  <text x="525" y="274" fill="#44aadd" font-size="8">Occipital Horn</text>
+
+  <!-- Foramen of Monro -->
+  <line x1="322" y1="258" x2="440" y2="290" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="322" cy="258" r="2" fill="#55cc88" />
+  <text x="445" y="288" fill="#55cc88" font-size="10" font-weight="bold">Foramen of Monro</text>
+  <text x="445" y="300" fill="#55cc88" font-size="8" font-style="italic">(Interventricular Foramen)</text>
+
+  <!-- Third Ventricle -->
+  <line x1="326" y1="305" x2="440" y2="318" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="326" cy="305" r="2" fill="#55cc88" />
+  <text x="445" y="322" fill="#55cc88" font-size="10" font-weight="bold">Third Ventricle</text>
+
+  <!-- Cerebral Aqueduct -->
+  <line x1="318" y1="365" x2="440" y2="355" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="318" cy="365" r="2" fill="#55cc88" />
+  <text x="445" y="350" fill="#55cc88" font-size="10" font-weight="bold">Cerebral Aqueduct</text>
+  <text x="445" y="362" fill="#55cc88" font-size="8" font-style="italic">(of Sylvius)</text>
+
+  <!-- Fourth Ventricle -->
+  <line x1="344" y1="415" x2="440" y2="400" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="344" cy="415" r="2" fill="#55cc88" />
+  <text x="445" y="397" fill="#55cc88" font-size="10" font-weight="bold">Fourth Ventricle</text>
+
+  <!-- Foramen of Magendie -->
+  <line x1="310" y1="460" x2="400" y2="475" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="310" cy="460" r="2" fill="#55cc88" />
+  <text x="405" y="473" fill="#55cc88" font-size="9">Foramen of Magendie</text>
+  <text x="405" y="484" fill="#55cc88" font-size="8" font-style="italic">(median aperture)</text>
+
+  <!-- Foramina of Luschka -->
+  <line x1="266" y1="428" x2="160" y2="448" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="266" cy="428" r="2" fill="#55cc88" />
+  <text x="70" y="445" fill="#55cc88" font-size="9">Foramen of Luschka</text>
+  <text x="70" y="456" fill="#55cc88" font-size="8" font-style="italic">(lateral aperture)</text>
+
+  <line x1="354" y1="428" x2="580" y2="445" stroke="#55cc88" stroke-width="0.8" />
+  <circle cx="354" cy="428" r="2" fill="#55cc88" />
+  <text x="585" y="443" fill="#55cc88" font-size="9">Foramen of Luschka</text>
+  <text x="585" y="454" fill="#55cc88" font-size="8" font-style="italic">(lateral aperture)</text>
+
+  <!-- Choroid Plexus label -->
+  <line x1="310" y1="202" x2="160" y2="240" stroke="#ffaa44" stroke-width="0.7" />
+  <circle cx="310" cy="202" r="1.5" fill="#ffaa44" />
+  <text x="70" y="240" fill="#ffaa44" font-size="9">Choroid Plexus</text>
+  <text x="70" y="251" fill="#ffaa44" font-size="8" font-style="italic">(CSF production)</text>
+
+  <!-- CSF Flow Path label -->
+  <text x="120" y="380" fill="#44aadd" font-size="8" fill-opacity="0.7">CSF flow through</text>
+  <text x="120" y="391" fill="#44aadd" font-size="8" fill-opacity="0.7">subarachnoid space</text>
+
+  <!-- Legend -->
+  <rect x="615" y="140" width="170" height="100" rx="4" fill="#1a1a2e" stroke="#333" stroke-width="1" />
+  <text x="700" y="157" text-anchor="middle" fill="#888" font-size="9" font-weight="bold">Legend</text>
+  <line x1="660" y1="170" x2="680" y2="170" stroke="#44aadd" stroke-width="2" />
+  <text x="685" y="174" fill="#44aadd" font-size="8">CSF Spaces</text>
+  <path d="M660,185 Q665,181 670,185 Q675,189 680,185" fill="none" stroke="#ffaa44" stroke-width="2" />
+  <text x="685" y="189" fill="#ffaa44" font-size="8">Choroid Plexus</text>
+  <circle cx="670" cy="202" r="3" fill="#55cc88" fill-opacity="0.5" stroke="#55cc88" stroke-width="1" />
+  <text x="685" y="206" fill="#55cc88" font-size="8">Foramina (exits)</text>
+  <line x1="660" y1="218" x2="680" y2="218" stroke="#44aadd" stroke-width="1.2" stroke-dasharray="4,2" />
+  <text x="685" y="222" fill="#44aadd" font-size="8">CSF Flow Direction</text>
+  <ellipse cx="670" cy="232" rx="8" ry="4" fill="#dd6699" fill-opacity="0.6" />
+  <text x="685" y="236" fill="#dd6699" font-size="8">Arachnoid Granulations</text>
+</svg>
